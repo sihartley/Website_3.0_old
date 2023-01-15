@@ -1,0 +1,25 @@
+#scss_files: 'app/assets/stylesheets/**/*.css.scss'
+
+#exclude: 'app/assets/stylesheets/plugins/**'
+
+linters:
+  NameFormat:
+    enabled: false
+  SelectorFormat:
+    enabled: true
+  QualifyingElement:
+    enabled: false
+  NestingDepth:
+    enabled: true
+    max_depth: 4
+  SelectorDepth:
+    enabled: true
+    max_depth: 4
+
+
+#  Indentation:
+#    exclude:
+#      - 'path/to/file.scss'
+#      - 'path/to/directory/**'
+#    severity: warning
+#    width: 2

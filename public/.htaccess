@@ -1,0 +1,14 @@
+#Mod Rewrite
+RewriteEngine on
+
+RewriteBase /
+# css / js file versioning
+RewriteRule ^(.*)\.[\d]{10}\.(css|js)$ $1.$2 [L]
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+#Caching schema
+<FilesMatch "\.(css|svg|webp|png|jpg|jpeg|js|php)$">
+Header set Cache-Control "max-age=86400"
+</FilesMatch>
+

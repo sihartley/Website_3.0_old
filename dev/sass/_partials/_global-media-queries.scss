@@ -1,0 +1,37 @@
+//320px — 480px: Mobile devices
+//481px — 768px: iPads, Tablets
+//769px — 1024px: Small screens, laptops
+//1025px — 1200px: Desktops, large screens
+//1201px and more — Extra large screens, TV
+
+@media screen and (max-width: 1400px) { //below 1400px
+  header {
+    div.hero {
+      font-size: 1.6vw;
+    }
+  }
+}
+
+@media screen and (max-width: 930px) { //below 930px
+  header {
+    background: #030303 url('/images/banner-charger-930px.png') no-repeat center bottom;
+    background-size: cover;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 600px) { //below 600px
+  header {
+    background: #030303 url('/images/banner-charger-600px.png') no-repeat center bottom;
+    background-size: cover;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 465px) { //below 465px
+  header {
+    background: #030303 url('/images/banner-charger-465px.png') no-repeat center bottom;
+    background-size: cover;
+    position: relative;
+  }
+}

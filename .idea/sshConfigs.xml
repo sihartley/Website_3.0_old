@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="208.109.67.139" id="7cdcdd27-176b-42ac-9de2-9cbcb869ff07" keyPath="C:\Users\sihar\OneDrive\SSL for FTP\id_rsa_gd.ppk" port="22" customName="GoDaddy SFTP" nameFormat="CUSTOM" username="fp5xk3vo9hwc" useOpenSSHConfig="true">
+        <option name="customName" value="GoDaddy SFTP" />
+      </sshConfig>
+      <sshConfig host="168.235.116.113" id="7f8e52b6-bc9a-4432-9ede-e8c6bb97e69c" keyPath="C:\Users\sihar\OneDrive\SSL for FTP\id_rsa_im.ppk" port="2222" customName="InMotion SFTP" nameFormat="CUSTOM" username="n64e7f5" useOpenSSHConfig="true">
+        <option name="customName" value="InMotion SFTP" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

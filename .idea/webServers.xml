@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e81b551e-701b-402c-8f8b-f36fdcc10fa1" name="GoDaddy v3" url="https://v3.vi-primary-server.com">
+        <fileTransfer rootFolder="/home/fp5xk3vo9hwc/public_html/v_3.0" accessType="SFTP" host="208.109.67.139" port="22" sshConfigId="7cdcdd27-176b-42ac-9de2-9cbcb869ff07" sshConfig="GoDaddy SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="b82f4b8f-5426-4d40-8e70-bea4571f4f8e" name="InMotion v3" url="https://v3.vi-backup-server.com">
+        <fileTransfer rootFolder="/home/n64e7f5/public_html/v3" accessType="SFTP" host="168.235.116.113" port="2222" sshConfigId="7f8e52b6-bc9a-4432-9ede-e8c6bb97e69c" sshConfig="InMotion SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="9ff9a99f-976b-42bb-98c3-5c77b111bafd" name="GoDaddy" url="https://v3.vi-primary-server.com">
+        <fileTransfer rootFolder="/home/fp5xk3vo9hwc/public_html/v_3.0" accessType="SFTP" host="208.109.67.139" port="22" sshConfigId="7cdcdd27-176b-42ac-9de2-9cbcb869ff07" sshConfig="GoDaddy SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="e21aa49a-8bac-42c0-bae4-2b5a84972f3f" name="InMotion" url="https://v3.vi-backup-server.com">
+        <fileTransfer rootFolder="/home/n64e7f5/public_html/v3" accessType="SFTP" host="168.235.116.113" port="2222" sshConfigId="7f8e52b6-bc9a-4432-9ede-e8c6bb97e69c" sshConfig="InMotion SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+    <groups>
+      <group>
+        <name>All v3 Servers</name>
+        <servers>
+          <name value="GoDaddy" />
+          <name value="InMotion" />
+        </servers>
+      </group>
+    </groups>
+  </component>
+</project>

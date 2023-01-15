@@ -1,0 +1,153 @@
+// Global Styles Used in ALL Pages
+@import '../_imports/global-variables';
+
+@font-face { //Global //Only for Logo Name, NOT a complete font set
+  font-family: bickley-script;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url('/css/fonts/BickleyScriptLET-Plain.woff2');
+  font-display: swap;
+}
+
+h1 {margin: 0 0 1em 0; font-size: 2.8em; font-weight: 700;}
+h2 {margin: 0 0 .5em 0; font-size: 1.6em; font-weight: 700; line-height: 1.1em;}
+h3 {margin: 0 0 .5em 0; font-size: 1.3em; font-weight: 700;}
+h4 {margin: 0 0 1.5em 0; font-size: 1em; font-weight: 700;}
+p {margin: 0 0 1em 0;}
+
+
+html { //Global
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .6), rgba(159, 160, 159, .1) 25%, rgba(159, 160, 159, .1) 75%, rgba(0, 0, 0, .6)),
+                    linear-gradient(45deg, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, rgb(0, 0, 0) 75%, rgb(0, 0, 0)),
+                    linear-gradient(45deg, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, rgb(0, 0, 0) 75%, rgb(0, 0, 0)),
+                    linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-position: 0 0, 0 0, 5px 5px, 0 0;
+  background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+}
+
+body { //Global
+  color: $color-body-text;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px; //base font size 16px = 1em
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+
+  h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin: 0 0 1em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 .5em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 0 0 .5em;
+  }
+
+  h4 {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0 0 1.5em;
+  }
+
+  p {
+    margin: 0 0 1em;
+  }
+
+  div:first-child { //Global //#page div
+    margin: 0 auto;
+    max-width: 1400px;
+    position: relative;
+  }
+}
+
+
+
+header { //Global
+  aspect-ratio: 1 / .2714;
+  background: #030303 url('/images/banner-charger-1400px.webp') no-repeat center bottom;
+  //Simon: Note: image-set() Not Working Yet, fix this with media queries.
+  //background: #030303 image-set(
+  //        url('/images/banner-charger-465px.webp') 1x,
+  //        url('/images/banner-charger-930px.webp') 2x,
+  //        url('/images/banner-charger-1400px.webp') 3x) no-repeat center bottom;
+  background-size: cover;
+  position: relative;
+
+  a.logo {
+    left: 2%;
+    position: absolute;
+    text-decoration: none;
+    top: 1%;
+    width: 70%;
+
+    //&::after { content: ''; display: block; clear: both; }
+
+    svg {
+      filter: drop-shadow(1px 1px 1px rgba(179, 179, 179, .8));
+
+      &.company-logo-name {
+        fill: $color-logo-main;
+        font-family: 'bickley-script', cursive;
+        font-size: 80px;
+        font-style: italic;
+      }
+    }
+  }
+
+  a.phone {
+    left: 30%;
+    position: absolute;
+    text-decoration: none;
+    top: 49%;
+    width: 26%;
+
+    svg {
+      filter: drop-shadow(1px 1px 5px rgba(179, 179, 179, 1));
+
+      &.company-phone-number {
+        fill: $color-logo-accent;
+        font-size: 45px;
+        font-style: italic;
+        font-weight: 400;
+      }
+    }
+  }
+
+  div.hero {
+    color: $color-logo-accent;
+    font-size: 1.4em;
+    font-style: italic;
+    left: 3%;
+    line-height: 80%;
+    position: absolute;
+    top: 69%;
+    width: 53%;
+
+    h1 {
+      margin: 1% 0 6%;
+    }
+
+    p {
+      font-size: 1.7vw;
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+} //Global
+
+
+
+
+
+
+
+
+
+

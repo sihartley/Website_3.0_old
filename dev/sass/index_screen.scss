@@ -1,0 +1,51 @@
+@import '_partials/global';
+
+// Index Specific
+// Section All
+
+// Section Main
+section {
+  padding: 0 30px;
+
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+
+  &.main {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding: 0;
+
+    aside {
+      float: left;
+      text-align: center;
+      width: 33.3%;
+      //test
+      .automotive { background-image: url('/images/icon_automotive.svg'); }
+      .motorcycle { background-image: url('/images/icon_motorcycle.svg'); background-size: 62%}
+      .trailer { background-image: url('/images/icon_trailer.svg'); }
+      h2 a {color: #b3b3b3; text-decoration: none;}
+      h2 a:hover {text-decoration: underline;}
+      &:hover {
+        background-color: #6a6a6a;
+      }
+    }
+
+    .content {
+      background: no-repeat center top;
+      background-size: 95%;
+      margin: 15px;
+      padding-top: 45%;
+    }
+  }
+}
+
+
+
+
+
+
+@import '_partials/global-media-queries';
+@import '_partials/index-media-queries';
