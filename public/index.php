@@ -1,10 +1,10 @@
 <?php
 /* Core Functions (Functions for ALL Pages NO Exceptions) */
-include_once '../private/core_functions.php';
+include_once '../private/functions/core_functions.php';
 /* Global Functions (Functions for ALL Pages) */
-include_once '../private/global_functions.php';
+include_once '../private/functions/global_functions.php';
 /* CSS File Auto Versioning */
-const CSS = array( '/css/index_screen.css');
+const CSS = array( '/css/index_screen.css' );
 foreach (CSS as $css) {
     $css_file = '<link rel="stylesheet" media="screen"  href="' . auto_version($css) . '" type="text/css">';
 }
@@ -18,7 +18,7 @@ foreach (CSS as $css) {
 [$hostingServer, $dbPrefix] = host_ident($_SERVER['SERVER_ADDR']);
 
 /* HTML Minification */
-ob_start("minifier");
+//ob_start("minifier");
 
 /* Business Info */
 /* Simon: ToDo: create and move this to include file (business_info.php) */
@@ -29,6 +29,7 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
 ?>
 
 <!DOCTYPE html>
+<!--<html lang="en" oncontextmenu="return false;">-->
 <html lang="en">
 
 <head>
@@ -65,16 +66,16 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
     </header>
 
     <section class="main">
-        <aside onclick="window.open('https://google.com', '_blank')">
+        <aside oncontextmenu="return false;" onclick="window.open('https://google.com', '_blank')">
             <div class="content automotive" ">
                 <h2>
                     <a href="#">Automotive Graphics</a>
                 </h2>
-                <p>Lorem ipsum dolor sit amet, consect etuer adipiscing elit. <a href="http://codifydesign.com">Morbi commodo</a>, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.</p>
+                <p>Lorem ipsum dolor sit amet, consect etuer adipiscing elit. <a href="#">Morbi commodo</a>, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.</p>
             </div>
         </aside>
 
-        <aside onclick="window.open('https://yahoo.com', '_blank')">
+        <aside oncontextmenu="return false;" onclick="window.open('https://yahoo.com', '_blank')">
             <div class="content motorcycle">
                 <h2>
                     <a href="#">Motorcycle Graphics</a>
@@ -83,7 +84,7 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
             </div>
         </aside>
 
-        <aside onclick="window.open('https://bing.com', '_blank')">
+        <aside oncontextmenu="return false;" onclick="window.open('https://bing.com', '_blank')">
             <div class="content trailer">
                 <h2>
                     <a href="#">Trailer Graphics</a>
@@ -98,7 +99,6 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
         <!-- link example -->
         <a href="<?php echo $foxy_cart; ?>?name=Cool%20Example&price=10&color=red&code=sku123">Add a red Cool Example</a>
         <!-- form example -->
-<!--        <input type="hidden" name="code" value="p1" />-->
         <form data-fc-form-code="p1" action="<?php echo $foxy_cart; ?>" method="post" accept-charset="utf-8">
             <input type="hidden" name="name" value="2022 Ford Maverick Mach 1 Esque Hood Decal" />
             <input type="hidden" name="image" value="https://vinylimagination.com/Graphics/Vehicles/Ford/Maverick/2k22/M1HD/Ford%20Maverick%20Mach-1%20Hood%20Decal%20(M1HD-001).webp" />
@@ -134,14 +134,13 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
     </section>
 
 
-
-<!--    <section class="atmosphere">-->
-<!--        <article>-->
-<!--            <h2>Creating a modern atmosphere</h2>-->
-<!--            <p>Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Lorem ipsum dolor sit amet etuer adipiscing elit.  Pulvinar odio lorem non turpis. Nullam sit amet enim lorem.</p>-->
-<!--            <a class="btn" title="Creating a modern atmosphere" href="#">Learn more</a>-->
-<!--        </article>-->
-<!--    </section>-->
+    <section class="atmosphere">
+        <article>
+            <h2>Creating a modern atmosphere</h2>
+            <p>Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Lorem ipsum dolor sit amet etuer adipiscing elit.  Pulvinar odio lorem non turpis. Nullam sit amet enim lorem.</p>
+            <a class="btn" title="Creating a modern atmosphere" href="#">Learn more</a>
+        </article>
+    </section>
 
 <!--    <section class="how-to">-->
 <!--        <aside>-->
@@ -167,62 +166,11 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
 <!---->
 <!--    </section>-->
 
-    <nav>
-        <ul>
-            <li>
-                <a href="#" title="About Us" aria-haspopup="true">About Us</a>
-                <ul>
-                    <li>
-                        <a href="#" title="Sub Link 1">Sub Link 1</a></a>
-                    </li>
-                    <li>
-                        <a href="#" title="Sub Link 2">Sub Link 2</a></a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" title="Design Corner" aria-haspopup="true">Design Corner</a>
-                <ul>
-                    <li>
-                        <a href="#" title="Sub Link 1">Sub Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#" title="Sub Link 2">Sub Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#" title="Sub Link 3" aria-haspopup="true">Sub Link 3</a>
-                        <ul>
-                            <li>
-                                <a href="#" title="Sub Sub Link 1">Sub Sub Link 1</a>
-                            </li>
-                            <li>
-                                <a href="#" title="Sub Sub Link 2">Sub Sub Link 2</a>
-                            </li>
-                        </ul>
+<!-- Navigation -->
+<?php include '../private/includes/navigation.php'; ?>
 
-                    </li>
-                </ul>
 
-            </li>
-            <li>
-                <a href="#" title="Products" aria-haspopup="true">Products</a>
-                <ul>
-                    <li>
-                        <a href="#" title="Sub Link 1">Sub Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#" title="Sub Link 2">Sub Link 2</a>
-                    </li>
-                </ul>
-
-            </li>
-            <li>
-                <a href="#" title="Contact Us">Contact Us</a>
-            </li>
-
-        </ul>
-    </nav>
-
+<!-- Footer -->
     <footer>
         &copy; Vinyl Imagination
         <div class="content">

@@ -1,0 +1,60 @@
+.fc-cart__item__options {
+  color: black;
+}
+.fc-cart__item__option__name {
+  /*display: none;*/
+  font-weight: bold;
+  font-style: italic;
+}
+.fc-foxycomplete-list {
+  color: black;
+}
+
+/* Padlock icon in cart "Checkout" button */
+#fc .fa-lock {
+  fill: #FFFFFF;
+}
+/* Cart/Checkout buttons */
+#fc .fc-action--checkout--button, #fc .fc-button--subscription-cancel, #fc .fc-button--submit {
+  background: #163471;
+  background: linear-gradient(to bottom, #305fe1 0%, #163471 100%);
+  border-color: #305fe1;
+  color: white;
+  text-shadow: 1px 1px 0px #163471;
+}
+/* Cart/Checkout buttons - Hover */
+#fc .fc-action--checkout--button:hover, #fc .fc-action--checkout--button:focus, #fc .fc-button--subscription-cancel:hover, #fc .fc-button--subscription-cancel:focus, #fc .fc-button--submit:hover, #fc .fc-button--submit:focus {
+  background: #55aa3f;
+  border-color: #ec67825;
+  text-shadow: 1px 1px 0px #55aa3f;
+}
+/* Sidecart top checkout button */
+[data-fc-sidecart] #fc .fc-fixed-button-right .fc-btn-action {
+  background: #163471;
+  background: linear-gradient(to bottom, #305fe1 0%, #163471 100%);
+  color: white;
+}
+/* Sidecart top checkout button - Hover */
+[data-fc-sidecart] #fc .fc-fixed-button-right .fc-btn-action:hover {
+  background: #55aa3f;
+}
+/* spinner action on checkout submit button */
+#fc .fc-button--submit .fc-spinner > div {
+  background-color:#101a5c;
+}
+
+/* Field Boxes Background */
+#fc .fc-input-group-container--active .fc-input-group-container__title--forced {
+  background-color: #dde8ff;
+}
+
+/* Field Boxes move text right */
+#fc .fc-form-group .fc-input-group-container__title {
+  padding-left: 35px;
+}
+
+#fc .fc-input-group-container__title:before {
+  background: none;
+  border: 0px;
+
+}

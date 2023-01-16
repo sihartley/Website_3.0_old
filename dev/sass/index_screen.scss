@@ -19,6 +19,7 @@ section {
     padding: 0;
 
     aside {
+      cursor: pointer;
       float: left;
       text-align: center;
       width: 33.3%;
@@ -26,10 +27,9 @@ section {
       .automotive { background-image: url('/images/icon_automotive.svg'); }
       .motorcycle { background-image: url('/images/icon_motorcycle.svg'); background-size: 62%}
       .trailer { background-image: url('/images/icon_trailer.svg'); }
-      h2 a {color: #b3b3b3; text-decoration: none;}
-      h2 a:hover {text-decoration: underline;}
+      h2 a {color: $color-logo-accent; text-decoration: none;}
       &:hover {
-        background-color: #6a6a6a;
+        background-color: $element-hover-background;
       }
     }
 
@@ -42,10 +42,12 @@ section {
   }
 }
 
+/* Navigation */
+@import '_partials/navigation';
 
+/* Footer */ /* Simon: Todo: This will be required for all pages */
+@import '_partials/footer';
 
-
-
-
+/* Media Queries */
 @import '_partials/global-media-queries';
 @import '_partials/index-media-queries';

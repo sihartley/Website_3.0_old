@@ -1,0 +1,103 @@
+/* Navigation */
+nav.main {
+  background-color: $element-hover-background;
+  font-size: .8em; /* Added */
+  left: 50%;  /* Changed from 0px */
+  line-height: 1.3em; /* Added */
+  padding: 0; /* Changed from 50px 0 0 0 0 */
+  position: absolute;
+  top: 0;
+  width: 50%; /* Changed from 100% */
+
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+
+    li {
+      &:hover {
+        background-color: $color-logo-main;  /* Simon: Todo: Move to _global-variables */
+
+        > ul {
+          display: block;
+        }
+      }
+      a {
+        color: $color-body-text;
+        display: inline-block;
+        padding: 10px 20px;
+        position: relative;
+        text-decoration: none;
+        width: 11em;
+
+        &:visited {
+          color: $color-body-text;
+        }
+
+        &:hover {
+          background-color: $navigation-hover;
+        }
+      }
+    }
+
+    ul {
+      background-color: $color-logo-main;
+      display: none;
+      position: absolute;
+      top: 100%;
+
+      li {
+        position: relative;
+      }
+
+      ul {
+        left: 100%;
+        top: 0px;
+      }
+    }
+  }
+
+  > ul { /* Top Level */
+    padding-left: 0; /* Changed from 200px */
+
+    > li {
+      float: left;
+
+      > a {
+        padding: 10px 20px 15px 20px;
+        width: auto;
+      }
+
+      > a[aria-haspopup="true"]::after {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid $color-body-text;
+        bottom: 6px;
+        left: 20px;
+        right: auto;
+        top: auto;
+
+      }
+    }
+  }
+
+  a[aria-haspopup="true"]::after {
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid $color-body-text;
+    border-top: 4px solid transparent;
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 0;
+
+  }
+}
