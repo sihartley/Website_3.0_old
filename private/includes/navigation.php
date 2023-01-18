@@ -1,10 +1,10 @@
-<nav class="main">
+<nav id="menu" class="main">
     <ul>
         <li>
-            <a href="#" title="Graphics Products" aria-haspopup="true">Graphics Products</a>
+            <span>Graphics Products</span>
             <ul>
                 <li>
-                    <a href="#" title="Automotive" aria-haspopup="true">Automotive</a>
+                    <a href="https://vinylimagination.foxycart.com/cartView Cart" title="Automotive" aria-haspopup="true">Automotive</a>
                     <ul>
                         <li>
                             <a href="#" title="Dodge Vehicle Graphics">Dodge Vehicle Graphics</a>
@@ -43,7 +43,7 @@
 
         </li>
         <li>
-            <a href="#" title="Colors" aria-haspopup="true">Colors</a>
+            <span>Colors</span>
             <ul>
                 <li>
                     <a href="#" title="Wet-Install Premium">Wet-Install Premium Cast</a>
@@ -55,7 +55,7 @@
 
         </li>
         <li>
-            <a href="#" title="About Us" aria-haspopup="true">About Us</a>
+            <span>About Us</span>
             <ul>
                 <li>
                     <a href="#" title="FAQ">FAQ</a>
@@ -71,4 +71,3 @@
 
     </ul>
 </nav>
-

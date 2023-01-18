@@ -77,7 +77,7 @@ module.exports = function(grunt) {
       my_target: {
         files: {
           // 'assets/javascript/mmenu.all.min.js': ['assets/javascript/mmenu/*js'],
-          // 'public/js/scripts.min.js' : ['assets/javascript/*.js', 'node_modules/jquery/dist/jquery.js']
+          // 'public/js/scripts.min.js' : ['dev/javascript/*.js', 'node_modules/jquery/dist/jquery.js']
         }
       }
     },

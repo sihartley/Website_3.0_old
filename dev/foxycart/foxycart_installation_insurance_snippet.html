@@ -1,0 +1,58 @@
+<!-- place this in the custom footer text area under Add custom header and footer code to your templates-->
+<!-- Installation Insurance -->
+{% if context == "checkout" %}
+<script>
+  FC.client.on('cart-update.done', showInsuranceOption);
+  FC.client.on('cart-item-remove.done', showInsuranceOption);
+  FC.client.on('cart-submit.done', showInsuranceOption);
+  FC.client.on('cart-item-quantity-update.done', showInsuranceOption);
+
+  function showInsuranceOption(params) {
+    if (!params.data || (params.data && params.data.code != "Installation Insurance")) {
+      var insurance_id = 0;
+      for (var i=0; i<FC.json.items.length; i++) {
+        if (FC.json.items[i].code == 'Installation Insurance' ) {
+          insurance_id = FC.json.items[i].id;
+        }
+      }
+
+      if (insurance_id != 0) {
+        FC.client.request("https://{{ config.store_domain }}/cart?cart=update&quantity=0&id=" +insurance_id+ "").done(function() {
+          FC[FC.json.context].render();
+        });
+        alert('Installation Insurance was removed because the order changed. You can re-add it with the new price in the "Almost Done!" section.');
+      }
+    }
+    FC.checkout.renderAdditionalFields();
+  }
+</script>
+{% endif %}
+
+
+<!-- place this in the custom checkout fields text area under Add custom form fields to your checkout -->
+<!-- Installation Insurance Option -->
+{% set insurance_in_cart = false %}
+{% set items_price = 0 %}
+{% for item in items %}
+{% if item.code != 'Installation Insurance' %}
+{% set items_price = items_price + item.price %}
+{% endif %}
+{% if item.code == 'Installation Insurance' %}
+{% set insurance_in_cart = true %}
+{% endif %}
+{% endfor %}
+
+{% set insurance_price = (items_price*0.236)|number_format(2) %}
+<div class="fc-form-group">
+  <div class="col-md-8 col-md-offset-3">
+    <div class="fc-input-group-container fc-input-group-container--checkbox fc-input-group-container--active">
+      {% if not insurance_in_cart and item_count != 0 %}
+      <a href="https://{{ config.store_domain }}/cart?name=Installation+Insurance&price={{ insurance_price }}&code=covered&quantity_max=1">Click to add Installation Insurance to your order for ${{ insurance_price }}.</a>
+      {% elseif insurance_in_cart %}
+      There is Installation Insurance on your order. To cancel it, remove the <b>Installation Insurance</b> from the cart.
+      {% else %}
+      Add items to the cart to see the Installation Insurance option.
+      {% endif %}
+    </div>
+  </div>
+</div>
