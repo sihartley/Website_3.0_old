@@ -28,7 +28,7 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
 ?>
 
 <!DOCTYPE html>
-<html id="fmenu" lang="en"<?php echo $right_click_protect; ?>>
+<html lang="en"<?php echo $right_click_protect; ?>>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -49,41 +49,38 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
     <div id="content">
 
     <header id="header">
+
         <a class="logo" title="Vinyl Imagination" href="#">
-            <svg class="company-logo-name" viewBox="0 0 419 76" xmlns="http://www.w3.org/2000/svg">
-                <text x="-10" y="53">Vinyl Imagination</text>
-            </svg>
-        </a>
-        <a class="phone" title="Vinyl Imagination Phone Number" href="#">
-            <svg class="company-phone-number" viewBox="0 0 277 36" xmlns="http://www.w3.org/2000/svg">
-                <text x="0" y="34"><?php echo $phone_number; ?></text>
-            </svg>
+<!--        <a class="phone" title="Vinyl Imagination Phone Number" href="#">-->
+<!--            <svg class="company-phone-number" viewBox="0 0 277 36" xmlns="http://www.w3.org/2000/svg">-->
+<!--                <text x="0" y="34">--><?php //echo $phone_number; ?><!--</text>-->
+<!--            </svg>-->
         </a>
 
         <div class="hero">
-            <h1>Imagine. Design. Create.</h1>
             <p>Vehicle Graphics Done Your Way!</p>
         </div>
         <a href="#menu">
-            <div class="hamburger" onclick="myFunction(this)">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
+            <div class="hamburger">
+                <p>MENU</p>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
             </div>
         </a>
     </header>
 
     <section class="main">
-        <aside onclick="window.open('https://google.com', '_blank')">
+        <aside onclick="window.open('https://https://admin.foxycart.com/admin', '_blank')">
             <div class="content automotive">
                 <h2>
                     <a href="#">Automotive Graphics</a>
                 </h2>
-                <p>Lorem ipsum dolor sit amet, consect etuer adipiscing elit. <a href="#">Morbi commodo</a>, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.</p>
+                <p>Lorem ipsum dolor sit amet, consect etuer adipiscing elit. Ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.</p>
             </div>
         </aside>
 
-        <aside onclick="window.open('https://yahoo.com', '_blank')">
+        <aside onclick="window.open('https://mmenujs.com/', '_blank')">
             <div class="content motorcycle">
                 <h2>
                     <a href="#">Motorcycle Graphics</a>
@@ -92,7 +89,7 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
             </div>
         </aside>
 
-        <aside onclick="window.open('https://bing.com', '_blank')">
+        <aside onclick="window.open('https://google.com', '_blank')">
             <div class="content trailer">
                 <h2>
                     <a href="#">Trailer Graphics</a>
@@ -102,50 +99,50 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
         </aside>
     </section>
 
-    <a href="#menu">Open the menu</a>
-
-
     <section class="addtocart">
         <!-- link example -->
 
-        <a href="<?php echo $foxy_cart; ?>?name=Cool%20Example&price=10&color=red&code=sku123">Add a red Cool Example</a>
+<!--        <a href="--><?php //echo $foxy_cart; ?><!--?name=Cool%20Example&price=10&color=red&code=sku123">Add a red Cool Example</a>-->
         <!-- form example -->
-        <form data-fc-form-code="p1" action="<?php echo $foxy_cart; ?>" method="post" accept-charset="utf-8">
-            <input type="hidden" name="name" value="2022 Ford Maverick Mach 1 Esque Hood Decal" />
-            <input type="hidden" name="image" value="https://vinylimagination.com/Graphics/Vehicles/Ford/Maverick/2k22/M1HD/Ford%20Maverick%20Mach-1%20Hood%20Decal%20(M1HD-001).webp" />
-            <input type="hidden" name="Design" value="Design 01" />
-            <input type="hidden" name="price" value="93.31" />
-            <input type="hidden" name="Part" value="FRD-MAVK22-M1HD" />
-            <input type="hidden" name="weight" value="2" />
-            <label class="label_left">Color</label>
-            <select name="Main Color" onchange="initDynamicPrice();">
-                <option value="Black">Black</option>
-                <option value="Red{p+10|w+1.2}">Red (+$10)</option>
-                <option value="White">White</option>
-            </select><br>
-            <label class="label_left">Accent</label>
-            <select name="Accent" onchange="initDynamicPrice();">
-                <option value="orange">Orange</option>
-                <option value="yellow{p+10|w+1.2}">Yellow (+$10)</option>
-                <option value="green">Green</option>
-            </select><br>
-            <label class="label_left">Accent 2</label>
-            <select name="Accent 2" onchange="initDynamicPrice();">
-                <option value="pink">Pink</option>
-                <option value="brown{p+10|w+1.2}">Brown (+$10)</option>
-                <option value="blue">Blue</option>
-            </select><br>
-            <input type="text" name="Design Notes" value="Design Notes"><br>
-            <input type="checkbox" name="discount_price_percentage" value="Installation Insurance{+21.3}">Add Installation Insurance<br>
-            <input type="submit" value="Add a Cool Example" class="submit" />
-        </form>
-        <h4 class="p1_total">$93.31</h4>
+<!--        <form data-fc-form-code="p1" action="--><?php //echo $foxy_cart; ?><!--" method="post" accept-charset="utf-8">-->
+<!--            <input type="hidden" name="name" value="2022 Ford Maverick Mach 1 Esque Hood Decal" />-->
+<!--            <input type="hidden" name="image" value="https://vinylimagination.com/Graphics/Vehicles/Ford/Maverick/2k22/M1HD/Ford%20Maverick%20Mach-1%20Hood%20Decal%20(M1HD-001).webp" />-->
+<!--            <input type="hidden" name="Design" value="Design 01" />-->
+<!--            <input type="hidden" name="price" value="93.31" />-->
+<!--            <input type="hidden" name="Part" value="FRD-MAVK22-M1HD" />-->
+<!--            <input type="hidden" name="weight" value="2" />-->
+<!--            <label class="label_left">Color</label>-->
+<!--            <select name="Main Color" onchange="initDynamicPrice();">-->
+<!--                <option value="Black">Black</option>-->
+<!--                <option value="Red{p+10|w+1.2}">Red (+$10)</option>-->
+<!--                <option value="White">White</option>-->
+<!--            </select><br>-->
+<!--            <label class="label_left">Accent</label>-->
+<!--            <select name="Accent" onchange="initDynamicPrice();">-->
+<!--                <option value="orange">Orange</option>-->
+<!--                <option value="yellow{p+10|w+1.2}">Yellow (+$10)</option>-->
+<!--                <option value="green">Green</option>-->
+<!--            </select><br>-->
+<!--            <label class="label_left">Accent 2</label>-->
+<!--            <select name="Accent 2" onchange="initDynamicPrice();">-->
+<!--                <option value="pink">Pink</option>-->
+<!--                <option value="brown{p+10|w+1.2}">Brown (+$10)</option>-->
+<!--                <option value="blue">Blue</option>-->
+<!--            </select><br>-->
+<!--            <input type="text" name="Design Notes" value="Design Notes"><br>-->
+<!--            <input type="submit" value="Add a Cool Example" class="submit" />-->
+<!--        </form>-->
+<!--        <h4 class="p1_total">$93.31</h4>-->
 
-        <!--    View Cart Button    -->
-        <button href="<?php echo $foxy_cart; ?>?cart=view">
-            View Cart
-        </button>
+        <!--    View Cart Buttons   -->
+<!--        <form action="--><?php //echo $foxy_cart; ?><!--?cart=view" method="get" target="_blank">-->
+<!--            <button type="submit">View Cart</button>-->
+<!--        </form>-->
+<!--        <button  onclick="window.open('--><?php //echo $foxy_cart; ?><!--?cart=view', '_blank')">-->
+<!--            View Cart-->
+<!--        </button>-->
     </section>
+
 
 
     <section class="atmosphere">
@@ -162,7 +159,6 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
                 <img src="images/photo_seating.jpg" alt="Choosing the proper seating">
                 <h4>How-To: Seating</h4>
                 <p>Consectetuer adipiscing elit. Morbi commodo ipsum sed gravida orci magna rhoncus pulvinar odio lorem.</p>
-                <a title="Learn how to choose the proper seating." href="http://codifydesign.com">Learn more</a>
             </div>
         </aside>
         <aside>
@@ -170,7 +166,6 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
                 <img src="images/photo_lighting.jpg" alt="Choosing the proper lighting">
                 <h4>How-To: Lighting</h4>
                 <p>Morbi commodo, ipsum sed pharetra gravida magna rhoncus neque id pulvinar odio lorem non turpis nullam sit amet.</p>
-                <a title="Learn how to choose the proper lighting." href="http://codifydesign.com">Learn more</a>
             </div>
         </aside>
         <blockquote>
@@ -181,7 +176,7 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
     </section>
 
 <!-- Navigation -->
-<?php include '../private/includes/navigation.php'; ?>
+<?php include '../private/includes/navigation.php'; ?> <!-- Simon: Note: -->
 
 
 <!-- Footer -->
@@ -205,18 +200,19 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
 <?php
 const JS = array (
   'https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js',
-  '/js/mmenu_config.min.js', '/js/foxycart_dynamin_price_calc.min.js'
+  '/js/mmenu_config.min.js',
+  '/js/foxycart_dynamin_price_calc.min.js' //Simon: Remove Me: Remove this from index.php - not required on this page
 );
 foreach (JS as $js) {
     echo '<script src="' . auto_version($js) . '" type="text/javascript"></script>' . "\n" ;
     /* https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js */
     /* js/mmenu_config.min.js */
-    /* js/foxycart_dynamin_price_calc.min.js */
+    /* js/foxycart_dynamin_price_calc.min.js */ //Simon: Remove Me: Remove this from index.php - not required on this page
 }
 ?>
 
-<!-- FOXYCART Simon: Note: Remove this from index.php - not required on this page -->
-<script data-cfasync="false" src="https://cdn.foxycart.com/vinylimagination/loader.js" async defer></script>
+<!-- FOXYCART Simon: Remove Me: Remove this from index.php - not required on this page -->
+<!--<script data-cfasync="false" src="https://cdn.foxycart.com/vinylimagination/loader.js" async defer></script>-->
 
 <?php
 /* Grunt LiveReload */

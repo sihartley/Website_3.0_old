@@ -47,7 +47,7 @@
       <option name="description" />
       <option name="exitCodeBehavior" value="ERROR" />
       <option name="fileExtension" value="scss" />
-      <option name="immediateSync" value="true" />
+      <option name="immediateSync" value="false" />
       <option name="name" value="Dart SCSS : Compressed" />
       <option name="output" value="$ProjectFileDir$/public/css/$FileNameWithoutExtension$.css:$ProjectFileDir$/public/css/$FileNameWithoutExtension$.css.map" />
       <option name="outputFilters">
@@ -107,7 +107,7 @@
       <option name="description" />
       <option name="exitCodeBehavior" value="ERROR" />
       <option name="fileExtension" value="js" />
-      <option name="immediateSync" value="true" />
+      <option name="immediateSync" value="false" />
       <option name="name" value="UglifyJS" />
       <option name="output" value="$FileNameWithoutExtension$.min.js" />
       <option name="outputFilters">

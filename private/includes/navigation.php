@@ -7,7 +7,28 @@
                     <a href="https://vinylimagination.foxycart.com/cartView Cart" title="Automotive" aria-haspopup="true">Automotive</a>
                     <ul>
                         <li>
-                            <a href="#" title="Dodge Vehicle Graphics">Dodge Vehicle Graphics</a>
+                            <span>Dodge Vehicle Graphics</span>
+                            <ul>
+                                <li>
+                                    <span>Challenger</span>
+                                    <ul>
+                                        <li><span>2008 - 2011</span></li>
+                                        <li><span>2012 - 2014</span></li>
+                                        <li><span>2015 - Present</span></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Charger</span>
+                                    <ul>
+                                        <li><span>2006 - 2010</span></li>
+                                        <li><span>2011 - 2014</span></li>
+                                        <li><span>2015 - Present</span></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>RAM 1500</span>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="#" title="Ford Vehicle Graphics">Ford Vehicle Graphics</a>

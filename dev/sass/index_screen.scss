@@ -44,6 +44,7 @@ section {
 
 /* Old Navigation */
 //@import '_partials/navigation';
+@import '_imports/mmenu'; /* Simon: Note: Not sure if this is the correct placement or in global.scss */
 
 /* Footer */ /* Simon: Todo: This will be required for all pages */
 @import '_partials/footer';

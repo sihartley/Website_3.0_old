@@ -5,11 +5,21 @@
 //1201px and more — Extra large screens, TV
 
 @media screen and (max-width: 1400px) { //below 1400px
-  html.mm-opened  .parent-container
-  {max-width:100%; margin:0;}
+  html.mm-opened  .parent-container {
+    margin: 0;
+    max-width: 100%;}
+
   header {
     div.hero {
       font-size: 1.6vw;
+    }
+
+    div.hamburger {
+      font-size: 1.4vw;
+
+      p {
+        font-size: 250%;
+      }
     }
   }
 }
@@ -23,34 +33,23 @@
 }
 
 @media screen and (max-width: 810px) { //below 810px
-  /* Navigation */
-  //nav.main {
-  //  position: static;
-  //  width: auto;
-  //  padding: 20px 15px;
-  //}
+  header {
+    div.hamburger {
+      left: 43%;
 
-  //nav.main ul, nav.main ul ul, nav.main ul ul ul {
-  //  display: block;
-  //  position: static;
-  //}
+      p {
+        display: none;
+      }
 
-  //nav.main > ul { padding: 0; }
-  //nav.main > ul > li {
-  //  float: none;
-  //  margin-top: 25px;
-  //}
+      .bar1, .bar2, .bar3 {
+        display: block;
+        height: 5px;
+        margin: 7px 0;
+        width: 40px;
+      }
 
-  //nav.main ul li:hover { background: none; }
-  //nav.main ul li a {
-  //  width: auto;
-  //  display: block;
-  //  margin: 8px 10px;
-  //  padding: 8px 15px;
-  //  border: 1px solid rgba(255, 255, 255, .25);
-  //}
-
-//  nav.main ul li a:hover { background-color: rgba(255, 255, 255, .2); }
+    }
+  }
 }
 
 @media screen and (max-width: 600px) { //below 600px

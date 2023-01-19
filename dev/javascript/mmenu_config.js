@@ -44,7 +44,7 @@ document.addEventListener(
           "hover": true,
           "parent": true
         },
-        "slidingSubmenus": true,
+        "slidingSubmenus": false,
         "offCanvas": {
           "position": "left-front",
           "page": {

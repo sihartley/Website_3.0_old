@@ -1,2 +1,0 @@
-Font: Vinyl Imagination (Bickley Script LET Plain:1.0) 877-558-2335 (Freestyle Script)
-Colors: Blue (rgb(0,123,230)), Grey (rgb(153,153,153)), Red (rgb(193,39,45))
