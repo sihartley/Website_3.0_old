@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 930px) { //below 930px
   header {
-    background: #030303 url('/images/banner-charger-930px.png') no-repeat center bottom;
+    background: $color-header-background url('/images/banner-charger-930px.png') no-repeat center bottom;
     background-size: cover;
     position: relative;
   }
@@ -54,16 +54,43 @@
 
 @media screen and (max-width: 600px) { //below 600px
   header {
-    background: #030303 url('/images/banner-charger-600px.png') no-repeat center bottom;
+    background: $color-header-background url('/images/banner-charger-600px.png') no-repeat center bottom;
+  }
+}
+
+@media screen and (max-width: 480px) { //below 480px
+  header {
+    aspect-ratio: 1.6/.7;
     background-size: cover;
     position: relative;
+
+    div.hamburger {
+      top: 80%;
+
+    }
+
+    a.logo {
+      width: 65.5%;
+    }
+
+    div.hero {
+      left: 6%;
+      top: 57%;
+    }
+
   }
+
+
 }
 
 @media screen and (max-width: 465px) { //below 465px
   header {
-    background: #030303 url('/images/banner-charger-465px.png') no-repeat center bottom;
+    background: $color-header-background url('/images/banner-charger-465px.png') no-repeat center bottom;
     background-size: cover;
     position: relative;
+
+    div.hamburger {
+      top: 75%;
+    }
   }
 }

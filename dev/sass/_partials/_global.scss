@@ -71,17 +71,20 @@ body { //Global
     background-color: $color-content-background;
     margin: 0 auto;
     max-width: 1400px;
+    min-height: 100vh;
+    padding-bottom: 1.5em; /* Simon: Note: CLose gap between content and footer */
     position: relative;
   }
+
 }
 
 header { //Global
   aspect-ratio: 1 / .2714;
   background: $color-header-background url('/images/banner-charger-1400px.webp') no-repeat center bottom;
   //Simon: Note: image-set() Not Working Yet, fix this with media queries.
-  //background: #030303 image-set(
-  //        url('/images/banner-charger-465px.webp') 1x,
-  //        url('/images/banner-charger-930px.webp') 2x,
+  //background: $color-header-background image-set(
+  //        url('images/banner-charger-465px.png') 1x,
+  //        url('/images/banner-charger-930px.png') 2x,
   //        url('/images/banner-charger-1400px.webp') 3x) no-repeat center bottom;
   background-size: cover;
   position: relative;
@@ -93,7 +96,7 @@ header { //Global
     text-decoration: none;
     top: 3%;
     width: 40%;
-    height: 42%;
+    height: 65.5%;
     background: url('/images/company/Logo.svg') no-repeat 0 0 ;
 
     &::after { content: ''; display: block; clear: both; }
@@ -188,9 +191,11 @@ header { //Global
   }
 
 
+
 } //Global
 
-
+/* Footer */ /* Simon: Todo: This will be required for all pages */
+@import 'footer';
 
 
 //.change .bar1 {
@@ -202,8 +207,6 @@ header { //Global
 //.change .bar3 {
 //  transform: translate(0, -11px) rotate(45deg);
 //}
-
-
 
 
 

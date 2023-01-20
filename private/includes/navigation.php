@@ -1,4 +1,4 @@
-<nav id="menu" class="main">
+<nav id="menu" class="main"> <!-- Simon: Note: display: none here stops mmenu from displaying. -->
     <ul>
         <li>
             <span>Graphics Products</span>

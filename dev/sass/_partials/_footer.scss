@@ -1,23 +1,30 @@
 /* Footer */
 footer {
-  color: #999; /* Simon: Todo: Move to _global-variables */
+  background-color: $color-footer-background; /* Simon: Todo: Move to _global-variables */
+  //bottom: 0;
+  color: $color-footer-text;
   font-size: .8em;
-  margin: 40px;
+  //left: 0;
+  margin: 0 auto;
+  max-width: 1340px;
+  //right: 0;
+  padding: 30px;
+  position: relative;
 
   .content {
     display: inline;
   }
 
   a {
-    color: #777;  /* Simon: Todo: Move to _global-variables */
+    color: $color-footer-link;  /* Simon: Todo: Move to _global-variables */
     margin-left: 30px;
 
     &:visited {
-      color: #777;  /* Simon: Todo: Move to _global-variables */
+      color: $color-footer-link;  /* Simon: Todo: Move to _global-variables */
     }
 
     &:hover {
-      color: #6a6a6a;  /* Simon: Todo: Move to _global-variables */
+      color: $navigation-hover;  /* Simon: Todo: Move to _global-variables */
     }
   }
 
