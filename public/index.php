@@ -47,7 +47,7 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
     echo '<script src="' . auto_version('https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js') . '" type="text/javascript" defer></script>' . "\n" ;
     echo '<script src="' . auto_version('/js/mmenu_config.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
     /* JQUERY Simon: Note: Only activate jQuery if jQuery is used. */
-    echo '<script src="' . auto_version('https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js') . '" type="text/javascript"></script>' . "\n" ;
+    echo '<script src="' . auto_version('https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
     /* FOXYCART Simon: Remove Me: Remove foxycart scripts from index.php - not required on this page*/
     echo '<script src="' . auto_version('/js/foxycart_dynamin_price_calc.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
     echo '<script src="' . auto_version('https://cdn.foxycart.com/vinylimagination/loader.js') . '" type="text/javascript" defer></script>' . "\n" ;
@@ -65,7 +65,7 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
             <!-- Simon: Note: Remove of not being used. -->
 <!--        <a class="phone" title="Vinyl Imagination Phone Number" href="#">-->
 <!--            <svg class="company-phone-number" viewBox="0 0 277 36" xmlns="http://www.w3.org/2000/svg">-->
-<!--                <text x="0" y="34">--><?php //echo $phone_number; ?><!--</text>-->
+<!--                <text x="0" y="34"><?php /*echo $phone_number; */?></text>-->
 <!--            </svg>-->
         </a>
 
@@ -112,16 +112,13 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
     </section>
 
 
-<?php include '../private/includes/foxycart_test.php'?>
-
-
-<!--    <section class="atmosphere">
+    <section class="atmosphere">
         <article>
             <h2>Creating a modern atmosphere</h2>
             <p>Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Lorem ipsum dolor sit amet etuer adipiscing elit.  Pulvinar odio lorem non turpis. Nullam sit amet enim lorem.</p>
         </article>
     </section>
--->
+
     <section class="how-to">
         <aside>
             <div class="content">
@@ -144,7 +141,8 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
 
     </section>
 
-
+<!-- FOYCART TEST -->
+<?php //include '../private/includes/foxycart_test.php'?>
 
 <!-- Navigation -->
 <?php include '../private/includes/navigation.php'; ?> <!-- Simon: Note: -->

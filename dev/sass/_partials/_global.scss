@@ -80,37 +80,31 @@ body { //Global
 
 header { //Global
   aspect-ratio: 1 / .2714;
-  background: $color-header-background url('/images/banner-charger-1400px.webp') no-repeat center bottom;
+  background: $color-header-background url('/images/company/vi_charger_mesh.svg') no-repeat right -10% bottom;
+  background-size: 49%;
+  //background: $color-header-background url('/images/banner-charger-1400px.webp') no-repeat center bottom;
   //Simon: Note: image-set() Not Working Yet, fix this with media queries.
   //background: $color-header-background image-set(
   //        url('images/banner-charger-465px.png') 1x,
   //        url('/images/banner-charger-930px.png') 2x,
   //        url('/images/banner-charger-1400px.webp') 3x) no-repeat center bottom;
-  background-size: cover;
+  //background-size: cover;
   position: relative;
 
   a.logo {
     //z-index: 1;
     //left: 2%;
+    background: url('/images/company/vi_car_logo.svg') no-repeat 0 0;
+    height: 65.5%;
     position: absolute;
     text-decoration: none;
     top: 3%;
     width: 40%;
-    height: 65.5%;
-    background: url('/images/company/Logo.svg') no-repeat 0 0 ;
 
-    &::after { content: ''; display: block; clear: both; }
-
-    //svg {
-    //  filter: drop-shadow(1px 1px 1px rgba(179, 179, 179, .8));
-    //
-    //  &.company-logo-name {
-    //    fill: $color-logo-main;
-    //    font-family: 'bickley-script', cursive;
-    //    font-size: 4.5em;
-    //    font-style: italic;
-    //  }
-    //}
+    &::after {
+      clear: both;
+      content: '';
+      display: block; }
   }
 
   a.phone {
@@ -142,10 +136,6 @@ header { //Global
     top: 69%;
     width: 53%;
 
-    //h1 {
-    //  margin: 1% 0 6%;
-    //}
-
     p {
       font-size: 200%;
       font-style: italic;
@@ -157,11 +147,12 @@ header { //Global
     color: $color-logo-accent;
     cursor: pointer;
     left: 44.5%;
+    margin-top: 10px;
     padding: 1px 4px;
     position: absolute;
-    top: 3%;
 
     p {
+      background-color: $menu_button-background;
       border: 1px solid $color-logo-accent;
       color: $color-logo-accent;
       font-size: 300%;
@@ -169,7 +160,6 @@ header { //Global
       line-height: 1;
       margin: 0;
       padding: 0 8px 3px;
-      background-color: $menu_button-background;
 
       &:hover {
         background-color: $menu_button-hover;
