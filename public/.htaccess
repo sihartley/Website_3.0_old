@@ -8,7 +8,7 @@ RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
 #Caching schema
-<FilesMatch "\.(css|svg|webp|png|jpg|jpeg|js|php)$">
-Header set Cache-Control "max-age=86400"
+<FilesMatch "\.(css|svg|webp|png|jpg|jpeg|js|php|woff2)$">
+    Header set Cache-Control "max-age=86400"
+#    Header set Cache-Control "max-age=604800, public"
 </FilesMatch>
-

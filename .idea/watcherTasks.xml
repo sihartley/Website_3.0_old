@@ -42,14 +42,14 @@
       <envs />
     </TaskOptions>
     <TaskOptions isEnabled="true">
-      <option name="arguments" value="--update $FileName$:$ProjectFileDir$/public/css/$FileNameWithoutExtension$.css --style compressed --source-map-urls=absolute" />
+      <option name="arguments" value="--update $FileName$:$ProjectFileDir$/public/css/$FileNameWithoutExtension$.min.css --style compressed --source-map-urls=absolute" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
       <option name="exitCodeBehavior" value="ERROR" />
       <option name="fileExtension" value="scss" />
       <option name="immediateSync" value="false" />
       <option name="name" value="Dart SCSS : Compressed" />
-      <option name="output" value="$ProjectFileDir$/public/css/$FileNameWithoutExtension$.css:$ProjectFileDir$/public/css/$FileNameWithoutExtension$.css.map" />
+      <option name="output" value="$ProjectFileDir$/public/css/$FileNameWithoutExtension$.min.css:$ProjectFileDir$/public/css/$FileNameWithoutExtension$.min.css.map" />
       <option name="outputFilters">
         <array />
       </option>
@@ -119,6 +119,26 @@
       <option name="scopeName" value="ignore" />
       <option name="trackOnlyRoot" value="true" />
       <option name="workingDir" value="$FileDir$" />
+      <envs />
+    </TaskOptions>
+    <TaskOptions isEnabled="false">
+      <option name="arguments" value="/public/css/index_screen.css /public/index.php -m -i -o /public/css/index_screen.p.min.css" />
+      <option name="checkSyntaxErrors" value="true" />
+      <option name="description" />
+      <option name="exitCodeBehavior" value="ERROR" />
+      <option name="fileExtension" value="UNKNOWN" />
+      <option name="immediateSync" value="true" />
+      <option name="name" value="PurifyCSS" />
+      <option name="output" value="$FilePath$/public/css/index_screen.p.min.css" />
+      <option name="outputFilters">
+        <array />
+      </option>
+      <option name="outputFromStdout" value="false" />
+      <option name="program" value="$USER_HOME$/AppData/Roaming/npm/purifycss" />
+      <option name="runOnExternalChanges" value="true" />
+      <option name="scopeName" value="Project Files" />
+      <option name="trackOnlyRoot" value="false" />
+      <option name="workingDir" value="" />
       <envs />
     </TaskOptions>
   </component>

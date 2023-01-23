@@ -82,6 +82,15 @@ module.exports = function(grunt) {
       }
     },
 
+    purifycss: {
+      options: {},
+      target: {
+        src: ['public/*.html', 'publick.js/*.js'],
+        css: ['public/css/*.css'],
+        dest: 'public/css/purified/purified.css'
+      },
+    },
+
     /*
     * Grunt Contrib Watch
     * Monitor files and execute tasks

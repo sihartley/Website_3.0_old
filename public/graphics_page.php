@@ -1,10 +1,10 @@
 <?php
 /* Core Functions (Functions for ALL Pages NO Exceptions) */
-include_once '../private/core_functions.php';
+include_once '../private/functions/core_functions.php';
 /* Global Functions (Functions for ALL Pages) */
-include_once '../private/global_functions.php';
+include_once '../private/functions/global_functions.php';
 /* CSS File Auto Versioning */
-const CSS = array( '/css/index_screen.css');
+const CSS = array( '/css/index_screen.min.css');
 foreach (CSS as $css) {
     $css_file = '<link rel="stylesheet" media="screen"  href="' . auto_version($css) . '" type="text/css">';
 }
@@ -20,7 +20,7 @@ foreach (CSS as $css) {
 $phone_number = '877-558-2335';
 
 /* Test Graphic Style Images */
-$svg = file_get_contents('images/test-image.svg');
+$svg = file_get_contents('images/Mach 1 Hood Decal (M1HD-001).svg');
 preg_match('/<svg.*>(.*?)<\/svg>/s', $svg, $match);
 $svgfile = $match[0];
 $svg2 = file_get_contents('images/Mach-1 Hood.svg');
@@ -42,11 +42,11 @@ $svgfile2 = $match2[0];
         .design_image {padding: 2.5%;}
         .design_image_2 { width: 28.33%; padding: 2.5%; float: left;}
         .design_test_image { width: 28.33%; padding: 2.5%; float: left;}
-        .graphic-main { fill: #000000; }
-        .graphic-text { fill: #ff0000; }
-        .graphic-accent { fill: #fbd702 }
-        .graphic-text-2 {  }
-        .graphic-accent-2 { fill: #6a6a6a }
+        .maincolor { fill: #a5a5a5; }
+        .accentcolor { fill: #ea0000; }
+        .accent2color { fill: #02c1fb }
+        .textcolor { fill: #7fff00 }
+        .text2color { fill: #fbd702 }
     </style>
 </head>
 <body>

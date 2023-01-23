@@ -5,7 +5,7 @@
 
 // Section Main
 section {
-  padding: 0 30px;
+  padding: 0 1%;
 
   &::after {
     clear: both;
@@ -13,12 +13,19 @@ section {
     display: block;
   }
 
+  &.new-products {
+    background-color: rgba(10, 10, 10, .5);
+    margin: 1%;
+    padding: 15%;
+    text-align: center;
+  }
+
   &.main {
     margin-bottom: 30px;
     margin-top: 20px;
     padding: 0;
 
-    aside {
+    > div {
       cursor: pointer;
       float: left;
       text-align: center;
@@ -40,6 +47,20 @@ section {
       padding-top: 45%;
     }
   }
+
+  &.information {
+
+    aside {
+      background-color: $color-section-background;
+      margin-bottom: 3%;
+      padding: 1%;
+    }
+
+    h4 {
+      margin-bottom: .2em;
+    }
+  }
+
 }
 
 /* Old Navigation */

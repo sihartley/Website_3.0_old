@@ -25,7 +25,7 @@ document.addEventListener(
           {
             position: "top",
             content: [
-              "<img style='background-color: #000; padding: 10px 7px 4px 0;' src='/images/company/Logo.svg' width ='100%' height='100%' alt='Vinyl Imagination Logo'/>"
+              "<img style='background-color: #000; padding: 10px 7px 4px 0;' src='/images/company/vi_car_logo.svg' width ='100%' height='100%' alt='Vinyl Imagination Logo'/>"
             ]
           },
           {
