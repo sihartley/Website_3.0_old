@@ -1,0 +1,51 @@
+{
+  "Design-01": {
+    "Description": "This solid hockey shaped graphic design has lettering (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) that could be cut out or added in a different color on the stripe itself.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "This graphic style is a solid hockey stripe with the lettering (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) below the thick portion of the stripe. The lettering and stripe can be the same or different colors.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT",
+    "Text-Color": "Red"
+  },
+  "Design-03": {
+    "Description": "This dual split hockey decal is a great accent stripe that can be one or two colors depending on your preference. The lettering (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) is below the stripe and can be left off if you prefer to not have any lettering and just the stripe and can be the same color or alternate colors to add that extra touch to your car!",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT",
+    "Text-Color": "Red"
+  },
+  "Design-04": {
+    "Description": "This triple hash hockey graphic decal is a solid color with the lettering below. The lettering (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) can be in the same or another color if you wish. The lettering could also be left off if you would prefer to just have the stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT",
+    "Text-Color": "Red"
+  },
+  "Design-05": {
+    "Description": "This upward strobe hockey decal sticker is a solid color with the lettering (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) below. The design can be one or two colors.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT",
+    "Text-Color": "Red"
+  },
+  "Design-06": {
+    "Description": "This hockey stripe decal has an upper accent stripe cutout and the Custom Text (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) below the stripe. The custom text or logo can be the same color as the main stripe, the accent stripe, or a third color that you of your choice",
+    "Accent-Color": "Red",
+    "Text-Ref": "CUSTOM TEXT",
+    "Text-Color": "Red"
+  },
+  "Design-07": {
+    "Description": "This hockey graphic has an upper / inner accent pinstripe that can be a 2nd color or can be left as a cut out. The lettering (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) on this stripe is also on the stripe. The lettering and upper accent pinstripe look good in a complimenting color to the stripe. The custom text or logo can be the same color as the main stripe, the accent stripe, or a third color that you of your choice",
+    "Accent-Color": "Red",
+    "Text-Ref": "CUSTOM TEXT",
+    "Text-Color": "Red"
+  },
+  "Design-08": {
+    "Description": "This stripe has a side strobe with the text below the stripe. The lettering (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) and stripe can be in like or alternate colors.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT",
+    "Text-Color": "Red"
+  }
+}
+

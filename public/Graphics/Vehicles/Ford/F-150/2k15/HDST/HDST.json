@@ -1,0 +1,26 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01: is a Solid graphic. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe allowing the vehicle surface to show through, or it can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "Design Style 02: is a Solid stripe with outer accent pinstripe decal. The outer accent (<span style='font-style: italic;'>red in image</span>) can be the same color as the main center stripe, or an alternate color to the main stripe. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe, it can be the same color as the accent, or an alternate color entirely.",
+    "Accent-Color": "Red",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Blue"
+  },
+  "Design-03": {
+    "Description": "Design Style 03: is a Strobed / Striped decal design with outer accent pinstripe. The outer accent (<span style='font-style: italic;'>red in image</span>) can be the same color as the main center decal section, or an alternate color to the main decal.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-04": {
+    "Description": "Design Style 04: is a Solid design with a distressed U.S. Flag sweeping back from the front of the hood to the rear of the hood. The distressed U.S. Flag is cut out so that the vehicle's paint color can show through.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid graphic style. Custom Text or Custom Logo can be added to the front doors (red <span style='font-style: italic;'>'FR DR TXT / LOGO'</span> in image), or rear doors (blue <span style='font-style: italic;'>'RR DR TXT'</span> in image) and can be cut out of the stripe so that the vehicle surface can show through, or an alternate color can be chosen.",
+    "Accent-Color": "",
+    "Text-Ref": "FR DR TXT / LOGO",
+    "Text-2": "RR DR TXT",
+    "Text-Color": "Red",
+    "Text-2-Color": "Blue"
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid stripe with upper pinstripe. The upper pinstripe accents (<span style='font-style: italic;'>red in image</span>) can be the same, or alternate color to the main stripe. Custom Text or Custom Logo can be added to the front doors (yellow <span style='font-style: italic;'>'FR DR TXT / LOGO'</span> in image), or rear doors (blue <span style='font-style: italic;'>'RR DR TXT'</span> in image) and can be cut out of the stripe so that the vehicle surface can show through, or an alternate color can be chosen.",
+    "Accent-Color": "Red",
+    "Text-Ref": "FR DR TXT / LOGO",
+    "Text-2": "RR DR TXT",
+    "Text-Color": "Yellow",
+    "Text-2-Color": "Blue"
+  },
+  "Design-03": {
+  "Description": "Design Style 03 is a strobe stripe with an upper pinstripe accent (<span style='font-style: italic;'>red in image</span>). The pinstripe can be the same color as the strobes, or an alternate color.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-2": "",
+    "Text-Color": "",
+    "Text-2-Color": ""
+  }
+}

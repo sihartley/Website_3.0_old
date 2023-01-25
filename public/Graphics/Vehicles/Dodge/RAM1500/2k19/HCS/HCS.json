@@ -1,0 +1,38 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid stripe design. Custom Text or Custom Logo can be added and either cut out of the main stripe allowing the vehicle surface to show through, or it can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid stripe with outer accent pinstripe decal design. The outer accent (<span style='font-style: italic;'>red in image</span>) can be the same color as the main center stripe, or an alternate color to the main stripe. Custom Text or Custom Logo can be added and either cut out of the main stripe, it can be the same color as the accent, or an alternate color entirely.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-03": {
+    "Description": "Design Style 03 is a Strobe / Striped decal stripe design with even stripes and spacing from front to rear of the hood. Custom Text or Custom Logo can be added with a border cut between it and the main stripe, or can be the same color or an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-04": {
+    "Description": "Design Style 04 is a Solid stripe with inner accent vinyl graphic design. The inner accent (<span style='font-style: italic;'>red in image</span>) can be cut away to allow the vehicle surface to show through, or an alternate color to the main stripe. Custom Text or Custom Logo can be added and either cut out of the main stripe, or it can be the same color as the accent or an alternate color entirely.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-05": {
+    "Description": "Design Style 05 is a Strobe / Striped decal stripe design with varied stripes and even spacing from front to rear of the hood. Custom Text or Custom Logo can be added with a border cut between it and the main stripe, or can be the same color or an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "RAM Logo",
+    "Text-Color": "Red"
+  },
+  "Design-06": {
+    "Description": "Design Style 06 is a Strobe / Striped / Chevron decal stripe design with even stripes and even spacing in the middle section of the hood. Custom Text or Custom Logo can be added and can be cut out, or can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "RAM Logo",
+    "Text-Color": "Red"
+  }
+}

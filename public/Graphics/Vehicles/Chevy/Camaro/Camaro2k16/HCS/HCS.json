@@ -1,0 +1,39 @@
+{
+  "Design-01": {
+    "Description": "This is a solid center hood cowl stripe that can also have lettering (yellow <span style='font-style: italic;'>'TEXT OR LOGO'</span> in image) added to it as cut out or an alternate color.",
+    "Accent-Color": "",
+    "Text-Ref": "TEXT OR LOGO",
+    "Text-Color": "Yellow"
+  },
+  "Design-02": {
+    "Description": "This center hood stripe has a pinstripe around the inner edge (<span style='font-style: italic;'>red in image</span>) and can be cut away, a 2nd color option, along with the optional lettering (yellow <span style='font-style: italic;'>'TEXT OR LOGO'</span> in image). This lettering can be cut out or a another color.",
+    "Accent-Color": "Red",
+    "Text-Ref": "TEXT OR LOGO",
+    "Text-Color": "Yellow"
+  },
+  "Design-03": {
+    "Description": "This hood graphic has a thicker pinstripe around the front inside of the decal tapering off toward the rear (<span style='font-style: italic;'>red in image</span>), and can be cut out or a different color. Along with the lettering towards the nose of the car (yellow <span style='font-style: italic;'>'TEXT OR LOGO'</span> in image). That can be a cutout or also another color.",
+    "Accent-Color": "Red",
+    "Text-Ref": "TEXT OR LOGO",
+    "Text-Color": "Yellow"
+  },
+  "Design-04": {
+    "Description": "This center hood stripe has tiered pinstripes (<span style='font-style: italic;'>red in image</span>) that can either be cutout or a 2nd color. ",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-05": {
+    "Description": "This center hood decal is a chevroned strobe one color design.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-06": {
+    "Description": "This center hood stripe is a full strobe one color design. The \"strobe\" stripes vary from thick at the front to thin at the rear.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  }
+}
+

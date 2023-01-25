@@ -1,0 +1,23 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid graphic style. Custom Text or Custom Logo can be added to the front doors (red <span style='font-style: italic;'>'FR DR TXT / LOGO'</span> in image), or rear doors (red <span style='font-style: italic;'>'RR DR TXT / LOGO'</span> in image) and can be cut out of the stripe so that the vehicle surface can show through, or an alternate color can be chosen.",
+    "Accent-Color": "",
+    "Text-Ref": "FR DR TXT / LOGO",
+    "Text-2": "RR DR TXT / LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid stripe with upper and lower pinstripes. The upper and lower pinstripe accents (<span style='font-style: italic;'>red in image</span>) can be the same, or alternate color to the main stripe. Custom Text or Custom Logo can be added to the front doors (blue <span style='font-style: italic;'>'FR DR TXT / LOGO'</span> in image), or rear doors (blue <span style='font-style: italic;'>'RR DR TXT / LOGO'</span> in image) and can be cut out of the stripe so that the vehicle surface can show through, or an alternate color can be chosen.",
+    "Accent-Color": "",
+    "Text-Ref": "FR DR TXT / LOGO",
+    "Text-2": "RR DR TXT / LOGO",
+    "Text-Color": "Blue"
+  },
+  "Design-03": {
+  "Description": "Design Style 03 is a Split stripe design. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'RAM'</span> in image) can be added and can be the same color or an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "FR DR TXT / LOGO",
+    "Text-2": "RR DR TXT / LOGO",
+    "Text-Color": "Red"
+  }
+}

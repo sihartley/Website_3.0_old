@@ -1,0 +1,26 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01: is a Solid graphic. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe allowing the vehicle surface to show through, or it can be an alternate color than the main decal.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "Design Style 02: is a Solid stripe with outer accent pinstripe. The outer accent (<span style='font-style: italic;'>red in image</span>) can be the same color as the main center graphic, or a different color to the main graphic. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe, it can be the same color as the accent, or an alternate color entirely.",
+    "Accent-Color": "Red",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Blue"
+  },
+  "Design-03": {
+    "Description": "Design Style 03: is a Solid stripe with inner accent stripe. The inner accent (<span style='font-style: italic;'>red in image</span>) can be the same color as the main center graphic, or a different color to the main graphic. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe, can be the same color as the accent, or an alternate color totally.",
+    "Accent-Color": "Red",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Blue"
+  },
+  "Design-04": {
+    "Description": "Design Style 04: is a strobe graphic decal with stripes starting thick at the tip of the hood, and getting thinner back toward the windshield.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  }
+}

@@ -3,13 +3,20 @@
 include_once '../private/functions/core_functions.php';
 /* Global Functions (Functions for ALL Pages) */
 include_once '../private/functions/global_functions.php';
-/* CSS File Auto Versioning */
+/* CSS File Auto Versioning Simon: Clean Me: */
 //const CSS = array( '.min.css' );
-/* JS File Auto Versioning */
+/* JS File Auto Versioning Simon: Clean Me: */
 //const JS = array( '.min.js' );
 
-/* Server Detection, Database Prefix, HTML Minification, Right Click Protection, Live Reload, Server ID Dot */
+/* Server Detection, Database Prefix, HTML Minification, Right Click Protection, Live Reload, Server ID Dot, Database Credentials*/
 [$hostingServer, $dbPrefix, $minifyHTML, $rightClickProtect, $liveReload, $serverDot] = host_ident($_SERVER['SERVER_ADDR']);
+
+/* Database */
+$new_products_query = '(select product_name, part_number, make, model, price_1, image_path, main_page_image from '.$dbPrefix.'Automotive.graphics where available IS NOT NULL ORDER BY id DESC LIMIT 4)';
+$featured_products_query = '(select product_name, part_number, make, model, price_1, image_path, main_page_image from '.$dbPrefix.'Automotive.graphics where available IS NOT NULL ORDER BY RAND() LIMIT 10 OFFSET 4)';
+$new_products = db_query($new_products_query);
+$featured_products = db_query($featured_products_query);
+db_disconnect(db_connect());
 
 /* Business Info */
 /* Simon: ToDo: create and move this to include file (business_info.php) */
@@ -43,6 +50,7 @@ $minifyHTML;
     /* FOXYCART Simon: Remove Me: Remove foxycart scripts from index.php - not required on this page*/
 /*    echo '<script src="' . auto_version('/js/foxycart_dynamin_price_calc.min.js') . '" type="text/javascript" defer></script>' . "\n" ;*/
 /*    echo '<script src="' . auto_version('https://cdn.foxycart.com/vinylimagination/loader.js') . '" type="text/javascript" defer></script>' . "\n" ;*/
+    echo '<script src="' . auto_version('/js/scripts_global.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
     ?>
 </head>
 
@@ -74,19 +82,39 @@ $minifyHTML;
             </a>
         </header>
 
+        <!-- New Products -->
         <section class="new-products">
-            reserved for new products carousel
-
+            <h4>Latest Automotive Designs</h4>
+        <?php $product = 1;
+            while ($new_product = mysqli_fetch_assoc($new_products)){
+        ?>
+            <div class="<?php echo "product_" . $product++; ?>">
+                <div class="content">
+                    <h5><?php echo "{$new_product['make']} {$new_product['model']} - {$new_product['product_name']}"; ?></h5>
+                    <img src="<?php echo $new_product['image_path'] . $new_product['main_page_image']; ?>" alt="<?php echo "BUY {$new_product['make']} {$new_product['model']} - {$new_product['product_name']}"; ?>">
+                    <a href="#" class="buy-now-button">
+                        <div>
+                            <span>BUY NOW</span><br>
+    <!--                        Part#: --><?php //echo $new_product['part_number']; ?><!--<br>-->
+                            From $<?php echo $new_product['price_1']; ?>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        <?php
+            }
+        ?>
         </section>
 
+        <!-- Main Content -->
         <section class="main">
             <div onclick="window.open('https://admin.foxycart.com/admin', '_blank')">
                 <div class="content automotive">
                     <h2>
                         <a href="#">Automotive Graphics</a>
                     </h2>
-                    <h3>A custom look for your vehicle Here.</h3>
-                    Precision Fit, Premium Quality Materials, and Custom Graphics equal a great, unique, long-lasting look for your vehicle at a very reasonable cost.</p>
+                    <h3>Get a custom look for your vehicle.</h3>
+                    <p>Precision Fit, Premium Quality Materials, and Custom Graphics equal a great, unique, long-lasting look for your vehicle at a very reasonable cost.</p>
                 </div>
             </div>
 
@@ -95,7 +123,7 @@ $minifyHTML;
                     <h2>
                         <a href="#">Motorcycle Graphics</a>
                     </h2>
-                    <h3>Customize your ride Here.</h3>
+                    <h3>Customize your ride.</h3>
                     <p>Various Sizes. Lots of Designs. Add our custom graphic decals to your motorcycle gas tank. Give that hog a unique look to match your wild side!</p>
                 </div>
             </div>
@@ -105,17 +133,37 @@ $minifyHTML;
                     <h2>
                         <a href="#">Trailer Graphics</a>
                     </h2>
-                    <h3>Add some style to your trailer Here.</h3>
+                    <h3>Add some style to your trailer.</h3>
                     <p>Horse Trailer. Toy Hauler. Work Trailer. Customize your trailer for work or leisure style, stand out from the crowd, or advertise your business.</p>
                 </div>
             </div>
         </section>
 
-<!--    <section>-->
-<!--        -->
-<!--    </section>-->
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <h4>Featured Automotive Graphics</h4>
+        <?php $feature = 1;
+            while ($feature_product = mysqli_fetch_assoc($featured_products)){
+        ?>
+            <div class="<?php echo "feature_" . $feature++; ?>">
+                <div class="content">
+                    <h5><?php echo "{$feature_product['make']} {$feature_product['model']} - {$feature_product['product_name']}"; ?></h5>
+                    <img src="<?php echo $feature_product['image_path'] . $feature_product['main_page_image']; ?>" alt=""><a href="" class="buy-now-button">
+                        <a href="#" class="buy-now-button">
+                            <div>
+                                <span>BUY NOW</span><br>
+                                From $<?php echo $feature_product['price_1']; ?>
+                            </div>
+                        </a>
+                    </a>
+                </div>
+            </div>
+        <?php
+            }
+        ?>
+        </section>
 
-
+        <!-- Information -->
         <section class="information">
             <aside class="automotive">
                 <h3>Graphics Information</h3>
@@ -151,17 +199,17 @@ $minifyHTML;
             </aside>
         </section>
 
-        <section>
-            <aside>
-            </aside>
-            <aside>
-            </aside>
+<!--        <section>-->
+<!--            <aside>-->
+<!--            </aside>-->
+<!--            <aside>-->
+<!--            </aside>-->
     <!--        <blockquote>-->
     <!--            <p class="quote">Lorem ipsum dolor sit amet conse ctetuer adipiscing elit. Morbi comod sed dolor sit amet consect adipiscing elit.</p>-->
     <!--            <p class="credit"><strong>Author Name</strong><br><em>Business Title</em><br>Company</p>-->
     <!--        </blockquote>-->
 
-        </section>
+<!--        </section>-->
 
 <!-- FOYCART TEST -->
 <?php //include '../private/includes/foxycart_test.php'?>

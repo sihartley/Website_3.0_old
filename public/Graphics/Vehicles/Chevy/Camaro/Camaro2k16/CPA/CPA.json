@@ -1,0 +1,27 @@
+{
+  "Design-01": {
+    "Description": "This is a solid accent stripe with your custom text. The text (yellow <span style='font-style: italic;'>'TEXT'</span> in image) can be left off, cut out, or a contrasting color.",
+    "Accent-Color": "",
+    "Text-Ref": "TEXT",
+    "Text-Color": "Yellow"
+  },
+  "Design-02": {
+    "Description": "This solid C-Pillar accent stripe has a thin pinstripe (<span style='font-style: italic;'>red in image</span>) around the inner perimeter. It also has the option of text (yellow <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) in either a contrasting color or cut out.",
+    "Accent-Color": "Red",
+    "Text-Ref": "TEXT",
+    "Text-Color": "Yellow"
+  },
+  "Design-03": {
+    "Description": "This accent stripe is great for adding that contrast to your C-pillar. This stripe has half a pinstripe (<span style='font-style: italic;'>red in image</span>) to highlight the accent. The text (yellow <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) is optional and can be either cutout or a coordinating color.",
+    "Accent-Color": "Red",
+    "Text-Ref": "TEXT",
+    "Text-Color": "Yellow"
+  },
+  "Design-04": {
+    "Description": "This thick outline accent stripe is a subtle but impacting look. The Text (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) can be in an alternating color. ",
+    "Accent-Color": "",
+    "Text-Ref": "TEXT",
+    "Text-Color": "Red"
+  }
+}
+

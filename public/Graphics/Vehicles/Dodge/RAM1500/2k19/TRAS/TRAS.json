@@ -1,0 +1,14 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid graphic style. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe, or it can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid stripe with a single upper / outer pinstripe style. The upper / outer pinstripe accent (<span style='font-style: italic;'>red in image</span>) can be the same, or different color to the main stripe. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe, or it can be an alternate color than the main stripe.",
+    "Accent-Color": "Red",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Blue"
+  }
+}

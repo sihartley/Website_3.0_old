@@ -1,0 +1,26 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Single color front fascia blackout that will fit LS and LT Models without the RS option.",
+    "Accent-Color": "",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Single color front fascia blackout that will fit LS and LT Models with the RS option.",
+    "Accent-Color": "",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-03": {
+    "Description": "Design Style 03 is a Single color front fascia blackout that will fit SS Models without the RS option.",
+    "Accent-Color": "",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-04": {
+    "Description": "Design Style 04 is a Single color front fascia blackout that will fit SS Models with the RS option.",
+    "Accent-Color": "",
+    "Text": "",
+    "Text-Color": ""
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01: is a Solid stripe one color style that does not have any text.",
+    "Accent-Color": "",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-02": {
+    "Description": "Design Style 02: is a Solid stripe with a pinstripe accent. The 'accent' (<span style='font-style: italic;'>red in image</span>)  can be cut away, or an alternate accent color.",
+    "Accent-Color": "Red",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-03": {
+    "Description": "Design Style 03: is a Solid stripe style with an upper pinstripe accent. The accent (<span style='font-style: italic;'>red in image</span>)  can be cut away, or an alternate accent color.",
+    "Accent-Color": "Red",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-04": {
+    "Description": "Design Style 04: is a Solid stripe style with an upper tapered pinstripe stripe style. The outer pinstripe accents (<span style='font-style: italic;'>red in image</span>)  can be cut out, or an alternate color to the main stripe.",
+    "Accent-Color": "Red",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-05": {
+    "Description": "Design Style 05: is a Solid stripe style with an extended section that goes further down the nose.",
+    "Accent-Color": "",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-06": {
+    "Description": "Design Style 06: is a Solid stripe style with outer pinstripes stripe style. The outer pinstripes accents (<span style='font-style: italic;'>red in image</span>) can be the same, or alternate color to the main twin stripes.",
+    "Accent-Color": "Red",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-07": {
+    "Description": "Design Style 07: is a Solid stripe style with an upper pinstripe. The upper pinstripe accents (<span style='font-style: italic;'>red in image</span>) can be cut out, or alternate color to the main twin stripes.",
+    "Accent-Color": "Red",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-08": {
+    "Description": "Design Style 08: is a Solid stripe style with an upper tapered pinstripe stripe style. The outer pinstripe accents (<span style='font-style: italic;'>red in image</span>) can be cut out, or an alternate color to the main stripe.",
+    "Accent-Color": "Red",
+    "Text": "",
+    "Text-Color": ""
+  }
+}

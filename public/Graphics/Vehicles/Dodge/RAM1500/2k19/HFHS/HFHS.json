@@ -1,0 +1,20 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid Twin decal style. Custom Text or Custom Logo (red <span style='font-style: italic;'>'TEXT</span> in image) can be added below the main stripe, and can be the same color or an alternate color from the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "TEXT",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid Twin stripes with twin inner and outer pinstripes vinyl graphic. The outer pinstripe accents (<span style='font-style: italic;'>red in image</span>) can be the same, or alternate color to the main twin stripes. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'TEXT'</span> in image) can be added below the stripes, and can be the same color or an alternate color from the main stripe.",
+    "Accent-Color": "Red",
+    "Text-Ref": "TEXT",
+    "Text-Color": "Blue"
+  },
+  "Design-03": {
+    "Description": "Design Style 03 is a Solid Twin stripes and outer pinstripes graphic. The outer pinstripe accents (<span style='font-style: italic;'>red in image</span>) can be the same, or alternate color to the main twin stripes. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'TEXT'</span> in image) can be added below the stripes, and can be the same color or an alternate color from the main stripe.",
+    "Accent-Color": "Red",
+    "Text-Ref": "TEXT",
+    "Text-Color": "Blue"
+  }
+}

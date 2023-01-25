@@ -1,0 +1,27 @@
+{
+  "Design-01": {
+    "Description": "This design is a solid stripe with the lettering (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) as an optional cutout or alternate color.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "These spears are a solid stripe with an outline. The outline (<span style='font-style: italic;'>red in image</span>) can be an alternate color or the same color whatever you prefer. Also, the lettering (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) can match the outline or be cutout.",
+    "Accent-Color": "Red",
+    "Text-Ref": "CUSTOM TEXT",
+    "Text-Color": "Red"
+  },
+  "Design-03": {
+    "Description": "This set of spears is a pinstripe outline design with lettering. The pinstripe and lettering (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) could be the same color or alternate colors to add that extra touch to your car!",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT",
+    "Text-Color": "Red"
+  },
+  "Design-04": {
+    "Description": "This solid accent stripe can be one color or two depending on the look that you are searching for. The stripe and lettering (red <span style='font-style: italic;'>'CUSTOM TEXT'</span> in image) can be the same color or complimenting colors.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT",
+    "Text-Color": "Red"
+  }
+}
+

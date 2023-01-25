@@ -11,8 +11,8 @@ h1 {font-size: 2.8em; font-weight: 700; margin: 0 0 1em;}
 h2 {font-size: 1.6em; font-weight: 700; line-height: 1.1em; margin: 0 0 .5em; }
 h3 {font-size: 1.3em; font-weight: 700; margin: 0 0 .5em; }
 h4 {font-size: 1em; font-weight: 700; margin: 0 0 1.5em; }
+h5 {font-size: .85em; font-weight: 700; margin: 0 0 .85em; }
 p {margin: 0 0 1em;}
-
 
 html { //Global
   //Simon: Clean Me: Delete this, moved to body for mmenu to work.
@@ -63,9 +63,9 @@ body { //Global
     margin: 0 0 1.5em;
   }
 
-  p {
-    margin: 0 0 1em;
-  }
+  //p {
+  //  margin: 0 0 1em;
+  //}
 
   div#content { //Global //#page div
     background-color: $color-content-background;
@@ -74,6 +74,25 @@ body { //Global
     min-height: 100vh;
     padding-bottom: 1.5em; /* Simon: Note: CLose gap between content and footer */
     position: relative;
+  }
+
+  .buy-now-button { // <a> element.
+    color: $color-body-text;  /* Simon: Todo: Move to _global-variables */
+    margin-top: auto;
+    text-decoration: none;
+
+    &:hover {
+      color: $navigation-hover;  /* Simon: Todo: Move to _global-variables */
+    }
+
+    > div{
+      background-color: $color-buy-now-button-background;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: $color-buy-now-button-hover;
+      }
+    }
   }
 
 }

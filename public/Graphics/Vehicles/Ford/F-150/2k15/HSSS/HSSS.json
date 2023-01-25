@@ -1,0 +1,38 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid graphic style. Custom Text or Custom Logo can be added to the front doors (red <span style='font-style: italic;'>'F-150'</span> in image), and can be cut out of the stripe so that the vehicle surface can show through, or an alternate color can be chosen.",
+    "Accent-Color": "",
+    "Text-Ref": "F-150",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid stripe with outer pinstripe. The outer pinstripe accents (<span style='font-style: italic;'>red in image</span>) can be the same, or alternate color to the main stripe. Custom Text or Custom Logo can be added to the front doors (blue <span style='font-style: italic;'>'F-150'</span> in image), and can be cut out of the stripe so that the vehicle surface can show through, or an alternate color can be chosen.",
+    "Accent-Color": "Red",
+    "Text-Ref": "F-150",
+    "Text-Color": "Blue"
+  },
+  "Design-03": {
+  "Description": "Design Style 03 is a Solid stripe with lower inner pinstripe. The inner pinstripe accent (<span style='font-style: italic;'>red in image</span>) cut out of the main stripe, or alternate color to the main stripe. Custom Text or Custom Logo can be added to the front doors (blue <span style='font-style: italic;'>'F-150'</span> in image), and can be cut out of the stripe so that the vehicle surface can show through, or an alternate color can be chosen.",
+    "Accent-Color": "Red",
+    "Text-Ref": "F-150",
+    "Text-Color": "Blue"
+  },
+  "Design-04": {
+    "Description": "Design Style 04 has graduated horizontal strobe stripes on the front doors and becomes Solid on the lower sections of the doors, cab, bed and tailgate.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-05": {
+    "Description": "Design Style 05 has thicker horizontal strobe stripes on the front doors that becomes Solid on the lower sections of the doors, cab, bed and tailgate.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-06": {
+    "Description": "Design Style 06 has horizontal strobe inner pinstripes on the front doors that continue onto the lower sections of the doors, cab, bed and tailgate. The pinstripes can be cut out of the main stripe, or an alternate color to the main stripe.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is inspired by the Chip Foose rendering. This split stripe runs from the edge of the wheel well on the front fender to the rear of the Maverick behind the rear wheel well.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-2": "",
+    "Text-Color": ""
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid is the un-split version of design style 01. Custom Text or Custom Logo can be added to the front doors (Red <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) and can be cut out of the stripe so that the vehicle surface can show through, or an alternate color can be chosen.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-2": "",
+    "Text-Color": "Red"
+  },
+  "Design-03": {
+  "Description": "Design Style 03 is a Split stripe design with a banner cutout for custom text or logo. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and can be the same color or an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-2": "",
+    "Text-Color": "Red"
+  },
+  "Design-04": {
+    "Description": "Design Style 04 is a Visco Esque solid design. Custom Text or Custom Logo (red <span style='font-style: italic;'>'FX4'</span> in image), you tell us the logo or text you want and it will be added and can be the same color or an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "FX4",
+    "Text-2": "",
+    "Text-Color": "Red"
+  },
+  "Design-05": {
+    "Description": "Design Style 05 is a Visco Esque split design. We can produce this graphic in a single color or two-color stripe design. Select your color material options for the main stripe (light gray in image) and accent stripe (red in image).",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-2": "",
+    "Text-Color": ""
+  },
+  "Design-06": {
+    "Description": "Design Style 06 is a Visco Esque split design\nwith a strobed upper stripe. We can produce this graphic in a single color or two-color stripe design. Select your color material options for the main stripe (light gray in image) and accent stripe (red in image).",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-2": "",
+    "Text-Color": ""
+  },
+  "Design-07": {
+    "Description": "Design Style 07 is a 'straight razor' style design. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'FX4'</span> in image) (You choose the logo or text) can be added and can cut out, be the same color as the accent stripe (red in image), or be another color entirely.",
+    "Accent-Color": "Red",
+    "Text-Ref": "FX4",
+    "Text-2": "",
+    "Text-Color": "Blue"
+  },
+  "Design-08": {
+    "Description": "Design Style 08 is a straight stripe with strobing on the rear doors and bed that matches the body-line angle. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM TEXT / LOGO\n'</span> in image) can be added, and we can cut this out or add it as an alternate color to the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-2": "",
+    "Text-Color": "Red"
+  }
+}

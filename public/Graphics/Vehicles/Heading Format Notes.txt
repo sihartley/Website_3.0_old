@@ -1,0 +1,34 @@
+Headings Format.
+	Auto Make Main Pages:> (Listing of Vehicles)
+		(Company Logo in php include)
+		(auto make-Main-Heading){1}
+			Vehicle Model Headings:>
+			(make-model-Headings){2}
+	
+	Auto Model Main Pages:> (Listing of Graphics for Vehicle)
+		(Company Logo in php include)
+		(auto model-Main-Heading){1}
+			Vehicle Graphics Headings:>
+			(graphic-Headings){3}
+				
+	Graphics Main Pages:> (Listing of Styles for Graphic)
+		(Company Logo in php include)
+		(graphic-Main-Heading){1}
+			Graphic Style Headings:>
+			(graphic style-Headings){4}
+			
+File Name Formats:
+	Heading {1}>
+		Master~ [make]-Main-Heading.fw.png	//** ex. Dodge-Main-Heading.fw.png (FireWorks File)
+		Then~	[auto make]-Main-Heading.png	//** ex. Dodge-Main-Heading.png (Flattened .png File)
+				[auto model]-Main-Vehicle-Heading.png	//** ex. Charger-Main-Vehicle-Heading.png (Flattened .png File)
+				[auto model]-[part#]-Main-Heading.png	//** ex. Charger-SSAS-Main-Heading.png (Flattened .png File) === SQL Table
+	Heading {2}>
+		Master~ [make]-Model-Sub-Heading.fw.png	//** ex. Dodge-Model-Sub-Heading.fw.png (FireWorks File)
+		Then~	[auto model]-Sub-Heading.png	//** ex. Charger-Sub-Heading.png (Flattened .png File) === SQL Table 
+	Heading {3}>
+		Master~ [auto make]-[auto model]-Page-Sub-Heading.fw.png	//** ex. Dodge-Vehicle-Page-Sub-Heading.fw.png (FireWorks File)
+		Then~	[auto make]-[auto model]-Page-[graphic part#]-Sub-Heading.png	//** ex. Dodge-Charger-Page-SSAS-Sub-Heading.png (Flattened .png File) === SQL Table
+	Heading {4}>
+		Master~	["Horizontal"/"Vertical"]-Style-Heading.fw.png	//** ex. SSAS-Style-Heading.fw.png (FireWorks File)
+		Then~	[graphic style]-[part#style#]-Style-Heading.png	//** ex. SSAS01-Style-Heading.png (Flattened .png File) === SQL Table

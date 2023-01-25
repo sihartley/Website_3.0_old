@@ -1,0 +1,20 @@
+{
+  "Design-01": {
+    "Description": "Design Style 03 is a Solid Twin stripe design. Custom Text or Custom Logo (red <span style='font-style: italic;'>'TEXT'</span> in image) can be added with a border cut between it at the main stripe, and can be the same color or an alternate color from the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "RAM",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid stripe with outer pinstripes. The outer pinstripe accents (<span style='font-style: italic;'>red in image</span>) can be the same, or alternate color to the main stripe. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'TEXT'</span> in image) can be added with a border cut between it at the main stripe, and can be the same color or an alternate color from the main stripe.",
+    "Accent-Color": "Red",
+    "Text-Ref": "TEXT",
+    "Text-Color": "Blue"
+  },
+  "Design-03": {
+    "Description": "Design Style 03 is a Tire Track Stripe. Custom Text or Custom Logo (red <span style='font-style: italic;'>'TEXT'</span> in image) can be added with a border cut between it at the main stripe, and can be the same color or an alternate color from the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "TEXT",
+    "Text-Color": "Red"
+  }
+}

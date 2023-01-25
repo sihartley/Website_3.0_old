@@ -1,0 +1,20 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid stripe. Custom Text or Custom Logo (red <span style='font-style: italic;'>'TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe allowing the vehicle surface to show through, or it can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "TEXT / LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid stripe with outer pinstripes. The outer pinstripe accents (<span style='font-style: italic;'>red in image</span>) can be the same, or alternate color to the main stripe. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe, or it can be an alternate color than the main stripe.",
+    "Accent-Color": "Red",
+    "Text-Ref": "TEXT / LOGO",
+    "Text-Color": "Blue"
+  },
+  "Design-03": {
+    "Description": "Design Style 03 is a Solid stripe with outer pinstripes and a pinstriped circular section where custom text or logo can be added. The outer pinstripe and circular pinstripe accents (<span style='font-style: italic;'>red in image</span>) can be the same, or different colors than the main stripe. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'TEXT / LOGO'</span> in image) can be added and either be the same color as the main stripe, accent stripes, or it can be an alternate color both.",
+    "Accent-Color": "Red",
+    "Text-Ref": "TEXT / LOGO",
+    "Text-Color": "Blue"
+  }
+}

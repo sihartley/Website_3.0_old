@@ -1,0 +1,27 @@
+{
+  "Design-01": {
+    "Description": "These are solid blackout stripes design.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-02": {
+    "Description": "These solid blackout stripes have an inner pinstripe (<span style='font-style: italic;'>red in image</span>) that can either be cutout or a complimenting color.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-03": {
+    "Description": "These blackouts are solid with a chevron accent pinstripe (<span style='font-style: italic;'>red in image</span>) on the front end of the stripe. This pinstripe can be either cutout or a 2nd color.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-04": {
+    "Description": " These blackouts are checkered (racing flag) themed and can either be one or two colors.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  }
+}
+

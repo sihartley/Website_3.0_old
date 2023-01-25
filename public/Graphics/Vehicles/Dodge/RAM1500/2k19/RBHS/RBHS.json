@@ -1,0 +1,34 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid graphic stripe. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe allowing the vehicle surface to show through, or it can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid stripe with outer pinstripes decal style. The outer pinstripe accent (<span style='font-style: italic;'>red in image</span>) can be the same, or alternate color to the main stripe. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe, or it can be an alternate color than the main stripe.",
+    "Accent-Color": "Red",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Blue"
+  },
+  "Design-03": {
+    "Description": "Design Style 03 is a Solid stripe with open mid section where custom text or logo can be added. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added to the mid section and either be the same color as the main stripe, or it can be an alternate color both.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-04": {
+    "Description": "Design Style 04 is a Strobe / Striped design with thicker stripes at the top, narrow stripes at the bottom. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM / TEXT LOGO'</span> in image) can be added with a border cut between it and the main stripe in the same color, or can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-05": {
+    "Description": "Design Style 05 is a Solid stripe with inner tapered accent. The inner  accent (<span style='font-style: italic;'>red in image</span>) can be cut away to allow the vehicle surface to show through, or an alternate color to the main stripe. Custom Text or Custom Logo (blue <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe, or it can be the same color as the accent or an alternate color entirely.",
+    "Accent-Color": "Red",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Blue"
+  }
+
+
+}

@@ -10,6 +10,9 @@ function host_ident($server): array
         $rightClickProtect = '' /* ' oncontextmenu="return false;"'; */;
         $liveReload = '';
         $serverDot = 'darkred';
+        define('DB_SERVER', 'localhost'); //GoDaddy & Local Hosted Databases
+        define('DB_USER', 'n64e7f5_AccessAllDB'); //InMotion Hosted Databases
+        define('DB_PASS', 'Auptxj27v$!#'); //InMotion Hosted Databases
 //  echo "Hosted by InMotion Hosting ".$dbPrefix."  databases.php";
     } elseif ($server === '208.109.67.139') {
         $hostingServer = 'GoDaddy';
@@ -18,6 +21,9 @@ function host_ident($server): array
         $rightClickProtect = ' oncontextmenu="return false;"';
         $liveReload = '';
         $serverDot = 'green';
+        define('DB_SERVER', 'localhost'); //GoDaddy & Local Hosted Databases
+        define('DB_USER', 'AccessAllDB'); //GoDaddy & Local Hosted Databases
+        define('DB_PASS', 'Paranoia13$'); //GoDaddy & Local Hosted Databases
 //  echo "Hosted by GoDaddy Hosting".$dbPrefix."  databases.php";
     } else {
         $hostingServer = 'Local';
@@ -26,11 +32,58 @@ function host_ident($server): array
         $rightClickProtect = '';
         $liveReload = '<!--LiveReload-->' . "\n" . '<script src="http://localhost:35729/livereload.js"></script>' . PHP_EOL;
         $serverDot = 'darkorange';
+        define('DB_SERVER', 'localhost'); //GoDaddy & Local Hosted Databases
+        define('DB_USER', 'AccessAllDB'); //GoDaddy & Local Hosted Databases
+        define('DB_PASS', 'Paranoia13$'); //GoDaddy & Local Hosted Databases
 //  echo "Local Xampp Server".$dbPrefix." databases.php";
     }
 
     return array($hostingServer, $dbPrefix, $minifyHTML, $rightClickProtect, $liveReload, $serverDot);
 }
+
+function db_query($query): mysqli_result
+{
+    $results = mysqli_query(db_connect(), $query);
+    confirm_result_set($results);
+    return $results;
+}
+
+function db_connect(): bool|mysqli
+{
+    $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS);
+    confirm_db_connect();
+    return $connection;
+}
+
+function db_disconnect($connection): void
+{
+    if(isset($connection)) {
+        mysqli_close($connection);
+    }
+}
+
+function db_escape($connection, $string): string
+{
+    return mysqli_real_escape_string($connection, $string);
+}
+
+function confirm_db_connect(): void
+{
+    if(mysqli_connect_errno()) {
+        $msg = 'Database connection failed: ';
+        $msg .= mysqli_connect_error();
+        $msg .= ' (' . mysqli_connect_errno() . ')';
+        exit($msg);
+    }
+}
+
+function confirm_result_set($result_set): void
+{
+    if (!$result_set) {
+        die("Database query {$result_set} failed.");
+    }
+}
+
 
 /* Automatic File Versioning */
 function auto_version($file) {

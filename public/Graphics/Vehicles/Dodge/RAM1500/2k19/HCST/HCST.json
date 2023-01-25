@@ -1,0 +1,44 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid stripe design. Custom Text or Custom Logo can be added and either cut out of the main stripe, or an alternate color entirely.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid design with outer pinstripe accent. The outer accent (<span style='font-style: italic;'>red in image</span>) can be same color as the main stripe, or an alternate color to the main stripe. Custom Text or Custom Logo can be added and either cut out of the main stripe, it can be the same color as the accent, or a different color entirely.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-03": {
+    "Description": "Design Style 03 is a Strobe / Striped design even stripes from front to back. Custom Text or Custom Logo can be added with a border cut between it and the main stripe in the same color, or can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-04": {
+    "Description": "Design Style 04 is a Solid graphic stripe with an inner accent. The inner accent (<span style='font-style: italic;'>red in image</span>) can be cut away to allow the vehicle surface to show through, or an alternate color to the main stripe. Custom Text or Custom Logo can be added and either cut out of the main stripe, it can be the same color as the accent, or an alternate color entirely.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-05": {
+    "Description": "Design Style 05 is a Strobe / Striped graphic with thicker stripes from front to thinner stripes at the back. Custom Text or Custom Logo can be added with a border cut between it and the main stripe in the same color, or can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-06": {
+    "Description": "Design Style 06  is a Strobe / Striped graphic with thinner stripes from front to thicker stripes at the back. Custom Text or Custom Logo can be added with a border cut between it and the main stripe in the same color, or can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-07": {
+    "Description": "Design Style 07 is a Solid stripe with inner accent pinstripe layout. The inner accent (<span style='font-style: italic;'>red in image</span>) can be cut away to allow the vehicle surface to show through, or an alternate color to the main stripe. Custom Text or Custom Logo can be added and either cut out of the main stripe, it can be the same color as the accent, or an alternate color entirely.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  }
+}

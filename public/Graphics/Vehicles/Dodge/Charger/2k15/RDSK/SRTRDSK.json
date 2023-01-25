@@ -1,0 +1,51 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 - Twin central stripes with 0.25in Outer Pin-Stripe and 0.25in space between the central stripe and outer pin-stripe. We will adjust the production of this kit, including the cutout for the Hood Intake Scoop, Antenna, and bumpers, according to the year and trim level you choose in the customize & buy options. This Rally Stripe kit will fit the 2022 Charger Hellcat Widebody and 2022 Charger Hellcat Redeye Widebody. We adjust the production of the stripe accordingly.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-2": "",
+    "Text-Color": ""
+  },
+  "Design-02": {
+    "Description": "Design Style 02 - Twin solid central stripes. We will adjust the production of this kit, including the cutout for the Hood Intake Scoop, Antenna, and bumpers, according to the year and trim level you choose in the customize & buy options. This Rally Stripe kit will fit the 2022 Charger Hellcat Widebody and 2022 Charger Hellcat Redeye Widebody. We adjust the production of the stripe accordingly.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-2": "",
+    "Text-Color": ""
+  },
+  "Design-03": {
+  "Description": "Design Style 03 - Twin central stripes with 0.375in Inner and Outer Pin-Stripes. We will adjust the production of this kit, including the cutout for the Hood Intake Scoop, Antenna, and bumpers, according to the year and trim level you choose in the customize & buy options. This Rally Stripe kit will fit the 2022 Charger Hellcat Widebody and 2022 Charger Hellcat Redeye Widebody. We adjust the production of the stripe accordingly.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-2": "",
+    "Text-Color": ""
+  },
+  "Design-04": {
+    "Description": "Design Style 04 - Twin central stripes with 0.375in Outer Pin-Stripe. We will adjust the production of this kit, including the cutout for the Hood Intake Scoop, Antenna, and bumpers, according to the year and trim level you choose in the customize & buy options. This Rally Stripe kit will fit the 2022 Charger Hellcat Widebody and 2022 Charger Hellcat Redeye Widebody. We adjust the production of the stripe accordingly.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-2": "",
+    "Text-Color": ""
+  },
+  "Design-05": {
+    "Description": "Design Style 05 - Twin central stripes in a hexagonal honeycomb patten. We will adjust the production of this kit, including the cutout for the Hood Intake Scoop, Antenna, and bumpers, according to the year and trim level you choose in the customize & buy options. This Rally Stripe kit will fit the 2022 Charger Hellcat Widebody and 2022 Charger Hellcat Redeye Widebody. We adjust the production of the stripe accordingly.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-2": "",
+    "Text-Color": ""
+  },
+  "Design-06": {
+    "Description": "Design Style 06 - Solid single central stripe with 1.5in Outer Pin-Stripe on the drivers side and 0.375in space between the central stripe and outer pin-stripe. We will adjust the production of this kit, including the cutout for the Hood Intake Scoop, Antenna, and bumpers, according to the year and trim level you choose in the customize & buy options. This Rally Stripe kit will fit the 2022 Charger Hellcat Widebody and 2022 Charger Hellcat Redeye Widebody. We adjust the production of the stripe accordingly.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-2": "",
+    "Text-Color": ""
+  },
+  "Design-07": {
+    "Description": "Design Style 07 - Twin central stripes with 1.5in Outer Pin-Stripe and no space between the central stripe and outer pin-stripes. We will adjust the production of this kit, including the cutout for the Hood Intake Scoop, Antenna, and bumpers, according to the year and trim level you choose in the customize & buy options. This Rally Stripe kit will fit the 2022 Charger Hellcat Widebody and 2022 Charger Hellcat Redeye Widebody. We adjust the production of the stripe accordingly.",
+    "Accent-Color": "Red",
+    "Text-Ref": "FX4",
+    "Text-2": "",
+    "Text-Color": "Blue"
+  }
+}

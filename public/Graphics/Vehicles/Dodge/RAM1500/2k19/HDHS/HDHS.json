@@ -1,0 +1,26 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid decal design. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe allowing the vehicle surface to show through, or it can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid stripe with inner accent graphic design. The inner  accent (<span style='font-style: italic;'>blue in image</span>) can be cut away to allow the vehicle surface to show through, or an alternate color to the main stripe. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe, it can be the same color as the accent, or an alternate color entirely.",
+    "Accent-Color": "Blue",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-03": {
+    "Description": "Design Style 03 is a Solid stripe with inner accent stripe design. The inner  accent (<span style='font-style: italic;'>blue in image</span>) can be cut away to allow the vehicle surface to show through, or an alternate color to the main stripe. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe, it can be the same color as the accent, or an alternate color entirely.",
+    "Accent-Color": "Blue",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-04": {
+    "Description": "Design Style 04 is a Strobe / Striped layout with even stripes from front to back. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM / TEXT LOGO'</span> in image) can be added with a border cut between it and the main stripe in the same color, or can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Red"
+  }
+}

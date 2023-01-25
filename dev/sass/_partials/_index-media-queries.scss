@@ -4,8 +4,47 @@
 //1025px — 1200px: Desktops, large screens
 //1201px and more — Extra large screens, TV
 
+@media screen and (max-width: 1200px) {
+  section.new-products,
+  section.featured-products  {
+    > div {
+      //height: 16.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section.new-products,
+  section.featured-products  {
+    > div {
+      flex-basis: 29%;
+    }
+
+    .product_4 {
+      display: none;
+    }
+  }
+}
+
+//@media screen and (max-width: 800px) {
+//  section.new-products {
+//    > div {
+//    }
+//  }
+//}
+
 @media screen and (max-width: 600px) {
-  section.main {
+  section.new-products,
+  section.featured-products {
+    > div {
+      flex-basis: 46%;
+    }
+    .product_3 {
+      display: none;
+    }
+  }
+
+    section.main {
     > div {
       float: none;
       text-align: left;
@@ -21,13 +60,8 @@
   }
 
   section.information {
-
     aside {
       text-align: center;
     }
   }
-}
-
-@media screen and (max-width: 600px) {
-
 }

@@ -13,11 +13,56 @@ section {
     display: block;
   }
 
-  &.new-products {
-    background-color: rgba(10, 10, 10, .5);
+  &.new-products,
+  &.featured-products {
+    background-color: $color-feature-background;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 1%;
-    padding: 15%;
-    text-align: center;
+
+    h4 {
+      flex: 1 0 100%;
+      font-size: 1.5em;
+      margin: 0 5%;
+      text-align: center;
+    }
+
+    > div {
+      background-color: $color-product-background;
+      //flex: 0 1 calc(21% - 1px);
+      display: flex;
+      flex: 0 1 21%;
+      margin: 1%;
+      padding: 1%;
+      text-align: center;
+    }
+
+    .content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      div {
+        padding: 1%;
+        text-decoration: none;
+      }
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    h5 {
+      margin: 0 0 auto;
+      padding-bottom: 4%;
+    }
+    img {
+      margin: auto 0;
+      padding-bottom: 5%;
+      width: 100%;
+
+    }
   }
 
   &.main {

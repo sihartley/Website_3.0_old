@@ -1,0 +1,39 @@
+{
+  "Design-01": {
+    "Description": "These hood spear accent stripes are solid. <span style='font-style: italic;'>Pre cut to fit around the vents depending on your trim level</span>.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-02": {
+    "Description": "These hood spear accent stripes are solid with a thin pinstripe (<span style='font-style: italic;'>red in image</span>) around the outer edge. The pinstripe can be cutout or an alternate color. <span style='font-style: italic;'>Pre cut to fit around the vents depending on your trim level</span>.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-03": {
+    "Description": "The hood spear accents are perfect for your car! These are a solid stripe with a lower pinstripe (<span style='font-style: italic;'>red in image</span>) outlining the front section of the stripe. The pinstripes can either be cut out or a secondary color. <span style='font-style: italic;'>Pre cut to fit around the vents depending on your trim level</span>.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-04": {
+    "Description": "These strobe hood spear accent stripes will fit perfectly around the vents on your hood. This is a one color design. <span style='font-style: italic;'>Pre cut to fit around the vents depending on your trim level</span>.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-05": {
+    "Description": "This center hood decal is a chevroned strobe one color design.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-06": {
+    "Description": "This center hood stripe is a full strobe one color design. The \"strobe\" stripes vary from thick at the front to thin at the rear.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  }
+}
+

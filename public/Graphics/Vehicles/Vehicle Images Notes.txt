@@ -1,0 +1,19 @@
+Images Format.
+	Auto Make Main Pages:>
+		Master~ [model-"year"]-250px.fw.png	//** ex. Charger-2k15-250px.fw.png (FireWorks File Layered with Glow)
+		Then~	[model-"year"]-250px.png	//** ex. Charger-2k15-250px.png (Flattened .png File)
+				[model-"year"]-250px-Glow.png	//** Charger-2k15-250px-Glow.png (Flattened .png File Glowing)
+	
+	Auto Model Main Pages:>
+		Master~	Created from Photoshop image file of relevant vehicle & graphic.
+		Then~	[model-"year"]-[part#]-350px.png //** ex. Charger-2k15-SSAS-350px.png
+				
+	Graphics Main Pages:>
+		Vehicle Images:>
+			Master~	Both files (Graphic ON, and Graphic OFF) created from Photoshop image file of relevant vehicle & graphic. Formatted to fit within the Tabs "The Look" Tab/DIV.
+			Then~	[model-"year"]-[part#]-ON.png	//** ex. Charger-2k15-SSAS-ON.png (Flattened .png Graphic ON Vehicle)
+				[model-"year"]-[part#]-OFF.png	//** ex. Charger-2k15-SSAS-OFF.png (Flattened .png Graphic OFF Vehicle)
+		Graphics Images:>
+			Size~ 	Size for HORIZONTAL graphics styles currently (Fixed Layout) no larger than W880px.
+					Size for VERTICAL graphics styles currently (Fixed Layout) no larger than W400px, or H400px.
+				

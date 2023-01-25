@@ -1,0 +1,63 @@
+{
+  "Design-01": {
+    "Description": "This is a solid upper accent hockey stick decal.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-02": {
+    "Description": "This is a solid upper accent hockey stripe with a longer front-end section.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-03": {
+    "Description": "This is an upper accent hockey stripe with a thin pinstripe (<span style='font-style: italic;'>red in image</span>) within the stripe. This can either be cutout or a secondary color.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-04": {
+    "Description": "This hockey stick accent stripe has an extended front end with a thin pinstripe (<span style='font-style: italic;'>red in image</span>) all the way around. The pinstripe can be cutout or an alternate color.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-05": {
+    "Description": "This upper accent hockey stripe has a thin pinstripe (<span style='font-style: italic;'>red in image</span>) running along the top. This pinstripe can be cut out or a 2nd color. It is up to you and the look you are trying to achieve.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-06": {
+    "Description": "This upper accent hockey stripe has an extended front end and a pinstripe (<span style='font-style: italic;'>red in image</span>) along the top. The pinstripe can be cut out or an alternate color.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-07": {
+    "Description": "This upper accent hockey stripe is a solid stripe with a pinstripe (<span style='font-style: italic;'>red in image</span>) running along the lower line of the stripe. The pinstripe can be cut out or a different color.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-08": {
+    "Description": "The upper accent hockey stripe is an extended solid stripe with a lower pinstripe (<span style='font-style: italic;'>red in image</span>) that can be cutout or an alternate color.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-09": {
+    "Description": "This is a strobed upper accent hockey stripe. This is a one-color design.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-10": {
+    "Description": "This is an extended strobed upper accent stripe. This is a one-color design.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  }
+}
+

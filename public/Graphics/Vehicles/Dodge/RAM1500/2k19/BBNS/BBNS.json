@@ -1,0 +1,20 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid vinyl decal. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM / TEXT LOGO'</span> in image) can be cut out of the stripe so that the vehicle surface can show through, or an alternate color can be chosen.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM / TEXT LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid vinyl stripe with outer pinstripes. Custom Text or Custom Logo (same as red <span style='font-style: italic;'>'CUSTOM / TEXT LOGO'</span> in design 01 image) can be cut out of the stripe so that the vehicle surface can show through, the same color as the pinstripes or an alternate color can be chosen.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-03": {
+    "Description": "Design Style 03 is a Strobe / Striped graphic decal with thicker stripes at the front, narrow stripes at the rear. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM / TEXT LOGO'</span> in image) can be added in the same color with a border cut between it and the main stripe, or can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM / TEXT LOGO",
+    "Text-Color": "Red"
+  }
+}

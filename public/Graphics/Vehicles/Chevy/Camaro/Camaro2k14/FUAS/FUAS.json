@@ -1,0 +1,28 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid stripe, one color style.",
+    "Accent-Color": "",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid stripe with a pinstripe accent. The 'accent' (<span style='font-style: italic;'>cut away in image</span>) can be cut away, or an alternate accent color.",
+    "Accent-Color": "",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-03": {
+    "Description": "Design Style 03 is a Strobed stripe style and is a single color.",
+    "Accent-Color": "",
+    "Text": "",
+    "Text-Color": ""
+  },
+  "Design-04": {
+    "Description": "Design Style 04 is an outlined stripe style and is a single color.",
+    "Accent-Color": "",
+    "Text": "",
+    "Text-Color": ""
+  }
+}
+  
+

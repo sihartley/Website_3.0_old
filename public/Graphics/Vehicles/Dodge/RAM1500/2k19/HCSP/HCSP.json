@@ -1,0 +1,32 @@
+{
+  "Design-01": {
+    "Description": "Design Style 01 is a Solid graphic. Custom Text or Custom Logo (red <span style='font-style: italic;'>'CUSTOM TEXT / LOGO'</span> in image) can be added and either cut out of the main stripe allowing the vehicle surface to show through, or it can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "CUSTOM TEXT / LOGO",
+    "Text-Color": "Red"
+  },
+  "Design-02": {
+    "Description": "Design Style 02 is a Solid stripe with outer accent pinstripe decal. The outer accent (<span style='font-style: italic;'>red in image</span>) can be the same color as the main center stripe, or an alternate color to the main stripe. Custom Text or Custom Logo can be added and either cut out of the main stripe, it can be the same color as the accent, or an alternate color entirely.",
+    "Accent-Color": "Red",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-03": {
+    "Description": "Design Style 03 is a Strobe / Striped style with even stripes and spaces from front to rear of the hood. Custom Text or Custom Logo can be added with a border cut between it and the main stripe, or can be the same color or an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "",
+    "Text-Color": ""
+  },
+  "Design-04": {
+    "Description": "Design Style 04 is a slanted Strobe / Striped style with varied stripes and even spaces from front to rear of the hood. Custom Text or Custom Logo can be added and either cut out of the main stripe allowing the vehicle surface to show through, or it can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "RAM",
+    "Text-Color": "Red"
+  },
+  "Design-05": {
+    "Description": "Design Style 05 is a slanted Strobe / Striped / Chevron style with even stripes and even spaces in the middle section with a split spear. Custom Text or Custom Logo can be added and either cut out of the main stripe allowing the vehicle surface to show through, or it can be an alternate color than the main stripe.",
+    "Accent-Color": "",
+    "Text-Ref": "RAM",
+    "Text-Color": "Red"
+  }
+}
