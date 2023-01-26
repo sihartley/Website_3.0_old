@@ -13,9 +13,10 @@ section {
     display: block;
   }
 
+  &.pop-vehicles,
   &.new-products,
   &.featured-products {
-    background-color: $color-feature-background;
+    background-color: $color-section-background;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -66,20 +67,23 @@ section {
   }
 
   &.main {
-    margin-bottom: 30px;
-    margin-top: 20px;
-    padding: 0;
+    display: flex;
 
     > div {
       cursor: pointer;
-      float: left;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
       text-align: center;
-      width: 33.3%;
-      //test
+
       .automotive { background-image: url('/images/icon_automotive.svg'); }
       .motorcycle { background-image: url('/images/icon_motorcycle.svg'); background-size: 62%}
       .trailer { background-image: url('/images/icon_trailer.svg'); }
-      h2 a {color: $color-logo-accent; text-decoration: none;}
+      h2, h3 {
+        margin: 0;
+
+        a { color: $color-logo-accent; text-decoration: none; }
+      }
       &:hover {
         background-color: $element-hover-background;
       }

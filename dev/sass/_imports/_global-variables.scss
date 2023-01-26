@@ -1,6 +1,7 @@
 // Global Variables
 $color-html-background: #0c0c0c;
-$color-content-background: rgba(16, 26, 92, 1); //#101a5c
+//$color-content-background: rgba(16, 26, 92, 1); //#101a5c
+$color-content-background: rgba(50, 50, 50, 1); //#323232
 $color-header-background: #030303;
 $color-body-text: #fff;
 $color-logo-main: rgb(18, 44, 208); //#122cd0
@@ -10,7 +11,7 @@ $color-footer-text: #999;
 $color-footer-link: #777;
 
 
-$color-section-background: #222;
+$color-section-background: rgba(10, 10, 10, .5);
 $element-hover-background: rgba(106, 106, 106, .44);
 $color-feature-background: rgba(10, 10, 10, .5);
 $navigation-hover: rgb(106, 106, 106); //#6a6a6a

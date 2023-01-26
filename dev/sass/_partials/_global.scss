@@ -98,107 +98,63 @@ body { //Global
 }
 
 header { //Global
-  aspect-ratio: 1 / .2714;
-  background: $color-header-background url('/images/company/vi_charger_mesh.svg') no-repeat right -10% bottom;
+  aspect-ratio: 1 / .4;
+  /*Simon: Changed:*/
+  //background: $color-header-background url('/images/company/vi_charger_mesh.svg') no-repeat right -10% bottom;
+  background-color: $color-header-background;
   background-size: 49%;
-  //background: $color-header-background url('/images/banner-charger-1400px.webp') no-repeat center bottom;
-  //Simon: Note: image-set() Not Working Yet, fix this with media queries.
-  //background: $color-header-background image-set(
-  //        url('images/banner-charger-465px.png') 1x,
-  //        url('/images/banner-charger-930px.png') 2x,
-  //        url('/images/banner-charger-1400px.webp') 3x) no-repeat center bottom;
-  //background-size: cover;
   position: relative;
 
   a.logo {
-    //z-index: 1;
-    //left: 2%;
-    background: url('/images/company/vi_car_logo.svg') no-repeat 0 0;
-    height: 65.5%;
+    background: url('/images/company/vinyl-imagination-logo.svg') no-repeat 0 0;
+    bottom: 28%;
+    height: 40%;
+    left: 50%;
+    margin-left: -36.5%;
     position: absolute;
     text-decoration: none;
-    top: 3%;
-    width: 40%;
+    width: 75%;
 
-    &::after {
-      clear: both;
-      content: '';
-      display: block; }
   }
 
-  a.phone {
-    left: 30%;
-    position: absolute;
-    text-decoration: none;
-    top: 49%;
-    width: 26%;
-
-    svg {
-      filter: drop-shadow(1px 1px 5px rgba(179, 179, 179, 1));
-
-      &.company-phone-number {
-        fill: $color-logo-accent;
-        font-size: 2.8em;
-        font-style: italic;
-        font-weight: 400;
-      }
-    }
-  }
 
   div.hero {
+    bottom: 16%;
     color: $color-logo-accent;
-    font-size: 1.4em;
+    font-size: 4.2em;
     font-style: italic;
-    left: 3%;
+    font-weight: 700;
+    left: 50%;
     line-height: 80%;
+    margin-left: -28%;
     position: absolute;
-    top: 69%;
-    width: 53%;
+    width: 57%;
 
     p {
-      font-size: 200%;
-      font-style: italic;
-      font-weight: bold;
+      margin: 0;
     }
   }
 
-  div.hamburger {
+  .hamburger, .shopcart {
+    //background-color: $color-content-background;
+    //border-radius: 2px;
     color: $color-logo-accent;
     cursor: pointer;
-    left: 44.5%;
-    margin-top: 10px;
-    padding: 1px 4px;
+    padding: 4px 6px 0 5.5px;
     position: absolute;
 
-    p {
-      background-color: $menu_button-background;
-      border: 1px solid $color-logo-accent;
-      color: $color-logo-accent;
-      font-size: 300%;
-      font-weight: 600;
-      line-height: 1;
-      margin: 0;
-      padding: 0 8px 3px;
-
-      &:hover {
-        background-color: $menu_button-hover;
-        border-color: $menu_button-hover;
-
-      }
-    }
-
-    .bar1,
-    .bar2,
-    .bar3 {
-      background-color: $color-logo-accent;
-      height: 5px;
-      margin: 6px 0;
-      transition: .4s;
-      width: 35px;
-      display: none;
-    }
   }
-
+  .hamburger {
+    margin: .5% 0 0 1.5%;
+    width: 2em;
+  }
+  .shopcart {
+    margin: .5% 1.5% 0 0;
+    padding-bottom: 3.5px;
+    padding-top: 5.5px;
+    right: 0;
+    width: 2.3em;
+  }
 
 
 } //Global

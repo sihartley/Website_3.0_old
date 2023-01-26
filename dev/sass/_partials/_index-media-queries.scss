@@ -4,57 +4,56 @@
 //1025px — 1200px: Desktops, large screens
 //1201px and more — Extra large screens, TV
 
-@media screen and (max-width: 1200px) {
-  section.new-products,
-  section.featured-products  {
-    > div {
-      //height: 16.5em;
-    }
-  }
-}
 
 @media screen and (max-width: 1000px) {
+  section.pop-vehicles,
   section.new-products,
   section.featured-products  {
     > div {
       flex-basis: 29%;
     }
 
+    .vehicle_4,
     .product_4 {
       display: none;
     }
   }
 }
 
-//@media screen and (max-width: 800px) {
-//  section.new-products {
-//    > div {
-//    }
-//  }
-//}
 
 @media screen and (max-width: 600px) {
+
+  section.pop-vehicles,
   section.new-products,
   section.featured-products {
     > div {
       flex-basis: 46%;
     }
+    .vehicle_3,
     .product_3 {
       display: none;
     }
   }
 
     section.main {
+      flex-direction: column;
+      padding-top: 2em;
+
     > div {
-      float: none;
+      flex: 1 0 100%;
+      min-height: 7em;
       text-align: left;
-      width: 100%;
 
       div.content {
         background-position: 5% 15%;
         background-size: 25%;
         margin: 1.5% 3% 1.5% 0;
         padding: 1% 0 2% 30%;
+      }
+
+      div.motorcycle {
+        background-position: 10% 17%;
+        background-size: 20%;
       }
     }
   }

@@ -12,8 +12,10 @@ include_once '../private/functions/global_functions.php';
 [$hostingServer, $dbPrefix, $minifyHTML, $rightClickProtect, $liveReload, $serverDot] = host_ident($_SERVER['SERVER_ADDR']);
 
 /* Database */
+$pop_vehicles_query = '(select make, model, year, image_path, vehicle_250px_image from '.$dbPrefix.'Automotive.vehicles where id IN (14, 17, 30, 42))';
 $new_products_query = '(select product_name, part_number, make, model, price_1, image_path, main_page_image from '.$dbPrefix.'Automotive.graphics where available IS NOT NULL ORDER BY id DESC LIMIT 4)';
-$featured_products_query = '(select product_name, part_number, make, model, price_1, image_path, main_page_image from '.$dbPrefix.'Automotive.graphics where available IS NOT NULL ORDER BY RAND() LIMIT 10 OFFSET 4)';
+$featured_products_query = '(select product_name, part_number, make, model, price_1, image_path, main_page_image from '.$dbPrefix.'Automotive.graphics where available IS NOT NULL ORDER BY RAND() LIMIT 6 OFFSET 4)';
+$pop_vehicles = db_query($pop_vehicles_query);
 $new_products = db_query($new_products_query);
 $featured_products = db_query($featured_products_query);
 db_disconnect(db_connect());
@@ -48,8 +50,8 @@ $minifyHTML;
     /* JQUERY Simon: Note: Only activate jQuery if jQuery is used. */
     echo '<script src="' . auto_version('https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
     /* FOXYCART Simon: Remove Me: Remove foxycart scripts from index.php - not required on this page*/
-/*    echo '<script src="' . auto_version('/js/foxycart_dynamin_price_calc.min.js') . '" type="text/javascript" defer></script>' . "\n" ;*/
-/*    echo '<script src="' . auto_version('https://cdn.foxycart.com/vinylimagination/loader.js') . '" type="text/javascript" defer></script>' . "\n" ;*/
+    echo '<script src="' . auto_version('/js/foxycart_dynamin_price_calc.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
+    echo '<script src="' . auto_version('https://cdn.foxycart.com/vinylimagination/loader.js') . '" type="text/javascript" defer></script>' . "\n" ;
     echo '<script src="' . auto_version('/js/scripts_global.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
     ?>
 </head>
@@ -70,33 +72,31 @@ $minifyHTML;
             </a>
 
             <div class="hero">
-                <p>Vehicle Graphics Done Your Way!</p>
+                <p>You imagine. We create!</p>
             </div>
-            <a aria-label="menu-button" href="#menu">
-                <div class="hamburger">
-                    <p>MENU</p>
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
+            <a class="hamburger" aria-label="menu-button" href="#menu">
+                <img src="/images/icons/bars.svg" alt="Menu Icon">
+            </a>
+            <a class="shopcart" aria-label="menu-button" href="https://vinylimagination.foxycart.com/cartView">
+                <img src="/images/icons/shopping-cart.svg" alt="Menu Icon">
             </a>
         </header>
 
-        <!-- New Products -->
-        <section class="new-products">
-            <h4>Latest Automotive Designs</h4>
-        <?php $product = 1;
-            while ($new_product = mysqli_fetch_assoc($new_products)){
+        <!-- Popular Vehicles -->
+        <section class="pop-vehicles">
+            <h4>Popular Vehicles</h4>
+        <?php $vehicle = 1;
+            while ($pop_vehicle = mysqli_fetch_assoc($pop_vehicles)){
         ?>
-            <div class="<?php echo "product_" . $product++; ?>">
+            <div class="<?php echo "vehicle_" . $vehicle++; ?>">
                 <div class="content">
-                    <h5><?php echo "{$new_product['make']} {$new_product['model']} - {$new_product['product_name']}"; ?></h5>
-                    <img src="<?php echo $new_product['image_path'] . $new_product['main_page_image']; ?>" alt="<?php echo "BUY {$new_product['make']} {$new_product['model']} - {$new_product['product_name']}"; ?>">
+                    <h5><?php echo "{$pop_vehicle['year']} {$pop_vehicle['make']} {$pop_vehicle['model']}"; ?></h5>
+                    <img src="<?php echo $pop_vehicle['image_path'] . $pop_vehicle['vehicle_250px_image']; ?>" alt="<?php echo "BUY {$pop_vehicle['make']} {$pop_vehicle['model']} Vehicle Graphics"; ?>">
                     <a href="#" class="buy-now-button">
                         <div>
-                            <span>BUY NOW</span><br>
+                            <span>View Graphic Designs</span><br>
     <!--                        Part#: --><?php //echo $new_product['part_number']; ?><!--<br>-->
-                            From $<?php echo $new_product['price_1']; ?>
+<!--                            From $--><?php //echo ceil($new_product['price_1']); ?>
                         </div>
                     </a>
                 </div>
@@ -113,8 +113,7 @@ $minifyHTML;
                     <h2>
                         <a href="#">Automotive Graphics</a>
                     </h2>
-                    <h3>Get a custom look for your vehicle.</h3>
-                    <p>Precision Fit, Premium Quality Materials, and Custom Graphics equal a great, unique, long-lasting look for your vehicle at a very reasonable cost.</p>
+                    <h3>A custom look for your vehicle.</h3>
                 </div>
             </div>
 
@@ -123,8 +122,7 @@ $minifyHTML;
                     <h2>
                         <a href="#">Motorcycle Graphics</a>
                     </h2>
-                    <h3>Customize your ride.</h3>
-                    <p>Various Sizes. Lots of Designs. Add our custom graphic decals to your motorcycle gas tank. Give that hog a unique look to match your wild side!</p>
+                    <h3>Personalize your ride.</h3>
                 </div>
             </div>
 
@@ -133,10 +131,33 @@ $minifyHTML;
                     <h2>
                         <a href="#">Trailer Graphics</a>
                     </h2>
-                    <h3>Add some style to your trailer.</h3>
-                    <p>Horse Trailer. Toy Hauler. Work Trailer. Customize your trailer for work or leisure style, stand out from the crowd, or advertise your business.</p>
+                    <h3>Some style for your trailer.</h3>
                 </div>
             </div>
+        </section>
+
+        <!-- New Products -->
+        <section class="new-products">
+            <h4>Latest Automotive Designs</h4>
+        <?php $product = 1;
+            while ($new_product = mysqli_fetch_assoc($new_products)){
+        ?>
+            <div class="<?php echo "product_" . $product++; ?>">
+                <div class="content">
+                    <h5><?php echo "{$new_product['make']} {$new_product['model']} - {$new_product['product_name']}"; ?></h5>
+                    <img src="<?php echo $new_product['image_path'] . $new_product['main_page_image']; ?>" alt="<?php echo "BUY {$new_product['make']} {$new_product['model']} - {$new_product['product_name']}"; ?>">
+                    <a href="#" class="buy-now-button">
+                        <div>
+                            <span>BUY NOW</span><br>
+    <!--                        Part#: --><?php //echo $new_product['part_number']; ?><!--<br>-->
+                            From $<?php echo ceil($new_product['price_1']); ?>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        <?php
+            }
+        ?>
         </section>
 
         <!-- Featured Products -->
@@ -152,7 +173,7 @@ $minifyHTML;
                         <a href="#" class="buy-now-button">
                             <div>
                                 <span>BUY NOW</span><br>
-                                From $<?php echo $feature_product['price_1']; ?>
+                                From $<?php echo ceil($feature_product['price_1']); ?>
                             </div>
                         </a>
                     </a>
@@ -165,38 +186,9 @@ $minifyHTML;
 
         <!-- Information -->
         <section class="information">
-            <aside class="automotive">
-                <h3>Graphics Information</h3>
-                <h4>Automotive</h4>
-                <p>Our automotive graphics are precision measured to contour-fit the vehicle we design them to fit. Our precision vehicle graphics only require minor manipulation when installing them on your car and will follow the contours and curves of the vehicle where they are applied. We produce automotive graphics from the highest quality materials for the most straightforward installation with the most durability possible. Our products allow you to achieve a unique look for your vehicle at a very reasonable cost.</p>
-
-                <h4>Motorcycle</h4>
-                <p>We offer graphic designs in several sizes to suit your motorcycle graphics needs, provided in the same high-quality materials as our automotive graphics. Our motorcycle graphics can give your motorcycle a new, custom, unique, personalized look.</p>
-
-                <h4>Trailer</h4>
-                <p>If you have a work trailer, we can create a graphic including your logo to advertise your business. If you have a toy hauler, we can create a graphic that will reflect your personality or the toys you haul. We can create graphics to reflect equestrian life if you have a horse trailer. We offer various sizes and use the same high-quality graphic films and materials you would expect.</p>
-            </aside>
 
 
-            <aside class="oolors">
-                <h3>Vinyl Materials Information</h3>
-                <p>We only use the highest quality vinyl films from 3M, Avery, and Oracal, as well as others, for all our graphics products. We offer Premium Cast (Wet-Install) and Premium Wrap (Dry-Install) materials. So, whatever your chosen installation method is, we can produce graphics to suit your needs.
-                    We do not offer graphics produced in calendared materials, often referred to as intermediate or economy vinyl films, even if requested.</p>
-                <div class="content premium_cast">
-                    <!--                <img src="images/icon_star.svg" width="100" height="100" alt="Choosing the proper seating">-->
-                    <h4>Premium Cast (Wet-Install) Material & Colors</h4>
-                    <p>This material is usually installed using the Wet-Installation method. The graphics are applied using an application fluid such as water with a few drops of dish soap in a spray bottle. The application fluid allows the graphic to be moved around during installation without the adhesive taking hold immediately, often preferred by "old-school" installers and tint shops.</p>
-                    <p>These graphic films are Cast 2mil (50 microns), High-Performance vinyl films with an expected lifetime durability rating of seven to twelve years. There is a wide range of colors available in these materials. However, specific effects colors are unavailable in this material, such as Carbon Fiber, Matte or Satin Finish, Chrome, and Shade-Shift.</p>
-                </div>
-                <div class="content premium_wrap">
-                    <!--                <img src="images/icon_gear.svg" width="100" height="100" alt="Choosing the proper lighting">-->
-                    <h4>Premium Wrap (Dry-Install) Material & Colors</h4>
-                    <p>This material is usually installed using the Dry-Installation method. The graphics have a special air-release adhesive and are applied dry. This special adhesive allows the graphics to be lifted and repositioned without the adhesive taking hold until squeegeed, often preferred by less experienced installers, and wrap shops.</p>
-                    <p>These graphic films are Cast 3-4mil (75-100 microns), with an expected lifetime durability rating of seven to twelve years. There is a wide range of colors available in these materials, including specific effects colors such as Carbon Fiber, Matte or Satin Finish, Chrome, and Shade-Shift.</p>
-                </div>
 
-                <p>We only use the highest quality, longest durability vinyl films for vehicle use. These are the same vinyl films used by many OEM Auto Makers and dealerships. Using these high-quality films, you can rest assured that the graphics will continue to look amazing on your vehicle for many years.</p>
-            </aside>
         </section>
 
 <!--        <section>-->

@@ -11,16 +11,9 @@
 
   header {
     div.hero {
-      font-size: 1.6vw;
+      font-size: 4.8vw;
     }
 
-    div.hamburger {
-      font-size: 1.4vw;
-
-      p {
-        font-size: 250%;
-      }
-    }
   }
 }
 
@@ -34,30 +27,9 @@
 }
 
 @media screen and (max-width: 810px) { //below 810px
-  header {
-    div.hamburger {
-      left: 47%;
-
-      p {
-        display: none;
-      }
-
-      .bar1, .bar2, .bar3 {
-        display: block;
-        height: 5px;
-        margin: 7px 0;
-        width: 40px;
-      }
-
-    }
-  }
 }
 
 @media screen and (max-width: 600px) { //below 600px
-  //header {
-  //Simon: Clean Me: remove this if continue to use .svg
-  //  background: $color-header-background url('/images/banner-charger-600px.png') no-repeat center bottom;
-  //}
 }
 
 @media screen and (max-width: 480px) { //below 480px
@@ -69,31 +41,8 @@
     background-position: right -210% bottom;
     background-size: 80%;
 
-    div.hamburger {
-      bottom: 1%;
-    }
-
-    a.logo {
-      width: 65.5%;
-    }
-
-    div.hero {
-      left: 6%;
-      top: 57%;
-    }
   }
-
-
 }
 
-//@media screen and (max-width: 465px) { //below 465px
-//  header {
-//    //Simon: Clean Me: remove this if continue to use .svg
-//    //background: $color-header-background url('/images/banner-charger-465px.png') no-repeat center bottom;
-//    //background-size: cover;
-//
-//
-//    div.hamburger {
-//    }
-//  }
-//}
+@media screen and (max-width: 465px) { //below 465px
+}
