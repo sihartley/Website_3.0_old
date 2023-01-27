@@ -2,8 +2,8 @@
 @import '../_imports/global-variables';
 
 @font-face { //Global //Only for Logo Name, NOT a complete font set
-  font-family: bickley-script;
-  src: local('Pacifico Regular'), local('Pacifico-Regular'), url('/css/fonts/BickleyScriptLET-Plain.woff2');
+  font-family: 'Exo', 'Ubuntu', /*bickley-script,*/ sans-serif;
+  src: local('Pacifico Regular'), local('Pacifico-Regular')/*, url('/css/fonts/BickleyScriptLET-Plain.woff2')*/;
   font-display: swap;
 }
 
@@ -32,7 +32,7 @@ body { //Global
   background-position: 0 0, 0 0, 5px 5px, 0 0;
   background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
   color: $color-body-text;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Exo', sans-serif;
   font-size: 16px;
   font-weight: 300;
   margin: 0;
@@ -63,9 +63,9 @@ body { //Global
     margin: 0 0 1.5em;
   }
 
-  //p {
-  //  margin: 0 0 1em;
-  //}
+  p {
+    margin: 0 0 1em;
+  }
 
   div#content { //Global //#page div
     background-color: $color-content-background;
@@ -76,85 +76,91 @@ body { //Global
     position: relative;
   }
 
-  .buy-now-button { // <a> element.
-    color: $color-body-text;  /* Simon: Todo: Move to _global-variables */
-    margin-top: auto;
+  .buy-now-button,
+  .shop-now-button { // <a> element.
+    //margin-top: auto;
     text-decoration: none;
 
-    &:hover {
-      color: $navigation-hover;  /* Simon: Todo: Move to _global-variables */
-    }
-
     > div{
-      background-color: $color-buy-now-button-background;
-      border-radius: 4px;
+      //background-color: $color-buy-now-button-background;
+      background-color: $color-logo-main;
+      border: $color-logo-accent 1px solid;
+      color: $color-logo-accent;
+      margin: 0 auto;
+      width: 65%;
+
 
       &:hover {
-        background-color: $color-buy-now-button-hover;
+        background-color: $menu_button-hover;
       }
     }
   }
-
 }
 
 header { //Global
-  aspect-ratio: 1 / .4;
-  /*Simon: Changed:*/
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 1 / .5;
+  /*Simon: Changed: Roved Charger Mesh*/
   //background: $color-header-background url('/images/company/vi_charger_mesh.svg') no-repeat right -10% bottom;
   background-color: $color-header-background;
-  background-size: 49%;
-  position: relative;
+  //background-size: 49%; /*Simon: Changed:*/
+  //position: relative; /*Simon: Changed:*/
 
-  a.logo {
-    background: url('/images/company/vinyl-imagination-logo.svg') no-repeat 0 0;
-    bottom: 28%;
-    height: 40%;
-    left: 50%;
-    margin-left: -36.5%;
-    position: absolute;
-    text-decoration: none;
-    width: 75%;
+  div {
+    display: flex;
+    .hamburger, .shopcart {
+      color: $color-logo-main;
+      cursor: pointer;
+      padding: 4px 6px 0 5.5px;
+      position: absolute;
 
-  }
-
-
-  div.hero {
-    bottom: 16%;
-    color: $color-logo-accent;
-    font-size: 4.2em;
-    font-style: italic;
-    font-weight: 700;
-    left: 50%;
-    line-height: 80%;
-    margin-left: -28%;
-    position: absolute;
-    width: 57%;
-
-    p {
-      margin: 0;
+    }
+    .hamburger {
+      margin: .5% 0 0 1.5%;
+      width: 2em;
+    }
+    .shopcart {
+      margin: .5% 1.5% 0 0;
+      padding-bottom: 3.5px;
+      padding-top: 5.5px;
+      right: 0;
+      width: 2.3em;
     }
   }
 
-  .hamburger, .shopcart {
-    //background-color: $color-content-background;
-    //border-radius: 2px;
-    color: $color-logo-accent;
-    cursor: pointer;
-    padding: 4px 6px 0 5.5px;
-    position: absolute;
+  a.logo {
+    aspect-ratio: 1/.212;
+    background: url('/images/company/vinyl-imagination-logo.svg') no-repeat 0 0;
+    margin: 7% auto 0;
+    width: 90%;
 
   }
-  .hamburger {
-    margin: .5% 0 0 1.5%;
-    width: 2em;
+
+  div.slogan {
+    color: $color-logo-accent;
+    flex: auto;
+    flex-direction: column;
+    font-style: italic;
+    font-weight: 700;
+    margin: auto;
+    text-align: center;
+    width: 95%;
+
+    p {
+      color: $color-logo-accent;
+      font-size: 3em;
+      margin: 1% 0 auto;
+    }
+
+    h1 {
+      //font-size: 1em;
+      color: $color-logo-main;
+      line-height: 1.1em;
+      margin: auto 0;
+    }
   }
-  .shopcart {
-    margin: .5% 1.5% 0 0;
-    padding-bottom: 3.5px;
-    padding-top: 5.5px;
-    right: 0;
-    width: 2.3em;
-  }
+
 
 
 } //Global

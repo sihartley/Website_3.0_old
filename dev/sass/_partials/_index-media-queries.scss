@@ -37,24 +37,28 @@
 
     section.main {
       flex-direction: column;
-      padding-top: 2em;
+      padding: 2em 0;
 
     > div {
-      flex: 1 0 100%;
+      //flex: 1 0 100%;
       min-height: 7em;
       text-align: left;
 
       div.content {
-        background-position: 5% 15%;
         background-size: 25%;
-        margin: 1.5% 3% 1.5% 0;
-        padding: 1% 0 2% 30%;
+        flex-direction: row;
+
+        a {
+          flex: 1;
+          margin: 0;
+        }
+
+        div {
+          flex: 2;
+          margin: auto 0 auto 10%;
+        }
       }
 
-      div.motorcycle {
-        background-position: 10% 17%;
-        background-size: 20%;
-      }
     }
   }
 

@@ -7,22 +7,27 @@
 @media screen and (max-width: 1400px) { //below 1400px
   html.mm-opened  .parent-container {
     margin: 0;
-    max-width: 100%;}
-
-  header {
-    div.hero {
-      font-size: 4.8vw;
-    }
-
+    max-width: 100%;
   }
+
 }
 
-@media screen and (max-width: 930px) { //below 930px
+@media screen and (max-width: 1025px) { //below 930px
   header {
-    //Simon: Clean Me: remove this if continue to use .svg
-    //background: $color-header-background url('/images/banner-charger-930px.png') no-repeat center bottom;
-    //background-size: cover;
-    //position: relative;
+    div.slogan {
+      p, h1 {
+        font-size: 4.3vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 975px) { //below 930px
+  header {
+    div.slogan {
+      p, h1 {
+        //font-size: 2.4em;
+      }
+    }
   }
 }
 
@@ -30,6 +35,27 @@
 }
 
 @media screen and (max-width: 600px) { //below 600px
+  header {
+    a.logo {
+      margin: 17% auto 0;
+      width: 98%;
+    }
+
+    div.slogan {
+      p,
+      h1 {
+        font-size: 1.8em;
+        margin: 2% 0;
+        &:after {
+          content: '.';
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 480px) { //below 480px

@@ -58,6 +58,11 @@ section {
       margin: 0 0 auto;
       padding-bottom: 4%;
     }
+    h5:nth-of-type(2) {
+      margin: auto 0 0;
+      padding-top: 4%;
+    }
+
     img {
       margin: auto 0;
       padding-bottom: 5%;
@@ -76,25 +81,46 @@ section {
       flex-direction: column;
       text-align: center;
 
-      .automotive { background-image: url('/images/icon_automotive.svg'); }
-      .motorcycle { background-image: url('/images/icon_motorcycle.svg'); background-size: 62%}
-      .trailer { background-image: url('/images/icon_trailer.svg'); }
-      h2, h3 {
+      .content {
+        background: no-repeat center top;
+        background-size: 95%;
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+      }
+
+      .automotive > a {;
+        aspect-ratio: 1/.45;
+        background: url('/images/icon_automotive.svg') no-repeat 0 0;
+        margin: 0 auto 3%;
+        width: 95%;
+      }
+
+      .motorcycle > a {
+        aspect-ratio: 1/.7317;
+        background: url('/images/icon_motorcycle.svg') no-repeat 0 0;
+        margin: 0 auto 3%;
+        width: 60%;
+      }
+
+      .trailer > a {
+        aspect-ratio: 1/.47;
+        background: url('/images/icon_trailer.svg') no-repeat 0 0;
+        margin: 0 auto 3%;
+        width: 95%;
+      }
+
+      h2,
+      h3 {
         margin: 0;
 
-        a { color: $color-logo-accent; text-decoration: none; }
+        a { color: $color-logo-main; text-decoration: none; }
       }
       &:hover {
         background-color: $element-hover-background;
       }
     }
 
-    .content {
-      background: no-repeat center top;
-      background-size: 95%;
-      margin: 15px;
-      padding-top: 45%;
-    }
   }
 
   &.information {
@@ -107,6 +133,22 @@ section {
 
     h4 {
       margin-bottom: .2em;
+    }
+
+    p a {
+      font-weight: 700;
+      &:link {
+        color: $color-logo-main;
+      }
+      &:active {
+      $color-logo-accent: rgb(18, 44, 208); //#122cd0
+
+    }
+
+      &:visited {
+        color: darkorange;
+
+      }
     }
   }
 

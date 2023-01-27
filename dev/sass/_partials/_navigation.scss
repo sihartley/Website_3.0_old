@@ -22,7 +22,7 @@ nav.main {
 
     li {
       &:hover {
-        background-color: $color-logo-main;  /* Simon: Todo: Move to _global-variables */
+        background-color: $color-logo-accent;  /* Simon: Todo: Move to _global-variables */
 
         > ul {
           display: block;
@@ -47,7 +47,7 @@ nav.main {
     }
 
     ul {
-      background-color: $color-logo-main;
+      background-color: $color-logo-accent;
       display: none;
       position: absolute;
       top: 100%;
