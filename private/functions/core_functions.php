@@ -105,10 +105,10 @@ function minifier($code): array|string|null
     $search = array(
 
         // Remove whitespaces after tags
-      '/\>[^\S ]+/s',
+      '/>[^\S ]+/s',
 
         // Remove whitespaces before tags
-      '/[^\S ]+\</s',
+      '/[^\S ]+</s',
 
         // Remove multiple whitespace sequences
       '/(\s)+/s',
@@ -119,6 +119,13 @@ function minifier($code): array|string|null
     $replace = array('>', '<', '\\1');
     $code = preg_replace($search, $replace, $code);
     return $code;
+}
+
+function image_ratio($image): void
+{
+    [$width, $height, $type, $attr] = getimagesize("." . urldecode($image));
+    $ratio = $height/$width;
+    echo "1/{$ratio}";
 }
 
 

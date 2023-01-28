@@ -5,39 +5,58 @@
 //1201px and more — Extra large screens, TV
 
 
+@media screen and (max-width: 1150px) {
+  section.information div,
+  section.design div {
+    width: 33.3%;
+  }
+
+}
+
 @media screen and (max-width: 1000px) {
+
   section.pop-vehicles,
   section.new-products,
-  section.featured-products  {
+  section.featured-products {
     > div {
       flex-basis: 29%;
     }
 
-    .vehicle_4,
-    .product_4 {
+    .vehicle-4,
+    .product-4 {
       display: none;
     }
   }
 }
 
+@media screen and (max-width: 860px) {
+  section.information div,
+  section.design div {
+    width: 50%;
+  }
+
+}
 
 @media screen and (max-width: 600px) {
 
   section.pop-vehicles,
   section.new-products,
   section.featured-products {
+
     > div {
       flex-basis: 46%;
+      min-height: 200px;
     }
-    .vehicle_3,
-    .product_3 {
+
+    .vehicle-3,
+    .product-3 {
       display: none;
     }
   }
 
-    section.main {
-      flex-direction: column;
-      padding: 2em 0;
+  section.main {
+    flex-direction: column;
+    padding: 2em 0;
 
     > div {
       //flex: 1 0 100%;
@@ -62,9 +81,12 @@
     }
   }
 
-  section.information {
-    aside {
-      text-align: center;
+  section.information,
+  section.design {
+
+    div {
+      width: 100%;
+
     }
   }
 }

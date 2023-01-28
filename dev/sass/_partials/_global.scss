@@ -38,35 +38,6 @@ body { //Global
   margin: 0;
   padding: 0;
 
-  h1 {
-    font-size: 2.8em;
-    font-weight: 700;
-    margin: 0 0 1em;
-  }
-
-  h2 {
-    font-size: 1.6em;
-    font-weight: 700;
-    line-height: 1.1em;
-    margin: 0 0 .5em;
-  }
-
-  h3 {
-    font-size: 1.3em;
-    font-weight: 700;
-    margin: 0 0 .5em;
-  }
-
-  h4 {
-    font-size: 1em;
-    font-weight: 700;
-    margin: 0 0 1.5em;
-  }
-
-  p {
-    margin: 0 0 1em;
-  }
-
   div#content { //Global //#page div
     background-color: $color-content-background;
     margin: 0 auto;
@@ -81,51 +52,59 @@ body { //Global
     //margin-top: auto;
     text-decoration: none;
 
-    > div{
+    > div {
       //background-color: $color-buy-now-button-background;
-      background-color: $color-logo-main;
-      border: $color-logo-accent 1px solid;
-      color: $color-logo-accent;
+      background-color: $color-product-button-background;
+      border: $color-product-button-text 1px solid;
+      color: $color-product-button-text;
       margin: 0 auto;
       width: 65%;
 
 
       &:hover {
-        background-color: $menu_button-hover;
+        background-color: $color-product-button-hover;
       }
     }
   }
 }
 
 header { //Global
+  aspect-ratio: 1 / .5;
+  background-color: $color-header-background;
   display: flex;
   flex-direction: column;
-  aspect-ratio: 1 / .5;
-  /*Simon: Changed: Roved Charger Mesh*/
-  //background: $color-header-background url('/images/company/vi_charger_mesh.svg') no-repeat right -10% bottom;
-  background-color: $color-header-background;
-  //background-size: 49%; /*Simon: Changed:*/
-  //position: relative; /*Simon: Changed:*/
 
   div {
     display: flex;
-    .hamburger, .shopcart {
+
+    .hamburger,
+    .shopcart {
       color: $color-logo-main;
       cursor: pointer;
       padding: 4px 6px 0 5.5px;
       position: absolute;
-
     }
+
     .hamburger {
       margin: .5% 0 0 1.5%;
-      width: 2em;
+
+      img {
+        aspect-ratio: 1/1.1428;
+        width: 2em;
+      }
     }
+
     .shopcart {
       margin: .5% 1.5% 0 0;
       padding-bottom: 3.5px;
       padding-top: 5.5px;
       right: 0;
-      width: 2.3em;
+
+      img {
+        aspect-ratio: 1/.8886;
+        width: 2.3em;
+
+      }
     }
   }
 
@@ -134,7 +113,6 @@ header { //Global
     background: url('/images/company/vinyl-imagination-logo.svg') no-repeat 0 0;
     margin: 7% auto 0;
     width: 90%;
-
   }
 
   div.slogan {
@@ -167,20 +145,6 @@ header { //Global
 
 /* Footer */ /* Simon: Todo: This will be required for all pages */
 @import 'footer';
-
-
-//.change .bar1 {
-//  transform: translate(0, 11px) rotate(-45deg);
-//}
-//
-//.change .bar2 {opacity: 0;}
-//
-//.change .bar3 {
-//  transform: translate(0, -11px) rotate(45deg);
-//}
-
-
-
 
 
 

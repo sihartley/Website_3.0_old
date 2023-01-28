@@ -20,7 +20,7 @@ $menu_button-hover: rgba(30, 30, 30, 1); //#1e1e1e;
 
 // Products New, Featured, Purchase
 $color-product-background: rgb(106, 106, 106); //#6a6a6a
-$color-buy-now-button-background: #222;
-$color-buy-now-button: rgb(179, 179, 179); //#b3b3b3
-$color-buy-now-button-hover: rgba(0, 0, 0, 1); //#222
+$color-product-button-background: #c8c8c8;
+$color-product-button-text: $color-logo-accent;
+$color-product-button-hover: $menu_button-hover;
 

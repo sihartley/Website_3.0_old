@@ -15,7 +15,9 @@
 @media screen and (max-width: 1025px) { //below 930px
   header {
     div.slogan {
-      p, h1 {
+
+      p,
+      h1 {
         font-size: 4.3vw;
       }
     }
@@ -24,7 +26,9 @@
 @media screen and (max-width: 975px) { //below 930px
   header {
     div.slogan {
-      p, h1 {
+
+      p,
+      h1 {
         //font-size: 2.4em;
       }
     }
@@ -42,10 +46,13 @@
     }
 
     div.slogan {
+      min-height: 205px;
+
       p,
       h1 {
         font-size: 1.8em;
         margin: 2% 0;
+
         &:after {
           content: '.';
         }
@@ -56,19 +63,21 @@
       }
     }
   }
+
+  section.main {
+    min-height: 400px;
+  }
+
 }
 
 @media screen and (max-width: 480px) { //below 480px
   header {
     aspect-ratio: 1.6/.7;
-    //Simon: Clean Me: remove this if continue to use .svg
-    //background-size: cover;
-    //position: relative;
     background-position: right -210% bottom;
     background-size: 80%;
 
   }
 }
 
-@media screen and (max-width: 465px) { //below 465px
-}
+//@media screen and (max-width: 465px) { //below 465px
+//}
