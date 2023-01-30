@@ -1,7 +1,7 @@
 <section class="addtocart">
 <!--     link example -->
 <!---->
-<!--            <a href="--><?php //echo $foxy_cart; ?><!--?name=Cool%20Example&price=10&color=red&code=sku123">Add a red Cool Example</a>-->
+            <a href="<?php echo $foxy_cart; ?>?name=Cool%20Example&price=10&color=red&code=sku123">Add a red Cool Example</a>
      form example
             <form data-fc-form-code="p1" action="<?php echo $foxy_cart; ?>" method="post" accept-charset="utf-8">
                 <input type="hidden" name="name" value="2022 Ford Maverick Mach 1 Esque Hood Decal" />

@@ -77,16 +77,19 @@
 
             </li>
             <li>
-                <span>About Us</span>
+                <a href="about.php" title="About us">About Us</a>
                 <ul>
                     <li>
-                        <a href="#" title="FAQ">FAQ</a>
+                        <a href="about.php#offer" title="What We Offer">What We Offer</a>
                     </li>
                     <li>
-                        <a href="#" title="Knowledge Base">Knowledge Base</a>
+                        <a href="about.php#graphics" title="Our Graphics">Our Graphics</a>
                     </li>
                     <li>
-                        <a href="#" title="Contact Us">Contact Us</a>
+                        <a href="about.php#design" title="Design Process">Custom Design Process</a>
+                    </li>
+                    <li>
+                        <a href="about.php#materials" title="Materials we use">Materials We Use</a>
                     </li>
                 </ul>
             </li>

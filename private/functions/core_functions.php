@@ -6,7 +6,7 @@ function host_ident($server): array
     if ($server === '168.235.116.113') {
         $hostingServer = 'InMotion';
         $dbPrefix = 'n64e7f5_';
-        $minifyHTML = '' /* ob_start("minifier" ) */;
+        $minifyHTML = ob_start("minifier" ) ;
         $rightClickProtect = '' /* ' oncontextmenu="return false;"'; */;
         $liveReload = '';
         $serverDot = 'darkred';

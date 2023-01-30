@@ -1,0 +1,133 @@
+@import '_partials/global';
+
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1%;
+
+  aside {
+    background-color: $color-section-background;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1%;
+    padding-top: 1%;
+    text-align: center;
+  }
+
+  h2 {
+    flex: 1 0 100%;
+    font-size: 1.7em;
+  }
+
+  div {
+    margin-top: 1em;
+    width: 25%;
+
+    h3,
+    p {
+      margin: 0 auto 1em;
+      width: 90%;
+    }
+
+    h4 {
+      font-size: 1.2em;
+    }
+
+    p {
+      border-top: $color-logo-accent 3px solid;
+      padding-top: 1em;
+    }
+  }
+
+  p a {
+    font-weight: 700;
+
+    &:link {
+      color: $color-logo-main;
+    }
+
+    &:active {
+      color: $color-logo-accent; //#122cd0
+    }
+
+    &:visited {
+      color: $color-info-link;
+    }
+  }
+
+  &.offer {
+    background: url('/images/company/vi_charger_mesh _l.svg') no-repeat left -21% bottom 13%;
+    background-size: 49%;
+    position: relative;
+
+  }
+
+  &.design {
+    background: url('/images/company/vi_charger_mesh.svg') no-repeat right -21% bottom 13%;
+    background-size: 49%;
+    position: relative;
+
+    div p span {
+      font-size: 1em;
+      font-weight: 700;
+    }
+
+  }
+
+  &.graphics div {
+    width: 33.3%;
+  }
+
+  &.materials div {
+    width: 50%;
+  }
+}
+
+/* Menu CSS */
+@import '_imports/mmenu'; /* Simon: Note: Not sure if this is the correct placement or in global.scss */
+
+/* Media Queries */
+@import '_partials/global-media-queries';
+
+
+
+@media screen and (max-width: 1220px) {
+  section.offer div {
+    width: 33.3%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  section.offer div {
+    width: 50%;
+  }
+
+  section.design div {
+       width: 50%;
+     }
+
+}
+
+@media screen and (max-width: 860px) {
+  section.graphics div {
+    width: 100%;
+  }
+  section.design div {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    &.offer,
+    &.design,
+    &.materials {
+      div {
+        width: 100%;
+
+      }
+    }
+  }
+}

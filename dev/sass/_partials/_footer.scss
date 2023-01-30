@@ -18,19 +18,21 @@ footer {
 
   .content {
     display: inline;
-  }
 
-  a {
-    color: $color-footer-link;  /* Simon: Todo: Move to _global-variables */
-    margin-left: 30px;
-
-    &:visited {
+    a {
       color: $color-footer-link;  /* Simon: Todo: Move to _global-variables */
+      margin-left: 30px;
+
+      &:visited {
+        color: $color-footer-link;  /* Simon: Todo: Move to _global-variables */
+      }
+
+      &:hover {
+        color: $navigation-hover;  /* Simon: Todo: Move to _global-variables */
+      }
     }
 
-    &:hover {
-      color: $navigation-hover;  /* Simon: Todo: Move to _global-variables */
-    }
   }
+
 
 }

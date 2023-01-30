@@ -3,18 +3,8 @@
 include_once '../private/functions/core_functions.php';
 /* Global Functions (Functions for ALL Pages) */
 include_once '../private/functions/global_functions.php';
-
 /* Server Detection, Database Prefix, HTML Minification, Right Click Protection, Live Reload, Server ID Dot, Database Credentials*/
 [$hostingServer, $dbPrefix, $minifyHTML, $rightClickProtect, $liveReload, $serverDot] = host_ident($_SERVER['SERVER_ADDR']);
-
-/* Database */
-$pop_vehicles_query = '(select make, model, year, image_path, vehicle_250px_image from '.$dbPrefix.'Automotive.vehicles where id IN (14, 17, 30, 42))';
-$new_products_query = '(select product_name, part_number, make, model, year, price_1, image_path, main_page_image from '.$dbPrefix.'Automotive.graphics where available IS NOT NULL ORDER BY id DESC LIMIT 4)';
-$featured_products_query = '(select product_name, part_number, make, model, year, price_1, image_path, main_page_image from '.$dbPrefix.'Automotive.graphics where available IS NOT NULL ORDER BY RAND() LIMIT 6 OFFSET 4)';
-$pop_vehicles = db_query($pop_vehicles_query);
-$new_products = db_query($new_products_query);
-$featured_products = db_query($featured_products_query);
-db_disconnect(db_connect());
 
 /* Business Info */
 /* Simon: ToDo: create and move this to include file (business_info.php) */
@@ -22,6 +12,7 @@ $phone_number = '877-558-2335';
 $sms_number = '805-910-7072';
 $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
 
+$page_title = 'About Us';
 /* HTML Minification */
 $minifyHTML;
 ?>
@@ -31,8 +22,8 @@ $minifyHTML;
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="description" content="Vinyl Imagination - Automotive Decals and Graphics Main Page">
-    <title>Vinyl Imagination v3.0 Responsive, Mobile First Website</title>
+    <meta name="description" content="Vinyl Imagination - About Us.">
+    <title>Vinyl Imagination - <?php echo $page_title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +31,7 @@ $minifyHTML;
 
     <?php
 
-    echo '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/index.min.css') . '" type="text/css">' . "\n";
+    echo '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/about.min.css') . '" type="text/css">' . "\n";
     /* Simon: Info: These are ordered for optimal performance ref. Lighthouse Test. */
     echo '<script src="' . auto_version('https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js') . '" type="text/javascript" defer></script>' . "\n" ;
     echo '<script src="' . auto_version('/js/mmenu_config.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
@@ -48,7 +39,7 @@ $minifyHTML;
     echo '<script src="' . auto_version('https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
     /* FOXYCART */
     echo '<script src="' . auto_version('/js/foxycart_dynamin_price_calc.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
-    echo '<script src="' . auto_version('https://cdn.foxycart.com/vinylimagination/loader.js') . '" type="text/javascript" async defer></script>' . "\n" ;
+    echo '<script src="' . auto_version('https://cdn.foxycart.com/vinylimagination/loader.js') . '" type="text/javascript" defer></script>' . "\n" ;
     echo '<script src="' . auto_version('/js/scripts_global.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
     ?>
 </head>
@@ -57,41 +48,21 @@ $minifyHTML;
 
 <div id="page">
     <div id="content">
+        <?php
+        include '../private/includes/header.php' ?>
 
-        <!-- Header -->
-        <?php include '../private/includes/header.php'?>
+        <!-- What we offer. -->
+        <?php echo str_replace(['h3>', 'h4>'], ['h2>', 'h3>'], file_get_contents('../private/includes/about/offer.php')); ?>
 
-        <!-- Popular Vehicles -->
-        <?php include '../private/includes/index/pop_vehicles.php'?>
-
-        <!-- Main Content -->
-        <?php include '../private/includes/index/main_content.php' ?>
-
-        <!-- New Products -->
-        <?php include '../private/includes/index/new_products.php'?>
-
-        <!-- Featured Products -->
-        <?php include '../private/includes/index/featured_vehicles.php'?>
+        <!-- Graphics -->
+        <?php include '../private/includes/about/graphics.php'?>
 
         <!-- Design -->
-        <?php include '../private/includes/about/design.php'?>
+        <?php echo str_replace(['h3>', 'h4>'], ['h2>', 'h3>'], file_get_contents('../private/includes/about/design.php')); ?>
 
-        <!-- FOYCART TEST -->
-<!--        --><?php //include '../private/includes/foxycart_test.php'?>
+        <!-- Materials -->
+        <?php include '../private/includes/about/materials.php'?>
 
-
-
-        <!--        <section>-->
-<!--            <aside>-->
-<!--            </aside>-->
-<!--            <aside>-->
-<!--            </aside>-->
-    <!--        <blockquote>-->
-    <!--            <p class="quote">Lorem ipsum dolor sit amet conse ctetuer adipiscing elit. Morbi comod sed dolor sit amet consect adipiscing elit.</p>-->
-    <!--            <p class="credit"><strong>Author Name</strong><br><em>Business Title</em><br>Company</p>-->
-    <!--        </blockquote>-->
-
-<!--        </section>-->
 
 
         <!-- Navigation -->
@@ -103,11 +74,9 @@ $minifyHTML;
 
 </div> <!-- #page close -->
 
-
 <?php echo $liveReload . '<!-- '.$dbPrefix.' -->'; ?>
 </body>
 
 </html>
-
 <!-- Simon: Todo: create and move this to include file foot.php -->
 <?php ob_end_flush(); ?>
