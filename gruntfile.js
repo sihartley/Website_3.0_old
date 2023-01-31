@@ -123,7 +123,7 @@ module.exports = function(grunt) {
         // tasks: ['uglify']
       }, //scripts
       html: {
-        files: ['public/**/*.html', 'public/**/*.php']
+        files: ['private/**/*.php', 'public/*.html', 'public/*.php', 'public/**/*.php']
       },
       css: {
         files: ['public/css/**/*.css']

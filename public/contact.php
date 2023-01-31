@@ -9,15 +9,14 @@ include_once '../private/functions/global_functions.php';
 /* Business Info */
 include '../private/includes/business_info.php';
 
-$page_title = 'About Us';
-$css_file = '/css/about.min.css';
+$page_title = 'Contact Us';
+$css_file = '/css/contact.min.css';
 /* HTML Minification */
 $minifyHTML;
 ?>
 
 <!DOCTYPE html>
 <html lang="en"<?php echo $rightClickProtect; ?>>
-
 
 <!-- Head -->
 <?php include_once '../private/includes/head.php'?>
@@ -26,20 +25,20 @@ $minifyHTML;
 
 <div id="page">
     <div id="content">
-        <?php
-        include '../private/includes/header.php' ?>
+        <!-- Header -->
+        <?php include '../private/includes/header.php' ?>
 
-        <!-- What we offer. -->
-        <?php echo str_replace(['h3>', 'h4>'], ['h2>', 'h3>'], file_get_contents('../private/includes/about/offer.php')); ?>
+        <!-- SMS / MMS -->
+        <?php include '../private/includes/contact/sms.php'?>
 
-        <!-- Graphics -->
-        <?php include '../private/includes/about/graphics.php'?>
+        <!-- Info Email -->
+        <?php include '../private/includes/contact/info_email.php'?>
 
-        <!-- Design -->
-        <?php echo str_replace(['h3>', 'h4>'], ['h2>', 'h3>'], file_get_contents('../private/includes/about/design.php')); ?>
+        <!-- Design Email -->
+        <?php include '../private/includes/contact/graphics_email.php'?>
 
-        <!-- Materials -->
-        <?php include '../private/includes/about/materials.php'?>
+        <!-- Call -->
+        <?php include '../private/includes/contact/call.php'?>
 
 
 

@@ -77,7 +77,7 @@
 
             </li>
             <li>
-                <a href="about.php" title="About us">About Us</a>
+                <a href="about.php" title="About us">About</a>
                 <ul>
                     <li>
                         <a href="about.php#offer" title="What We Offer">What We Offer</a>
@@ -92,6 +92,9 @@
                         <a href="about.php#materials" title="Materials we use">Materials We Use</a>
                     </li>
                 </ul>
+            </li>
+            <li>
+                <a href="contact.php" title="Contact us">Contact</a>
             </li>
 
         </ul>

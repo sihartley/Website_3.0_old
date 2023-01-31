@@ -1,0 +1,37 @@
+//@import '_partials/global';
+@import '_imports/global-variables';
+
+
+section {
+  div {
+    background-color: $color-section-background;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1% auto;
+    padding-top: 1%;
+    text-align: center;
+
+    ul {
+      margin: 1% auto;
+      text-align: left;
+    }
+  }
+}
+
+/* Menu CSS */
+//@import '_imports/mmenu'; /* Simon: Note: Not sure if this is the correct placement or in global.scss */
+
+/* Media Queries */
+@import '_partials/global-media-queries';
+
+
+@media screen and (max-width: 1220px) {
+}
+
+@media screen and (max-width: 1150px) {
+}
+
+@media screen and (max-width: 860px) {
+}

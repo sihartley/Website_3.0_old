@@ -1,11 +1,5 @@
 // Global Styles Used in ALL Pages
-@import '../_imports/global-variables';
-
-@font-face { //Global //Only for Logo Name, NOT a complete font set
-  font-family: 'Exo', 'Ubuntu', sans-serif;
-  src: local('Pacifico Regular'), local('Pacifico-Regular');
-  font-display: swap;
-}
+@import '_imports/_global-variables.scss';
 
 h1 {font-size: 2.8em; font-weight: 700; margin: 0 0 1em;}
 h2 {font-size: 1.6em; font-weight: 700; line-height: 1.1em; margin: 0 0 .5em; }
@@ -103,7 +97,7 @@ header { //Global
 
     .menu-bar {
       color: $color-logo-main;
-      font-size: 2.3em;
+      font-size: 2em;
       font-weight: 400;
       margin: auto 1% auto auto;
 
@@ -177,7 +171,7 @@ header { //Global
 } //Global
 
 /* Footer */ /* Simon: Todo: This will be required for all pages */
-@import 'footer';
+@import '_partials/footer';
 
 
 

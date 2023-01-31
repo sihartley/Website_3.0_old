@@ -1,4 +1,5 @@
-@import '_partials/global';
+//@import '_partials/global';
+@import '_imports/global-variables';
 
 
 section {
@@ -58,7 +59,7 @@ section {
   }
 
   &.offer {
-    background: url('/images/company/vi_charger_mesh _l.svg') no-repeat left -21% bottom 13%;
+    background: url('/images/company/vi_charger_mesh_l.svg') no-repeat left -21% bottom 13%;
     background-size: 49%;
     position: relative;
 
@@ -86,7 +87,7 @@ section {
 }
 
 /* Menu CSS */
-@import '_imports/mmenu'; /* Simon: Note: Not sure if this is the correct placement or in global.scss */
+//@import '_imports/mmenu'; /* Simon: Note: Not sure if this is the correct placement or in global.scss */
 
 /* Media Queries */
 @import '_partials/global-media-queries';

@@ -25,6 +25,9 @@
 }
 @media screen and (max-width: 975px) { //below 930px
   header {
+    div.fixed-title .menu-bar {
+      font-size: 1.5em;
+    }
     div.slogan {
 
       p,
@@ -35,7 +38,25 @@
   }
 }
 
-@media screen and (max-width: 810px) { //below 810px
+@media screen and (max-width: 800px) { //below 810px
+  header {
+    div.fixed-title .menu-bar {
+      display: none;
+    }
+    div.fixed-title .hamburger,
+    div.fixed-title .shopcart {
+      display: block;
+    }
+
+    div.fixed-title img.mini-logo {
+      margin: auto;
+      display: none;
+    }
+    div.slogan {
+      min-height: 205px;
+    }
+
+  }
 }
 
 @media screen and (max-width: 600px) { //below 600px
