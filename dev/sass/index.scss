@@ -143,7 +143,6 @@ section {
     background: url('/images/company/vi_charger_mesh.svg') no-repeat right -21% bottom 13%;
     background-size: 49%;
     display: flex;
-
     flex-wrap: wrap;
     position: relative;
 
@@ -152,7 +151,6 @@ section {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      //margin-bottom: 3%;
       padding: 1%;
       text-align: center;
     }
@@ -179,13 +177,12 @@ section {
       p {
         border-top: $color-logo-accent 3px solid;
         padding-top: 1em;
-      }
 
-      p span {
-        font-size: 1em;
-        font-weight: 700;
+        span {
+          font-size: 1em;
+          font-weight: 700;
+        }
       }
-    }
 
     p a {
       font-weight: 700;
@@ -305,5 +302,5 @@ section {
     }
   }
 
-
+  }
 }

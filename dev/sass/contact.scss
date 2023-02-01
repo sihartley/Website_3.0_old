@@ -1,24 +1,87 @@
 //@import '_partials/global';
 @import '_imports/global-variables';
 
-
 section {
-  div {
+  margin: 1%;
+  padding: 0 1%;
+
+  > div.contacts {
     background-color: $color-section-background;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 1% auto;
-    padding-top: 1%;
+    padding: 1%;
     text-align: center;
 
-    ul {
-      margin: 1% auto;
-      text-align: left;
+    > h2 { // Main Title
+      flex: 1 0 100%;
+      font-size: 1.7em;
     }
+
+    > h3 { // Hours
+      flex: 1 0 100%;
+      margin: 1%;
+    }
+
+    div { //Contact Method
+      flex: 1 0 25%;
+      margin-top: 1%;
+
+      img {
+        height: 4em;
+        margin-bottom: 3%;
+      }
+
+      &.email img {
+        height: 2.5em;
+        padding: .75em;
+      }
+
+      h3,
+      p,
+      h4,
+      h5 {
+        margin: 0 auto 1em;
+        width: 90%;
+      }
+
+      h3 {
+        border-bottom: $color-logo-accent 3px solid;
+        padding-bottom: 1em;
+      }
+
+      a {
+        //margin: 1% 0;
+
+        div {
+          margin-bottom: 3%;
+        }
+      }
+
+      a span {
+        font-weight: bold;
+      }
+
+      p > span {
+        font-weight: 700;
+      }
+
+      h4,
+      h5 {
+        margin-bottom: .5em;
+      }
+
+      h5 {
+        color: $color-info-notice;
+      }
+
+
+    }
+
   }
+
 }
+
 
 /* Menu CSS */
 //@import '_imports/mmenu'; /* Simon: Note: Not sure if this is the correct placement or in global.scss */
@@ -26,12 +89,17 @@ section {
 /* Media Queries */
 @import '_partials/global-media-queries';
 
+@media screen and (max-width: 1060px) {
+  section>div.contacts div {
+    flex: 1 0 50%;
+    margin-top: 2%;
+  }
 
-@media screen and (max-width: 1220px) {
 }
+@media screen and (max-width: 600px) {
+  section>div.contacts div {
+    flex: 1 0 100%;
+    margin-top: 2%;
+  }
 
-@media screen and (max-width: 1150px) {
-}
-
-@media screen and (max-width: 860px) {
 }

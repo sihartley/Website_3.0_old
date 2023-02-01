@@ -12,6 +12,7 @@ $fax = '+1 (866) 871-8450'; $fax_clean = str_replace([' ', '(', ')', '-'], '', $
 $email_info = 'info@vinylimagination.com'; $e_info = 'info@';
 $email_graphics = 'graphics@vinylimagination.com'; $e_graphics = 'graphics@';
 $email_sales = 'sales@vinylimagination.com'; $e_sales = 'sales@';
+$email_orders = 'orders@vinylimagination.com'; $e_orders = 'orders@';
 $email_admin = 'administrator@vinylimagination.com'; $e_admin = 'administrator@';
 $email_gallery = 'gallery@vinylimagination.com'; $e_gallery = 'gallery@';
 

@@ -1,11 +1,17 @@
 // Global Variables
 $color-html-background: #0c0c0c;
+
+// Company Colors
+$vinyl-imagination-gray: #b3b3b3;
+$vinyl-imagination-blue: #122cd0;
+$vinyl-imagination-orange: #e57a00;
+
 //$color-content-background: rgba(16, 26, 92, 1); //#101a5c
 $color-content-background: rgba(50, 50, 50, 1); //#323232
 $color-header-background: #030303;
 $color-body-text: #fff;
-$color-logo-accent: rgb(18, 44, 208); //#122cd0
-$color-logo-main: rgb(179, 179, 179); //b3b3b3
+$color-logo-accent: $vinyl-imagination-blue; //rgb(18, 44, 208); //#122cd0
+$color-logo-main: $vinyl-imagination-gray; //rgb(179, 179, 179); //b3b3b3
 $color-footer-background: #000;
 $color-footer-text: #999;
 $color-footer-link: #777;
@@ -17,11 +23,16 @@ $color-feature-background: rgba(10, 10, 10, .5);
 $navigation-hover: rgb(106, 106, 106); //#6a6a6a
 $menu_button-background: rgba(51, 51, 51, 1); //#333;
 $menu_button-hover: rgba(30, 30, 30, 1); //#1e1e1e;
-$color-info-link: #e57a00;
+$color-info-link: $vinyl-imagination-orange;
+$color-info-notice: $vinyl-imagination-orange;
 
 // Products New, Featured, Purchase
 $color-product-background: rgb(106, 106, 106); //#6a6a6a
 $color-product-button-background: #c8c8c8;
 $color-product-button-text: $color-logo-accent;
 $color-product-button-hover: $menu_button-hover;
+
+// Icons
+$color-icon-main: $color-logo-main;
+$color-icon-accent: $vinyl-imagination-orange;
 

@@ -5,7 +5,7 @@
         </a>
         <img class="mini-logo" src="/images/company/vinyl-imagination-logo.svg" alt="Vinyl Imagination Logo">
         <div class="menu-bar">
-            <a href="index.php">Home</a>|<a href="#menu">Menu</a>|<a href="contact.php">Contact</a>|<a href="about.php">About</a>
+            <a href="index.php">Home</a>|<a href="#menu">Menu</a>|<a href="contact.php">Contact</a>|<a href="about.php">About</a>|<a href="https://vinylimagination.foxycart.com/cart?cart=view">Cart</a>
 
         </div>
         <a class="shopcart" aria-label="Shopping Cart Button" href="https://vinylimagination.foxycart.com/cart?cart=view">

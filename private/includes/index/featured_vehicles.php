@@ -3,10 +3,7 @@
     <h2>Featured Automotive Graphics</h2>
     <?php $feature = 1;
     while ($feature_product = mysqli_fetch_assoc($featured_products)){
-        [$width, $height, $type, $attr] = getimagesize("." . $feature_product['image_path'] . $feature_product['main_page_image']);
-        $im_ratio = $height/$width;
-
-        ?>
+    ?>
         <div class="<?php echo "feature-" . $feature++; ?>">
             <div class="content">
                 <h3><?php echo $feature_product['product_name']; ?></h3>
