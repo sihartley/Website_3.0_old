@@ -13,7 +13,7 @@
                 <h3><?php echo "{$feature_product['year']} {$feature_product['make']} {$feature_product['model']}"; ?></h3>
                 <a href="" class="buy-now-button" aria-label="<?php echo "BUY {$feature_product['year']} {$feature_product['make']} {$feature_product['model']} - {$feature_product['product_name']} " . ceil($feature_product['price_1']); ?>">
                     <div>
-                        <span>BUY NOW</span><br>
+                        <span>Customize</span><br>
                         <span>From $<?php echo ceil($feature_product['price_1']); ?></span>
 
                     </div>

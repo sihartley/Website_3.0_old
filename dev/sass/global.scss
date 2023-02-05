@@ -1,11 +1,11 @@
 // Global Styles Used in ALL Pages
 @import '_imports/_global-variables.scss';
 
-h1 {font-size: 2.8em; font-weight: 700; margin: 0 0 1em;}
-h2 {font-size: 1.6em; font-weight: 700; line-height: 1.1em; margin: 0 0 .5em; }
-h3 {font-size: 1.3em; font-weight: 700; margin: 0 0 .5em; }
-h4 {font-size: 1em; font-weight: 700; margin: 0 0 1.5em; }
-h5 {font-size: .85em; font-weight: 700; margin: 0 0 .85em; }
+h1 {font-size: 2.8em; font-weight: 500; margin: 0 0 1em;} //Simon: Changed: font-weight from 700 to 500
+h2 {font-size: 1.6em; font-weight: 500; line-height: 1.1em; margin: 0 0 .5em; } //Simon: Changed: font-weight from 700 to 500
+h3 {font-size: 1.3em; font-weight: 500; margin: 0 0 .5em; } //Simon: Changed: font-weight from 700 to 500
+h4 {font-size: 1em; font-weight: 500; margin: 0 0 1.5em; } //Simon: Changed: font-weight from 700 to 500
+h5 {font-size: .85em; font-weight: 500; margin: 0 0 .85em; } //Simon: Changed: font-weight from 700 to 500
 p {margin: 0 1% 1em;}
 
 html { //Global
@@ -38,7 +38,8 @@ body { //Global
 
   .buy-now-button, /* Simon: Temp: Possibly Move this to index_screen.scss */
   .shop-now-button,
-  .contact-button { // <a> element.
+  .contact-button,
+  .claim-button { // <a> element.
     //margin-top: auto;
     text-decoration: none;
 
@@ -96,6 +97,7 @@ header { //Global
     img.mini-logo {
       height: 90%;
       margin: auto auto auto 1%;
+      opacity: 0;
     }
 
     .menu-bar {
@@ -105,9 +107,9 @@ header { //Global
       margin: auto 1% auto auto;
 
       a {
-        font-weight: 700;
-        text-decoration: none;
+        font-weight: 500;
         padding: 0 12px;
+        text-decoration: none;
       }
 
       a:link,
@@ -141,7 +143,7 @@ header { //Global
 
   a.logo {
     aspect-ratio: 1/.212;
-    background: url('/images/company/vinyl-imagination-logo.svg') no-repeat 0 0;
+    background: url('/images/company/vi-logo.svg') no-repeat 0 0;
     margin: 6em auto 0;
     width: 90%;
   }

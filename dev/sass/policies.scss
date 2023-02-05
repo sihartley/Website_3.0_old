@@ -1,0 +1,100 @@
+//@import '_partials/global';
+@import '_imports/global-variables';
+
+section {
+  margin: 1%;
+  padding: 0 1%;
+
+  > div.terms,
+  > div.privacy {
+    background-color: $color-section-background;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+    text-align: left;
+
+    p {
+      margin: 0 auto 1em;
+      width: 90%;
+    }
+
+    h2 {
+      text-align: center;
+      width: 100%;
+
+      ~ p {
+        width: 98%;
+      }
+    }
+
+    img {
+      flex: 1 0 100%;
+      height: 6em;
+      padding: .75em;
+    }
+
+    div {
+      margin-top: 3%;
+    }
+
+    h3 {
+      margin-left: 1%;
+      margin-right: auto;
+      padding-bottom: 1em;
+      width: 90%;
+    }
+
+    h4,
+    h5 {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2%;
+    }
+
+    ul > li {
+      margin: auto;
+      width: 85%;
+
+      h5, p {
+        margin-left: unset;
+      }
+    }
+
+    a {
+      font-weight: 500;
+
+      &:link {
+        color: $color-logo-main;
+      }
+
+      &:active {
+        color: $color-logo-accent;
+      }
+
+      &:visited {
+        color: $color-info-link;
+      }
+    }
+
+    .contact {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+  } // div.terms, div.privacy
+
+  > div.privacy div h4,
+  > div.privacy div h5 {
+    width: 90%;
+  }
+
+  > div.terms div h4 {
+    width: 85%;
+  }
+
+} //Section
+
+/* Media Queries */
+@import '_partials/global-media-queries';
+

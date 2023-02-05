@@ -19,6 +19,7 @@ db_disconnect(db_connect());
 /* Business Info */
 include '../private/includes/business_info.php';
 
+/* CSS Files Specific to this page. */
 $css_file = '/css/index.min.css';
 
 /* HTML Minification */

@@ -96,6 +96,15 @@
             <li>
                 <a href="contact.php" title="Contact us">Contact</a>
             </li>
+            <li>
+                <a href="insurance.php" title="Installation Insurance">Installation Insurance</a>
+            </li>
+            <li>
+                <a href="terms-conditions.php" title="Installation Insurance">Terms & Conditions</a>
+            </li>
+            <li>
+                <a href="privacy-policy.php" title="Installation Insurance">Privacy Policy</a>
+            </li>
 
         </ul>
     </nav>

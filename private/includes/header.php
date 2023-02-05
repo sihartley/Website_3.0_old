@@ -3,7 +3,7 @@
         <a class="hamburger" aria-label="Menu Button" href="#menu">
             <img src="/images/icons/bars.svg" alt="Menu Icon">
         </a>
-        <img class="mini-logo" src="/images/company/vinyl-imagination-logo.svg" alt="Vinyl Imagination Logo">
+        <img class="mini-logo" src="/images/company/vi-logo-simple.svg" alt="Vinyl Imagination Logo">
         <div class="menu-bar">
             <a href="index.php">Home</a>|<a href="#menu">Menu</a>|<a href="contact.php">Contact</a>|<a href="about.php">About</a>|<a href="https://vinylimagination.foxycart.com/cart?cart=view">Cart</a>
 

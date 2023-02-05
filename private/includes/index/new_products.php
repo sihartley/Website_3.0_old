@@ -14,7 +14,7 @@
                 <a href="#" class="buy-now-button"
                    aria-label="<?php echo "BUY {$new_product['year']} {$new_product['make']} {$new_product['model']} - {$new_product['product_name']} " . ceil($new_product['price_1']); ?>">
                     <div>
-                        <span>BUY</span><br>
+                        <span>Customize</span><br>
                         <span>From $<?php echo ceil($new_product['price_1']); ?></span>
                     </div>
                 </a>

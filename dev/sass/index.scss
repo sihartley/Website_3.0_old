@@ -160,6 +160,11 @@ section {
       font-size: 1.7em;
     }
 
+    div > img {
+      height: 4em;
+      margin-bottom: 3%;
+    }
+
     div {
       margin-top: 1em;
       width: 25%;
@@ -184,24 +189,25 @@ section {
         }
       }
 
-    p a {
-      font-weight: 700;
+      p a {
+        font-weight: 700;
 
-      &:link {
-        color: $color-logo-main;
+        &:link {
+          color: $color-logo-main;
+        }
+
+        &:active {
+          color: $color-logo-accent; //#122cd0
+        }
+
+        &:visited {
+          color: $color-info-link;
+        }
       }
-
-      &:active {
-        color: $color-logo-accent; //#122cd0
     }
 
-      &:visited {
-        color: $color-info-link;
-      }
-    }
+
   }
-
-
 }
 
 /* Old Navigation */
@@ -221,7 +227,6 @@ section {
 //1201px and more — Extra large screens, TV
 
 @media screen and (max-width: 1150px) {
-  section.offer div,
   section.design div {
     width: 33.3%;
   }
@@ -272,7 +277,7 @@ section {
     padding: 2em 0;
 
     > div {
-      //flex: 1 0 100%;
+      flex: 1 0 100%;
       min-height: 7em;
       text-align: left;
 
@@ -294,13 +299,9 @@ section {
     }
   }
 
-  section.design {
-
-    div {
-      width: 100%;
-
-    }
+  section.design div {
+    width: 100%;
   }
 
-  }
 }
+

@@ -1,7 +1,6 @@
 //@import '_partials/global';
 @import '_imports/global-variables';
 
-
 section {
   display: flex;
   flex-wrap: wrap;
@@ -72,9 +71,16 @@ section {
 
     div p span {
       font-size: 1em;
-      font-weight: 700;
+      font-weight: 600;
     }
+  }
 
+  &.offer,
+  &.design {
+    div > img {
+      height: 4em;
+      margin-bottom: 3%;
+    }
   }
 
   &.graphics div {

@@ -9,7 +9,6 @@
     margin: 0;
     max-width: 100%;
   }
-
 }
 
 @media screen and (max-width: 1025px) { //below 930px
@@ -28,6 +27,7 @@
     div.fixed-title .menu-bar {
       font-size: 1.5em;
     }
+
     div.slogan {
 
       p,
@@ -43,6 +43,7 @@
     div.fixed-title .menu-bar {
       display: none;
     }
+
     div.fixed-title .hamburger,
     div.fixed-title .shopcart {
       display: block;
@@ -50,8 +51,10 @@
 
     div.fixed-title img.mini-logo {
       margin: auto;
-      display: none;
+      max-width: 336px;
+      width: 60%;
     }
+
     div.slogan {
       min-height: 205px;
     }

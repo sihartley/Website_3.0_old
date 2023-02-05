@@ -19,4 +19,7 @@ $email_gallery = 'gallery@vinylimagination.com'; $e_gallery = 'gallery@';
 //FoxyCart
 $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
 
+//Tawk.to Direct Chat Link
+$chat_link = 'https://tawk.to/chat/6229917ca34c2456412a54e4/1ftp60k94';
+
 
