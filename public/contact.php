@@ -1,18 +1,9 @@
 <?php
-/* Core Functions (Functions for ALL Pages NO Exceptions) */
-include_once '../private/functions/core_functions.php';
-/* Global Functions (Functions for ALL Pages) */
-include_once '../private/functions/global_functions.php';
-/* Server Detection, Database Prefix, HTML Minification, Right Click Protection, Live Reload, Server ID Dot, Database Credentials*/
-[$hostingServer, $dbPrefix, $minifyHTML, $rightClickProtect, $liveReload, $serverDot] = host_ident($_SERVER['SERVER_ADDR']);
-
-/* Business Info */
-include '../private/includes/business_info.php';
+include_once '../private/includes/initialize.php';
 
 $page_title = 'Contact Us';
 $css_file = '/css/inform.min.css';
-/* HTML Minification */
-$minifyHTML;
+
 ?>
 
 <!DOCTYPE html>
@@ -28,12 +19,11 @@ $minifyHTML;
         <!-- Header -->
         <?php include '../private/includes/header.php' ?>
 
-        <!-- Page Content -->
-<!-- Simon: ToDo: Add aspect ratios to images.-->
+<!-- Page Content -->
         <section id="contact">
             <div class="contacts">
                 <h2>Ways to contact us.</h2>
-                <h3><?php echo "Business Hours: {$office_days}, {$office_hours}" ?></h3>
+                <h3><?php echo "Business Hours: $office_days, $office_hours" ?></h3>
 
 <!-- Text Message -->
                 <div class="text">
@@ -114,18 +104,16 @@ $minifyHTML;
 
         </section>
 
-
-
         <!-- Navigation -->
-        <?php include '../private/includes/navigation.php'; ?> <!-- Simon: Info: Keep inside content div for page anchors to work properly -->
+        <?php include '../private/includes/navigation.php'; ?> <!-- Note: Keep inside content div for page anchors to work properly -->
     </div> <!-- #content close -->
 
     <!-- footer -->
-    <?php include_once '../private/includes/footer.php' /* Simon: Info: Keep here for positioning and scrolling to work correctly */?>
+    <?php include_once '../private/includes/footer.php' /* Note: Keep here for positioning and scrolling to work correctly */?>
 
 </div> <!-- #page close -->
 
-<?php echo $liveReload . '<!-- '.$dbPrefix.' -->'; ?>
+<?php if (!empty($liveReload)) { echo $liveReload . '<!-- '.$dbPrefix.' -->'; } ?>
 </body>
 
 </html>

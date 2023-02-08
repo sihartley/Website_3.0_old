@@ -1,11 +1,10 @@
 // Global Styles Used in ALL Pages
 @import '_imports/_global-variables.scss';
 
-h1 {font-size: 2.8em; font-weight: 500; margin: 0 0 1em;} //Simon: Changed: font-weight from 700 to 500
-h2 {font-size: 1.6em; font-weight: 500; line-height: 1.1em; margin: 0 0 .5em; } //Simon: Changed: font-weight from 700 to 500
-h3 {font-size: 1.3em; font-weight: 500; margin: 0 0 .5em; } //Simon: Changed: font-weight from 700 to 500
-h4 {font-size: 1em; font-weight: 500; margin: 0 0 1.5em; } //Simon: Changed: font-weight from 700 to 500
-h5 {font-size: .85em; font-weight: 500; margin: 0 0 .85em; } //Simon: Changed: font-weight from 700 to 500
+h1 {font-size: 2.8em; font-weight: 500; margin: 0 0 1em;} //Note: font-weight from 700 to 500
+h2 {font-size: 1.6em; font-weight: 500; line-height: 1.1em; margin: 0 0 .5em; } //Note: font-weight from 700 to 500
+h4 {font-size: 1em; font-weight: 500; margin: 0 0 1.5em; } //Note: font-weight from 700 to 500
+h5 {font-size: .85em; font-weight: 500; margin: 0 0 .85em; } //Note: font-weight from 700 to 500
 p {margin: 0 1% 1em;}
 
 html { //Global
@@ -32,11 +31,11 @@ body { //Global
     margin: 0 auto;
     max-width: 1400px;
     min-height: 100vh;
-    padding-bottom: 1.5em; /* Simon: Note: CLose gap between content and footer */
+    padding-bottom: 1.5em;
     position: relative;
   }
 
-  .buy-now-button, /* Simon: Temp: Possibly Move this to index_screen.scss */
+  .buy-now-button,
   .shop-now-button,
   .contact-button,
   .claim-button { // <a> element.
@@ -50,8 +49,6 @@ body { //Global
       color: $color-product-button-text;
       margin: 0 auto;
       width: 65%;
-
-
 
       &:hover {
         background-color: $color-product-button-hover;
@@ -108,8 +105,12 @@ header { //Global
 
       a {
         font-weight: 500;
-        padding: 0 12px;
+        margin: 0 12px;
         text-decoration: none;
+
+        &.on {
+          border-bottom: $color-logo-accent solid 5px;
+        }
       }
 
       a:link,
@@ -122,7 +123,8 @@ header { //Global
       }
 
       a:hover {
-        background-color: $element-hover-background;
+        //background-color: $element-hover-background;
+        border-bottom: $color-logo-accent solid 5px;
       }
 
     }
@@ -175,9 +177,5 @@ header { //Global
 
 } //Global
 
-/* Footer */ /* Simon: Todo: This will be required for all pages */
+// Footer - Required for all pages
 @import '_partials/footer';
-
-
-
-//@import '../_imports/mmenu'; /* Simon: Note: Not sure if this is the correct placement */

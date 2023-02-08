@@ -36,11 +36,11 @@ body { //Global
     margin: 0 auto;
     max-width: 1400px;
     min-height: 100vh;
-    padding-bottom: 1.5em; /* Simon: Note: CLose gap between content and footer */
+    padding-bottom: 1.5em;
     position: relative;
   }
 
-  .buy-now-button, /* Simon: Temp: Possibly Move this to index_screen.scss */
+  .buy-now-button,
   .shop-now-button { // <a> element.
     //margin-top: auto;
     text-decoration: none;
@@ -109,8 +109,8 @@ header { //Global
 
       a {
         font-weight: 700;
-        text-decoration: none;
         padding: 0 12px;
+        text-decoration: none;
       }
 
       a:link,
@@ -176,9 +176,5 @@ header { //Global
 
 } //Global
 
-/* Footer */ /* Simon: Todo: This will be required for all pages */
+/* Footer - Required for all pages */
 @import 'footer';
-
-
-
-//@import '../_imports/mmenu'; /* Simon: Note: Not sure if this is the correct placement */

@@ -1,13 +1,13 @@
-/* Navigation */
+// Navigation
 nav.main {
   background-color: $element-hover-background;
-  font-size: .8em; /* Added */
-  left: 50%;  /* Changed from 0px */
-  line-height: 1.3em; /* Added */
-  padding: 0; /* Changed from 50px 0 0 0 0 */
+  font-size: .8em; // Added
+  left: 50%;  // Changed from 0px
+  line-height: 1.3em; // Added
+  padding: 0; // Changed from 50px 0 0 0 0
   position: absolute;
   top: 0;
-  width: 50%; /* Changed from 100% */
+  width: 50%; // Changed from 100%
 
   &::after {
     clear: both;
@@ -18,16 +18,17 @@ nav.main {
   ul {
     list-style: none;
     margin: 0;
-    padding: 0px;
+    padding: 0;
 
     li {
       &:hover {
-        background-color: $color-logo-accent;  /* Simon: Todo: Move to _global-variables */
+        background-color: $color-logo-accent;
 
         > ul {
           display: block;
         }
       }
+
       a {
         color: $color-body-text;
         display: inline-block;
@@ -58,19 +59,19 @@ nav.main {
 
       ul {
         left: 100%;
-        top: 0px;
+        top: 0;
       }
     }
   }
 
-  > ul { /* Top Level */
-    padding-left: 0; /* Changed from 200px */
+  > ul { // Top Level
+    padding-left: 0; // Changed from 200px
 
     > li {
       float: left;
 
       > a {
-        padding: 10px 20px 15px 20px;
+        padding: 10px 20px 15px;
         width: auto;
       }
 

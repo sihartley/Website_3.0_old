@@ -3,6 +3,8 @@
 $office_hours = '10am to 5pm PST';
 $office_days = 'Monday to Friday';
 
+//Address
+$address = 'Camarillo, CA 93010 USA';
 //Contact Phone Numbers
 $phone = '+1 (877) 558-2335'; $phone_clean = str_replace([' ', '(', ')', '-'], '', $phone);
 $sms = '+1 (805) 910-7072'; $sms_clean = str_replace([' ', '(', ')', '-'], '', $sms);

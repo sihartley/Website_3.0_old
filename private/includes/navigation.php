@@ -1,5 +1,5 @@
 <div style="display: none;"> <!-- This div prevents momentary visibility on page load before mmenu takes over. -->
-    <nav id="menu" class="main"> <!-- Simon: Note: display: none here stops mmenu from displaying. -->
+    <nav id="menu" class="main"> <!-- Note: display: none here stops mmenu from displaying. -->
         <ul>
             <li>
                 <span>Graphics Products</span>

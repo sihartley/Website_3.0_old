@@ -60,6 +60,12 @@
     }
 
   }
+
+  footer {
+    div.footer-details {
+      flex-direction: column;
+    }
+  }
 }
 
 @media screen and (max-width: 600px) { //below 600px
@@ -99,9 +105,13 @@
     aspect-ratio: 1.6/.7;
     background-position: right -210% bottom;
     background-size: 80%;
-
   }
 }
 
-//@media screen and (max-width: 465px) { //below 465px
-//}
+@media screen and (max-width: 450px) { //below 450px
+  footer {
+    div.footer-details div.lists {
+      flex-direction: column;
+    }
+  }
+}

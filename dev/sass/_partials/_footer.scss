@@ -1,38 +1,106 @@
-/* Footer */
+// Footer
 footer {
-  background-color: $color-footer-background; /* Simon: Todo: Move to _global-variables */
-  //bottom: 0;
+  background-color: $color-footer-background;
   color: $color-footer-text;
   font-size: .8em;
-  //left: 0;
   margin: 0 auto;
   max-width: 1340px;
-  //right: 0;
   padding: 30px;
   position: relative;
 
-  svg{
-    width: .8em;
+  div.footer-details {
+    border-bottom: $color-footer-link solid 1px;
+    display: flex;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+
+    h5 {
+      font-size: 1.5em;
+    }
+
+    div.co-info {
+      display: flex;
+      flex: 2;
+      flex-direction: column;
+      padding-right: 3%;
+
+      img {
+        margin: 3% auto 1%;
+        width: 80%;
+      }
+
+      p {
+        font-size: 1.3em;
+        font-weight: 500;
+        margin: 1% auto;
+
+      }
+
+      div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 1% auto auto;
+
+        img {
+          //width: 21%;
+          width: 8em;
+        }
+      }
+    }
+
+    div.lists {
+      display: flex;
+      flex: 2;
+
+      div {
+        flex: 1;
+        margin-left: 2%;
+        margin-right: 2%;
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+
+          li {
+            margin-top: 4%;
+          }
+        }
+
+        &.other-list {
+          flex: 1;
+
+          ul {
+            //width: unset;
+          }
+        }
+      }
+
+    }
+  }
+
+  svg {
     margin-right: 1em;
+    width: .8em;
   }
 
   .content {
     display: inline;
 
     a {
-      color: $color-footer-link;  /* Simon: Todo: Move to _global-variables */
+      color: $color-footer-text;
       margin-left: 30px;
 
-      &:visited {
-        color: $color-footer-link;  /* Simon: Todo: Move to _global-variables */
-      }
-
-      &:hover {
-        color: $navigation-hover;  /* Simon: Todo: Move to _global-variables */
-      }
+      //&:visited {
+      //  color: $color-footer-link;
+      //}
+      //
+      //&:hover {
+      //  color: $navigation-hover;
+      //}
     }
 
   }
-
 
 }
