@@ -94,16 +94,19 @@
                 </ul>
             </li>
             <li>
-                <a href="contact.php" title="Contact us">Contact</a>
+                <a href="contact.php" title="Contact us">Contact Us</a>
             </li>
             <li>
                 <a href="insurance.php" title="Installation Insurance">Installation Insurance</a>
             </li>
             <li>
-                <a href="terms-conditions.php" title="Installation Insurance">Terms & Conditions</a>
+                <a href="terms-conditions.php" title="Terms and Conditions">Terms & Conditions</a>
             </li>
             <li>
-                <a href="privacy-policy.php" title="Installation Insurance">Privacy Policy</a>
+                <a href="privacy-policy.php" title="Privacy Policy">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="return-policy.php" title="Return Policy">Return Policy</a>
             </li>
 
         </ul>

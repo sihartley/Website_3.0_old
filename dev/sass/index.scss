@@ -7,24 +7,19 @@ div#content > aside {
   margin: 2%;
 
   p {
+    margin: 1% 2% 0;
+    text-align: center;
+
     &:nth-child(1) {
       font-size: 1.5em;
       font-weight: 500;
     }
-    margin: 1% 2% 0;
-    text-align: center;
   }
 }
 
 // Sections
 section {
   padding: 0 1%;
-
-  &::after {
-    //clear: both;
-    //content: '';
-    //display: block;
-  }
 
   &.pop-vehicles,
   &.new-products,
@@ -151,12 +146,16 @@ section {
 
   }
 
-  &.design {
-    background: url('/images/company/vi_charger_mesh.svg') no-repeat right -21% bottom 13%;
-    background-size: 49%;
+  &.design,
+  &.process {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+
+    h3 {
+      flex: 1 0 100%;
+      font-size: 1.7em;
+    }
 
     > aside {
       background-color: $color-section-background;
@@ -165,70 +164,103 @@ section {
       justify-content: center;
       padding: 1%;
       text-align: center;
-    }
 
-    h3 {
-      flex: 1 0 100%;
-      font-size: 1.7em;
-    }
+      div {
+        margin-top: 1em;
 
-    div > img {
-      height: 4em;
-      margin-bottom: 3%;
-    }
-
-    div {
-      margin-top: 1em;
-      width: 25%;
-
-      h4,
-      p {
-        margin: 0 auto 1em;
-        width: 90%;
-      }
-
-      h4 {
-        font-size: 1.2em;
-      }
-
-      p {
-        border-top: $color-logo-accent 3px solid;
-        padding-top: 1em;
-
-        span {
-          font-size: 1em;
-          font-weight: 700;
-        }
-      }
-
-      p a {
-        font-weight: 700;
-
-        &:link {
-          color: $color-logo-main;
+        > img {
+          height: 4em;
+          margin-bottom: .5em;
         }
 
-        &:active {
-          color: $color-logo-accent; //#122cd0
+        h4,
+        p {
+          margin: 0 auto 1em;
+          width: 90%;
         }
 
-        &:visited {
-          color: $color-info-link;
+        h4 {
+          font-size: 1.2em;
+        }
+
+        p {
+          border-top: $color-logo-accent 3px solid;
+          padding-top: 1em;
+
+          span {
+            font-size: 1em;
+            font-weight: 700;
+          }
+
+          a {
+            font-weight: 700;
+
+            &:link {
+              color: $color-logo-main;
+            }
+
+            &:active {
+              color: $color-logo-accent; //#122cd0
+            }
+
+            &:visited {
+              color: $color-info-link;
+            }
+          }
         }
       }
     }
 
 
   }
+
+  &.design {
+    background: url('/images/company/vi_charger_mesh.svg') no-repeat right -21% bottom 13%;
+    background-size: 49%;
+    margin: 1% 0;
+
+    div {
+      width: 25%;
+
+      &:nth-of-type(4) > img {
+        height: 3em;
+        margin-bottom: 1em;
+        margin-top: .5em;
+      }
+    }
+
+  }
+
+  &.process {
+    div {
+      width: 33%;
+
+      &:nth-of-type(1) > img {
+        margin-bottom: 1.8em;
+        margin-top: 1em;
+      }
+
+      &:nth-of-type(2) > img {
+        height: 6em;
+        margin-bottom: .8em;
+      }
+
+      &:nth-of-type(3) > img {
+        height: 3em;
+        margin-bottom: 1.8em;
+        margin-top: 2em;
+      }
+    }
+  }
 }
 
-/* Old Navigation */
+// Old Navigation
 //@import '_partials/navigation';
-/* Menu CSS */
+// Menu CSS
 //@import '_imports/mmenu'; /* Simon: Note: Not sure if this is the correct placement or in global.scss */
 
 
-/* Media Queries */
+// Media Queries
 @import '_partials/global-media-queries';
 //@import '_partials/index-media-queries';
 
@@ -245,7 +277,6 @@ section {
 }
 
 @media screen and (max-width: 1000px) {
-
   section.pop-vehicles,
   section.new-products,
   section.featured-products {
@@ -261,14 +292,13 @@ section {
 }
 
 @media screen and (max-width: 860px) {
-  section.design div {
+  section.design div,
+  section.process div {
     width: 50%;
   }
-
 }
 
 @media screen and (max-width: 600px) {
-
   section.pop-vehicles,
   section.new-products,
   section.featured-products {
@@ -307,11 +337,11 @@ section {
           margin: auto 0 auto 10%;
         }
       }
-
     }
   }
 
-  section.design div {
+  section.design div,
+  section.process div {
     width: 100%;
   }
 

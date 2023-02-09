@@ -50,6 +50,9 @@ db_disconnect(db_connect());
         <!-- Design -->
         <?php include '../private/includes/about/design.php'?>
 
+        <!-- Process -->
+        <?php include '../private/includes/index/order_process.php'?>
+
         <!-- FOYCART TEST -->
         <?php //include '../private/includes/foxycart_test.php'?>
 

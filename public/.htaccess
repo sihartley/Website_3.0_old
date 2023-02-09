@@ -13,6 +13,16 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 #    Header set Cache-Control "max-age=604800, public"
 </FilesMatch>
 
+#Simon: ToDo: CSP Need to add external sources (mmenu, google fonts, foxycart etc.)
+#Header set Content-Security-Policy "default-src 'self'; img-src 'self'; style-src 'self' 'unsafe-hashes' https://fonts.googleapis.com/; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; script-src 'self' https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js https://cdn.foxycart.com https://ajax.googleapis.com"
+
+#https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js
+#https://fonts.googleapis.com
+#https://fonts.gstatic.com
+#https://cdn.foxycart.com/vinylimagination/loader.js
+#https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js
+
+
 ##### Enable gzip compression for resources #Simon: Note: Test This
 #<ifModule mod_gzip.c>
 #    mod_gzip_on Yes

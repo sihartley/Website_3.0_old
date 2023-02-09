@@ -1,6 +1,6 @@
 <!-- Main Content -->
 <section class="main">
-    <div onclick="window.open('https://admin.foxycart.com/admin', '_blank')">
+    <div onclick="window.open('https://admin.foxycart.com/admin', '_blank')"> <!-- Simon: ToDo: Change this after page is created -->
         <div class="content automotive">
             <a href="#" aria-label="View All Automotive Graphics"></a>
             <div>
@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div onclick="window.open('https://mmenujs.com/', '_blank')">
+    <div onclick="window.open('https://mmenujs.com/', '_blank')"> <!-- Simon: ToDo: Change this after page is created -->
         <div class="content motorcycle">
             <a href="#" aria-label="View All Motorcycle Graphics"></a>
             <div>
@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <div onclick="window.open('https://google.com', '_blank')">
+    <div onclick="window.open('https://google.com', '_blank')"> <!-- Simon: ToDo: Change this after page is created -->
         <div class="content trailer">
             <a href="#" aria-label="View All Trailer Graphics"></a>
             <div>

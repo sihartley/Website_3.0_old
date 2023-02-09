@@ -58,9 +58,10 @@
 
     &copy; Vinyl Imagination
     <div class="content">
-        <a href="#" title="Privacy Policy">Privacy Policy</a>
-        <a href="#" title="Terms of Service">Terms of Service</a>
-        <a href="#" title="SiteMap">SiteMap</a>
+        <a href="/privacy-policy.php#privacy" title="Privacy Policy">Privacy Policy</a>
+        <a href="/terms-conditions.php#terms" title="Terms of Service">Terms of Service</a>
+        <a href="/return-policy.php#returns" title="Return Policy">Return Policy</a>
+        <a href="/sitemap.php" title="SiteMap">SiteMap</a>
     </div>
 
 
