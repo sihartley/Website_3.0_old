@@ -1,0 +1,209 @@
+@import '_imports/global-variables';
+
+html { //Global
+  scroll-padding-top: 140px;
+}
+
+ul.color-type {
+  background-color: $color-content-background;
+  bottom: 0;
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  position: sticky;
+  text-align: center;
+  top: 3.2em;
+  width: 98%;
+
+  li {
+    margin: auto;
+    padding: 1%;
+
+    a {
+      color: $color-body-text;
+      text-decoration: none;
+    }
+  }
+
+}
+
+section {
+  margin: 1%;
+
+  > div.colors {
+    background-color: $color-section-background;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1%;
+    padding: 1%;
+    text-align: center;
+
+    > h3 {
+      flex: 1 0 100%;
+      margin: 1%;
+    }
+
+    div.colors-premium,
+    div.colors-reflective,
+    div.colors-wrap {
+      margin-top: 1%;
+
+      img {
+        height: 4em;
+      }
+
+      h3 {
+        border-bottom: $color-logo-accent 3px solid;
+        padding-bottom: 1em;
+      }
+
+      h3,
+      p,
+      h4,
+      h5 {
+        margin: 0 auto 1em;
+        width: 90%;
+      }
+
+      h4 {
+        margin-top: 2em;
+      }
+
+      h4,
+      h5 {
+        margin-bottom: .5em;
+      }
+
+      ul.specs {
+        margin-top: auto;
+        li {
+          height: 3em;
+
+          span {
+            font-size: .8em;
+            margin: auto;
+          }
+        }
+      }
+
+      h5 { /* Simon: Remove Me: If this is not used */
+        color: $color-info-notice;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        li {
+          background-color: $color_tile_background;
+          display: flex;
+          flex-direction: column;
+          height: 10em;
+          margin: .5%;
+          padding: .5%;
+          width: 11em;
+
+          .gloss { background-image: url('/css/color-tiles/gloss_400px.webp'); }
+          .satin { background-image: url('/css/color-tiles/satin_400px.webp'); }
+          .brushed { background-image: url('/css/color-tiles/brushed_400px.webp'); }
+          .metallic-gloss,
+          .metallic-shift-gloss { background-image: url('/css/color-tiles/gloss_metallic_400px.webp'); }
+          .metallic-matte { background-image: url('/css/color-tiles/matte_metallic_400px.webp'); }
+          .metallic-satin,
+          .metallic-shift-satin { background-image: url('/css/color-tiles/satin_metallic_400px.webp'); }
+          .brushed-metallic,
+          .metallic-brushed { background-image: url('/css/color-tiles/brushed_metallic_400px.webp'); }
+          .gloss-ultra-metallic { background-image: url('/css/color-tiles/gloss_metallic_400px.webp'); }
+          .carbon-fiber,
+          .carbon-fiber-straight { background-image: url('/css/color-tiles/carbon_fiber_400px.webp'); }
+          .printed-carbon-fiber { background-image: url('/css/color-tiles/printed_carbon_fiber_high_gloss_400px.webp'); }
+          .reflective,
+          .high-visibility-reflective { background-image: url('/css/color-tiles/reflective_400px.webp'); }
+          .matrix { background-image: url('/css/color-tiles/matrix_400px.webp'); }
+          .shadow { background-image: url('/css/color-tiles/shadow_400px.webp'); }
+          .chrome { background-image: url('/css/color-tiles/chrome_400px.webp'); }
+          .liquid-metal { background-image: url('/css/color-tiles/liquid_metal_400px.webp'); }
+          .honeycomb { background-image: url('/css/color-tiles/honeycomb_400px.webp'); }
+          .crocodile { background-image: url('/css/color-tiles/crocodile_400px.webp'); }
+
+          //not used
+          //.carbon-fiber-metallic { background-image: url('/css/color-tiles/Carbon_Fiber_Metallic_75px.png'); }
+          //.straight-fiber-metallic { background-image: url('/css/color-tiles/Straight_Fiber_Metallic_75px.png'); }
+
+          div.color-tile {
+            background-size: contain;
+            border-radius: 3px;
+            height: 7em;
+          }
+
+          div.color-name {
+            margin: auto;
+          }
+
+        }
+
+      }
+
+    }
+
+    a {
+      div {
+        margin-bottom: 3%;
+      }
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+
+
+  }
+
+} // Section
+
+// Media Queries
+@import '_partials/global-media-queries';
+@media screen and (max-width: 800px) {
+  ul.color-type li {
+    span:nth-child(1) {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section > div.colors div.colors-premium ul li,
+  section > div.colors div.colors-wrap ul li,
+  section > div.colors div.colors-reflective ul li {
+    width: 9em;
+
+    div.color-tile {
+      height: 5.6em;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  ul.color-type {
+    flex-wrap: wrap;
+    top: 3.6em;
+
+    li {
+      padding-left: 2%;
+      padding-right: 2%;
+
+      span:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}

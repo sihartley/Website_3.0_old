@@ -2,6 +2,7 @@
     <?php
     $vehicles_list_query = '(select make, model, year from '.$dbPrefix.'Automotive.vehicles where available IS NOT NULL ORDER BY make, model, year ASC)';
     $vehicles_list = db_query($vehicles_list_query);
+    db_disconnect(db_connect());
     ?>
     <div class="footer-details">
         <div class="co-info">
