@@ -10,14 +10,14 @@ $css_file = '/css/inform.min.css';
 <html lang="en"<?php echo $rightClickProtect; ?>>
 
 <!-- Head -->
-<?php include_once '../private/includes/head.php'?>
+<?php include_once ROOT.'/private/includes/head.php'?>
 
 <body>
 
 <div id="page">
     <div id="content">
         <!-- Header -->
-        <?php include '../private/includes/header.php' ?>
+        <?php include ROOT.'/private/includes/header.php' ?>
 
 <!-- Page Content -->
         <section id="insurance">
@@ -81,11 +81,11 @@ $css_file = '/css/inform.min.css';
 
 
         <!-- Navigation -->
-        <?php include '../private/includes/navigation.php'; ?> <!-- Note: Keep inside content div for page anchors to work properly -->
+        <?php include ROOT.'/private/includes/navigation.php'; ?> <!-- Note: Keep inside content div for page anchors to work properly -->
     </div> <!-- #content close -->
 
     <!-- footer -->
-    <?php include_once '../private/includes/footer.php' /* Note: Keep here for positioning and scrolling to work correctly */?>
+    <?php include_once ROOT.'/private/includes/footer.php' /* Note: Keep here for positioning and scrolling to work correctly */?>
 
 </div> <!-- #page close -->
 

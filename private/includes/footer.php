@@ -48,6 +48,31 @@
                     <li>Horse Trailer Graphics</li>
                     <li>Toy Hauler Graphics</li>
                 </ul>
+                <h5>Color Charts</h5>
+                <ul class="footer-color-list">
+                    <li><a href="/color-charts/3m-color-charts.php">3M Color Charts</a>
+                        <ul>
+                            <li><a href="/color-charts/3m-color-charts.php#7125-cast">3M 7125 Colors</a></li>
+                            <?php include ROOT.'/private/includes/colors/3m_wrap_list.php'; ?>
+                        </ul>
+                    </li>
+                    <li><a href="/color-charts/avery-color-charts.php">Avery Color Charts</a>
+                        <ul>
+                            <li><a href="/color-charts/avery-color-charts.php#SC950-cast">Avery SC950 Colors</a></li>
+                            <?php include ROOT.'/private/includes/colors/avery_wrap_list.php'; ?>
+                        </ul>
+                    </li>
+                    <li><a href="/color-charts/oracal-color-charts.php">Oracal Color Charts</a>
+                        <ul>
+                            <?php include ROOT.'/private/includes/colors/oracal_wrap_list.php'; ?>
+                        </ul>
+                    </li>
+                    <li><a href="/color-charts/vvivid-color-charts.php">Vvivid Color Charts</a>
+                        <ul>
+                            <?php include ROOT.'/private/includes/colors/vvivid_wrap_list.php'; ?>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

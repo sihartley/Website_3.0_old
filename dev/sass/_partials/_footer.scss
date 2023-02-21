@@ -53,6 +53,23 @@ footer {
       display: flex;
       flex: 2;
 
+      a{
+        text-decoration: none;
+        &:link,
+        &:visited {
+          color: $color-footer-text;
+        }
+
+        &:hover {
+          font-weight: 600;
+        }
+
+        &:active {
+          color: $color-info-link;
+
+        }
+      }
+
       div {
         flex: 1;
         margin-left: 2%;
@@ -72,8 +89,14 @@ footer {
           flex: 1;
 
           ul {
-            //width: unset;
+            margin-bottom: 2.5em;
+
+            ul {
+              margin-left: 2em;
+              margin-bottom: 1.5em;
+            }
           }
+
         }
       }
 

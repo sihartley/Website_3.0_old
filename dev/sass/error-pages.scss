@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto:wght@100;300&display=swap");
+@property --swing-x {
+  initial-value: 0;
+  inherits: false;
+  syntax: '<integer>';
+}
+@property --swing-y {
+  initial-value: 0;
+  inherits: false;
+  syntax: '<integer>';
+}
+
+div#content {
+  min-height: unset;
+
+  #header {
+    aspect-ratio: unset;
+    h1 {
+      display: none;
+    }
+  }
+
+  div.error-screen {
+
+
+    * {
+      box-sizing: border-box;
+      transform-style: preserve-3d;
+    }
+
+    --shadow: #000;
+    --bg: #737373;
+    --header: #7a7a7a;
+    --color: #fafafa;
+    --lit-header: #e6e6e6;
+    --speed: 2s;
+
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    color: var(--color);
+    perspective: 1200px;
+
+    p {
+      font-weight: 100;
+    }
+
+    h1 {
+      //-webkit-animation: swing var(--speed) infinite alternate ease-in-out;
+      --x: calc(50% + (var(--swing-x) * .5) * 1%);
+      animation: swing var(--speed) infinite alternate ease-in-out;
+      background: radial-gradient(var(--lit-header), var(--header) 45%) var(--x) 100%/200% 200%;
+      background-clip: text;
+      color: transparent;
+      font-family: 'Open Sans', sans-serif;
+      font-size: clamp(5rem, 40vmin, 20rem);
+      letter-spacing: 1rem;
+      margin: 0 0 1rem;
+      transform: translate3d(0, 0, 0vmin);
+
+      &:after {
+        //-webkit-animation: swing var(--speed) infinite alternate ease-in-out;
+        animation: swing var(--speed) infinite alternate ease-in-out;
+        color: var(--shadow);
+        content: '404';
+        filter: blur(1.5vmin);
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: scale(1.05) translate3d(0, 12%, -10vmin) translate(calc((var(--swing-x, 0) * .05) * 1%), calc((var(--swing-y) * .05) * 1%));
+      }
+    }
+
+    .cloak {
+      animation: swing var(--speed) infinite alternate-reverse ease-in-out;
+      background: radial-gradient(40% 40% at 50% 42%, transparent, #000 35%);
+      height: 100%;
+      transform: rotate(calc(var(--swing-x) * -.25deg));
+      transform-origin: 50% 30%;
+      width: 100%;
+
+      &__wrapper {
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+
+      &__container {
+        height: 250vmax;
+        left: 50%;
+        position: absolute;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        width: 250vmax;
+      }
+    }
+
+    .info {
+      line-height: 1.5;
+      max-width: clamp(16rem, 90vmin, 25rem);
+      text-align: center;
+
+      & > p {
+        margin-bottom: 3rem;
+      }
+    }
+
+    //@-webkit-keyframes swing {
+    //  0% {
+    //    --swing-x: -100;
+    //    --swing-y: -100;
+    //  }
+    //  50% {
+    //    --swing-y: 0;
+    //  }
+    //  100% {
+    //    --swing-x: 100;
+    //    --swing-y: -100;
+    //  }
+    //}
+
+    @keyframes swing {
+      0% {
+        --swing-x: -100;
+        --swing-y: -100;
+      }
+
+      50% {
+        --swing-y: 0;
+      }
+
+      100% {
+        --swing-x: 100;
+        --swing-y: -100;
+      }
+    }
+
+  }
+
+}
+
+
+
+/* Media Queries */
+@import '_partials/global-media-queries';

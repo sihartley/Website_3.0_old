@@ -19,7 +19,7 @@ db_disconnect(db_connect());
 <html lang="en"<?php echo $rightClickProtect; ?>>
 
 <!-- Head -->
-<?php include_once '../private/includes/head.php'?>
+<?php include_once ROOT.'/private/includes/head.php'?>
 
 <body>
 
@@ -27,7 +27,7 @@ db_disconnect(db_connect());
     <div id="content">
 
         <!-- Header -->
-        <?php include '../private/includes/header.php'?>
+        <?php include ROOT.'/private/includes/header.php'?>
 
         <aside>
             <p>Our Graphics</p>
@@ -36,32 +36,32 @@ db_disconnect(db_connect());
         </aside>
 
         <!-- Popular Vehicles -->
-        <?php include '../private/includes/index/pop_vehicles.php'?>
+        <?php include ROOT.'/private/includes/index/pop_vehicles.php'?>
 
         <!-- Main Content -->
-        <?php include '../private/includes/index/main_content.php' ?>
+        <?php include ROOT.'/private/includes/index/main_content.php' ?>
 
         <!-- New Products -->
-        <?php include '../private/includes/index/new_products.php'?>
+        <?php include ROOT.'/private/includes/index/new_products.php'?>
 
         <!-- Featured Products -->
-        <?php include '../private/includes/index/featured_vehicles.php'?>
+        <?php include ROOT.'/private/includes/index/featured_vehicles.php'?>
 
         <!-- Design -->
-        <?php include '../private/includes/about/design.php'?>
+        <?php include ROOT.'/private/includes/about/design.php'?>
 
         <!-- Process -->
-        <?php include '../private/includes/index/order_process.php'?>
+        <?php include ROOT.'/private/includes/index/order_process.php'?>
 
         <!-- FOYCART TEST -->
-        <?php //include '../private/includes/foxycart_test.php'?>
+        <?php //include ROOT.'/private/includes/foxycart_test.php'?>
 
         <!-- Navigation -->
-        <?php include '../private/includes/navigation.php'; ?> <!-- Note: Keep inside content div for page anchors to work properly -->
+        <?php include ROOT.'/private/includes/navigation.php'; ?> <!-- Note: Keep inside content div for page anchors to work properly -->
     </div> <!-- #content close -->
 
     <!-- footer -->
-    <?php include_once '../private/includes/footer.php' /* Note: Keep here for positioning and scrolling to work correctly */?>
+    <?php include_once ROOT.'/private/includes/footer.php' /* Note: Keep here for positioning and scrolling to work correctly */?>
 
 </div> <!-- #page close -->
 

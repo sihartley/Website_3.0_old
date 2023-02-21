@@ -6,16 +6,16 @@
       <sourceFolder url="file://$MODULE_DIR$/public" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.sass-cache" />
       <excludeFolder url="file://$MODULE_DIR$/dev/sass/.sass-cache" />
-      <excludeFolder url="file://$MODULE_DIR$/public/Graphics/Vehicles/Fiat/500/2k11/USS/_notes" />
+      <excludeFolder url="file://$MODULE_DIR$/public/graphics/Vehicles/Fiat/500/2k11/USS/_notes" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
-      <excludeFolder url="file://$MODULE_DIR$/public/Graphics/Vehicles/Dodge/Caliber/2k7/Future Designs" />
-      <excludeFolder url="file://$MODULE_DIR$/public/Graphics/Vehicles/Dodge/Avenger/2k8/Future Designs" />
-      <excludeFolder url="file://$MODULE_DIR$/public/Graphics/Vehicles/Dodge/Challenger/Challenger-2k11/Future Designs" />
-      <excludeFolder url="file://$MODULE_DIR$/public/Graphics/Vehicles/Dodge/RAM2500" />
-      <excludeFolder url="file://$MODULE_DIR$/public/Graphics/Vehicles/Dodge/RAM3500" />
-      <excludeFolder url="file://$MODULE_DIR$/public/Graphics/Vehicles/Dodge/Charger/2k6/RBO" />
-      <excludeFolder url="file://$MODULE_DIR$/public/Graphics/Vehicles/Ford/BroncoSport/2k21/TBO" />
-      <excludeFolder url="file://$MODULE_DIR$/public/Graphics/Vehicles/Hyundai/Sonata/Vehicle Main" />
+      <excludeFolder url="file://$MODULE_DIR$/public/graphics/Vehicles/Dodge/Caliber/2k7/Future Designs" />
+      <excludeFolder url="file://$MODULE_DIR$/public/graphics/Vehicles/Dodge/Avenger/2k8/Future Designs" />
+      <excludeFolder url="file://$MODULE_DIR$/public/graphics/Vehicles/Dodge/Challenger/Challenger-2k11/Future Designs" />
+      <excludeFolder url="file://$MODULE_DIR$/public/graphics/Vehicles/Dodge/RAM2500" />
+      <excludeFolder url="file://$MODULE_DIR$/public/graphics/Vehicles/Dodge/RAM3500" />
+      <excludeFolder url="file://$MODULE_DIR$/public/graphics/Vehicles/Dodge/Charger/2k6/RBO" />
+      <excludeFolder url="file://$MODULE_DIR$/public/graphics/Vehicles/Ford/BroncoSport/2k21/TBO" />
+      <excludeFolder url="file://$MODULE_DIR$/public/graphics/Vehicles/Hyundai/Sonata/Vehicle Main" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

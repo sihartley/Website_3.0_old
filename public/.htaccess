@@ -1,6 +1,10 @@
 #Mod Rewrite
 RewriteEngine on
 
+#Error Pages and Case Insesitive
+ErrorDocument 403 /error-pages/403.php
+ErrorDocument 404 /error-pages/404.php
+
 RewriteBase /
 # css / js file versioning
 RewriteRule ^(.*)\.[\d]{10}\.(css|js)$ $1.$2 [L]

@@ -54,60 +54,42 @@
             <li>
                 <span>Color Charts</span>
                 <ul>
-                    <li><a href="/3m-color-charts.php" title="3M Color Charts">3M Color Charts</a></li>
-                    <li><a href="/avery-color-charts.php" title="Avery Color Charts">Avery Color Charts</a></li>
-                    <li><a href="/oracal-color-charts.php" title="Oracal Color Charts">Oracal Color Charts</a></li>
+                    <li><a href="/color-charts/3m-color-charts.php" title="3M Color Charts">3M Color Charts</a></li>
+                    <li><a href="/color-charts/avery-color-charts.php" title="Avery Color Charts">Avery Color Charts</a></li>
+                    <li><a href="/color-charts/oracal-color-charts.php" title="Oracal Color Charts">Oracal Color Charts</a></li>
 <!--                    <li><a href="#" title="Hexis Color Charts">Hexis Color Charts</a></li>-->
-                    <li><a href="/vvivid-color-charts.php" title="Vvivid Color Charts">Vvivid Color Charts</a></li>
+                    <li><a href="/color-charts/vvivid-color-charts.php" title="Vvivid Color Charts">Vvivid Color Charts</a></li>
 
                     <li>
                         <span>Premium Cast (Wet-Install)</span>
                         <ul>
-                            <li><a href="/3m-color-charts.php#7125-cast">3M 7125</a></li>
-                            <li><a href="/avery-color-charts.php#SC950-cast">Avery SC950</a></li>
-                            <li><a href="/oracal-color-charts.php#751C-cast">Oracal 751C</a></li>
+                            <li><a href="/color-charts/3m-color-charts.php#7125-cast">3M 7125</a></li>
+                            <li><a href="/color-charts/avery-color-charts.php#SC950-cast">Avery SC950</a></li>
+                            <li><a href="/color-charts/oracal-color-charts.php#751C-cast">Oracal 751C</a></li>
                         </ul>
                     </li>
                     <li>
                         <span>Premium Wrap (Dry-Install)</span>
                         <ul>
-                            <li><a href="/3m-color-charts.php#1080-wrap">3M 1080</a></li>
-                            <li><a href="/3m-color-charts.php#2080-wrap">3M 2080</a>
+                            <li><a href="/color-charts/3m-color-charts.php#1080-wrap">3M 1080</a></li>
+                            <li><a href="/color-charts/3m-color-charts.php#2080-wrap">3M 2080</a>
                                 <ul>
-                                    <li><a href="/3m-color-charts.php#wrap-gloss">3M 2080 Gloss Colors</a></li>
-                                    <li><a href="/3m-color-charts.php#wrap-matte">3M 2080 Matte Colors</a></li>
-                                    <li><a href="/3m-color-charts.php#wrap-satin">3M 2080 Satin Colors</a></li>
-                                    <li><a href="/3m-color-charts.php#wrap-textured">3M 2080 Textured Colors</a></li>
-                                    <li><a href="/3m-color-charts.php#wrap-shift">3M 2080 Shift Colors</a></li>
+                                    <?php include ROOT.'/private/includes/colors/3m_wrap_list.php'; ?>
                                 </ul>
                             </li>
-                            <li><a href="/avery-color-charts.php#wrap">Avery SW900</a>
+                            <li><a href="/color-charts/avery-color-charts.php#wrap">Avery SW900</a>
                                 <ul>
-                                    <li><a href="/avery-color-charts.php#wrap-gloss">Avery SW900 Gloss Colors</a></li>
-                                    <li><a href="/avery-color-charts.php#wrap-matte">Avery SW900 Matte Colors</a></li>
-                                    <li><a href="/avery-color-charts.php#wrap-satin">Avery SW900 Satin Colors</a></li>
-                                    <li><a href="/avery-color-charts.php#wrap-textured">Avery SW900 Textured Colors</a></li>
-                                    <li><a href="/avery-color-charts.php#wrap-shift">Avery SW900 Shift Colors</a></li>
+                                    <?php include ROOT.'/private/includes/colors/avery_wrap_list.php'; ?>
                                 </ul>
                             </li>
-                            <li><a href="/oracal-color-charts.php#wrap">Oracal 970RA</a>
+                            <li><a href="/color-charts/oracal-color-charts.php#wrap">Oracal 970RA</a>
                                 <ul>
-                                    <li><a href="/oracal-color-charts.php#wrap-gloss">970RA Gloss Colors</a></li>
-                                    <li><a href="/oracal-color-charts.php#wrap-matte">970RA Matte Colors</a></li>
-                                    <li><a href="/oracal-color-charts.php#wrap-satin">970RA Satin Colors</a></li>
-                                    <li><a href="/oracal-color-charts.php#wrap-textured">970RA Textured Colors</a></li>
-                                    <li><a href="/oracal-color-charts.php#wrap-shift">970RA Shift Colors</a></li>
+                                    <?php include ROOT.'/private/includes/colors/oracal_wrap_list.php'; ?>
                                 </ul>
                             </li>
-                            <li><a href="/vvivid-color-charts.php#wrap">Vvivid Wrap</a>
+                            <li><a href="/color-charts/vvivid-color-charts.php#wrap">Vvivid Wrap</a>
                                 <ul>
-                                    <li><a href="/vvivid-color-charts.php#XPO-gloss">XPO Gloss Colors</a></li>
-                                    <li><a href="/vvivid-color-charts.php#XPO-matte">XPO Matte Colors</a></li>
-                                    <li><a href="/vvivid-color-charts.php#XPO-metal">XPO Liquid Metal Colors</a></li>
-                                    <li><a href="/vvivid-color-charts.php#XPO-glow">XPO Glow In The Dark Colors</a></li>
-                                    <li><a href="/vvivid-color-charts.php#vvivid+-gloss">VViViD+ Gloss Colors</a></li>
-                                    <li><a href="/vvivid-color-charts.php#vvivid+-matte">VViViD+ Matte Colors</a></li>
-                                    <li><a href="/vvivid-color-charts.php#vvivid+-shift">VViViD+ Shift Colors</a></li>
+                                    <?php include ROOT.'/private/includes/colors/vvivid_wrap_list.php'; ?>
                                 </ul>
                             </li>
 <!--                            <li><a href="#">Hexis HX20000</a></li>-->
@@ -117,9 +99,9 @@
                     <li>
                         <span>Reflective Colors</span>
                         <ul>
-                            <li><a href="/3m-color-charts.php#680CR-reflective" title="3M 680CR Reflective Colors">3M 680CR Reflective Colors</a></li>
-                            <li><a href="/avery-color-charts.php#HV1200-reflective" title="Avery HV1200 Reflective Colors">Avery HV1200 Reflective Colors</a></li>
-                            <li><a href="/oracal-color-charts.php#5600-reflective" title="Oracal Oralite 5600 Reflective Colors">Oracal Oralite 5600 Reflective Colors</a></li>
+                            <li><a href="/color-charts/3m-color-charts.php#680CR-reflective" title="3M 680CR Reflective Colors">3M 680CR Reflective Colors</a></li>
+                            <li><a href="/color-charts/avery-color-charts.php#HV1200-reflective" title="Avery HV1200 Reflective Colors">Avery HV1200 Reflective Colors</a></li>
+                            <li><a href="/color-charts/oracal-color-charts.php#5600-reflective" title="Oracal Oralite 5600 Reflective Colors">Oracal Oralite 5600 Reflective Colors</a></li>
                         </ul>
 
                     </li>

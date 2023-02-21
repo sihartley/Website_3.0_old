@@ -123,7 +123,7 @@ function minifier($code): array|string|null
 /* Non-SVG Image Ratio */
 function image_ratio($image): void
 {
-    [$width, $height, $type, $attr] = getimagesize("." . urldecode($image));
+    [$width, $height, $type, $attr] = getimagesize(PUB_PATH . urldecode($image));
     $ratio = $height/$width;
     echo "1/{$ratio}";
 }
@@ -131,7 +131,7 @@ function image_ratio($image): void
 /* SVG Image Ratio */
 function svg_ratio($svgfile): void
 {
-    $file = simplexml_load_string(file_get_contents('.' . $svgfile));
+    $file = simplexml_load_string(file_get_contents(PUB_PATH . $svgfile));
     [$x_start, $y_start, $x_end, $y_end] = explode(' ', $file['viewBox']);
     $ratio = $y_end / $x_end;
     echo "1/{$ratio}";
