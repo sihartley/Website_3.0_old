@@ -3,7 +3,7 @@
         <a class="hamburger" aria-label="Menu Button" href="#menu">
             <img src="/images/icons/bars.svg" alt="Menu Icon">
         </a>
-        <a class="mini-logo" href="index.php"><img src="/images/company/vi-logo-simple.svg" alt="Vinyl Imagination Logo" style="aspect-ratio: <?php svg_ratio('/images/company/vi-logo-simple.svg'); ?>"></a>
+        <a class="mini-logo" href="/index.php"><img src="/images/company/vi-logo-simple.svg" alt="Vinyl Imagination Logo" style="aspect-ratio: <?php svg_ratio('/images/company/vi-logo-simple.svg'); ?>"></a>
         <div class="menu-bar">
             <a href="/index.php">Home</a>|<a href="#menu">Menu</a>|<a href="/contact.php">Contact</a>|<a href="/about.php">About</a>|<a href="https://vinylimagination.foxycart.com/cart?cart=view">Cart</a>
 
@@ -12,7 +12,7 @@
             <img src="/images/icons/shopping-cart.svg" alt="Menu Icon">
         </a>
     </div>
-    <a class="logo" aria-label="Vinyl Imagination Logo" title="Vinyl Imagination" href="index.php">
+    <a class="logo" aria-label="Vinyl Imagination Logo" title="Vinyl Imagination" href="/index.php">
     </a>
     <div class="slogan">
         <p>You imagine. We create.</p>

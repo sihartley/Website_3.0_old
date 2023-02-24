@@ -1,18 +1,17 @@
-<!-- Popular Vehicles -->
-<section class="pop-vehicles">
-    <h2>Popular Vehicles</h2>
+<?php
+if (isset($alt_years) && (mysqli_num_rows($alt_years) !== 0)) { ?>
+<section class="alt-years">
+    <?php $h2 = "Other<span> {$_GET['make']} {$_GET['model']}</span> Model Years"; ?>
+    <h2><?= $h2 ?></h2>
     <?php
-    /** @var $pop_vehicles
-     *  Populated from SQL Query on index.php
-     */
-    $vehicle = 1;
-    if (isset($pop_vehicles)) {
-        while ($pop_vehicle = mysqli_fetch_assoc($pop_vehicles)){
-            $make = $pop_vehicle['make'];
-            $model = $pop_vehicle['model'];
-            $years = $pop_vehicle['year'];
+        $vehicle = 1;
+        while ($alt_year = mysqli_fetch_assoc($alt_years)) {
+            $make = $alt_year['make'];
+            $model = $alt_year['model'];
+            $years = $alt_year['year'];
             $year_start = explode(' ', $years)[0];
-            $image = $pop_vehicle['image_path'] . $pop_vehicle['vehicle_250px_image']; $image_alt = "BUY $make $model $years Vehicle Graphics";
+            $image = $alt_year['image_path'] . $alt_year['vehicle_250px_image'];
+            $image_alt = "BUY $make $model $years Vehicle Graphics";
             $href = "/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start&years=$years";
             $aria_label = "SHOP $years $make $model Vehicle Graphics";
             ?>
@@ -29,7 +28,8 @@
                 </div>
             </div>
             <?php
-        } //END: While Loop
-    } // Simon: Todo: Add a contingency if this database fails ?>
+        } ?>
 </section>
+<?php } //END: if (isset($alt_years))
+?>
 

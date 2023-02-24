@@ -1,7 +1,11 @@
 <!-- Featured Products -->
+
 <section class="featured-products">
     <h2>Featured Automotive Graphics</h2>
     <?php $feature = 1;
+    /** @var $featured_products
+     * From SQL Query in index.php
+     */
     while ($feature_product = mysqli_fetch_assoc($featured_products)){
     ?>
         <div class="<?php echo "feature-" . $feature++; ?>">

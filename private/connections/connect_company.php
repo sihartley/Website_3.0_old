@@ -1,4 +1,5 @@
-<?php /* Simon: Clean Me: Unless this is used delete it */
+<?php
+//Simon: Clean Me: Unless this is used delete it
 error_reporting(0);
 //1. Database Connection
 	

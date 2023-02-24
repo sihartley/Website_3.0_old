@@ -1,0 +1,200 @@
+@import '_imports/global-variables';
+//Simon: Todo: Merge this file with other .scss files
+html { //Global
+  scroll-padding-top: 100px;
+}
+
+ul.shortcuts {
+  background-color: $color-content-background;
+  bottom: 0;
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  position: sticky;
+  text-align: center;
+  top: 3.2em;
+  width: 98%;
+
+  li {
+    margin: auto;
+    padding: 1%;
+
+    a {
+      color: $color-body-text;
+      text-decoration: none;
+    }
+  }
+}
+
+section {
+  //padding: 0 1%;
+
+  &.alt-years,
+  &.graphic-products,
+  &.all-vehicles,
+  &.motorcycle-graphics,
+  &.trailer-graphics {
+    background-color: $color-section-background;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1%;
+
+    h2 {
+      flex: 1 0 100%;
+      font-size: 1.5em;
+      margin: 1% 0 0;
+      text-align: center;
+    }
+
+    > div {
+      background-color: $color-product-background;
+      //flex: 0 1 calc(21% - 1px);
+      display: flex;
+      margin: 1%;
+      padding: 1%;
+      text-align: center;
+    }
+
+    .content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      div {
+        padding: 1%;
+        text-decoration: none;
+      }
+
+      span {
+        font-weight: 700;
+      }
+
+      span:nth-of-type(2) {
+        font-style: italic;
+        font-weight: 400;
+      }
+
+    }
+
+    h3 {
+      font-size: .85em;
+      font-weight: 700;
+      margin: 0 0 auto;
+      padding-bottom: 4%;
+    }
+
+    h3:nth-of-type(2) {
+      font-size: .85em;
+      font-weight: 700;
+      margin: auto 0 0;
+      padding-top: 4%;
+    }
+
+    img {
+      margin: auto 0;
+      padding-bottom: 5%;
+      width: 100%;
+
+    }
+  }// &.alt-years, &.graphic-products
+
+  &.all-vehicles {
+    > div {
+      flex: 0 1 21%;
+    }
+  }
+
+  &.alt-years {
+    > div {
+      flex: 0 0 20%;
+    }
+  }// &.alt-years
+
+  &.graphic-products,
+  &.motorcycle-graphics {
+    > div {
+      flex: 0 0 29%;
+    }
+  }// &.products
+} //section
+
+@import '_partials/global-media-queries';
+
+@media screen and (max-width: 950px) {
+  section {
+    &.all-vehicles {
+      > div {
+        flex-basis: 29%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  section {
+    &.alt-years {
+      >div {
+        flex: 0 0 27%;
+      }
+    }
+
+    &.graphic-products,
+    &.all-vehicles {
+      >div {
+        flex: 0 0 46%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  ul.shortcuts {
+    li {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  section {
+    &.alt-years > div {
+      flex: 0 0 35%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  ul.shortcuts {
+    flex-wrap: wrap;
+    top: 3.5em;
+
+    li {
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section {
+    &.alt-years,
+    &.graphic-products {
+      h2 span {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  section {
+    &.graphic-products {
+      > div {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}

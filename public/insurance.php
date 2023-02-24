@@ -1,4 +1,8 @@
 <?php
+/** @var $rightClickProtect
+ *  From function hostident() IN core_functions.php INCLUDE in initialize.php
+ */
+
 include_once '../private/includes/initialize.php';
 
 $page_title = 'Installation Insurance';

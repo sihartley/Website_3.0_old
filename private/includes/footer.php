@@ -1,5 +1,8 @@
 <footer>
     <?php
+    /** @var $dbPrefix * from function hostident within initialize.php */
+    /** @var $serverDot; * from function hostident within initialize.php */
+
     $vehicles_list_query = '(select make, model, year from '.$dbPrefix.'Automotive.vehicles where available IS NOT NULL ORDER BY make, model, year ASC)';
     $vehicles_list = db_query($vehicles_list_query);
     db_disconnect(db_connect());
@@ -26,24 +29,28 @@
             <div class="auto-list">
                 <h5>Car Graphics, Stripes, and Decals</h5>
                 <ul>
-                    <?php while ($vehicle = mysqli_fetch_assoc($vehicles_list)) { ?>
-                        <li><?php echo "{$vehicle['make']} {$vehicle['model']} {$vehicle['year']}" ?></li>
+                    <?php while ($vehicle = mysqli_fetch_assoc($vehicles_list)) {
+                        $make = $vehicle['make']; $model = $vehicle['model']; $years = $vehicle['year']; $year_start = explode(' ', $years)[0];
+                        $href = "/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start&years=$years";?>
+                        <li><a href="<?= $href ?>"><?= "{$make} {$model} {$years}" ?></a></li>
                     <?php } ?>
                     <li>Universal Fit Graphics</li>
                 </ul>
             </div>
 
             <div class="other-list">
-                <h5>Motorcycle Custom Graphics</h5>
+                <h5><a href="/motorcycle/motorcycle.php">Motorcycle Custom Graphics</a></h5>
                 <ul class="cycle-list">
-                    <li>Gas Tank Decals</li>
+                    <!-- Simon: Todo: Automate this by Adding foreach loop here. -->
+                    <li>Custom Tank Decals</li>
                     <li>Flaming Eagles</li>
                     <li>Flaming Skulls</li>
                     <li>Gas Tank Flames</li>
                 </ul>
 
-                <h5>Trailer Graphics</h5>
+                <h5><a href="/trailer/trailer.php">Trailer Graphics</a></h5>
                 <ul class="trailer-list">
+                    <!-- Simon: Todo: Automate this by Adding foreach loop here. -->
                     <li>Motorcycle Trailer Graphics</li>
                     <li>Horse Trailer Graphics</li>
                     <li>Toy Hauler Graphics</li>
@@ -77,7 +84,7 @@
         </div>
     </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="<?php echo $serverDot; ?>">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="<?= $serverDot ?>">
         <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 424c-97.06 0-176-79-176-176S158.94 80 256 80s176 79 176 176-78.94 176-176 176z" class="secondary"/>
         <path d="M256 432c-97.06 0-176-79-176-176S158.94 80 256 80s176 79 176 176-78.94 176-176 176z" class="primary"/>
     </svg>

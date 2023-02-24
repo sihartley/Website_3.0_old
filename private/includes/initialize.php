@@ -4,6 +4,8 @@ define('ROOT', str_replace('\\', '/', dirname($_SERVER['DOCUMENT_ROOT']))); //C:
 define('PRIV_PATH', str_replace('\\', '/', dirname($_SERVER['DOCUMENT_ROOT']) . '/private')); //C:/xampp/htdocs/Website_3.0/private
 define('PUB_PATH', str_replace('\\', '/', dirname($_SERVER['DOCUMENT_ROOT']) . '/public')); //C:/xampp/htdocs/Website_3.0/public
 
+/* Business Info */
+include ROOT.'/private/includes/business_info.php';
 
 /* Core Functions (Functions for ALL Pages NO Exceptions) */
 include_once ROOT.'/private/functions/core_functions.php';
@@ -12,8 +14,6 @@ include_once ROOT.'/private/functions/global_functions.php';
 /* Server Detection, Database Prefix, HTML Minification, Right Click Protection, Live Reload, Server ID Dot, Database Credentials*/
 [$hostingServer, $dbPrefix, $minifyHTML, $rightClickProtect, $liveReload, $serverDot] = host_ident($_SERVER['SERVER_ADDR']);
 
-/* Business Info */
-include ROOT.'/private/includes/business_info.php';
 
 /* HTML Minification */
 if (!empty($minifyHTML)) { $minifyHTML; /*core_functions - host_ident()*/ }

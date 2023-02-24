@@ -1,3 +1,7 @@
+<?php
+/**  @var $dbPrefix  * From function hostident() IN core_functions.php INCLUDE in initialize.php */
+?>
+
 <div style="display: none;"> <!-- This div prevents momentary visibility on page load before mmenu takes over. -->
     <nav id="menu" class="main"> <!-- Note: display: none here stops mmenu from displaying. -->
         <ul>
@@ -5,46 +9,50 @@
                 <span>Graphics Products</span>
                 <ul>
                     <li>
-                        <a href="https://vinylimagination.foxycart.com/cartView Cart" title="Automotive" aria-haspopup="true">Automotive</a>
+                        <a href="/automotive/automotive.php" title="Automotive Graphics" aria-haspopup="true">Automotive Graphics</a>
                         <ul>
-                            <li>
-                                <span>Dodge Vehicle Graphics</span>
-                                <ul>
-                                    <li>
-                                        <span>Challenger</span>
-                                        <ul>
-                                            <li><span>2008 - 2011</span></li>
-                                            <li><span>2012 - 2014</span></li>
-                                            <li><span>2015 - Present</span></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <span>Charger</span>
-                                        <ul>
-                                            <li><span>2006 - 2010</span></li>
-                                            <li><span>2011 - 2014</span></li>
-                                            <li><span>2015 - Present</span></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <span>RAM 1500</span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" title="Ford Vehicle Graphics">Ford Vehicle Graphics</a>
-                            </li>
+                        <?php
+                        $vehicle_makes_query = "(SELECT make FROM ".$dbPrefix."Automotive.manufacturers WHERE make != 'Generic' ORDER BY make ASC)";
+                        $vehicle_makes = db_query($vehicle_makes_query);
+                        while ($makes = mysqli_fetch_assoc($vehicle_makes)) {
+                            $make = $makes['make'];
+                            echo '<li>';
+                                echo "<span>$make Vehicle Graphics</span>";
+                                echo '<ul>';
+                                $vehicle_models_query = "(SELECT DISTINCT model FROM ".$dbPrefix."Automotive.vehicles WHERE make = '$make' AND available IS NOT NULL ORDER BY model ASC)";
+                                $vehicle_models = db_query($vehicle_models_query);
+                                while ($models = mysqli_fetch_assoc($vehicle_models)) {
+                                    $model = $models['model'];
+                                    echo '<li>';
+                                    echo "<span>$model</span>";
+                                        echo '<ul>';
+                                        $vehicle_years_query = "(SELECT year FROM ".$dbPrefix."Automotive.vehicles WHERE model = '$model' AND available IS NOT NULL ORDER BY year ASC)";
+                                        $vehicle_years = db_query($vehicle_years_query);
+                                        db_disconnect(db_connect());
+                                        while ($year =mysqli_fetch_assoc($vehicle_years)) {
+                                            $years = $year['year']; $year_start = explode(' ', $years)[0];
+                                            $href = "/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start&years=$years";
+                                            echo "<li><a href='$href'>$years</a></li>";
+                                        }
+                                        echo '</ul>';
+                                    echo '</li>';
+                                } //while Models
+                                echo '</ul>';
+                            echo '</li>';
+                        } //while Makes ?>
                         </ul>
                     </li>
                     <li>
-                        <a href="#" title="Motorcycle"  aria-haspopup="true">Motorcycle</a>
+                        <a href="/motorcycle/motorcycle.php" title="Motorcycle Graphics"  aria-haspopup="true">Motorcycle Graphics</a>
                         <ul>
+                            <!-- Simon: Todo: Automate this by Adding foreach loop here. -->
                             <li><a href="#" title="Custom Graphics">Custom Graphics</a></li>
                             <li><a href="#" title="Flame Graphics">Flame Graphics</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" title="Trailer" aria-haspopup="true">Trailer</a>
+                    <li><a href="/trailer/trailer.php" title="Trailer" aria-haspopup="true">Trailer Graphics</a>
                         <ul>
+                            <!-- Simon: Todo: Automate this by Adding foreach loop here. -->
                             <li><a href="#" title="Motorcycle Trailer">Motorcycle Trailer</a></li>
                             <li><a href="#" title="Horse Trailer">Horse Trailer</a></li>
                         </ul>

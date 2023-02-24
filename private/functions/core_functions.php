@@ -3,7 +3,8 @@
 /* Hosting Server Identification */
 function host_ident($server): array
 {
-    if ($server === '168.235.116.113') {
+    global $godaddy_ip, $inmotion_ip;
+    if ($server === $inmotion_ip) {
         $hostingServer = 'InMotion';
         $dbPrefix = 'n64e7f5_';
         $minifyHTML = ob_start("minifier" ) ;
@@ -14,7 +15,7 @@ function host_ident($server): array
         define('DB_USER', 'n64e7f5_AccessAllDB'); //InMotion Hosted Databases
         define('DB_PASS', 'Auptxj27v$!#'); //InMotion Hosted Databases
 //  echo "Hosted by InMotion Hosting ".$dbPrefix."  databases.php";
-    } elseif ($server === '208.109.67.139') {
+    } elseif ($server === $godaddy_ip) {
         $hostingServer = 'GoDaddy';
         $dbPrefix = '';
         $minifyHTML = ob_start("minifier" );
@@ -30,7 +31,7 @@ function host_ident($server): array
         $dbPrefix = '';
         $minifyHTML = '';
         $rightClickProtect = '';
-        $liveReload = '<!--LiveReload-->' . "\n" . '<script src="http://localhost:35729/livereload.js"></script>' . PHP_EOL;
+        $liveReload = '<!-- LiveReload -->' . "\n" . '<script src="http://localhost:35729/livereload.js"></script>' . PHP_EOL;
         $serverDot = 'darkorange';
         define('DB_SERVER', 'localhost'); //GoDaddy & Local Hosted Databases
         define('DB_USER', 'AccessAllDB'); //GoDaddy & Local Hosted Databases
@@ -62,8 +63,9 @@ function db_disconnect($connection): void
     }
 }
 
-function db_escape($connection, $string): string
+function db_escape($string): string
 {
+    $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS);
     return mysqli_real_escape_string($connection, $string);
 }
 
@@ -136,6 +138,5 @@ function svg_ratio($svgfile): void
     $ratio = $y_end / $x_end;
     echo "1/{$ratio}";
 }
-
 
 

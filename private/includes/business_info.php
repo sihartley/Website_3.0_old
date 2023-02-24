@@ -1,4 +1,10 @@
 <?php
+//Company Identification
+$companyName = 'Vinyl Imagination';
+$companySite = 'https://vinylimagination.com';
+$godaddy_ip = '208.109.67.139';
+$inmotion_ip = '168.235.116.113';
+
 //Business Hours
 $office_hours = '10am to 5pm PST';
 $office_days = 'Monday to Friday';
@@ -25,10 +31,10 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
 $chat_link = 'https://tawk.to/chat/6229917ca34c2456412a54e4/1ftp60k94';
 
 $automotive_sale_discount = match (date('M')) {
-    'Jan', 'Feb', 'Mar' => 0.20, /*Simon: Note: This was set at 15% (Business Was Low) Changed to 30% on 3/1/22, Changed to 26% 1/5/23, Changed to 20% 2/15/23*/
-    'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep' => 0.15,
-    'Oct', 'Nov', 'Dec' => 0.23,
-    default => 0.020
+    'Jan', 'Feb', 'Mar' => 0.15, /*Simon: Note: This was set at 15% (Business Was Low) Changed to 30% on 3/1/22, Changed to 26% 1/5/23, Changed to 20% 2/15/23*/
+    'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep' => 0.10,
+    'Oct', 'Nov', 'Dec' => 0.18,
+    default => 0.05
 };
 
 

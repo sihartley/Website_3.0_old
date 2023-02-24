@@ -79,6 +79,7 @@ section {
 
       ul.specs {
         margin-top: auto;
+
         li {
           height: 3em;
 
@@ -89,7 +90,7 @@ section {
         }
       }
 
-      h5 { /* Simon: Remove Me: If this is not used */
+      h5 { // Simon: Remove Me: If this is not used
         color: $color-info-notice;
       }
 
@@ -195,7 +196,7 @@ section {
 @media screen and (max-width: 450px) {
   ul.color-type {
     flex-wrap: wrap;
-    top: 3.6em;
+    top: 3.5em;
 
     li {
       padding-left: 2%;

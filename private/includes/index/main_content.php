@@ -1,31 +1,31 @@
 <!-- Main Content -->
 <section class="main">
-    <div onclick="window.open('https://admin.foxycart.com/admin', '_blank')"> <!-- Simon: ToDo: Change this after page is created -->
+    <div onclick="window.open('/automotive/automotive.php', '_self')">
         <div class="content automotive">
-            <a href="#" aria-label="View All Automotive Graphics"></a>
+            <a href="/automotive/automotive.php" aria-label="View All Automotive Graphics"></a>
             <div>
-                <h2><a href="#">Automotive Graphics</a></h2>
-                <h3>A custom look for your vehicle.</h3>
+                <h2><a href="/automotive/automotive.php">Automotive Graphics</a></h2>
+                <h3><a href="/automotive/automotive.php">A custom look for your vehicle.</a></h3>
             </div>
         </div>
     </div>
 
-    <div onclick="window.open('https://mmenujs.com/', '_blank')"> <!-- Simon: ToDo: Change this after page is created -->
+    <div onclick="window.open('/motorcycle/motorcycle.php', '_self)">
         <div class="content motorcycle">
-            <a href="#" aria-label="View All Motorcycle Graphics"></a>
+            <a href="/motorcycle/motorcycle.php" aria-label="View All Motorcycle Graphics"></a>
             <div>
-                <h2><a href="#">Motorcycle Graphics</a></h2>
-                <h3>Personalize your ride.</h3>
+                <h2><a href="/motorcycle/motorcycle.php">Motorcycle Graphics</a></h2>
+                <h3><a href="/motorcycle/motorcycle.php">Personalize your ride.</a></h3>
             </div>
         </div>
     </div>
 
-    <div onclick="window.open('https://google.com', '_blank')"> <!-- Simon: ToDo: Change this after page is created -->
+    <div onclick="window.open('/trailer/trailer.php', '_self')">
         <div class="content trailer">
-            <a href="#" aria-label="View All Trailer Graphics"></a>
+            <a href="/trailer/trailer.php" aria-label="View All Trailer Graphics"></a>
             <div>
-                <h2><a href="#">Trailer Graphics</a></h2>
-                <h3>Some style for your trailer.</h3>
+                <h2><a href="/trailer/trailer.php">Trailer Graphics</a></h2>
+                <h3><a href="/trailer/trailer.php">Some style for your trailer.</a></h3>
             </div>
         </div>
     </div>
