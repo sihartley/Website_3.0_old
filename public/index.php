@@ -1,5 +1,5 @@
 <?php
-include_once '../private/includes/initialize.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
 /** @var $dbPrefix
  * @var $rightClickProtect
  *  From function hostident() IN core_functions.php INCLUDE in initialize.php
@@ -33,7 +33,7 @@ db_disconnect(db_connect());
         <?php include ROOT.'/private/includes/header.php'?>
 
         <aside>
-            <p>Our Graphics</p>
+            <p>Premier Design and Production</p>
             <p>Our graphics products are the best way to add a unique look to your vehicle without requiring permanent or invasive changes.
                 We can help you create a one-of-a-kind custom graphics kit that will show your character through your vehicle. Our graphics will not harm your car, and should you feel like a change or need to return your lease. Remove them or change them up.</p>
         </aside>

@@ -1,5 +1,5 @@
 <?php
-include_once '../../private/includes/initialize.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
 /**
  * @var $_GET
  * values passed in URI after ? (vehicle-main.php?make=foo&model=bar)
@@ -19,7 +19,6 @@ if (isset($_GET['make'], $_GET['model'], $_GET['year'], $_GET['years'])) {
 
     $css_file = '/css/graphics.min.css';
     $page_title = "Graphics for the $years $make $model";
-}
 
 ?>
 
@@ -35,6 +34,12 @@ if (isset($_GET['make'], $_GET['model'], $_GET['year'], $_GET['years'])) {
 
 <!-- Header -->
         <?php include ROOT.'/private/includes/header.php'?>
+        <aside>
+            <p>Our <?= "$make $model" ?> Graphics Kits.</p>
+            <p>We produce all of our <?= "$make $model" ?> graphics, decals, and stripe kits to order in your chosen colors and materials.
+            We design our graphics products to contour and fit the <?= "$make $model" ?> perfectly.
+            We test-fit to ensure a perfect fit and give the most straightforward installation possible. We add features to prevent lifting and provide a long-lasting installation.</p>
+        </aside>
 
 <!-- Alternate Years -->
         <?php include ROOT.'/private/includes/automotive/alternative_years.php'; ?>
@@ -58,4 +63,5 @@ if (isset($_GET['make'], $_GET['model'], $_GET['year'], $_GET['years'])) {
 </html>
 
     <!-- Simon: Todo: create and move this to include file foot.php -->
-<?php ob_end_flush(); ?>
+<?php ob_end_flush();
+}?>

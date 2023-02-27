@@ -1,5 +1,5 @@
 <?php
-include_once '../../private/includes/initialize.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
 
 /* Database */
 $brand = '3M'; $premium = '7125'; $wrap = '2080'; $reflective = '680CR';

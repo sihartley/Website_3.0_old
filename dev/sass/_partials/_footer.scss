@@ -53,8 +53,9 @@ footer {
       display: flex;
       flex: 2;
 
-      a{
+      a {
         text-decoration: none;
+
         &:link,
         &:visited {
           color: $color-footer-text;
@@ -92,8 +93,8 @@ footer {
             margin-bottom: 2.5em;
 
             ul {
-              margin-left: 2em;
               margin-bottom: 1.5em;
+              margin-left: 2em;
             }
           }
 

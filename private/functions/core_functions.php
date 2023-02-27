@@ -139,4 +139,20 @@ function svg_ratio($svgfile): void
     echo "1/{$ratio}";
 }
 
+/* Color Lists (Menu, Footer) */
+function vinyl_list($brand, $cast_wrap): void{
+    global $vinyl_array;
+    $series = implode('',array_keys($vinyl_array[strtolower($brand)][$cast_wrap]['series']));
+    foreach ($vinyl_array[strtolower($brand)][$cast_wrap]['series'][$series]['type'] as $type) {
+        if ($cast_wrap === 'wrap') {
+            echo "<li><a href='" . $vinyl_array[strtolower($brand)]['page'] . "#$cast_wrap-$type'>$brand $series " . ucwords($type) . " Colors</a></li>";
+        } else {
+            echo "<li><a href='" . $vinyl_array[strtolower($brand)]['page'] . "#$series-$cast_wrap'>$brand $series Colors</a></li>";
+        }
+    }
+}
+
+
+
+
 

@@ -1,5 +1,5 @@
 <?php
-include_once '../../private/includes/initialize.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
 /**
  * @var $_GET
  * values passed in URI after ? (vehicle-main.php?make=foo&model=bar)
@@ -7,11 +7,9 @@ include_once '../../private/includes/initialize.php';
  * From function hostident() IN core_functions.php INCLUDE in initialize.php
  * @var $rightClickProtect
  * From function hostident() IN core_functions.php INCLUDE in initialize.php
+ * @var $mc_array
+ * From databases.php INCLUDE in initialize.php
  */
-$databases = ['custom', 'flaming_eagles', 'flaming_skull', 'tank_flames'];
-
-
-//$vehicle_makes = db_query($vehicle_makes_query);
 
 $css_file = '/css/graphics.min.css';
 $page_title = 'Motorcycle Graphics';
@@ -33,7 +31,7 @@ $page_title = 'Motorcycle Graphics';
 
         <!-- Shortcuts -->
             <ul class="shortcuts">
-        <?php foreach ($databases as $shortcut) {
+        <?php foreach ($mc_array as $shortcut) {
             $link = str_replace('_', '-', $shortcut);
             $shortcut = ucwords(str_replace('_', ' ', $shortcut));
             ?>
@@ -43,7 +41,7 @@ $page_title = 'Motorcycle Graphics';
 
         <!-- Motorcycle Graphics -->
         <!-- Graphics Types -->
-        <?php foreach ($databases as $database) {
+        <?php foreach ($mc_array as $database) {
             $motorcycle_db_query = "(SELECT product_name, image_path, product_image_on, price_base, unit FROM ".$dbPrefix."Motorcycle.graphics_$database )";
             $motorcycle_db = db_query($motorcycle_db_query);
             $category = ucwords(str_replace('_', ' ', $database));
@@ -78,8 +76,9 @@ $page_title = 'Motorcycle Graphics';
             } //END: foreach ($database as $databases) ?>
 
             </section>
-        <?php //db_disconnect(db_connect());
-        } //END: while ($makes = mysqli_fetch_assoc($vehicle_makes)) ?>
+        <?php
+        } //END: while ($makes = mysqli_fetch_assoc($vehicle_makes))
+        db_disconnect(db_connect()); ?>
 
         <!-- Navigation -->
         <?php include ROOT.'/private/includes/navigation.php'; ?> <!-- Note: Keep inside content div for page anchors to work properly -->

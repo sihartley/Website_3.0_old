@@ -1,8 +1,14 @@
 <?php
+session_start();
+
+setcookie("LastVisitedSection", "Use", time() + 3600, "/", $_SERVER['HTTP_HOST']);
 
 define('ROOT', str_replace('\\', '/', dirname($_SERVER['DOCUMENT_ROOT']))); //C:/xampp/htdocs/Website_3.0
 define('PRIV_PATH', str_replace('\\', '/', dirname($_SERVER['DOCUMENT_ROOT']) . '/private')); //C:/xampp/htdocs/Website_3.0/private
 define('PUB_PATH', str_replace('\\', '/', dirname($_SERVER['DOCUMENT_ROOT']) . '/public')); //C:/xampp/htdocs/Website_3.0/public
+
+/* Arrays */
+include ROOT.'/private/includes/arrays.php';
 
 /* Business Info */
 include ROOT.'/private/includes/business_info.php';
@@ -13,7 +19,6 @@ include_once ROOT.'/private/functions/core_functions.php';
 include_once ROOT.'/private/functions/global_functions.php';
 /* Server Detection, Database Prefix, HTML Minification, Right Click Protection, Live Reload, Server ID Dot, Database Credentials*/
 [$hostingServer, $dbPrefix, $minifyHTML, $rightClickProtect, $liveReload, $serverDot] = host_ident($_SERVER['SERVER_ADDR']);
-
 
 /* HTML Minification */
 if (!empty($minifyHTML)) { $minifyHTML; /*core_functions - host_ident()*/ }

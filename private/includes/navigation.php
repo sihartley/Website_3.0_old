@@ -1,5 +1,8 @@
 <?php
-/**  @var $dbPrefix  * From function hostident() IN core_functions.php INCLUDE in initialize.php */
+/** @var $dbPrefix  * From function hostident() IN core_functions.php INCLUDE in initialize.php
+ * @var $mc_array * from arrays.php INCLUDE in initialize.php
+ * @var $trailer_array * from arrays.php INCLUDE in initialize.php
+ */
 ?>
 
 <div style="display: none;"> <!-- This div prevents momentary visibility on page load before mmenu takes over. -->
@@ -26,7 +29,7 @@
                                     echo '<li>';
                                     echo "<span>$model</span>";
                                         echo '<ul>';
-                                        $vehicle_years_query = "(SELECT year FROM ".$dbPrefix."Automotive.vehicles WHERE model = '$model' AND available IS NOT NULL ORDER BY year ASC)";
+                                        $vehicle_years_query = "(SELECT year FROM ".$dbPrefix."Automotive.vehicles WHERE model = '$model' AND available IS NOT NULL ORDER BY year DESC)";
                                         $vehicle_years = db_query($vehicle_years_query);
                                         db_disconnect(db_connect());
                                         while ($year =mysqli_fetch_assoc($vehicle_years)) {
@@ -42,38 +45,49 @@
                         } //while Makes ?>
                         </ul>
                     </li>
+
+                    <!-- Motorcycle Graphics -->
                     <li>
                         <a href="/motorcycle/motorcycle.php" title="Motorcycle Graphics"  aria-haspopup="true">Motorcycle Graphics</a>
                         <ul>
-                            <!-- Simon: Todo: Automate this by Adding foreach loop here. -->
-                            <li><a href="#" title="Custom Graphics">Custom Graphics</a></li>
-                            <li><a href="#" title="Flame Graphics">Flame Graphics</a></li>
+                            <?php foreach ($mc_array as $mc_item) {
+                                $link = str_replace('_', '-', $mc_item);
+                                $item = ucwords(str_replace('_', ' ', $mc_item)); ?>
+                                <li><a href="/motorcycle/motorcycle.php#<?= $link ?>"><?= $item ?><span> Motorcycle Graphics</span></a></li>
+                            <?php } ?>
                         </ul>
                     </li>
+
+                    <!-- Trailer Graphics -->
                     <li><a href="/trailer/trailer.php" title="Trailer" aria-haspopup="true">Trailer Graphics</a>
                         <ul>
-                            <!-- Simon: Todo: Automate this by Adding foreach loop here. -->
-                            <li><a href="#" title="Motorcycle Trailer">Motorcycle Trailer</a></li>
-                            <li><a href="#" title="Horse Trailer">Horse Trailer</a></li>
+                            <?php foreach ($trailer_array as $item) {
+                                $link = str_replace('_', '-', $item);
+                                $item = ucwords(str_replace('_', ' ', $item)); ?>
+                                <li><a href="/trailer/trailer.php#<?= $link ?>"><?= $item ?><span> Trailer Graphics</span></a></li>
+                            <?php } ?>
                         </ul>
                     </li>
                 </ul>
             </li>
+
+            <!-- Color Charts -->
             <li>
-                <span>Color Charts</span>
+                <span>Materials and Color Charts</span>
                 <ul>
+                    <li><a href="/support/materials.php" title="Materials Information">Materials Information</a></li>
                     <li><a href="/color-charts/3m-color-charts.php" title="3M Color Charts">3M Color Charts</a></li>
                     <li><a href="/color-charts/avery-color-charts.php" title="Avery Color Charts">Avery Color Charts</a></li>
-                    <li><a href="/color-charts/oracal-color-charts.php" title="Oracal Color Charts">Oracal Color Charts</a></li>
+                    <li><a href="/color-charts/orafol-color-charts.php" title="Orafol Color Charts">Orafol Color Charts</a></li>
 <!--                    <li><a href="#" title="Hexis Color Charts">Hexis Color Charts</a></li>-->
                     <li><a href="/color-charts/vvivid-color-charts.php" title="Vvivid Color Charts">Vvivid Color Charts</a></li>
 
                     <li>
                         <span>Premium Cast (Wet-Install)</span>
                         <ul>
-                            <li><a href="/color-charts/3m-color-charts.php#7125-cast">3M 7125</a></li>
-                            <li><a href="/color-charts/avery-color-charts.php#SC950-cast">Avery SC950</a></li>
-                            <li><a href="/color-charts/oracal-color-charts.php#751C-cast">Oracal 751C</a></li>
+                            <?php vinyl_list('3M', 'cast'); ?>
+                            <?php vinyl_list('Avery', 'cast'); ?>
+                            <?php vinyl_list('Orafol', 'cast'); ?>
                         </ul>
                     </li>
                     <li>
@@ -82,17 +96,17 @@
                             <li><a href="/color-charts/3m-color-charts.php#1080-wrap">3M 1080</a></li>
                             <li><a href="/color-charts/3m-color-charts.php#2080-wrap">3M 2080</a>
                                 <ul>
-                                    <?php include ROOT.'/private/includes/colors/3m_wrap_list.php'; ?>
+                                    <?php vinyl_list('3M', 'wrap'); ?>
                                 </ul>
                             </li>
                             <li><a href="/color-charts/avery-color-charts.php#wrap">Avery SW900</a>
                                 <ul>
-                                    <?php include ROOT.'/private/includes/colors/avery_wrap_list.php'; ?>
+                                    <?php vinyl_list('Avery', 'wrap'); ?>
                                 </ul>
                             </li>
-                            <li><a href="/color-charts/oracal-color-charts.php#wrap">Oracal 970RA</a>
+                            <li><a href="/color-charts/orafol-color-charts.php#wrap">Orafol 970RA</a>
                                 <ul>
-                                    <?php include ROOT.'/private/includes/colors/oracal_wrap_list.php'; ?>
+                                    <?php vinyl_list('Orafol', 'wrap'); ?>
                                 </ul>
                             </li>
                             <li><a href="/color-charts/vvivid-color-charts.php#wrap">Vvivid Wrap</a>
@@ -109,26 +123,25 @@
                         <ul>
                             <li><a href="/color-charts/3m-color-charts.php#680CR-reflective" title="3M 680CR Reflective Colors">3M 680CR Reflective Colors</a></li>
                             <li><a href="/color-charts/avery-color-charts.php#HV1200-reflective" title="Avery HV1200 Reflective Colors">Avery HV1200 Reflective Colors</a></li>
-                            <li><a href="/color-charts/oracal-color-charts.php#5600-reflective" title="Oracal Oralite 5600 Reflective Colors">Oracal Oralite 5600 Reflective Colors</a></li>
+                            <li><a href="/color-charts/orafol-color-charts.php#5600-reflective" title="Orafol Oralite 5600 Reflective Colors">Orafol Oralite 5600 Reflective Colors</a></li>
                         </ul>
 
                     </li>
                 </ul>
 
             </li>
-            <li><a href="about.php" title="About us">About</a>
+            <li><a href="/support/about.php" title="About Vinyl Imagination">About</a>
                 <ul>
-                    <li><a href="about.php#offer" title="What We Offer">What We Offer</a></li>
-                    <li><a href="about.php#graphics" title="Our Graphics">Our Graphics</a></li>
-                    <li><a href="about.php#design" title="Design Process">Custom Design Process</a></li>
-                    <li><a href="about.php#materials" title="Materials we use">Materials We Use</a></li>
+                    <li><a href="/support/about.php#graphics" title="Our Graphics">Our Graphics</a></li>
+                    <li><a href="/support/about.php#design" title="Design Process">Custom Design Process</a></li>
+                    <li><a href="/support/about.php#offer" title="What We Offer">What We Offer</a></li>
                 </ul>
             </li>
-            <li><a href="contact.php" title="Contact us">Contact Us</a></li>
-            <li><a href="insurance.php" title="Installation Insurance">Installation Insurance</a></li>
-            <li><a href="terms-conditions.php" title="Terms and Conditions">Terms & Conditions</a></li>
-            <li><a href="privacy-policy.php" title="Privacy Policy">Privacy Policy</a></li>
-            <li><a href="return-policy.php" title="Return Policy">Return Policy</a></li>
+            <li><a href="/support/contact.php" title="Contact us">Contact Us</a></li>
+            <li><a href="/support/insurance.php" title="Installation Insurance">Installation Insurance</a></li>
+            <li><a href="/support/terms-conditions.php" title="Terms and Conditions">Terms & Conditions</a></li>
+            <li><a href="/support/privacy-policy.php" title="Privacy Policy">Privacy Policy</a></li>
+            <li><a href="/support/return-policy.php" title="Return Policy">Return Policy</a></li>
         </ul>
     </nav>
 </div>

@@ -2,10 +2,10 @@
 /** @var $rightClickProtect
  *  From function hostident() IN core_functions.php INCLUDE in initialize.php
  */
-include_once '../private/includes/initialize.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
 
 $page_title = 'Contact Us';
-$css_file = '/css/inform.min.css';
+$css_file = '/css/support.min.css';
 
 ?>
 

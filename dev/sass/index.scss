@@ -133,7 +133,7 @@ section {
         margin: 0;
 
         a {
-          color: $color-logo-main;
+          color: $color-body-text;
           text-decoration: none;
         }
       }
@@ -214,8 +214,8 @@ section {
   }
 
   &.design {
-    background: url('/images/company/vi_charger_mesh.svg') no-repeat right -21% bottom 13%;
-    background-size: 49%;
+    //background: url('/images/company/vi_charger_mesh.svg') no-repeat right -21% bottom 13%;
+    //background-size: 49%;
     margin: 1% 0;
 
     div {

@@ -11,6 +11,7 @@ $office_days = 'Monday to Friday';
 
 //Address
 $address = 'Camarillo, CA 93010 USA';
+
 //Contact Phone Numbers
 $phone = '+1 (877) 558-2335'; $phone_clean = str_replace([' ', '(', ')', '-'], '', $phone);
 $sms = '+1 (805) 910-7072'; $sms_clean = str_replace([' ', '(', ')', '-'], '', $sms);
@@ -30,6 +31,7 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
 //Tawk.to Direct Chat Link
 $chat_link = 'https://tawk.to/chat/6229917ca34c2456412a54e4/1ftp60k94';
 
+//Discounts
 $automotive_sale_discount = match (date('M')) {
     'Jan', 'Feb', 'Mar' => 0.15, /*Simon: Note: This was set at 15% (Business Was Low) Changed to 30% on 3/1/22, Changed to 26% 1/5/23, Changed to 20% 2/15/23*/
     'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep' => 0.10,

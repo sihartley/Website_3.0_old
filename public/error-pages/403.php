@@ -1,5 +1,5 @@
 <?php
-include_once '../../private/includes/initialize.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
 $requested_url = $_SERVER['REQUEST_URI'];
 $lowercase_url = strtolower($requested_url);
 

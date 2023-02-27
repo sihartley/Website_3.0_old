@@ -28,6 +28,22 @@ ul.shortcuts {
   }
 }
 
+div#content {
+  > aside {
+    margin: 2%;
+
+    p {
+      margin: 1% 2% 0;
+      text-align: center;
+
+      &:nth-child(1) {
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
 section {
   //padding: 0 1%;
 
@@ -56,6 +72,11 @@ section {
       margin: 1%;
       padding: 1%;
       text-align: center;
+
+      &:hover {
+        transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      }
+
     }
 
     .content {
@@ -114,7 +135,8 @@ section {
   }// &.alt-years
 
   &.graphic-products,
-  &.motorcycle-graphics {
+  &.motorcycle-graphics,
+  &.trailer-graphics {
     > div {
       flex: 0 0 29%;
     }
@@ -141,8 +163,10 @@ section {
       }
     }
 
+    &.alt-years,
     &.graphic-products,
-    &.all-vehicles {
+    &.motorcycle-graphics,
+    &.trailer-graphics {
       >div {
         flex: 0 0 46%;
       }
@@ -191,9 +215,11 @@ section {
 
 @media screen and (max-width: 350px) {
   section {
-    &.graphic-products {
+    &.graphic-products,
+    &.motorcycle-graphics,
+    &.trailer-graphics {
       > div {
-        flex: 0 0 100%;
+        flex: 0 0 95%;
       }
     }
   }

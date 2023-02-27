@@ -1,8 +1,12 @@
 <footer>
     <?php
-    /** @var $dbPrefix * from function hostident within initialize.php */
-    /** @var $serverDot; * from function hostident within initialize.php */
-
+    /** @var $dbPrefix * from function hostident within initialize.php
+     * @var $serverDot * from function hostident within initialize.php
+     * @var $address * from business_info.php INCLUDE in initialize.php
+     * @var $phone * from business_info.php INCLUDE in initialize.php
+     * @var $mc_array * from databases.php INCLUDE in initialize.php
+     * @var $trailer_array * from databases.php INCLUDE in initialize.php
+     */
     $vehicles_list_query = '(select make, model, year from '.$dbPrefix.'Automotive.vehicles where available IS NOT NULL ORDER BY make, model, year ASC)';
     $vehicles_list = db_query($vehicles_list_query);
     db_disconnect(db_connect());
@@ -39,39 +43,45 @@
             </div>
 
             <div class="other-list">
+                <!-- Motorcycle Graphics List -->
                 <h5><a href="/motorcycle/motorcycle.php">Motorcycle Custom Graphics</a></h5>
                 <ul class="cycle-list">
-                    <!-- Simon: Todo: Automate this by Adding foreach loop here. -->
-                    <li>Custom Tank Decals</li>
-                    <li>Flaming Eagles</li>
-                    <li>Flaming Skulls</li>
-                    <li>Gas Tank Flames</li>
+                    <?php foreach ($mc_array as $mc_item) {
+                        $link = str_replace('_', '-', $mc_item);
+                        $item = ucwords(str_replace('_', ' ', $mc_item)); ?>
+                        <li><a href="/motorcycle/motorcycle.php#<?= $link ?>"><?= $item ?><span> Motorcycle Decals</span></a></li>
+                    <?php } ?>
                 </ul>
 
+                <!-- Trailer Graphics List -->
                 <h5><a href="/trailer/trailer.php">Trailer Graphics</a></h5>
                 <ul class="trailer-list">
-                    <!-- Simon: Todo: Automate this by Adding foreach loop here. -->
-                    <li>Motorcycle Trailer Graphics</li>
-                    <li>Horse Trailer Graphics</li>
-                    <li>Toy Hauler Graphics</li>
+                    <?php foreach ($trailer_array as $trailer_item) {
+                        $link = str_replace('_', '-', $trailer_item);
+                        $item = ucwords(str_replace('_', ' ', $trailer_item)); ?>
+                        <li><a href="/trailer/trailer.php#<?= $link ?>"><?= $item ?><span> Trailer Decals</span></a></li>
+                    <?php } ?>
                 </ul>
+
+                <!-- Color Chart Lists -->
                 <h5>Color Charts</h5>
                 <ul class="footer-color-list">
                     <li><a href="/color-charts/3m-color-charts.php">3M Color Charts</a>
                         <ul>
-                            <li><a href="/color-charts/3m-color-charts.php#7125-cast">3M 7125 Colors</a></li>
-                            <?php include ROOT.'/private/includes/colors/3m_wrap_list.php'; ?>
+                            <?php vinyl_list('3M', 'cast'); ?>
+                            <?php vinyl_list('3M', 'wrap'); ?>
                         </ul>
                     </li>
                     <li><a href="/color-charts/avery-color-charts.php">Avery Color Charts</a>
                         <ul>
-                            <li><a href="/color-charts/avery-color-charts.php#SC950-cast">Avery SC950 Colors</a></li>
-                            <?php include ROOT.'/private/includes/colors/avery_wrap_list.php'; ?>
+                            <?php vinyl_list('Avery', 'cast'); ?>
+                            <?php vinyl_list('Avery', 'wrap'); ?>
                         </ul>
                     </li>
-                    <li><a href="/color-charts/oracal-color-charts.php">Oracal Color Charts</a>
+                    <li><a href="/color-charts/orafol-color-charts.php">Orafol Color Charts</a>
                         <ul>
-                            <?php include ROOT.'/private/includes/colors/oracal_wrap_list.php'; ?>
+                            <?php vinyl_list('Orafol', 'cast'); ?>
+                            <?php vinyl_list('Avery', 'wrap'); ?>
                         </ul>
                     </li>
                     <li><a href="/color-charts/vvivid-color-charts.php">Vvivid Color Charts</a>
@@ -91,9 +101,9 @@
 
     &copy; Vinyl Imagination
     <div class="content">
-        <a href="/privacy-policy.php#privacy" title="Privacy Policy">Privacy Policy</a>
-        <a href="/terms-conditions.php#terms" title="Terms of Service">Terms of Service</a>
-        <a href="/return-policy.php#returns" title="Return Policy">Return Policy</a>
+        <a href="/support/privacy-policy.php#privacy" title="Privacy Policy">Privacy Policy</a>
+        <a href="/support/terms-conditions.php#terms" title="Terms of Service">Terms of Service</a>
+        <a href="/support/return-policy.php#returns" title="Return Policy">Return Policy</a>
         <a href="/sitemap.php" title="SiteMap">SiteMap</a>
     </div>
 

@@ -1,11 +1,35 @@
 // Global Styles Used in ALL Pages
 @import '_imports/global-variables';
 
-h1 {font-size: 2.8em; font-weight: 500; margin: 0 0 1em;} //Note: font-weight from 700 to 500
-h2 {font-size: 1.6em; font-weight: 500; line-height: 1.1em; margin: 0 0 .5em; } //Note: font-weight from 700 to 500
-h4 {font-size: 1em; font-weight: 500; margin: 0 0 1.5em; } //Note: font-weight from 700 to 500
-h5 {font-size: .85em; font-weight: 500; margin: 0 0 .85em; } //Note: font-weight from 700 to 500
-p {margin: 0 1% 1em;}
+h1 {
+  border-top: $color-logo-accent 3px solid;
+  font-size: 2.5em;
+  font-weight: 500;
+  margin: 0 0 1em;
+  padding-top: .5em;
+  width: 96%;} //Note: font-weight from 700 to 500
+
+h2 {
+  font-size: 1.6em;
+  font-weight: 500;
+  line-height: 1.1em;
+  margin: 0 0 .5em;
+} //Note: font-weight from 700 to 500
+
+h4 {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0 0 1.5em;
+} //Note: font-weight from 700 to 500
+
+h5 {font-size: .85em;
+  font-weight: 500;
+  margin: 0 0 .85em;
+} //Note: font-weight from 700 to 500
+
+p {
+  margin: 0 1% 1em;
+}
 
 html { //Global
   scroll-padding-top: 70px;
@@ -167,9 +191,9 @@ header { //Global
     width: 95%;
 
     p {
-      color: $color-logo-accent;
+      color: $color-logo-main;
       font-size: 3em;
-      margin: 1% auto;
+      margin: 1% auto .5em;
     }
 
     h1 {

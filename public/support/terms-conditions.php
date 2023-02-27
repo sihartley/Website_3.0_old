@@ -3,10 +3,10 @@
  *  From function hostident() IN core_functions.php INCLUDE in initialize.php
  */
 
-include_once '../private/includes/initialize.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
 
 $page_title = 'Terms and Conditions';
-$css_file = '/css/policies.min.css';
+$css_file = '/css/support.min.css';
 
 ?>
 
@@ -24,7 +24,7 @@ $css_file = '/css/policies.min.css';
         <?php include ROOT.'/private/includes/header.php' ?>
 
 <!-- Page Content -->
-        <section id="terms">
+        <section id="terms" class="terms">
             <div class="terms">
                 <img src="/images/icons/form.svg" alt="Our Privacy Policy" style="aspect-ratio: <?php svg_ratio('/images/icons/form.svg'); ?>">
                 <h2>Effective date: <?php echo date ("F d, Y.", getlastmod()); ?></h2>
@@ -35,7 +35,7 @@ $css_file = '/css/policies.min.css';
                     <p>Welcome to Vinyl Imagination. By visiting or shopping at vinylimagination.com, or its affiliate websites(including our eBay Store), you accept and are subject to these conditions. Please read them carefully.</p>
                     <p>Vinyl Imagination respects the privacy and concerns of our customers. Our primary concern is protecting your privacy and the information collected only to process a purchase transaction on vinylimagination.com or its affiliate websites.</p>
                     <p>Vinyl Imagination will not sell or rent your name, address, email address, credit card information, product selection, or personal information under ANY circumstances.</p>
-                    <p>By entering into a business transaction with vinylimagination.com, you are accepting the Terms of Service and our Privacy Policy described below. This Privacy Policy is not intended to and does not create any contractual or other legal rights on behalf of any party, and you can see it <a href="/privacy-policy.php">here</a>.</p>
+                    <p>By entering into a business transaction with vinylimagination.com, you are accepting the Terms of Service and our Privacy Policy described below. This Privacy Policy is not intended to and does not create any contractual or other legal rights on behalf of any party, and you can see it <a href="/support/privacy-policy.php">here</a>.</p>
                 </div>
 
 <!-- Disclaimer of Liability. -->

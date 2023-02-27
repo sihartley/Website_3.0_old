@@ -1,0 +1,452 @@
+@import '_imports/global-variables';
+
+section {
+  margin: 1%;
+
+  &.cast-v-wrap,
+  &.films {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &.terms,
+  &.returns,
+  &.privacy {
+    padding: 0 1%;
+  }
+
+  aside,
+  > div {
+    background-color: $color-section-background;
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  aside,
+  > div.contacts,
+  > div.insurance {
+    justify-content: center;
+    text-align: center;
+  }
+
+  aside {
+    margin: 1%;
+    padding-top: 1%;
+
+    > h2,
+    > h3 {
+      flex: 1 0 100%;
+      font-size: 1.7em;
+      margin: 0 0 .5em;
+    } // > h2, > h3
+
+    p {
+      margin: 0 0 1em;
+
+      a {
+        font-weight: 700;
+
+        &:link,
+        &:visited {
+          color: $color-info-link;
+        }
+
+        &:active {
+          color: $color-logo-main; //#122cd0
+        }
+      }
+    } // p
+
+    div {
+      margin-top: 1em;
+
+      img {
+        height: 4em;
+        margin-bottom: 3%;
+      }
+
+      h3,
+      p {
+        margin: 0 auto 1em;
+        width: 98%;
+      }
+
+      h4 {
+        font-size: 1.2em;
+      }
+
+      p {
+        border-top: $color-logo-accent 3px solid;
+        padding-top: 1em;
+      }
+    } // div
+
+    ul {
+      list-style: none;
+      padding-left: unset;
+
+      li {
+        margin-top: 4%;
+
+        a {
+          text-decoration: none;
+
+          &:link,
+          &:visited {
+            color: $color-body-text;
+          }
+
+          &:hover {
+            font-weight: 600;
+          }
+        }
+      }
+    } // ul
+
+
+  } // aside
+
+  &.history,
+  &.vision,
+  &.offer {
+    aside {
+
+      div {
+        p {
+          width: 90%;
+        }
+
+        &:first-of-type {
+          width: 100%;
+
+          > img {
+            margin-bottom: 1%;
+
+            &:nth-child(1) {
+              margin-right: .5%;
+            }
+
+            &:nth-child(2) {
+              height: 3.5em;
+              margin-left: .5%;
+            }
+          }
+
+          h3,
+          p {
+            margin: 0 auto 1em;
+            width: 98%;
+          }
+
+        } // &:first-of-type
+      } // div
+    } // aside
+  } // &.history,&.vision, &.offer
+
+  /*&.offer {
+    background: url('/images/company/vi_charger_mesh_l.svg') no-repeat left -21% bottom 13%;
+    background-size: 49%;
+    position: relative;
+  }*/
+
+  &.design {
+    /*background: url('/images/company/vi_charger_mesh.svg') no-repeat right -21% bottom 13%;
+    background-size: 49%;
+    position: relative;*/
+
+    div p span {
+      font-size: 1em;
+      font-weight: 600;
+    }
+  } // &.design
+
+  &.design,
+  &.graphics,
+  &.films {
+    aside {
+      div {
+        p {
+          width: 90%;
+        }
+      }
+    }
+  } // &.design, &.graphics, &.films
+
+  &.design,
+  &.films {
+    aside {
+      div {
+        width: 25%;
+      }
+    }
+  } // &.design, &.films
+
+  &.graphics,
+  &.offer {
+    aside {
+      div {
+        width: 33.3%;
+      }
+    }
+  } // &.graphics, &.offer
+
+  &.cast-v-wrap,
+  &.history {
+    aside {
+      div {
+        width: 50%;
+
+        p {
+          width: 96%;
+        }
+
+      }
+    }
+  } // &.cast-v-wrap > aside div
+
+
+  > div.contacts,
+  > div.insurance {
+
+    > h3 { // Hours
+      flex: 1 0 100%;
+      margin: 1%;
+    }
+
+    div {
+      margin-top: 1%;
+
+      h3 {
+        border-bottom: $color-logo-accent 3px solid;
+        padding-bottom: 1em;
+      }
+
+      h3,
+      p,
+      h4,
+      h5 {
+        margin: 0 auto 1em;
+        width: 90%;
+      }
+
+      h4,
+      h5 {
+        margin-bottom: .5em;
+      }
+
+      h5 {
+        color: $color-info-notice;
+      }
+
+      &.email img {
+        height: 2.5em;
+        padding: .75em;
+      }
+
+      ol {
+        margin: auto;
+        max-width: 800px;
+        text-align: left;
+        width: 80%;
+      }
+
+      .claim-button > div {
+        max-width: 232px;
+      }
+    }
+
+    a {
+      div {
+        margin-bottom: 3%;
+      }
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  > div.insurance {
+    img {
+      flex: 1 0 100%;
+      height: 6em;
+      padding: .75em;
+    }
+
+    div {
+      flex: 1 0 50%;
+
+    }
+  }
+
+  > div.contacts {
+    div { //Contact Method
+      flex: 1 0 25%;
+
+      img {
+        height: 4em;
+        margin-bottom: 3%;
+      }
+    }
+
+  }
+
+  > div.terms,
+  > div.privacy,
+  > div.returns {
+    padding: 1%;
+    text-align: left;
+
+    p {
+      margin: 0 auto 1em;
+      width: 90%;
+    }
+
+    h2 {
+      text-align: center;
+      width: 100%;
+
+      ~ p {
+        width: 98%;
+      }
+    }
+
+    img {
+      flex: 1 0 100%;
+      height: 6em;
+      padding: .75em;
+    }
+
+    div {
+      margin-top: 3%;
+    }
+
+    h3 {
+      margin-left: 1%;
+      margin-right: auto;
+      padding-bottom: 1em;
+      width: 90%;
+    }
+
+    h4,
+    h5 {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2%;
+    }
+
+    ul > li {
+      margin: auto;
+      width: 85%;
+
+      h5,
+      p {
+        margin-left: unset;
+      }
+    }
+
+    a {
+      font-weight: 500;
+
+      &:link {
+        color: $color-logo-main;
+      }
+
+      &:active {
+        color: $color-logo-accent;
+      }
+
+      &:visited {
+        color: $color-info-link;
+      }
+    }
+
+    .contact {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+  } // > div.terms, > div.privacy, > div.returns
+
+  > div.privacy div h4,
+  > div.privacy div h5 {
+    width: 90%;
+  }
+
+  > div.terms div h4 {
+    width: 85%;
+  }
+
+} // section
+
+// Media Queries
+@import '_partials/global-media-queries';
+
+@media screen and (max-width: 1220px) {
+  section {
+    &.offer,
+    &.design,
+    &.films {
+      aside div {
+        width: 33.3%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  section {
+    &.offer,
+    &.design,
+    &.films {
+      aside div {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  section>div.contacts div {
+    flex: 1 0 50%;
+    margin-top: 3%;
+  }
+}
+
+
+@media screen and (max-width: 860px) {
+  section {
+    &.graphics {
+      aside div {
+        width: 100%;
+      }
+    }
+
+    &.design {
+      aside div {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section>div.contacts div,
+  section>div.insurance div {
+    flex: 1 0 100%;
+  }
+
+  section {
+    &.offer,
+    &.design,
+    &.materials,
+    &.films {
+      aside div {
+        width: 100%;
+
+      }
+    }
+  }
+}

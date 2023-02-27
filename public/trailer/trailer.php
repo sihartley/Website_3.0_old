@@ -1,5 +1,5 @@
 <?php
-include_once '../../private/includes/initialize.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
 /**
  * @var $_GET
  * values passed in URI after ? (vehicle-main.php?make=foo&model=bar)
@@ -7,11 +7,8 @@ include_once '../../private/includes/initialize.php';
  * From function hostident() IN core_functions.php INCLUDE in initialize.php
  * @var $rightClickProtect
  * From function hostident() IN core_functions.php INCLUDE in initialize.php
- */
-$databases = ['motorcycle'];
-
-
-//$vehicle_makes = db_query($vehicle_makes_query);
+ * @var $trailer_array
+ * From databases.php INCLUDE in initialize.php */
 
 $css_file = '/css/graphics.min.css';
 $page_title = 'Trailer Graphics';
@@ -33,7 +30,7 @@ $page_title = 'Trailer Graphics';
 
         <!-- Shortcuts -->
             <ul class="shortcuts">
-        <?php foreach ($databases as $shortcut) {
+        <?php foreach ($trailer_array as $shortcut) {
             $link = str_replace('_', '-', $shortcut);
             $shortcut = ucwords(str_replace('_', ' ', $shortcut));
             ?>
@@ -43,7 +40,7 @@ $page_title = 'Trailer Graphics';
 
         <!-- Motorcycle Graphics -->
         <!-- Graphics Types -->
-        <?php foreach ($databases as $database) {
+        <?php foreach ($trailer_array as $database) {
             $trailer_db_query = "(SELECT product_name, image_path, product_image_on, price_base, unit FROM ".$dbPrefix."Trailer.$database )";
             $trailer_db = db_query($trailer_db_query);
             $category = ucwords(str_replace('_', ' ', $database));
@@ -78,8 +75,8 @@ $page_title = 'Trailer Graphics';
             } //END: foreach ($database as $databases) ?>
 
             </section>
-        <?php //db_disconnect(db_connect());
-        } //END: while ($makes = mysqli_fetch_assoc($vehicle_makes)) ?>
+        <?php //END: while ($makes = mysqli_fetch_assoc($vehicle_makes))
+        }  db_disconnect(db_connect()); ?>
 
         <!-- Navigation -->
         <?php include ROOT.'/private/includes/navigation.php'; ?> <!-- Note: Keep inside content div for page anchors to work properly -->

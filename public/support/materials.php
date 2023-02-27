@@ -3,10 +3,10 @@
  *  From function hostident() IN core_functions.php INCLUDE in initialize.php
  */
 
-include_once '../private/includes/initialize.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
 
-$page_title = 'About Us';
-$css_file = '/css/about.min.css';
+$page_title = 'Materials We Use';
+$css_file = '/css/support.min.css';
 
 ?>
 
@@ -24,17 +24,8 @@ $css_file = '/css/about.min.css';
         <?php
         include ROOT.'/private/includes/header.php' ?>
 
-        <!-- What we offer. -->
-        <?php echo str_replace(['h3>', 'h4>'], ['h2>', 'h3>'], file_get_contents(ROOT.'/private/includes/about/offer.php')); ?>
-
-        <!-- Graphics -->
-        <?php include ROOT.'/private/includes/about/graphics.php'?>
-
-        <!-- Design -->
-        <?php echo str_replace(['h3>', 'h4>'], ['h2>', 'h3>'], file_get_contents(ROOT.'/private/includes/about/design.php')); ?>
-
         <!-- Materials -->
-        <?php include ROOT.'/private/includes/about/materials.php'?>
+        <?php include ROOT.'/private/includes/materials/materials.php'?>
 
 
         <!-- Navigation -->

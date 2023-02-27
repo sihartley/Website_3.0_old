@@ -5,7 +5,7 @@
         </a>
         <a class="mini-logo" href="/index.php"><img src="/images/company/vi-logo-simple.svg" alt="Vinyl Imagination Logo" style="aspect-ratio: <?php svg_ratio('/images/company/vi-logo-simple.svg'); ?>"></a>
         <div class="menu-bar">
-            <a href="/index.php">Home</a>|<a href="#menu">Menu</a>|<a href="/contact.php">Contact</a>|<a href="/about.php">About</a>|<a href="https://vinylimagination.foxycart.com/cart?cart=view">Cart</a>
+            <a href="/index.php">Home</a>|<a href="#menu">Menu</a>|<a href="/support/contact.php">Contact</a>|<a href="/support/about.php">About</a>|<a href="https://vinylimagination.foxycart.com/cart?cart=view">Cart</a>
 
         </div>
         <a class="shopcart" aria-label="Shopping Cart Button" href="https://vinylimagination.foxycart.com/cart?cart=view">
@@ -18,11 +18,18 @@
         <p>You imagine. We create.</p>
         <?php
             if (!isset($page_title)) {
-                $page_title = 'Premier Design and Production of Automotive, Vehicle Specific Graphics<span>, Stripes, and Decals.</span>';
+                $page_title = 'Automotive, Vehicle Specific Graphics<span>, Stripes, and Decals</span>';
             }
         ?>
 
         <h1><?php echo $page_title; ?></h1>
     </div>
 </header>
+
+<?php
+if(isset($_COOKIE["LastVisitedSection"])){
+    echo "Recently visited section:  {$_SERVER['HTTP_HOST']}  {$_COOKIE["LastVisitedSection"]}";
+} else{
+    echo "Welcome guest! We encourage you to explore different sections!";
+}
 

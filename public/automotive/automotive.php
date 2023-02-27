@@ -1,5 +1,5 @@
 <?php
-include_once '../../private/includes/initialize.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
 /**
  * @var $_GET
  * values passed in URI after ? (vehicle-main.php?make=foo&model=bar)

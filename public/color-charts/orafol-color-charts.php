@@ -1,5 +1,5 @@
 <?php
-include_once '../../private/includes/initialize.php';
+require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
 
 /* Database */
 $brand = 'Orafol'; $premium = '751C'; $wrap = '970RA'; $tex = '975'; $reflective = '5600';
@@ -15,8 +15,6 @@ db_disconnect(db_connect());
 
 $color_items = ['premium cast 751C', 'premium gloss wrap', 'premium matte wrap', 'premium satin wrap', 'premium textured wrap', 'premium shift wrap', 'premium reflective 5600'];
 
-
-$brand = 'Oracal';
 $page_title = "$brand Vinyl Color Charts";
 $css_file = '/css/color-charts.min.css';
 ?>
@@ -44,7 +42,7 @@ $css_file = '/css/color-charts.min.css';
                 <h2><?php echo "$brand "; ?>Wet-Install Vinyl Graphic Film Color Charts</h2>
 
                 <div class="colors-premium">
-                    <img src="/images/icons/oracal-logo.svg" alt="<?php echo "$brand $premium "; ?>Vinyl Graphics Film Color Cart" style="aspect-ratio: <?php svg_ratio('/images/icons/avery-logo.svg'); ?>">
+                    <img src="/images/icons/orafol-logo.svg" alt="<?php echo "$brand $premium "; ?>Vinyl Graphics Film Color Cart" style="aspect-ratio: <?php svg_ratio('/images/icons/orafol-logo.svg'); ?>">
                     <h3><?php echo "$brand $premium "; ?>(Wet-Install) Vinyl Film Colors</h3>
                     <h4>Vinyl Film Information</h4>
                     <ul class="specs">
@@ -70,7 +68,7 @@ $css_file = '/css/color-charts.min.css';
 <!-- Oracal 5600 Color Chart -->
             <div id="5600-reflective"  class="colors">
                 <div class="colors-reflective">
-                    <img src="/images/icons/oracal-logo.svg" alt="<?php echo "$brand $reflective "; ?>Reflective Graphics Film Color Cart" style="aspect-ratio: <?php svg_ratio('/images/icons/avery-logo.svg'); ?>">
+                    <img src="/images/icons/orafol-logo.svg" alt="<?php echo "$brand $reflective "; ?>Reflective Graphics Film Color Cart" style="aspect-ratio: <?php svg_ratio('/images/icons/orafol-logo.svg'); ?>">
                     <h3><?php echo "$brand $reflective "; ?>(Wet-Install) Reflective Vinyl Film Colors</h3>
                     <h4 id="colors-3m-680cr">Reflective Material Information</h4>
                     <ul class="specs">
@@ -97,7 +95,7 @@ $css_file = '/css/color-charts.min.css';
                 <h2><?php echo "$brand $wrap "; ?>(Dry-Install) Vinyl Wrap Color Chart</h2>
 
                 <div class="colors-wrap">
-                    <img src="/images/icons/oracal-logo.svg" alt="<?php echo "$brand $wrap "; ?>Vinyl Graphics Film Color Cart" style="aspect-ratio: <?php svg_ratio('/images/icons/avery-logo.svg'); ?>">
+                    <img src="/images/icons/orafol-logo.svg" alt="<?php echo "$brand $wrap "; ?>Vinyl Graphics Film Color Cart" style="aspect-ratio: <?php svg_ratio('/images/icons/orafol-logo.svg'); ?>">
                     <h3><?php echo "$brand $wrap "; ?>(Dry-Install) Vinyl Wrap Film Colors</h3>
                     <h4 id="wrap-gloss"><?php echo "$brand $wrap "; ?>Premium Wrap Gloss Colors</h4>
                     <ul class="specs">
