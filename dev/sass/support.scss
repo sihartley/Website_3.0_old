@@ -187,6 +187,49 @@ section {
     aside {
       div {
         width: 33.3%;
+
+
+        .auto-gallery,
+        .mc-gallery {
+          width: 100%;
+
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%;
+
+            li {
+              cursor: pointer;
+              flex: 1 1 auto;
+              //height: 300px;
+              margin-top: unset;
+              position: relative;
+
+              //&:hover {
+              //  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+              //  z-index: 100;
+              //}
+
+              img {
+                border-radius: 5px;
+                height: 5.3em;
+                object-fit: cover;
+                vertical-align: middle;
+                width: 100%;
+              }
+            }
+
+          }
+        }
+
+        .mc-gallery {
+          ul li img {
+            height: 11em;
+          }
+        };
       }
     }
   } // &.graphics, &.offer

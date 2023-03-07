@@ -35,7 +35,7 @@ $vinyl_array = [
                 '680CR'
             ]
         ],
-        'page' => '/color-charts/3m-color-charts.php'
+        'page' => '/pages/color-charts/3m-color-charts.php'
     ],
     'avery' => [
         'cast' => [
@@ -68,7 +68,7 @@ $vinyl_array = [
                 'hv1200'
             ]
         ],
-        'page' => '/color-charts/avery-color-charts.php'
+        'page' => '/pages/color-charts/avery-color-charts.php'
     ],
     'orafol' => [
         'cast' => [
@@ -98,7 +98,7 @@ $vinyl_array = [
                 '5600'
             ]
         ],
-        'page' => '/color-charts/orafol-color-charts.php'
+        'page' => '/pages/color-charts/orafol-color-charts.php'
     ],
     'vvivid' => [
         'wrap' => [
@@ -124,6 +124,6 @@ $vinyl_array = [
                 '5600'
             ]
         ],
-        'page' => '/color-charts/vvivid-color-charts.php'
+        'page' => '/pages/color-charts/vvivid-color-charts.php'
     ]
 ];

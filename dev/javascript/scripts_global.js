@@ -18,7 +18,8 @@ window.onload = function () {
 
 /* Bar Menu Highlight */
     (function () {
-      let current = location.pathname.split('/')[1];
+      let current = location.pathname.split('/');
+      current = current[current.length -1];
       if (current === "") return;
       let menuItems = document.querySelectorAll('.menu-bar a');
       let i = 0, len = menuItems.length;
@@ -29,3 +30,20 @@ window.onload = function () {
       }
     })();
 }
+
+/* Unite Gallery */
+$("#gallery").unitegallery({
+  tile_border_color:"#7a7a7a",
+  tile_outline_color:"#8B8B8B",
+  tile_enable_shadow:true,
+  tile_shadow_color:"#333333",
+  tile_overlay_opacity:0.6,
+  tile_show_link_icon:true,
+  tile_image_effect_type:"sepia",
+  tile_image_effect_reverse:true,
+  tile_enable_textpanel:true,
+  tile_textpanel_source: "description", //from data-description attribute (default alt attribute)
+  lightbox_textpanel_title_color:"e5e5e5",
+  tiles_col_width:350,
+  tiles_space_between_cols:20
+});

@@ -59,7 +59,9 @@ div#content {
       font-size: clamp(5rem, 40vmin, 20rem);
       letter-spacing: 1rem;
       margin: 0 0 1rem;
-      transform: translate3d(0, 0, 0vmin);
+      transform: translate3d(0, 0, 0);
+      padding-top: unset;
+      width: unset;
 
       &:after {
         //-webkit-animation: swing var(--speed) infinite alternate ease-in-out;

@@ -10,14 +10,13 @@
             <h3>Quality Materials</h3>
             <p>Over the years, we have gathered a selection of the highest-quality vinyl films. We offer choices from 3M, Avery, Oracal, and others. Different materials suit different installation methods, so we offer Premium Cast for wet-install and Premium Wrap for dry-install. We do not offer graphics made with calendared materials (i.e., intermediate or economy vinyl films), even if requested.<br>
             We only use materials equal to or above these specifications:
-                <a href="/color-charts/3m-color-charts.php#7125-cast">3M 7125</a>,
-                <a href="/color-charts/3m-color-charts.php#2080-wrap">3M 2080</a>,
-                <a href="/color-charts/avery-color-charts.php#SC950-cast">Avery SC950</a>,
-                <a href="/color-charts/avery-color-charts.php#wrap">Avery SW900</a>,
-                <a href="/color-charts/orafol-color-charts.php#751C-cast">Orafol 751</a>, and
-                <a href="/color-charts/orafol-color-charts.php#wrap">Orafol 970RA</a>.<br>
-                For more information about our vinyl materials,
-                <a href="/support/materials.php">click here</a>.
+                <a href="/pages/color-charts/3m-color-charts.php#7125-cast">3M 7125</a>,
+                <a href="/pages/color-charts/3m-color-charts.php#2080-wrap">3M 2080</a>,
+                <a href="/pages/color-charts/avery-color-charts.php#SC950-cast">Avery SC950</a>,
+                <a href="/pages/color-charts/avery-color-charts.php#wrap">Avery SW900</a>,
+                <a href="/pages/color-charts/orafol-color-charts.php#751C-cast">Orafol 751</a>, and
+                <a href="/pages/color-charts/orafol-color-charts.php#wrap">Orafol 970RA</a>.<br>
+                <a href="/pages/support/materials.php">For more information about our vinyl materials, click here</a>.
             </p>
         </div>
 
@@ -33,7 +32,7 @@
         <div>
             <img src="/images/icons/insurance.svg" alt="" style="aspect-ratio: <?php svg_ratio('/images/icons/insurance.svg'); ?>">
             <h3>Installation Insurance</h3>
-            <p>You can add this additional option during the checkout process. This option gives you peace of mind when installing your graphics. Should you run into any issues or mishaps when installing your graphics kit(s), we will replace them up to and including your complete order. Send us a picture of the issue, and we will replace the necessary piece of the kit or order. <a href="/support/insurance.php">Details.</a></p>
+            <p>You can add this additional option during the checkout process. This option gives you peace of mind when installing your graphics. Should you run into any issues or mishaps when installing your graphics kit(s), we will replace them up to and including your complete order. Send us a picture of the issue, and we will replace the necessary piece of the kit or order. <a href="/pages/support/insurance.php">Details.</a></p>
         </div>
 
 <!-- Free Shipping -->

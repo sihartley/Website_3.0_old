@@ -20,7 +20,7 @@
             <div class="<?= $class ?>">
                 <div class="content">
                     <h3><?= $product_name ?></h3>
-                    <img src="<?= $image ?>" alt="<?= $image_alt ?>" style="aspect-ratio: <?php image_ratio($image); ?>" <?= $lazy ?>>
+                    <img src="<?= webpImage($image) ?>" alt="<?= $image_alt ?>" style="aspect-ratio: <?php image_ratio($image); ?>" <?= $lazy ?>>
                     <h3><?= $title ?></h3>
                     <a href="<?= $href ?>" class="buy-now-button"
                        aria-label="<?= $aria_label ?>">

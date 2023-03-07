@@ -13,13 +13,13 @@
             $years = $pop_vehicle['year'];
             $year_start = explode(' ', $years)[0];
             $image = $pop_vehicle['image_path'] . $pop_vehicle['vehicle_250px_image']; $image_alt = "BUY $make $model $years Vehicle Graphics";
-            $href = "/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start&years=$years";
+            $href = "/pages/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start&years=$years";
             $aria_label = "SHOP $years $make $model Vehicle Graphics";
             ?>
             <div class="<?= "vehicle-" . $vehicle++ ?>">
                 <div class="content">
                     <h3><?= "$years $make $model" ?></h3>
-                    <img src="<?= $image ?>" alt="<?= $image_alt ?>" style="aspect-ratio: <?php image_ratio($image); ?>">
+                    <img src="<?= webpImage($image) ?>" alt="<?= $image_alt ?>" style="aspect-ratio: <?php image_ratio($image); ?>">
                     <a href="<?= $href ?>" class="shop-now-button"
                        aria-label="<?= $aria_label ?>">
                         <div>

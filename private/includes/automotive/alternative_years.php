@@ -18,7 +18,7 @@ if (isset($alt_years) && (mysqli_num_rows($alt_years) !== 0)) { ?>
             <div class="<?= "vehicle-" . $vehicle++ ?>">
                 <div class="content">
                     <h3><?= "$years $make $model" ?></h3>
-                    <img src="<?= $image ?>" alt="<?= $image_alt ?>" style="aspect-ratio: <?php image_ratio($image); ?>">
+                    <img src="<?= webpImage($image) ?>" alt="<?= $image_alt ?>" style="aspect-ratio: <?php image_ratio($image); ?>">
                     <a href="<?= $href ?>" class="shop-now-button"
                        aria-label="<?= $aria_label ?>">
                         <div>

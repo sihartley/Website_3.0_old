@@ -18,6 +18,7 @@
     echo '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/global.min.css') . '" type="text/css">' . "\n";
     echo '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version($css_file) . '" type="text/css">' . "\n";
     echo '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/menu.min.css') . '" type="text/css">' . "\n";
+    echo '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/unite-gallery.min.css') . '" type="text/css">' . "\n";
     /* Simon: Info: These are ordered for optimal performance ref. Lighthouse Test. */
     echo '<script src="' . auto_version('https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js') . '" type="text/javascript" defer></script>' . "\n" ;
     echo '<script src="' . auto_version('/js/mmenu_config.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
@@ -26,6 +27,7 @@
     /* FOXYCART */
     echo '<script src="' . auto_version('/js/foxycart_dynamin_price_calc.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
     echo '<script src="' . auto_version('https://cdn.foxycart.com/vinylimagination/loader.js') . '" type="text/javascript" async defer></script>' . "\n" ;
+    echo '<script src="' . auto_version('/js/unitegallery.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
     echo '<script src="' . auto_version('/js/scripts_global.min.js') . '" type="text/javascript" defer></script>' . "\n" ;
     ?>
 </head>

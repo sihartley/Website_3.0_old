@@ -7,7 +7,7 @@
         <div class="<?php echo "product-" . $product++; ?>">
             <div class="content">
                 <h3><?php echo $new_product['product_name']; ?></h3>
-                <img src="<?php echo $new_product['image_path'] . $new_product['main_page_image']; ?>"
+                <img src="<?php echo webpImage($new_product['image_path'] . $new_product['main_page_image']); ?>"
                      alt="<?php echo "BUY {$new_product['make']} {$new_product['model']} - {$new_product['product_name']}"; ?>"
                      style="aspect-ratio: <?php image_ratio($new_product['image_path'] . $new_product['main_page_image']); ?>" loading="lazy">
                 <h3><?php echo "{$new_product['year']} {$new_product['make']} {$new_product['model']}"; ?></h3>

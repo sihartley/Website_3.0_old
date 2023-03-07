@@ -11,7 +11,7 @@
         <div class="<?php echo "feature-" . $feature++; ?>">
             <div class="content">
                 <h3><?php echo $feature_product['product_name']; ?></h3>
-                <img src="<?php echo $feature_product['image_path'] . $feature_product['main_page_image']; ?>"
+                <img src="<?php echo webpImage($feature_product['image_path'] . $feature_product['main_page_image']); ?>"
                      alt="<?php echo "BUY {$feature_product['make']} {$feature_product['model']} - {$feature_product['product_name']}"; ?>"
                      style="aspect-ratio: <?php image_ratio($feature_product['image_path'] . $feature_product['main_page_image']); ?>" loading="lazy">
                 <h3><?php echo "{$feature_product['year']} {$feature_product['make']} {$feature_product['model']}"; ?></h3>

@@ -46,8 +46,6 @@ document.addEventListener(
         ]
       });
 
-      // let notFollow = document.getElementsByClassName("mm-navbar__title");
-      // notFollow.setAttribute("rel", "nofollow");
     }
 
 );

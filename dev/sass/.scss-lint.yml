@@ -4,16 +4,16 @@
 
 linters:
   NameFormat:
-    enabled: false
+    enabled: true
   SelectorFormat:
     enabled: true
   QualifyingElement:
     enabled: false
   NestingDepth:
-    enabled: true
+    enabled: false
     max_depth: 7
   SelectorDepth:
-    enabled: true
+    enabled: false
     max_depth: 6
 
 

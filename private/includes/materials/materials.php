@@ -25,7 +25,7 @@
         <p>We only use the highest quality, and highest durability vinyl films for vehicle use. These are the same vinyl films used by many OEM Automakers and dealerships. Using these high-quality films, you can rest assured that the graphics will continue to look amazing on your vehicle for many years.</p>
 
         <div>
-            <a href="/color-charts/3m-color-charts.php">
+            <a href="/pages/color-charts/3m-color-charts.php">
                 <img src="/images/icons/3m-logo.svg" alt="3M Color Film Information" style="<?php svg_ratio('/images/icons/3m-logo.svg'); ?>">
                 <h3></h3>
             </a>
@@ -36,7 +36,7 @@
             </ul>
         </div>
         <div>
-            <a href="/color-charts/avery-color-charts.php">
+            <a href="/pages/color-charts/avery-color-charts.php">
                 <img src="/images/icons/avery-logo.svg" alt="Avery Color Film Information" style="<?php svg_ratio('/images/icons/avery-logo.svg'); ?>">
                 <h3></h3>
             </a>
@@ -47,7 +47,7 @@
             </ul>
         </div>
         <div>
-            <a href="/color-charts/orafol-color-charts.php">
+            <a href="/pages/color-charts/orafol-color-charts.php">
                 <img src="/images/icons/orafol-logo.svg" alt="Orafol Color Film Information" style="<?php svg_ratio('/images/icons/orafol-logo.svg'); ?>">
                 <h3></h3>
             </a>
@@ -58,7 +58,7 @@
             </ul>
         </div>
         <div>
-            <a href="/color-charts/vvivid-color-charts.php">
+            <a href="/pages/color-charts/vvivid-color-charts.php">
                 <img src="/images/icons/vvivid-logo.svg" alt="Vvivid Color Film Information" style="<?php svg_ratio('/images/icons/vvivid-logo.svg'); ?>">
                 <h3></h3>
             </a>

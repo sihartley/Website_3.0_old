@@ -49,6 +49,7 @@ section {
 
   &.alt-years,
   &.graphic-products,
+  &.graphic-look,
   &.all-vehicles,
   &.motorcycle-graphics,
   &.trailer-graphics {
@@ -118,7 +119,6 @@ section {
       margin: auto 0;
       padding-bottom: 5%;
       width: 100%;
-
     }
   }// &.alt-years, &.graphic-products
 
@@ -141,6 +141,7 @@ section {
       flex: 0 0 29%;
     }
   }// &.products
+
 } //section
 
 @import '_partials/global-media-queries';

@@ -42,31 +42,12 @@ function host_ident($server): array
     return array($hostingServer, $dbPrefix, $minifyHTML, $rightClickProtect, $liveReload, $serverDot);
 }
 
-function db_query($query): mysqli_result
-{
-    $results = mysqli_query(db_connect(), $query);
-    confirm_result_set($results);
-    return $results;
-}
-
+/* Database */
 function db_connect(): bool|mysqli
 {
     $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS);
     confirm_db_connect();
     return $connection;
-}
-
-function db_disconnect($connection): void
-{
-    if(isset($connection)) {
-        mysqli_close($connection);
-    }
-}
-
-function db_escape($string): string
-{
-    $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS);
-    return mysqli_real_escape_string($connection, $string);
 }
 
 function confirm_db_connect(): void
@@ -84,6 +65,27 @@ function confirm_result_set($result_set): void
     if (!$result_set) {
         die("Database query {$result_set} failed.");
     }
+}
+
+function db_query($query): mysqli_result
+{
+    $results = mysqli_query(db_connect(), $query);
+    confirm_result_set($results);
+    return $results;
+}
+
+function db_disconnect($connection): void
+{
+    if(isset($connection)) {
+        mysqli_close($connection);
+    }
+}
+
+/* Prevent SQL Injection */
+function db_escape($string): string
+{
+    $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS);
+    return mysqli_real_escape_string($connection, $string);
 }
 
 /* Automatic File Versioning */

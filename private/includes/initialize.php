@@ -14,9 +14,14 @@ include ROOT.'/private/includes/arrays.php';
 include ROOT.'/private/includes/business_info.php';
 
 /* Core Functions (Functions for ALL Pages NO Exceptions) */
-include_once ROOT.'/private/functions/core_functions.php';
+include ROOT.'/private/functions/core_functions.php';
+
 /* Global Functions (Functions for ALL Pages) */
-include_once ROOT.'/private/functions/global_functions.php';
+include ROOT.'/private/functions/global_functions.php';
+
+/* Image Functions (Functions for Image Manipulation) */
+include ROOT.'/private/functions/image_functions.php';
+
 /* Server Detection, Database Prefix, HTML Minification, Right Click Protection, Live Reload, Server ID Dot, Database Credentials*/
 [$hostingServer, $dbPrefix, $minifyHTML, $rightClickProtect, $liveReload, $serverDot] = host_ident($_SERVER['SERVER_ADDR']);
 

@@ -1,0 +1,132 @@
+@import '_imports/global-variables';
+//Simon: Todo: Merge this file with graphics.scss files
+html { //Global
+  scroll-padding-top: 100px;
+}
+
+section {
+
+  &.graphic-look {
+    img {
+      width: 55%;
+    }
+  } //&.graphic-look
+
+  &.graphic-look {
+    background-color: $color-section-background;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1%;
+
+  } //&.graphic-look
+
+  &.graphic-designs {
+    background-color: $color-section-background;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1%;
+
+    h2 {
+      flex: 1 0 100%;
+      font-size: 1.5em;
+      margin: 1% 0 0;
+      text-align: center;
+    }
+
+    div.design {
+      align-items: center;
+      background-color: $color-product-background;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 1%;
+      padding: 1%;
+      text-align: center;
+      width: 98%;
+
+      h3 {
+        width: 98%;
+      }
+
+      div.image {
+        flex: .8;
+
+        img {
+          max-width: 400px;
+          width: 80%;
+        }
+      }
+
+      div.form {
+        flex: 1;
+        form {
+          background-color: #505050;
+
+          button {
+            background-color: $color-product-button-background;
+            border: $color-product-button-text 1px solid;
+            color: $color-product-button-text;
+            font-family: 'Exo', sans-serif;
+            font-size: 1em;
+            font-weight: 500;
+            height: 3em;
+            margin: 3% auto;
+            width: 35%;
+
+            &:hover {
+              background-color: $color-product-button-hover;
+            }
+          }
+        }
+
+
+      }
+
+    }
+
+    /*.content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      div {
+        padding: 1%;
+        text-decoration: none;
+      }
+
+      span {
+        font-weight: 700;
+      }
+
+      span:nth-of-type(2) {
+        font-style: italic;
+        font-weight: 400;
+      }
+
+    }*/
+
+    /*h3 {
+      font-size: .85em;
+      font-weight: 700;
+      margin: 0 0 auto;
+      padding-bottom: 4%;
+    }*/
+
+    /*h3:nth-of-type(2) {
+      font-size: .85em;
+      font-weight: 700;
+      margin: auto 0 0;
+      padding-top: 4%;
+    }*/
+
+    /*img {
+      margin: auto 0;
+      padding-bottom: 5%;
+      width: 100%;
+    }*/
+
+  } //&.graphic-designs
+
+
+} //section

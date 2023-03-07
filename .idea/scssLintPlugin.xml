@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ScssLintProjectComponent">
     <option name="scssLintConfigFile" value="C:\Users\sihar\Dropbox\xampp\htdocs\Website_3.0\dev\sass\.scss-lint.yml" />
-    <option name="scssLintExecutable" value="C:\Ruby27-x64\bin\scss-lint.bat" />
+    <option name="scssLintExecutable" value="C:\Ruby32-x64\bin\scss-lint.bat" />
     <option name="pluginEnabled" value="true" />
   </component>
 </project>
