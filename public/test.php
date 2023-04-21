@@ -6,8 +6,6 @@ require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.
  */
 /* CSS Files Specific to this page. */
 $css_file = '/css/index.min.css';
-$page_title = 'Test Page';
-
 
 /* Database */
 $pop_vehicles_query = '(select make, model, year, image_path, vehicle_250px_image from '.db_escape($dbPrefix).'Automotive.vehicles where id IN (14, 17, 30, 42))';
@@ -34,32 +32,32 @@ db_disconnect(db_connect());
         <!-- Header -->
         <?php include ROOT.'/private/includes/header.php'?>
 
+
         <?php
 
-//        echo '<pre>';
-//        print_r($files);
-//        echo '</pre>';
+        $file = '/Graphics/Vehicles/Chevy/Camaro\Chevy-Camaro-2013-Black-Driver-Side-192x610.png';
+        $source = PUB_PATH.$file;
+//        $dir = pathinfo($source, PATHINFO_DIRNAME);
+//        $name = pathinfo($source, PATHINFO_FILENAME);
+//        $destination = $dir . DIRECTORY_SEPARATOR . $name . '.webp';
+//        $info = getimagesize(ROOT.$source);
 
-        $thumbdir = 'thumbs';
-        $filename = ROOT.'/public/gallery/vehicles/imageFile.webp';
-        $dir = pathinfo($filename, PATHINFO_DIRNAME);
-        $name = pathinfo($filename, PATHINFO_FILENAME);
-        $thumbpath = implode(DIRECTORY_SEPARATOR, [$dir, $thumbdir]);
-        $thumbfile = implode(DIRECTORY_SEPARATOR, [$dir, $thumbdir, $name]) . '_300px.webp';
+//        echo '<br>';
+//        echo $dir . '<br>';
+//        echo $name . '<br>';
+//        echo $destination . '<br>';
+//        echo $info . '<br>';
 
+        phpinfo();
 
-        echo 'Directory: ' . $dir . '<br>';
-        echo 'Filename: ' . $name . '<br>';
-        echo 'Thumb Path: ' . $thumbpath . '<br>';
-        echo 'Thumb File: ' . $thumbfile . '<br>';
-
-        if (file_exists($thumbpath)) {
-            echo 'Exists: YES';
-        } else {
-            echo 'Exists: NO';
-        }
-
+           $image = webpImage($source);
+        
+        
         ?>
+
+<!--        <img src="/Graphics/Vehicles/Chevy/Camaro/Chevy-Camaro-2013-Black-Driver-Side-192x610.png" alt="">-->
+        <img src="<?= $image ?>" alt="">
+
 
         <!-- Navigation -->
         <?php include ROOT.'/private/includes/navigation.php'; ?> <!-- Note: Keep inside content div for page anchors to work properly -->

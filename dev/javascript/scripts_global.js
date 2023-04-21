@@ -1,3 +1,6 @@
+
+
+
 /* Logo Fade In/Out JS */
 const checkpoint = 200;
 let opacity;
@@ -32,7 +35,7 @@ window.onload = function () {
 }
 
 /* Unite Gallery */
-$("#gallery").unitegallery({
+/*$("#gallery").unitegallery({
   tile_border_color:"#7a7a7a",
   tile_outline_color:"#8B8B8B",
   tile_enable_shadow:true,
@@ -46,4 +49,9 @@ $("#gallery").unitegallery({
   lightbox_textpanel_title_color:"e5e5e5",
   tiles_col_width:350,
   tiles_space_between_cols:20
+});*/
+
+/* Select2 Simon: Note: Moved to top of color_lists.js*/
+$(document).ready(function() {
+
 });

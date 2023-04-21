@@ -3,24 +3,25 @@ session_start();
 
 setcookie("LastVisitedSection", "Use", time() + 3600, "/", $_SERVER['HTTP_HOST']);
 
+/* Define Directory Paths */
 define('ROOT', str_replace('\\', '/', dirname($_SERVER['DOCUMENT_ROOT']))); //C:/xampp/htdocs/Website_3.0
 define('PRIV_PATH', str_replace('\\', '/', dirname($_SERVER['DOCUMENT_ROOT']) . '/private')); //C:/xampp/htdocs/Website_3.0/private
 define('PUB_PATH', str_replace('\\', '/', dirname($_SERVER['DOCUMENT_ROOT']) . '/public')); //C:/xampp/htdocs/Website_3.0/public
 
 /* Arrays */
-include ROOT.'/private/includes/arrays.php';
+include PRIV_PATH.'/includes/arrays.php';
 
 /* Business Info */
-include ROOT.'/private/includes/business_info.php';
+include PRIV_PATH.'/includes/business_info.php';
 
 /* Core Functions (Functions for ALL Pages NO Exceptions) */
-include ROOT.'/private/functions/core_functions.php';
+include PRIV_PATH.'/functions/core_functions.php';
 
 /* Global Functions (Functions for ALL Pages) */
-include ROOT.'/private/functions/global_functions.php';
+include PRIV_PATH.'/functions/global_functions.php';
 
 /* Image Functions (Functions for Image Manipulation) */
-include ROOT.'/private/functions/image_functions.php';
+include PRIV_PATH.'/functions/image_functions.php';
 
 /* Server Detection, Database Prefix, HTML Minification, Right Click Protection, Live Reload, Server ID Dot, Database Credentials*/
 [$hostingServer, $dbPrefix, $minifyHTML, $rightClickProtect, $liveReload, $serverDot] = host_ident($_SERVER['SERVER_ADDR']);

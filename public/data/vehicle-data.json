@@ -1,0 +1,2278 @@
+//https://www.carsdirect.com/{year}/{make}/{model}/colors
+//https://www.jdpower.com/Cars/{year}/{make}/{model}
+//https://dot.report/vehicle/{make}/{model}/{year}
+
+{
+  "Automotive": [
+    {
+      "Dodge": [
+        {
+          "Charger": [
+            {
+              "Year": [
+                {
+                  "2006": [
+                    {
+                      "Base": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Cool Vanilla Clearcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Magnesium Pearlcoat",
+                            "Midnight Blue Pearlcoat",
+                            "Silver Steel Metallic Clearcoat",
+                            "Stone White Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray/Light Graystone",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Cool Vanilla Clearcoat",
+                            "Go Mango!",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Magnesium Pearlcoat",
+                            "Midnight Blue Pearlcoat",
+                            "Silver Steel Metallic Clearcoat",
+                            "Stone White Clearcoat",
+                            "Top Banana",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray/Light Graystone",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "SRT-8": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Inferno Red Crystal Pearlcoat"
+                          ],
+                          "Interior Colors": [
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2007": [
+                    {
+                      "Base": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Marine Blue Pearlcoat",
+                            "Silver Steel Metallic Clearcoat",
+                            "Steel Blue Metallic Clearcoat",
+                            "Stone White Clearcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray/Light Graystone",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Marine Blue Pearlcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Silver Steel Metallic Clearcoat",
+                            "Steel Blue Metallic Clearcoat",
+                            "Stone White Clearcoat",
+                            "Sublime Metallic Clearcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray/Light Graystone",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "SRT-8": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Detonator Yellow Clearcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray",
+                            "Dk/Lt Slate Gray"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2008": [
+                    {
+                      "Base": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Cool Vanilla Clearcoat",
+                            "Dark Titanium Metallic Clearcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Light Sandstone Metallic Clearcoat",
+                            "Steel Blue Metallic Clearcoat",
+                            "Stone White Clearcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Cool Vanilla Clearcoat",
+                            "Dark Titanium Metallic Clearcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Light Sandstone Metallic Clearcoat",
+                            "Steel Blue Metallic Clearcoat",
+                            "Stone White Clearcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Dark Titanium Metallic Clearcoat",
+                            "Hemi Orange Pearlcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Light Sandstone Metallic Clearcoat",
+                            "Steel Blue Metallic Clearcoat",
+                            "Stone White Clearcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray/Light Graystone",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "SRT-8": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Steel Blue Metallic Clearcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2009": [
+                    {
+                      "Base": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Dark Titanium Metallic Clearcoat",
+                            "Deep Water Blue Pearlcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Light Sandstone Metallic Clearcoat",
+                            "Stone White Clearcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Dark Titanium Metallic Clearcoat",
+                            "Deep Water Blue Pearlcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Light Sandstone Metallic Clearcoat",
+                            "Stone White Clearcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Dark Titanium Metallic Clearcoat",
+                            "Deep Water Blue Pearlcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Light Sandstone Metallic Clearcoat",
+                            "Stone White Clearcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray/Light Graystone",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "SRT-8": [
+                        {
+                          "Specs": "6.1L V8 425 HP",
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Deep Water Blue Pearlcoat",
+                            "Hemi Orange Pearlcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2010": [
+                    {
+                      "Base": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Dark Titanium Metallic Clearcoat",
+                            "Deep Water Blue Pearlcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Mineral Gray Metallic Clearcoat",
+                            "Stone White Clearcoat",
+                            "Torred",
+                            "White Gold Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "3.5L": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Dark Titanium Metallic Clearcoat",
+                            "Deep Water Blue Pearlcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Mineral Gray Metallic Clearcoat",
+                            "Torred",
+                            "White Gold Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Cool Vanilla Clearcoat",
+                            "Dark Titanium Metallic Clearcoat",
+                            "Deep Water Blue Pearlcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Mineral Gray Metallic Clearcoat",
+                            "Stone White Clearcoat",
+                            "Torred",
+                            "White Gold Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "RALLYE": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Cool Vanilla Clearcoat",
+                            "Dark Titanium Metallic Clearcoat",
+                            "Deep Water Blue Pearlcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Mineral Gray Metallic Clearcoat",
+                            "Torred",
+                            "White Gold Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Cool Vanilla Clearcoat",
+                            "Dark Titanium Metallic Clearcoat",
+                            "Deep Water Blue Pearlcoat",
+                            "Inferno Red Crystal Pearlcoat",
+                            "Mineral Gray Metallic Clearcoat",
+                            "Stone White Clearcoat",
+                            "Torred",
+                            "White Gold Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray/Light Graystone",
+                            "Dark/Light Slate Gray"
+                          ]
+                        }
+                      ],
+                      "SRT-8": [
+                        {
+                          "Specs": "6.1L V8 425 HP",
+                          "Exterior Colors": [
+                            "Bright Silver Metallic Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Deep Water Blue Pearlcoat",
+                            "Hemi Orange Pearlcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Dark Slate Gray"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2011": [
+                    {
+                      "Base": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Metallic Clearcoat",
+                            "Blackberry Pearlcoat",
+                            "Bright Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Pitch Black",
+                            "Redline 3 Coat Pearl",
+                            "Toxic Orange Pearlcoat",
+                            "Tungsten Metallic Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Black/Light Frost Beige",
+                            "Black/Red",
+                            "Black/Tan"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "Amped",
+                            "Billet Metallic Clearcoat",
+                            "Blackberry Pearlcoat",
+                            "Bright Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Brilliant Black Crystal Pearlcoat",
+                            "Pitch Black",
+                            "Redline 3 Coat Pearl",
+                            "Toxic Orange Pearlcoat",
+                            "Tungsten Metallic Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Black/Light Frost Beige",
+                            "Black/Red",
+                            "Black/Tan"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2012": [
+                    {
+                      "SE": [
+                        {
+                          "Exterior Colors": [
+                            "Blackberry Pearlcoat",
+                            "Bright Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Pitch Black",
+                            "Redline 3 Coat Pearl",
+                            "Tungsten Metallic Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Light Frost Beige/Black",
+                            "Tan/Black"
+                          ]
+                        }
+                      ],
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "Blackberry Pearlcoat",
+                            "Blue Streak Pearlcoat",
+                            "Bright Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Pitch Black",
+                            "Redline 3 Coat Pearl",
+                            "Tungsten Metallic Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Light Frost Beige/Black",
+                            "Red/Black",
+                            "Tan/Black"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "Blackberry Pearlcoat",
+                            "Blue Streak Pearlcoat",
+                            "Bright Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Pitch Black",
+                            "Redline 3 Coat Pearl",
+                            "Tungsten Metallic Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Light Frost Beige/Black",
+                            "Red/Black",
+                            "Tan/Black"
+                          ]
+                        }
+                      ],
+                      "SRT-8 SUPERBEE": [
+                        {
+                          "Exterior Colors": [
+                            "Pitch Black",
+                            "Stinger Yellow Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "SRT-8": [
+                        {
+                          "Exterior Colors": [
+                            "Blue Streak Pearlcoat",
+                            "Bright Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Pitch Black",
+                            "Redline 3 Coat Pearl",
+                            "Tungsten Metallic Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Red/Black"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2013": [
+                    {
+                      "SE": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Ivory 3-Coat",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Redline 3 Coat Pearl"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Light Frost Beige/Black",
+                            "Tan/Black"
+                          ]
+                        }
+                      ],
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Copperhead Pearlcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Ivory 3-Coat",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Redline 3 Coat Pearl",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Light Frost Beige/Black",
+                            "Red/Black",
+                            "Tan/Black"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Copperhead Pearlcoat",
+                            "Daytona Blue Pearlcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Ivory 3-Coat",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Redline 3 Coat Pearl",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Black/Blue",
+                            "Light Frost Beige/Black",
+                            "Red/Black",
+                            "Tan/Black"
+                          ]
+                        }
+                      ],
+                      "SRT-8 SUPERBEE": [
+                        {
+                          "Exterior Colors": [
+                            "Bright White Clearcoat",
+                            "Hemi Orange Pearlcoat",
+                            "Pitch Black",
+                            "Plum Crazy Pearlcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "SRT-8": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Hemi Orange Pearlcoat",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Plum Crazy Pearlcoat",
+                            "Redline 3 Coat Pearl",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Black/Sepia",
+                            "Red/Black"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2014": [
+                    {
+                      "SE": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Redline 3 Coat Pearl",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Black/Light Frost Beige",
+                            "Tan/Black"
+                          ]
+                        }
+                      ],
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Header Orange Clearcoat",
+                            "High Octane Red Pearlcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Redline 3 Coat Pearl",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Black/Foundry Black",
+                            "Black/Molten Red",
+                            "Light Frost Beige/Black",
+                            "Red/Black",
+                            "Tan/Black"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Header Orange Clearcoat",
+                            "High Octane Red Pearlcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Plum Crazy Pearlcoat",
+                            "Pitch Black",
+                            "Redline 3 Coat Pearl",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Black/Foundry Black",
+                            "Light Frost Beige/Black",
+                            "Red/Black",
+                            "Tan/Black"
+                          ]
+                        }
+                      ],
+                      "SRT-8 SUPERBEE": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Hemi Orange Pearlcoat",
+                            "Pitch Black",
+                            "Plum Crazy Pearlcoat",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "SRT-8": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Header Orange Clearcoat",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Plum Crazy Pearlcoat",
+                            "Redline 3 Coat Pearl",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Black/Sepia",
+                            "Red/Black"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2015": [
+                    {
+                      "SE": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Redline Red Tricoat Pearl"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearl Coat",
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Redline Red Tricoat Pearl",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Pearl/Black",
+                            "Ruby Red/ Black",
+                            "Tungsten/Black"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearl Coat",
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Redline Red Tricoat Pearl",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Pearl/Black",
+                            "Ruby Red/ Black",
+                            "Tungsten/Black"
+                          ]
+                        }
+                      ],
+                      "R/T SCAT PACK": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearl Coat",
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Redline Red Tricoat Pearl",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "SRT 392": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearl Coat",
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Redline Red Tricoat Pearl",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Ruby Red/ Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearl Coat",
+                            "Billet Silver Metallic Clearcoat",
+                            "Bright White Clearcoat",
+                            "Granite Crystal Metallic Clearcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Phantom Black Tri-Coat Pearl",
+                            "Pitch Black",
+                            "Redline Red Tricoat Pearl",
+                            "Torred"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Ruby Red/ Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2016": [
+                    {
+                      "SE": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Clearcoat",
+                            "Bright White Clearcoat",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Pitch Black Clearcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Billet Clearcoat",
+                            "Bright White Clearcoat",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Pearl/Black",
+                            "Ruby Red/ Black",
+                            "Tungsten/Black"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Billet Clearcoat",
+                            "Bright White Clearcoat",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Pearl/Black",
+                            "Ruby Red/ Black",
+                            "Tungsten/Black"
+                          ]
+                        }
+                      ],
+                      "R/T SCAT PACK": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Billet Clearcoat",
+                            "Bright White Clearcoat",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "SRT 392": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Billet Clearcoat",
+                            "Bright White Clearcoat",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Ruby Red/ Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Billet Clearcoat",
+                            "Bright White Clearcoat",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Ivory Tri-Coat Pearl",
+                            "Jazz Blue Pearlcoat",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Ruby Red/ Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2017": [
+                    {
+                      "SE": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Clearcoat",
+                            "Contusion Blue Pearlcoat",
+                            "Destroyer Gray Clearcoat",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Green Go Clearcoat",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Clearcoat",
+                            "Contusion Blue Pearlcoat",
+                            "Destroyer Gray Clearcoat",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Green Go Clearcoat",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Pearl/Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Clearcoat",
+                            "Contusion Blue Pearlcoat",
+                            "Destroyer Gray Clearcoat",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Green Go Clearcoat",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Brazen Gold/Black",
+                            "Pearl/Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "R/T 392": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Clearcoat",
+                            "Contusion Blue Pearlcoat",
+                            "Destroyer Gray Clearcoat",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Green Go Clearcoat",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Brazen Gold/Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "SRT 392": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Clearcoat",
+                            "Contusion Blue Pearlcoat",
+                            "Destroyer Gray Clearcoat",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Green Go Clearcoat",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Ruby Red/ Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT": [
+                        {
+                          "Exterior Colors": [
+                            "Billet Clearcoat",
+                            "Contusion Blue Pearlcoat",
+                            "Destroyer Gray Clearcoat",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Green Go Clearcoat",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Ruby Red/ Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2018": [
+                    {
+                      "SE": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Billet Clearcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "SXT PLUS": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Billet Clearcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Pearl/Black"
+                          ]
+                        }
+                      ],
+                      "GT": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Billet Clearcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Pearl/Black"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Billet Clearcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Brazen Gold/Black",
+                            "Pearl/Black"
+                          ]
+                        }
+                      ],
+                      "R/T 392": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Billet Clearcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Brazen Gold/Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "SRT 392": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Billet Clearcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Ruby Red/ Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Billet Clearcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Redline Red Tricoat Pearl",
+                            "Torred Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Yellow Jacket Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Demonic Red/ Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2019": [
+                    {
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Sublime Metallic Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "SXT AWD": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Sublime Metallic Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"
+                          ]
+                        }
+                      ],
+                      "GT": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Sublime Metallic Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Sublime Metallic Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "R/T SCAT PACK": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Sublime Metallic Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT": [
+                        {
+                          "Exterior Colors": [
+                            "B5 Blue Pearlcoat",
+                            "Destroyer Gray Clearcoat",
+                            "F8 Green",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Indigo Blue",
+                            "Maximum Steel Metallic Clearcoat",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Plum Crazy Pearlcoat",
+                            "Sublime Metallic Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Demonic Red/ Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ],
+                      "POLICE": [
+                        {
+                          "Exterior Colors": [
+                            "Black",
+                            "White"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "POLICE AWD": [
+                        {
+                          "Exterior Colors": [
+                            "Black",
+                            "White"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2020": [
+                    {
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "SXT AWD": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"
+                          ]
+                        }
+                      ],
+                      "GT": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"
+                          ]
+                        }
+                      ],
+                      "GT AWD": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"                          ]
+                        }
+                      ],
+                      "R/T SCAT PACK": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "B5 Blue Pearl"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "R/T SCAT PACK WIDEBODY": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "B5 Blue Pearl"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "B5 Blue Pearl"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Demonic Red/Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT WIDEBODY": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "B5 Blue Pearl"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Demonic Red/Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ],
+                      "POLICE": [
+                        {
+                          "Exterior Colors": [
+                            "Black",
+                            "White"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "POLICE AWD": [
+                        {
+                          "Exterior Colors": [
+                            "Black",
+                            "White"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2021": [
+                    {
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black"
+                          ]
+                        }
+                      ],
+                      "SXT AWD": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"
+                          ]
+                        }
+                      ],
+                      "GT": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"
+                          ]
+                        }
+                      ],
+                      "GT AWD": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"                          ]
+                        }
+                      ],
+                      "R/T SCAT PACK": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Gold Rush Pearlcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "R/T SCAT PACK WIDEBODY": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Gold Rush Pearlcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Gold Rush Pearlcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Demonic Red/Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT WIDEBODY": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Gold Rush Pearlcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Demonic Red/Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT REDEYE WIDEBODY": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat",
+                            "Gold Rush Pearlcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Demonic Red/Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "2022": [
+                    {
+                      "SXT": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Stinger Yellow Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"
+                          ]
+                        }
+                      ],
+                      "SXT AWD": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Stinger Yellow Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"
+                          ]
+                        }
+                      ],
+                      "GT": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Stinger Yellow Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"
+                          ]
+                        }
+                      ],
+                      "GT AWD": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Stinger Yellow Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"
+                          ]
+                        }
+                      ],
+                      "R/T": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Stinger Yellow Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black"
+                          ]
+                        }
+                      ],
+                      "R/T SCAT PACK": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Stinger Yellow Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "R/T SCAT PACK WIDEBODY": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Stinger Yellow Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Caramel/Black",
+                            "Ruby Red/ Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Stinger Yellow Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Demonic Red/Black",
+                            "Hammer-Head Gray/Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT WIDEBODY": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Stinger Yellow Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Demonic Red/Black",
+                            "Hammer-Head Gray/Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT REDEYE WIDEBODY": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Stinger Yellow Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Demonic Red/Black",
+                            "Hammer-Head Gray/Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ],
+                      "SRT HELLCAT REDEYE WIDEBODY JAILBREAK": [
+                        {
+                          "Exterior Colors": [
+                            "F8 Green",
+                            "Frostbite",
+                            "Go Mango",
+                            "Granite Pearlcoat",
+                            "Hellraisin",
+                            "Indigo Blue",
+                            "Octane Red Pearlcoat",
+                            "Pitch Black Clearcoat",
+                            "Sinamon Stick",
+                            "Smoke Show",
+                            "Stinger Yellow Clearcoat",
+                            "Torred Clearcoat",
+                            "Triple Nickel Clearcoat",
+                            "White Knuckle Clearcoat"
+                          ],
+                          "Interior Colors": [
+                            "Black",
+                            "Demonic Red/Black",
+                            "Hammer-Head Gray/Black",
+                            "Sepia/Black"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "Challenger": [
+
+          ]
+        }
+      ]
+    }
+  ]
+
+
+
+}
+

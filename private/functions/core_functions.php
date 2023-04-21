@@ -120,8 +120,7 @@ function minifier($code): array|string|null
       '/<!--(.|\s)*?-->/'
     );
     $replace = array('>', '<', '\\1');
-    $code = preg_replace($search, $replace, $code);
-    return $code;
+    return preg_replace($search, $replace, $code);
 }
 
 /* Non-SVG Image Ratio */

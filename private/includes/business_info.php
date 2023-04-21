@@ -33,10 +33,11 @@ $chat_link = 'https://tawk.to/chat/6229917ca34c2456412a54e4/1ftp60k94';
 
 //Discounts
 $automotive_sale_discount = match (date('M')) {
-    'Jan', 'Feb', 'Mar' => 0.15, /*Simon: Note: This was set at 15% (Business Was Low) Changed to 30% on 3/1/22, Changed to 26% 1/5/23, Changed to 20% 2/15/23*/
-    'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep' => 0.10,
-    'Oct', 'Nov', 'Dec' => 0.18,
-    default => 0.05
+    /* Simon: Info: a -ve value will add to the price. */
+    'Jan', 'Feb', 'Mar' => 0.01,
+    'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep' => 0.02,
+    'Oct', 'Nov', 'Dec' => 0.03,
+    default => 0.00
 };
 
 
