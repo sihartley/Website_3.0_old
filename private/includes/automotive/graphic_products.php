@@ -12,7 +12,7 @@
             $year_start = explode(' ', $years)[0];
             $image_alt = "BUY and CUSTOMIZE {$graphic['make']} {$graphic['model']} - {$graphic['product_name']}";
             $title = "$years {$graphic['make']} {$graphic['model']}";
-            $href = '#';
+            $href = $graphic['product_page'];
             $aria_label = "BUY {$graphic['year']} {$graphic['make']} {$graphic['model']} - {$graphic['product_name']} " . ceil($graphic['price_1']);
             $price = ceil($graphic['price_1']);
             $lazy = ''; if ($product > 3) { $lazy = "loading='lazy'"; }

@@ -9,8 +9,8 @@ $css_file = '/css/index.min.css';
 
 /* Database */
 $pop_vehicles_query = '(select make, model, year, image_path, vehicle_250px_image from '.db_escape($dbPrefix).'Automotive.vehicles where id IN (14, 17, 30, 42))';
-$new_products_query = '(select product_name, part_number, make, model, year, price_1, image_path, main_page_image from '.db_escape($dbPrefix).'Automotive.graphics where available IS NOT NULL ORDER BY id DESC LIMIT 4)';
-$featured_products_query = '(select product_name, part_number, make, model, year, price_1, image_path, main_page_image from '.db_escape($dbPrefix).'Automotive.graphics where available IS NOT NULL ORDER BY RAND() LIMIT 6 OFFSET 4)';
+$new_products_query = '(select product_name, part_number, make, model, year, price_1, image_path, main_page_image, product_page from '.db_escape($dbPrefix).'Automotive.graphics where available IS NOT NULL ORDER BY id DESC LIMIT 4)';
+$featured_products_query = '(select product_name, part_number, make, model, year, price_1, image_path, main_page_image, product_page from '.db_escape($dbPrefix).'Automotive.graphics where available IS NOT NULL ORDER BY RAND() LIMIT 6 OFFSET 4)';
 $pop_vehicles = db_query($pop_vehicles_query);
 $new_products = db_query($new_products_query);
 $featured_products = db_query($featured_products_query);

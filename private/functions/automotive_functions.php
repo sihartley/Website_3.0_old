@@ -1,10 +1,81 @@
 <?php // Functions for Automotive Pages
 
-//Graphics and Vehicle Query
+// Automotive Globals
+global $graphic, $vehicle;
+
+// Graphic Installed on Car
+function graphic_on_car($image_path, $graphic_installed, $page_title):void {
+    echo "<img src='". webpImage($image_path.$graphic_installed) ."' alt='$page_title .  Installed on Car' style='aspect-ratio: 1/"
+        . graphicRatio($image_path.$graphic_installed)
+        . "'>";
+};
+
+// Gallery Automation
+function galleryAutomation($galleryDir):void {
+    global $gallery;
+    if (file_exists($galleryDir)) {
+        $gallery = 'on'; // page gallery
+    }
+}
+
+// Graphic on Vehicle / Gallery
+function graphicOnVehicle($galleryDir, $image_path, $graphic_installed, $page_title):void {
+    if (file_exists($galleryDir)) {
+        echo "<section class='graphic-look' style='aspect-ratio: 1/0.4464285714'>";
+        echo "<div id='gallery' style='display:none;'>";
+        foreach (scandir($galleryDir) as $galleryItem) {
+            if (is_file($galleryDir.'/'.$galleryItem)) { /* Selects only Files NOT Directories (. ..) */
+                $galleryThumb = pathinfo($galleryItem)['filename'] . '_thumb.' . pathinfo($galleryItem)['extension'];
+                echo "<img src='{$image_path}gallery/thumbs/{$galleryThumb}' 
+                                  alt='Picture of 2015 to Present Dodge Charger SRT Rally Racing Dual Stripes Kit Installed By Customer' 
+                                  data-image='{$image_path}gallery/{$galleryItem}' 
+                                  data-description='image description' >";
+            }
+        }
+        echo '</div>';
+    } else {
+        echo "<section class='graphic-look'>";
+        graphic_on_car($image_path, $graphic_installed, $page_title); /* Main Installed Graphic Picture (automotive_functions.php) */
+    }
+    echo '</section>';
+}
+
+// Graphics Block Heading
+function graphic_block_heading($year_range, $model, $product_name):void {
+    echo "<section class='graphic-designs'>";
+    echo '<h2>'
+            . "<span>$year_range $model<br></span>"
+            . "<span>$product_name<br></span>"
+            . "Designs Currently Available"
+       . '</h2>';
+}
+
+// Container Start (Graphic Design Image)
+function containerStart($name, $design, $graphic_design):void {
+    echo "<div id='cartContainer-$design' class='design cart-container'>"
+        . "<h3>$name</h3>"
+        . "<div id='graphic_$design' class='image'>"
+        . $graphic_design /* Result from auto_graphic_while_start.php */
+        . '</div>';
+}
+
+// Form Start
+function formStart($design, $foxy_cart):void {
+    echo "<div class='form'>"
+        . "<form id='form-$design' data-fc-form-code='p$design' action='$foxy_cart' method='post' accept-charset='utf-8'>";
+}
+
+// Vehicle Information Section Start
+function vehicleInformationStart():void {
+    echo "<div class='vehicle-details'>"
+            ."<h4>Vehicle Information</h4>";
+}
+
+// Graphics and Vehicle Query
 function graphic_vehicle_query($id):array {
-    global $dbPrefix;
+    global $dbPrefix, $graphic, $vehicle;
     $graphic_columns = [
-        'part_number', 'make', 'model', 'year', 'years_exclusive', 'trims_exclusive',
+        'part_number', 'make', 'model', 'year', 'years_exclusive', 'trims_add', 'trims_exclusive',
         'product_name', 'image_path', 'product_image_on', 'design_image',
         'price_1', 'price_2', 'price_2_styles', 'price_3', 'price_3_styles', 'price_4', 'price_4_styles', 'price_5', 'price_5_styles', 'unit',
         'weight_1', 'weight_2', 'weight_2_styles', 'weight_3', 'weight_3_styles', 'weight_4', 'weight_4_styles', 'weight_5', 'weight_5_styles',
@@ -12,7 +83,7 @@ function graphic_vehicle_query($id):array {
     ];
 
     $vehicle_columns = [
-        'year', 'years', 'trims', 'colors'
+        'id', 'year', 'years', 'trims', 'colors'
     ];
 
     $select_graphics = implode(', ', $graphic_columns);
@@ -22,13 +93,12 @@ function graphic_vehicle_query($id):array {
     $vehicle_query = "( SELECT $select_vehicle FROM {$dbPrefix}Automotive.vehicles WHERE make = '{$graphic['make']}' AND model = '{$graphic['model']}' AND year LIKE '%{$graphic['year']}%' )";
     $vehicle = mysqli_fetch_assoc(db_query($vehicle_query));
     db_disconnect(db_connect());
+
     return [$graphic, $vehicle];
 }
 
 // Model Years
-function modelYears():void {
-    global $graphic, $vehicle;
-
+function modelYears($graphic, $vehicle, array $yearsMod = null):void {
     if ($graphic['years_exclusive']) {
         $modelYears = explode(', ', $graphic['years_exclusive']);
     } elseif(date('n') >= 8 && stripos($vehicle['year'], 'present')) { // > August, and 'Present'
@@ -38,18 +108,39 @@ function modelYears():void {
         $modelYears =  explode(', ', $vehicle['years']);
     }
 
+
     //output in form
-    echo '<div class="model-year"><select data-placeholder="Year" name="Model Year" onchange="initDynamicPrice();" style="width: 100%;" required>';
+    echo '<div class="model-year"><select data-placeholder="Year" name="Model Year:" onchange="initDynamicPrice();" style="width: 100%;" required>';
     echo "<option></option>"; //Required for placeholder to work
-    foreach ($modelYears as $year) {
-        echo "<option value='$year'>$year</option>";
+
+    if (!$yearsMod) {
+        foreach ($modelYears as $year) {
+            echo "<option value='$year'>$year</option>";
+        }
+    } else {
+        foreach ($modelYears as $year) {
+            if (($key = array_search($year, array_column($yearsMod, 'trim'), false)) !== false) {
+                $year = htmlentities("{$yearsMod[$key]['year']}", ENT_QUOTES);
+                $priceMod = ceil($yearsMod[$key]['price_mod']);
+
+                $svgMod = preg_split('/\./', $svg_image)[0].$yearsMod[$key]['image_mod'].'.svg';
+
+                echo "<option data-svg='$svgMod' value='$year{p+{$priceMod}}'>$year (+\${$priceMod})</option>";
+            } else { // Trim Levels without Price Mods.
+                $svg = $svg_image;
+                $year = htmlentities("$year", ENT_QUOTES);
+                echo "<option data-svg='$svg' value='$year'>$year</option>";
+            }
+        }
     }
+
+
     echo '</select></div>';
 }
 
 // Trim Levels
-function trimLevels(array $trimsOverride = null, array $trimsAddon = null, array $trimsPriceMod = null, bool $modelsOverride = null):void {
-    global $graphic, $vehicle;  $model = $graphic['model'];
+function trimLevels($graphic, $vehicle, array $trimsOverride = null, array $trimsAddon = null, array $trimsMod = null, bool $modelsOverride = null):void {
+    global $svg_image; $model = $modelsOverride === true ? '' : $graphic['model'];
 
     //Trim Level List Creation
     if ($trimsOverride) { // Takes Precedent Over Automated TrimLevel code below
@@ -71,21 +162,29 @@ function trimLevels(array $trimsOverride = null, array $trimsAddon = null, array
     }
 
     //Output in form
-    echo "<div class='trim-level'><select data-placeholder='Trim' name='Trim Level' onchange='initDynamicPrice();' style='width: 100%;' required>";
+    echo "<div class='trim-level'>
+            <select data-placeholder='Trim' name='Trim Level:' onchange='initDynamicPrice();' style='width: 100%;' required>";
     echo '<option></option>';
-    if (!$trimsPriceMod) {
+
+    if (!$trimsMod) {
         foreach ($trim_levels as $trim) {
             $trim = htmlentities("$model $trim", ENT_QUOTES);
-            echo "<option data-svg='\images\icon_star.svg' value='$trim'>$trim</option>";
+            echo "<option value='$trim'>$trim</option>";
         }
     } else {
         foreach ($trim_levels as $trim) { // Checks Trims with Adjustment.
-            if (($key = array_search($trim, array_column($trimsPriceMod, 'trim'), false)) !== false) {
-                $trim = htmlentities("$model {$trimsPriceMod[$key]['trim']}", ENT_QUOTES);
-                echo "<option data-svg='\images\icon_star.svg' value='$trim{p+{" . ceil($trimsPriceMod[$key]['price_mod']) . "}}'>$trim (+\${$trimsPriceMod[$key]['price_mod']})</option>";
+
+            if (($key = array_search($trim, array_column($trimsMod, 'trim'), false)) !== false) {
+                $trim = htmlentities("$model {$trimsMod[$key]['trim']}", ENT_QUOTES);
+                $priceMod = ceil($trimsMod[$key]['price_mod']);
+
+                $svgMod = preg_split('/\./', $svg_image)[0].$trimsMod[$key]['image_mod'].'.svg';
+
+                echo "<option data-svg='$svgMod' value='$trim{p+{$priceMod}}'>$trim (+\${$priceMod})</option>";
             } else { // Trim Levels without Price Mods.
+                $svg = $svg_image;
                 $trim = htmlentities("$model $trim", ENT_QUOTES);
-                echo "<option data-svg='\images\icon_star.svg' value='$trim'>$trim</option>";
+                echo "<option data-svg='$svg' value='$trim'>$trim</option>";
             }
         }
     }
@@ -93,11 +192,10 @@ function trimLevels(array $trimsOverride = null, array $trimsAddon = null, array
 }
 
 // Car Colors
-function carColors():void {
-    global $design, $vehicle;
+function carColors($vehicle):void {
     echo
         "<div class='car-color'>"
-        ."<select data-placeholder='Color' name='Car Color' onchange='initDynamicPrice();' style='width: 100%;'>"
+        ."<select data-placeholder='Color' name='Car Color:' onchange='initDynamicPrice();' style='width: 100%;'>"
         ."<option></option>";
     $color = explode(', ', $vehicle['colors']);
     $car_colors = [];
@@ -113,9 +211,15 @@ function carColors():void {
         .'</div>';
 }
 
+//Graphic Section Start
+function graphicInformationStart():void {
+    echo '</div>'; /* Vehicle Information Close */
+    echo "<div class='graphic-details'>" /* Main & Accent Colors */
+            ."<h4>Graphic Customization</h4>";
+}
+
 // Material & Brand
-function materialBrand():void {
-    global $design;
+function materialBrand($design):void {
     echo
     "<div class='material'>"
         ."<select id='material_$design' data-placeholder='Preferred Install Method' onchange='initDynamicPrice();' style='width: 100%;'>"
@@ -132,24 +236,40 @@ function materialBrand():void {
 }
 
 // Main Color Dropdown
-function mainColor():void {
-    global $design;
-    echo
-    "<div class='main-color' style='display: none;'>"
-        ."<select id='maincolor_$design' data-placeholder='Main Color' name='Main Color' onchange='initDynamicPrice();' style='width: 100%;' required disabled>"
-            ."<option class='standard-opt' value=''></option>"
-        .'</select>'
-    .'</div>';
+function mainColor($design, $textOption = null, $placeholder = null):void {
+    echo "<div class='main-color' style='display: none;'>";
+
+    if (isset($textOption) and in_array($design, $textOption)) {
+        echo
+            "<div class='text-option' style=''>"
+                ."<input id='textinput_$design' type='text' name='$placeholder:' placeholder='$placeholder'  oninput='textChange(this)'>"
+            ."</div>"
+            ."<select id='maincolor_$design' data-placeholder='$placeholder Color' name='$placeholder Color:' onchange='initDynamicPrice();' style='width: 100%;' required disabled>"
+                ."<option class='standard-opt' value=''></option>"
+            .'</select>';
+    } else {
+        echo "<select id='maincolor_$design' data-placeholder='Main Color' name='Main Color:' onchange='initDynamicPrice();' style='width: 100%;' required disabled>"
+                ."<option class='standard-opt' value=''></option>"
+            .'</select>';
+
+    }
+    echo '</div>';
 }
 
 // Accent Color Dropdown
-function accentColor($designs = [], $cut = [], $same = []):void {
-    global $design;
-    if (in_array($design, $designs)) {
-    echo
-        "<div class='accent' style='display: none'>"
-            ."<select id='accentcolor_$design' data-placeholder='Accent Color' name='Accent' onchange='initDynamicPrice();' style='width: 100%;' required disabled>"
-            ."<option class='standard-opt' value=''></option>";
+function accentColor($design, $designs = [], $cut = [], $same = [], $textOption = null, $placeholder = null):void {
+    if (in_array($design, $designs) or (isset($textOption) and in_array($design, $textOption))) {
+    echo "<div class='accent' style='display: none'>";
+        if (isset($textOption) and in_array($design, $textOption)) {
+            echo
+            "<div class='text-option' style=''>"
+            ."<input id='textinput_$design' type='text' name='$placeholder:' placeholder='$placeholder'  oninput='textChange(this)'>"
+            ."</div>"
+            ."<select id='accentcolor_$design' data-placeholder='$placeholder Color' name='$placeholder Color:' onchange='initDynamicPrice();' style='width: 100%;' required disabled>"
+                ."<option class='standard-opt' value=''></option>";
+        } else {
+            echo "<select id='accentcolor_$design' data-placeholder='Accent Color' name='Accent:' onchange='initDynamicPrice();' style='width: 100%;' required disabled>"
+                ."<option class='standard-opt' value=''></option>";
 
             if (in_array($design, $cut)) {
                 echo
@@ -173,20 +293,20 @@ function accentColor($designs = [], $cut = [], $same = []):void {
                         value='Accent Same as Main'>Same as Main Graphic
                 </option>";
             };
+        }
 
-    echo "</select>"
-    ."</div>";
+        echo "</select>"; //Common to both statements
+    echo "</div>";
 }
 
 }
 
 // Accent 2 Color Dropdown
-function accentColor2($designs = [], $cut = [], $same = []):void {
-    global $design;
+function accentColor2($design, $designs = [], $cut = [], $same = []):void {
     if (in_array($design, $designs)) {
     echo
         "<div class='accent' style='display: none'>"
-            ."<select id='accentcolor2_$design' data-placeholder='Accent 2 Color' name='Accent' onchange='initDynamicPrice();' style='width: 100%;' required disabled>"
+            ."<select id='accentcolor2_$design' data-placeholder='Accent 2 Color' name='Accent 2:' onchange='initDynamicPrice();' style='width: 100%;' required disabled>"
                 ."<option class='standard-opt' value=''></option>";
                 if (in_array($design, $cut)) {
                 echo
@@ -228,12 +348,12 @@ function text($textRef, $textCut, $textSame, $accentStyles, $accent2Styles):void
     echo
     "<div class='text-option'>"
         ."<div>"
-        ."<label for='option-1-$design' data-txt='$textRef'>$textRef</label>"
-        ."<input id='option-1-$design' type='checkbox'>"
+            ."<label for='option-1-$design' data-txt='$textRef'>$textRef</label>"
+            ."<input id='option-1-$design' type='checkbox'>"
         ."</div>"
         ."<div class='option' style='display: none'>"
-            ."<input id='textinput_$design' type='text'  oninput='textChange(this)'>"
-            ."<select id='textcolor_$design' data-placeholder='Text/Logo Color' name='$textRef' onchange='initDynamicPrice();' style='width: 100%;' disabled>"
+            ."<input id='textinput_$design' type='text' name='$textRef:'  oninput='textChange(this)'>"
+            ."<select id='textcolor_$design' data-placeholder='Text/Logo Color' name='$textRef Color:' onchange='initDynamicPrice();' style='width: 100%;' disabled>"
                 ."<option class='standard-opt' value=''></option>";
         if (in_array($design, $textCut)) {
             echo
@@ -291,8 +411,8 @@ function text2($text2Ref, $text2Cut, $text2Same, $text1, $accentStyles, $accent2
             ."<input id='option-2-$design' type='checkbox'>"
         ."</div>"
         ."<div class='option' style='display: none'>"
-            ."<input id='textinput2_$design' type='text' oninput='textChange(this)'>"
-            ."<select id='textcolor2_$design' data-placeholder='Text/Logo Color' name='$text2Ref' onchange='initDynamicPrice();' style='width: 100%;' disabled>"
+            ."<input id='textinput2_$design' type='text' name='$text2Ref:' oninput='textChange(this)'>"
+            ."<select id='textcolor2_$design' data-placeholder='Text/Logo Color' name='$text2Ref Color:' onchange='initDynamicPrice();' style='width: 100%;' disabled>"
                 ."<option class='standard-opt' value=''></option>";
         if (in_array($design, $text2Cut)) {
             echo
@@ -360,8 +480,8 @@ function text3($text3Ref, $text3Cut, $text3Same, $text1, $text2, $accentStyles, 
             ."<input id='option-3-$design' type='checkbox'>"
         ."</div>"
         ."<div class='option' style='display: none'>"
-            ."<input id='textinput_3$design' type='text' oninput='textChange(this)'>"
-            ."<select id='textcolor3_$design' data-placeholder='Text/Logo Color' name='$text3Ref' onchange='initDynamicPrice();' style='width: 100%;' disabled>"
+            ."<input id='textinput_3$design' type='text' name='$text3Ref:' oninput='textChange(this)'>"
+            ."<select id='textcolor3_$design' data-placeholder='Text/Logo Color' name='$text3Ref Color:' onchange='initDynamicPrice();' style='width: 100%;' disabled>"
                 ."<option class='standard-opt' value=''></option>";
         if (in_array($design, $text3Cut)) {
             echo
@@ -373,7 +493,7 @@ function text3($text3Ref, $text3Cut, $text3Same, $text1, $text2, $accentStyles, 
                         value='Cut Text/Logo Out'>Cut Text/Logo Out of Main Graphic
                 </option>";
         };
-        if (in_array($design, $text3Cut)) {
+        if (in_array($design, $text3Same)) {
             echo
                 "<option class='standard-opt text-same'
                         data-classes='text-same'
@@ -429,15 +549,24 @@ function text3($text3Ref, $text3Cut, $text3Same, $text1, $text2, $accentStyles, 
     ."</div>";
 }
 
+//Graphic Section Close
+function graphicInformationClose():void {
+    echo "</div>"; /* Graphic Section (material, color, accent, cutout options (trimOptions)) */
+}
+
+//Text, Logos, Notes Section Start
+function textLogoNotesStart():void {
+    echo "<div class='graphic-details' style='display: none '>";
+}
+
 // Text & Color Switch
-function textColorOptions($text1 = [], $textRef = '', $textCut = [], $textSame = [], $text2 = [], $text2Ref = '', $text2Cut = [], $text2Same = [], $text3 = [], $text3Ref = '', $text3Cut = [], $text3Same = [], $accentStyles = [], $accent2Styles = []):void {
-    global $design;
+function textColorOptions($design, $text1 = [], $textRef = '', $textCut = [], $textSame = [], $text2 = [], $text2Ref = '', $text2Cut = [], $text2Same = [], $text3 = [], $text3Ref = '', $text3Cut = [], $text3Same = [], $accentStyles = [], $accent2Styles = []):void {
     if (in_array($design, $text1) or in_array($design, $text2) or in_array($design, $text3)) {
         echo
-            "<div class='option-switch'>"
+        "<div class='option-switch'>"
             ."<label for='main-options-$design'
                    data-txt='Add Text and Logo Options?'
-                   data-alt-txt='Please select which area(s) you would like to customize.'>
+                   data-alt-txt='Select area(s) to customize.'>
                        Add Text and Logo Options?
             </label>"
             ."<input id='main-options-$design' class='options-check' type='checkbox'>"
@@ -458,21 +587,90 @@ function textColorOptions($text1 = [], $textRef = '', $textCut = [], $textSame =
     }
 }
 
+// Trim Options (Sunroof, Antenna, Hood etc.)
+function trimOptions ($design, array $trimDataArray = null):void {
+    if(isset($trimDataArray)) {
+        foreach ($trimDataArray as $trimData) {
+            $name = $trimData['select']['name']; $id = strtolower($name); $placeholder = $trimData['select']['placeholder'];
+            echo "<div class='trim-option' style='display: none;'>";
+            echo "<select class='trim-spec' id='{$id}_$design' name='{$name}:' data-placeholder='$placeholder' onchange='initDynamicPrice();' style='width: 100%;' required>"
+                ."<option value=''></option>";
+            foreach ($trimData['options'] as $option) {
+                $text = $option['text']; $specs = $option['specs']; $image = $option['image']; $pricemod = ceil($option['percentage'] * pricing($design)); $addsub = $option['add sub'];
+                echo "<option data-image='$image' data-specs='$specs' value='$text{p$addsub$pricemod|w+}'>$text</option>";
+            }
+            echo "</select>"
+                . "</div>";
+        }
+    }
+}
+
+// Notes
+function notes($rows = 3, $cols = 40):void {
+    echo
+    "<label class='notes label_left'>Notes</label>"
+    ."<textarea class='notes' placeholder='Any other details you would like us to know here...' name='Notes:' rows='$rows' cols='$cols'></textarea>";
+}
+
+// Text, Logos, Notes Section Close
+function textLogoNotesClose():void {
+    echo '</div>';
+}
+
+// Add to Cart Button
+function cartButton($design, $price):void {
+    echo
+    "<button class='buy-now-button'>"
+        ."<span>Add to Cart</span><br>"
+        ."<span class='p{$design}_total'>From \${$price} </span>"
+    ."</button>";
+}
+
+// Graphic Information Request
+function graphicInfoRequest($design, $design_pn):void {
+    echo "<a class=\"info-button\" href=\"javascript:void( window.open( 'https://form.jotform.com/232556466911057?"
+    ."designStyle=Design%20Style%20$design"
+    ."&partNumber=$design_pn"
+    ."&graphicPage={$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) \">"
+    ."Request<br>Information</a>";
+}
+
+// Form Close
+function formClose():void {
+    echo "</form>" /* Form End (formStart() function) */
+    . "</div>"; /* Form End (formStart() function) */
+}
+
+// Container Footer (Part Number)
+function containerFooter($design_pn):void {
+    echo "<h3>Part #: $design_pn </h3>";
+}
+
+// Container End
+function containerEnd():void {
+    echo "</div>"; /* Container End (containerStart() function) */
+}
+
+// Graphic Designs Section Close
+function graphicDesignsSectionClose():void {
+   echo '</section>';
+}
+
 // Price
 function pricing():string {
-    global $design, $graphic, $automotive_sale_discount;
+    global $design, $graphic, $base_costs, $hr_rate, $trans_fee, $automotive_sale_discount;
     if (in_array($design, explode(',', $graphic['price_2_styles']), false)) {
-        $price = ceil($graphic['price_2'] - ($graphic['price_2'] * $automotive_sale_discount));
+        $price = $graphic['price_2'] - ($graphic['price_2'] * $automotive_sale_discount);
     } elseif (in_array($design, explode(',', $graphic['price_3_styles']), false)) {
         $price = $graphic['price_3'] - ($graphic['price_3'] * $automotive_sale_discount);
     } elseif (in_array($design, explode(',', $graphic['price_4_styles']), false)) {
         $price = $graphic['price_4'] - ($graphic['price_4'] * $automotive_sale_discount);
     } elseif (in_array($design, explode(',', $graphic['price_5_styles']), false)) {
-        $price = ceil($graphic['price_5'] - ($graphic['price_5'] * $automotive_sale_discount));
+        $price = $graphic['price_5'] - ($graphic['price_5'] * $automotive_sale_discount);
     } else {
-        $price = ceil($graphic['price_1'] - ($graphic['price_1'] * $automotive_sale_discount));
+        $price = $graphic['price_1'] - ($graphic['price_1'] * $automotive_sale_discount);
     }
-    return ceil(number_format($price, 2));
+    return ceil(num: number_format((($base_costs + $price) * $trans_fee) + ($base_costs + $price), 2));
 }
 
 // Weight
@@ -493,7 +691,7 @@ function weight() {
 }
 
 // Graphic Image Ratio
-function graphicRatio($imagefile):void {
+function graphicRatio($imagefile):string {
     $extension = pathinfo($imagefile, PATHINFO_EXTENSION);
     if ($extension == 'svg') {
         $file = simplexml_load_string(file_get_contents(PUB_PATH . $imagefile));
@@ -502,8 +700,7 @@ function graphicRatio($imagefile):void {
     } else {
         [$width, $height, $type, $attr] = getimagesize(PUB_PATH . urldecode($imagefile));
         $ratio = $height/$width;
-
     }
-    echo "1/{$ratio}";
+    return $ratio;
 }
 

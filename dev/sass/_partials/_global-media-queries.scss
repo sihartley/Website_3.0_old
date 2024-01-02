@@ -130,3 +130,13 @@
     }
   }
 }
+
+@media screen and (max-width: 400px) {
+  header {
+    div.fixed-title a.mini-logo {
+      margin: auto;
+      max-width: 250px;
+      width: 60%;
+    }
+  }
+}

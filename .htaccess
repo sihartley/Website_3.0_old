@@ -1,0 +1,39 @@
+#Error Pages and Case Insesitive
+ErrorDocument 403 /public/pages/error-pages/403.php
+ErrorDocument 404 /public/pages/error-pages/404.php
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} v3\.vi-primary-server\.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://v3.vi-primary-server.com/$1 [R,L]
+
+#Case Insensitive
+RewriteCond %{REQUEST_URI} !([A-Z]+)
+RewriteRule .* - [S=27]
+RewriteRule ^(.*)A(.*)$ http://%{HTTP_HOST}/$1a$2 [R=301,L]
+RewriteRule ^(.*)B(.*)$ http://%{HTTP_HOST}/$1b$2 [R=301,L]
+RewriteRule ^(.*)C(.*)$ http://%{HTTP_HOST}/$1c$2 [R=301,L]
+RewriteRule ^(.*)D(.*)$ http://%{HTTP_HOST}/$1d$2 [R=301,L]
+RewriteRule ^(.*)E(.*)$ http://%{HTTP_HOST}/$1e$2 [R=301,L]
+RewriteRule ^(.*)F(.*)$ http://%{HTTP_HOST}/$1f$2 [R=301,L]
+RewriteRule ^(.*)G(.*)$ http://%{HTTP_HOST}/$1g$2 [R=301,L]
+RewriteRule ^(.*)H(.*)$ http://%{HTTP_HOST}/$1h$2 [R=301,L]
+RewriteRule ^(.*)I(.*)$ http://%{HTTP_HOST}/$1i$2 [R=301,L]
+RewriteRule ^(.*)J(.*)$ http://%{HTTP_HOST}/$1j$2 [R=301,L]
+RewriteRule ^(.*)K(.*)$ http://%{HTTP_HOST}/$1k$2 [R=301,L]
+RewriteRule ^(.*)L(.*)$ http://%{HTTP_HOST}/$1l$2 [R=301,L]
+RewriteRule ^(.*)M(.*)$ http://%{HTTP_HOST}/$1m$2 [R=301,L]
+RewriteRule ^(.*)N(.*)$ http://%{HTTP_HOST}/$1n$2 [R=301,L]
+RewriteRule ^(.*)O(.*)$ http://%{HTTP_HOST}/$1o$2 [R=301,L]
+RewriteRule ^(.*)P(.*)$ http://%{HTTP_HOST}/$1p$2 [R=301,L]
+RewriteRule ^(.*)Q(.*)$ http://%{HTTP_HOST}/$1q$2 [R=301,L]
+RewriteRule ^(.*)R(.*)$ http://%{HTTP_HOST}/$1r$2 [R=301,L]
+RewriteRule ^(.*)S(.*)$ http://%{HTTP_HOST}/$1s$2 [R=301,L]
+RewriteRule ^(.*)T(.*)$ http://%{HTTP_HOST}/$1t$2 [R=301,L]
+RewriteRule ^(.*)U(.*)$ http://%{HTTP_HOST}/$1u$2 [R=301,L]
+RewriteRule ^(.*)V(.*)$ http://%{HTTP_HOST}/$1v$2 [R=301,L]
+RewriteRule ^(.*)W(.*)$ http://%{HTTP_HOST}/$1w$2 [R=301,L]
+RewriteRule ^(.*)X(.*)$ http://%{HTTP_HOST}/$1x$2 [R=301,L]
+RewriteRule ^(.*)Y(.*)$ http://%{HTTP_HOST}/$1y$2 [R=301,L]
+RewriteRule ^(.*)Z(.*)$ http://%{HTTP_HOST}/$1z$2 [R=301,L]
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [R=301,L]

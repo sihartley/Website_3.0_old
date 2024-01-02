@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="e81b551e-701b-402c-8f8b-f36fdcc10fa1" name="GoDaddy v3" url="https://v3.vi-primary-server.com">
-        <fileTransfer rootFolder="/home/fp5xk3vo9hwc/public_html/v_3.0" accessType="SFTP" host="208.109.67.139" port="22" sshConfigId="7cdcdd27-176b-42ac-9de2-9cbcb869ff07" sshConfig="GoDaddy SFTP" keyPair="true">
+        <fileTransfer rootFolder="/home/fp5xk3vo9hwc/public_html/v_3.0" accessType="SFTP" host="132.148.208.9" port="22" sshConfigId="7cdcdd27-176b-42ac-9de2-9cbcb869ff07" sshConfig="GoDaddy SFTP" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
@@ -17,7 +17,7 @@
         </fileTransfer>
       </webServer>
       <webServer id="9ff9a99f-976b-42bb-98c3-5c77b111bafd" name="GoDaddy" url="https://v3.vi-primary-server.com">
-        <fileTransfer rootFolder="/home/fp5xk3vo9hwc/public_html/v_3.0" accessType="SFTP" host="208.109.67.139" port="22" sshConfigId="7cdcdd27-176b-42ac-9de2-9cbcb869ff07" sshConfig="GoDaddy SFTP" keyPair="true">
+        <fileTransfer rootFolder="/home/fp5xk3vo9hwc/public_html/v_3.0" accessType="SFTP" host="132.148.208.9" port="22" sshConfigId="7cdcdd27-176b-42ac-9de2-9cbcb869ff07" sshConfig="GoDaddy SFTP" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

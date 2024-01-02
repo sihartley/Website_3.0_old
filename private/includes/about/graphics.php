@@ -6,7 +6,9 @@
         For trailers and motorcycles, we use the same high-quality materials and design methods for a unique look. We can also apply your own logos to advertise your business, suit a toy hauler, or reflect equestrian life.
         </p>
         <div>
-            <img src="/images/icon_automotive.svg" alt="Automotive Graphics Gallery" style="aspect-ratio: <?php svg_ratio('/images/icon_automotive.svg'); ?>">
+            <a href="/pages/automotive/automotive.php">
+                <img src="/images/icon_automotive.svg" alt="Automotive Graphics Gallery" style="aspect-ratio: <?php svg_ratio('/images/icon_automotive.svg'); ?>">
+            </a>
             <h3>Automotive Gallery</h3>
             <!-- Simon: Todo: Insert Picture & Gallery Link -->
             <div class="auto-gallery">
@@ -39,7 +41,9 @@
                 </ul>
             </div>
         </div>
+
         <div>
+            <!-- Simon: Todo: Add <a> link to motorcycle image. -->
             <img src="/images/icon_motorcycle.svg" alt="Motorcycle Graphics Gallery" style="aspect-ratio: <?php svg_ratio('/images/icon_motorcycle.svg'); ?>">
             <h3>Motorcycle Gallery</h3>
             <!-- Simon: Todo: Insert Picture & Gallery Link -->
@@ -72,7 +76,9 @@
                 </ul>
             </div>
         </div>
+
         <div>
+            <!-- Simon: Todo: Add <a> link to trailer image. -->
             <img src="/images/icon_trailer.svg" alt="Trailer Graphics Gallery" style="aspect-ratio: <?php svg_ratio('/images/icon_trailer.svg'); ?>">
             <h3>Trailer Gallery</h3>
             <!-- Simon: Todo: Insert Picture & Gallery Link -->

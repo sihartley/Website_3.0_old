@@ -1,6 +1,7 @@
 <?php /* Core Function Used In EVERY Page */
 
 /* Hosting Server Identification */
+/* Simon: ToDo: Shorten this function */
 function host_ident($server): array
 {
     global $godaddy_ip, $inmotion_ip;
@@ -25,8 +26,8 @@ function host_ident($server): array
         define('DB_SERVER', 'localhost'); //GoDaddy & Local Hosted Databases
         define('DB_USER', 'AccessAllDB'); //GoDaddy & Local Hosted Databases
         define('DB_PASS', 'Paranoia13$'); //GoDaddy & Local Hosted Databases
-//  echo "Hosted by GoDaddy Hosting".$dbPrefix."  databases.php";
-    } else {
+//  echo "Hosted by GoDaddy Hosting".$dbPrefix." databases.php";
+    } elseif ($server === '127.0.0.1') {
         $hostingServer = 'Local';
         $dbPrefix = '';
         $minifyHTML = '';
@@ -37,9 +38,26 @@ function host_ident($server): array
         define('DB_USER', 'AccessAllDB'); //GoDaddy & Local Hosted Databases
         define('DB_PASS', 'Paranoia13$'); //GoDaddy & Local Hosted Databases
 //  echo "Local Xampp Server".$dbPrefix." databases.php";
+    } else {
+        $hostingServer = 'Unknown';
+        $dbPrefix = '';
+        $minifyHTML = ob_start("minifier" );
+        $rightClickProtect = ' oncontextmenu="return false;"';
+        $liveReload = '';
+        $serverDot = 'blue';
+        define('DB_SERVER', 'localhost'); //GoDaddy & Local Hosted Databases
+        define('DB_USER', 'AccessAllDB'); //GoDaddy & Local Hosted Databases
+        define('DB_PASS', 'Paranoia13$'); //GoDaddy & Local Hosted Databases
+//  echo "Unknown Server IP" .$dbPrefix." databases.php";
     }
 
     return array($hostingServer, $dbPrefix, $minifyHTML, $rightClickProtect, $liveReload, $serverDot);
+}
+
+function category_ident($cat, $string):void {
+    if (str_contains(strtolower($_SERVER['REQUEST_URI']), $cat)) {
+        echo $string;
+    }
 }
 
 /* Database */
@@ -153,7 +171,15 @@ function vinyl_list($brand, $cast_wrap): void{
     }
 }
 
+/* LiveReload for activates on local server only */
+function live_reload(): void {
+    global $liveReload, $dbPrefix;
+    if (!empty($liveReload)) { echo $liveReload . '<!-- '.$dbPrefix.' -->'; }
+}
 
-
-
-
+function insuranceClaimRequest($formNumber):void {
+    echo "<a class=\"claim-button\" aria-label=\"File an Installation Insurance Claim\"
+         href=\"javascript:void( window.open( 'https://form.jotform.com/{$formNumber}?"
+        ."&pageUrl={$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) \">"
+        ."<div><span>File Installation</span><br><span>Insurance Claim</div></a>";
+}

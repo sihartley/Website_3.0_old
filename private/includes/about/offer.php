@@ -16,7 +16,7 @@
                 <a href="/pages/color-charts/avery-color-charts.php#wrap">Avery SW900</a>,
                 <a href="/pages/color-charts/orafol-color-charts.php#751C-cast">Orafol 751</a>, and
                 <a href="/pages/color-charts/orafol-color-charts.php#wrap">Orafol 970RA</a>.<br>
-                <a href="/pages/support/materials.php">For more information about our vinyl materials, click here</a>.
+                For more information about our vinyl materials, <a href="/pages/support/materials.php">click here</a>.
             </p>
         </div>
 

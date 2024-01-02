@@ -10,7 +10,7 @@ require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.
  * @var $mc_array
  * From databases.php INCLUDE in initialize.php
  */
-
+/*cartContainer-CKO*/
 $css_file = '/css/graphics.min.css';
 $page_title = 'Motorcycle Graphics';
 
@@ -42,7 +42,7 @@ $page_title = 'Motorcycle Graphics';
         <!-- Motorcycle Graphics -->
         <!-- Graphics Types -->
         <?php foreach ($mc_array as $database) {
-            $motorcycle_db_query = "(SELECT product_name, image_path, product_image_on, price_base, unit FROM ".$dbPrefix."Motorcycle.graphics_$database )";
+            $motorcycle_db_query = "(SELECT product_name, image_path, product_image_on, price_base, unit, part_graphic, product_page FROM ".$dbPrefix."Motorcycle.graphics_$database WHERE available IS NOT NULL )";
             $motorcycle_db = db_query($motorcycle_db_query);
             $category = ucwords(str_replace('_', ' ', $database));
             $anchor = str_replace('_', '-', $database);
@@ -55,7 +55,7 @@ $page_title = 'Motorcycle Graphics';
             while ($graphics = mysqli_fetch_assoc($motorcycle_db)) {
                 $product_name = $graphics['product_name'];
                 $image = $graphics['image_path'] . $graphics['product_image_on']; $image_alt = "BUY $product_name Motorcycle Graphics";
-//                $href = "/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start&years=$years";
+                $href = strtolower($graphics['product_page']) . "#cartContainer-" . $graphics['part_graphic'];
                 $price = $graphics['price_base']; $unit = $graphics['unit'];
                 $aria_label = "SHOP $product_name Motorcycle Graphics from \$". ceil($price);
                 ?>
@@ -63,7 +63,7 @@ $page_title = 'Motorcycle Graphics';
                     <div class="content">
                         <h3><?= $product_name ?></h3>
                         <img src="<?= webpImage($image) ?>" alt="<?= $image_alt ?>" style="aspect-ratio: <?php image_ratio($image); ?>">
-                        <a href="#" class="buy-now-button"
+                        <a href="<?= $href ?>" class="buy-now-button"
                            aria-label="<?= $aria_label ?>">
                             <div>
                                 <span>Customize</span><br>

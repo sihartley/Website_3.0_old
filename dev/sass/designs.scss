@@ -64,10 +64,18 @@ section {
         flex: 1 0 45%; //Simon: Todo: remove and change to width for small screens
         margin-bottom: auto;
         margin-top: auto;
+        width: 90%;
 
-        img, svg {
-          max-width: 450px;
-          width: 90%;
+        img,
+        svg {
+          &.w {
+            max-width: 450px;
+            width: 90%; //Simon: Note: Removing this fucks Cumulative Layout Shift
+          }
+
+          &.v {
+            max-height: 600px;
+          }
         }
 
         svg {
@@ -99,7 +107,7 @@ section {
           flex-wrap: wrap;
           padding-top: 1%; //Simon: Clean Me:
 
-          div.vehicle-details {
+          div.vehicle-details, div.size-details {
             display: flex;
             flex-wrap: wrap;
             margin: 0 auto 1em;
@@ -115,14 +123,13 @@ section {
             }
 
             .model-year {
-              flex: .5;
+              flex: 1; //Changed from .5
               margin: 0 2%;
             }
 
-            .trim-level {
+            .trim-level, .size-option {
               flex: 1.5;
               margin: 0 2%;
-
             }
 
             .car-color {
@@ -136,7 +143,6 @@ section {
             flex-wrap: wrap;
             margin: 0 auto 1em;
             width: 96%;
-
 
             .stripe-1 {
               background: repeating-linear-gradient(
@@ -153,7 +159,7 @@ section {
               margin: 0 auto .5em;
             }
 
-            .material {
+            .material, .trim-option {
               flex: 2 0 46%;
               margin: 0 2% 1%;
             }
@@ -167,6 +173,20 @@ section {
             .accent {
               flex: 1 0 68%;
               margin: 0 2% 1%;
+
+              .text-option {
+                flex-basis: 100%;
+
+                input[type='text'] {
+                  font-size: 1.5em;
+                  font-weight: 500;
+                  height: 27px;
+                  margin-bottom: 1%;
+                  text-align: center;
+                  width: 98.5%;
+                };
+
+              }
 
             }
 
@@ -214,11 +234,13 @@ section {
               border-radius: 25px;
               box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0,0,0,1);
               cursor: pointer;
-              height: 25px;
+              //height: 25px;
               margin-right: auto;
-              padding-right: 25px;
+              //padding-right: 25px;
+              padding-right: 4%;
               transition: .25s;
-              width: 75px;
+              //width: 75px;
+              width: 10%;
 
               &:after {
                 background-color: #eee;
@@ -230,17 +252,25 @@ section {
                 0 0 2px hsla(0, 0%, 0%, .25);
                 content: '';
                 display: block;
-                height: 25px;
-                width: 50px;
+                //height: 25px;
+                //width: 50px;
+                height: 100%;
+                width: 100%;
               }
 
               &:checked {
                 background: linear-gradient(0deg, $color-switch-on-a, $color-switch-on-b);
                 box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1);
-                padding-left: 25px;
+                //padding-left: 25px;
+                padding-left: 4%;
                 padding-right: 0;
               }
             }
+
+            //.trim-option {
+            //  flex: 2 0 46%;
+            //  margin: 0 2% 1%;
+            //}
 
             .notes {
               flex: 1 0 95%;
@@ -296,6 +326,19 @@ section {
             mask-repeat: no-repeat;
         }
 
+        .info-button {
+          background-color: $color-product-button-background;
+          border: $color-product-button-text 1px solid;
+          color: $color-product-button-text;
+          font-family: "Exo",sans-serif;
+          font-size: 1em;
+          font-weight: 500;
+          height: 3em;
+          margin: 3% auto;
+          text-decoration: none;
+          width: 35%;
+        }
+
       }
 
     }
@@ -346,6 +389,36 @@ section {
 
 
 } //section
+
+//
+div.ac-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  max-height: 150px;
+
+  div.ac-image {
+    height: 95%;
+    width: 50%;
+
+    >img {
+      margin: auto;
+      max-height: 100px;
+    }
+  }
+
+  div.ac-phrase {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+  }
+}
+
+
 
 @import '_partials/global-media-queries';
 

@@ -11,6 +11,9 @@ define('PUB_PATH', str_replace('\\', '/', dirname($_SERVER['DOCUMENT_ROOT']) . '
 /* Arrays */
 include PRIV_PATH.'/includes/arrays.php';
 
+/* Host IPs */
+include PRIV_PATH.'/connections/host_ips.php';
+
 /* Business Info */
 include PRIV_PATH.'/includes/business_info.php';
 

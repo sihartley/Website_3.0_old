@@ -12,43 +12,158 @@ require_once PRIV_PATH . '/functions/automotive_functions.php';
  * From business_info.php INCLUDE in initialize.php
  */
 //$id = $_GET['id'];
-$id = 218;
+$graphicId = 218; //Simon: Note: ID391 model='gladiator'
+/**
+ * Returned by function graphic_vehicle_query()
+ * @var $graphic
+ * Global variable In INCLUDE automotive_functions.php
+ * @var $vehicle
+ * Global variable In INCLUDE automotive_functions.php
+ */
+graphic_vehicle_query($graphicId);
+/**
+ * variables contained in INCLUDE automotive_variables.php
+ * @var $make $graphic['make']
+ * @var $model $graphic['model']
+ * @var $year $graphic['year']
+ * @var $year_range $vehicle['year']
+ * @var $price ceil($graphic['price_1'])
+ * @var $product_name $graphic['product_name']
+ * @var $graphic_installed $graphic['product_image_on']
+ * @var $image_path $graphic['image_path']
+ * @var $design_image $graphic['design_image']
+ * @var $part_number $graphic['part_number']
+ * @var $galleryDir = PUB_PATH.$image_path.'gallery';
+ */
+require_once PRIV_PATH . '/includes/automotive/automotive_variables.php';
 
-//Simon: Todo: Incorporate this into graphic_vehicle_query()
-[$graphic, $vehicle] = graphic_vehicle_query($id);
+/* Simon: ToDo: Automate $gallery status on/off */
 
-$make = $graphic['make'];
-$model = $graphic['model'];
-$year = $graphic['year'];
-$year_range = $vehicle['year'];
-$price = ceil($graphic['price_1']);
+/* Gallery Automation */
+galleryAutomation ($galleryDir);
 
-$accentStyles = [1, 2, 3, 4, 6, 7, 8, 10, 11, 12, 13, 16, 17, 18]; //Styles that have an Accent
-$accentCut = [1, 2, 3, 4, 6, 7, 8, 10, 11, 12, 13, 16, 18]; //Styles that have the Accent Cut-Out
-$accentSame = [17]; //Styles that have the accent Separate which can be the Same Color as Main
+/* Graphics Options */
+$accentStyles = []; //Styles that have an Accent
+$accentCut = []; //Styles that have the Accent Cut-Out
+$accentSame = []; //Styles that have the accent Separate which can be the Same Color as Main
 $accent2Styles = []; //Styles with a 2nd Accent
 $accent2Cut = []; //Styles that have the 2nd Accent Cut-Out
 $accent2Same = [];  //Styles that have the 2nd Accent Separate which can be the Same Color as Main
-$text = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 15, 16, 17]; $textRef = 'Front Center Text'; $textCut = [1, 3, 5, 6, 7, 8, 9, 10, 14, 16, 17]; $textSame = [2, 4, 15];
-$text2 = [1, 2, 5, 6, 7, 8, 9, 10, 13, 15, 16, 17]; $text2Ref = 'Side Text'; $text2Cut = [1, 2, 5, 6, 7, 8, 9, 10, 13, 15, 16, 17]; $text2Same = [];
+$text = []; $textRef = 'TXT/LOGO'; $textCut = []; $textSame = [];
+$text2 = []; $text2Ref = 'SIDE TXT/LOGO'; $text2Cut = []; $text2Same = [];
 $text3 = []; $text3Ref = ''; $text3Cut = []; $text3Same = [];
+$trimData = null;
+/*$trimData = array(
+        'Sunroof' => [
+            'select' => [
+                'name' => 'Sunroof',
+                'placeholder' => 'Factory Sunroof installed?'
+            ],
+            'options' => [
+                'installed' => [
+                    'text' => 'Sunroof Installed',
+                    'specs' => 'Factory Sunroof is Installed on the vehicle',
+                    'image' => '',
+                    'percentage' => .05,
+                    'add sub' => '-'
+                ],
+                'none' => [
+                    'text' => 'No Sunroof Installed',
+                    'specs' => 'Factory Sunroof is NOT Installed on the vehicle',
+                    'image' => '',
+                    'percentage' => 0,
+                    'add sub' => ''
+                ]
+            ]
+        ],
+        'Antenna' => [
+            'select' => [
+                'name' => 'Antenna',
+                'placeholder' => 'Roof Antenna Style?',
+            ],
+            'options' => [
+                'none' => [
+                    'text' => 'No Antenna',
+                    'specs' => 'We will not pre-cut for an Antenna.',
+                    'image' => '',
+                    'percentage' => 0,
+                    'add sub' => ''
+                ],
+                'a' => [
+                    'text' => 'Satellite Antenna A',
+                    'specs' => 'Flat Square Style Antenna, usually Black.',
+                    'image' => '/Graphics/Vehicles/Dodge/Dodge_Satellite_Antenna_A.png',
+                    'percentage' => 0,
+                    'add sub' => ''
+                ],
+                'b' => [
+                    'text' => 'Satellite Antenna B',
+                    'specs' => 'Larger Shark Fin Style Antenna, usually Color Coded.',
+                    'image' => '/Graphics/Vehicles/Dodge/Dodge_Satellite_Antenna_B.png',
+                    'percentage' => 0,
+                    'add sub' => ''
+                ],
+                'c' => [
+                    'text' => 'Satellite Antenna C',
+                    'specs' => 'Smaller Shark Fin Style Antenna, usually Color Coded.',
+                    'image' => '/Graphics/Vehicles/Dodge/Dodge_Satellite_Antenna_C.png',
+                    'percentage' => 0,
+                    'add sub' => ''
+                ]
+            ]
+        ],
+        'Hood' => [
+            'select' => [
+                'name' => 'Hood',
+                'placeholder' => 'Hood Style?'
+            ],
+            'options' => [
+                'standard' => [
+                    'text' => 'Standard Hood',
+                    'specs' => 'Usually Installed on Charger SE, SXT',
+                    'image' => '/Graphics/Vehicles/Dodge/Charger/2k15/Charger_Standard_Hood.webp',
+                    'percentage' => 0
+                ],
+                'scat pack' => [
+                    'text' => 'Scat Pack Hood',
+                    'specs' => 'Usually Installed on Charger R/T, Scat Pack',
+                    'image' => '/Graphics/Vehicles/Dodge/Charger/2k15/Charger_ScatPack_Hood.webp',
+                    'percentage' => 0,
+                    'add sub' => ''
+                ],
+                'hellcat' => [
+                    'text' => 'Hellcat Hood',
+                    'specs' => 'Usually Installed on Charger Hellcat',
+                    'image' => '/Graphics/Vehicles/Dodge/Charger/2k15/Charger_Hellcat_Hood.webp',
+                    'percentage' => 0,
+                    'add sub' => ''
+                ],
+                'redeye' => [
+                    'text' => 'Redeye Hood',
+                    'specs' => 'Usually Installed on Charger Widebody Redeye',
+                    'image' => '/Graphics/Vehicles/Dodge/Charger/2k15/Charger_Redeye_Hood.webp',
+                    'percentage' => 0,
+                    'add sub' => ''
+                ]
+            ]
+        ]
+    );*/
 
-
-$css_file = '/css/designs.min.css';
-$page_title = "$year_range $make $model {$graphic['product_name']}";
-$h2 = "<span>$year_range $model<br></span><span>{$graphic['product_name']}<br></span>Designs Currently Available"
+/* Page Options */
+$css_file = '/css/designs.min.css'; // page css file
+$page_title = "$year_range $make $model $product_name"; // page title
 ?>
 
 <!DOCTYPE html>
     <script type="text/javascript">
-        localStorage.setItem('graphicId', '<?= $id; ?>')
+        localStorage.setItem('vehicleId', '<?= $vehicle['id']; ?>');
+        localStorage.setItem('graphicId', '<?= $graphicId; ?>');
     </script>
 
 <html lang="en"<?= $rightClickProtect ?>>
 
 <!-- Head -->
-<?php include_once ROOT.'/private/includes/head.php'?>
-
+<?php include_once ROOT.'/private/includes/head.php'; /* includes page title, meta, prefetch, css sheets, js scripts etc. */?>
 <body>
 <div id="page">
     <div id="content">
@@ -56,123 +171,122 @@ $h2 = "<span>$year_range $model<br></span><span>{$graphic['product_name']}<br></
         <!-- Header -->
         <?php include ROOT.'/private/includes/header.php'?>
 
-        <section class="graphic-look">
-<!--            <h2>--><?php //?><!--</h2>-->
-            <img src="<?= $graphic['image_path'].$graphic['product_image_on'] ?>" alt="" style="aspect-ratio: <?= image_ratio($graphic['image_path'].$graphic['product_image_on']) ?>">
-        </section>
+        <!-- Main Image Graphic on Vehicle / Gallery -->
+            <?php graphicOnVehicle($galleryDir, $image_path, $graphic_installed, $page_title); ?>
 
-
-        <section class="graphic-designs">
-            <h2><?= $h2 ?></h2>
+        <!-- Graphic Designs Section -->
+            <?php graphic_block_heading($year_range, $model, $product_name); /* h2 Graphic Block Heading (automotive_functions.php) */ ?>
 
             <?php
-            //Simon: Note: Testing Area
-            ?>
+            /* While Loop (Based on Design Images in Folder) */
+                $design = sprintf('%02s', 1); /* Design Number Formatting */
+                while (file_exists(PUB_PATH.$image_path.str_replace ('01', $design, $design_image))) {
+                    require ROOT.'/private/includes/automotive/auto_graphic_while_start.php';
+                    /** require ROOT.'/private/includes/automotive/auto_graphic_while_start.php' contains code for part number, container title, image work, selection etc.
+                     * @var $name
+                     * @var $graphic_design
+                     * @var $cart_image
+                     * @var $svg_image
+                     * @var $design_pn
+                     * @var $price
+                     * @var $weight
+                     */
+                ?>
 
-        <?php
-            $design = sprintf('%02s', 1);
-            while (file_exists(PUB_PATH.$graphic['image_path'].str_replace ('01', $design, $graphic['design_image']))) {
-                $part_number = "{$graphic['part_number']}-$design";
-                $name = "{$graphic['product_name']}<br>Design Style - $design";
-                $image_file = PUB_PATH.$graphic['image_path'].str_replace ('01', $design, $graphic['design_image']);
-                $image_alt = $name;
-                $lazy = ''; if ($design > 3) { $lazy = "loading='lazy'"; }
+        <!-- Container Start -->
+                <?php containerStart($name, $design, $graphic_design); ?>
 
-                $svg_image = str_replace(substr($graphic['design_image'], strpos($graphic['design_image'], ".") + strlen(".")), "svg", $graphic['design_image']);
+            <!-- Form Start -->
+                <?php formStart($design, $foxy_cart); ?>
 
-                if (file_exists(PUB_PATH.$graphic['image_path'].str_replace ('01', $design, $svg_image))) {
-                    $image = $graphic['image_path'].str_replace ('01', $design, $svg_image);
-                    $svg_code = file_get_contents(PUB_PATH.$graphic['image_path'].str_replace ('01', $design, $svg_image));
-                    $graphic_design = substr($svg_code, strpos($svg_code, '<svg'));
-                    } else {
-                    $image = $graphic['image_path'].str_replace ('01', $design, $graphic['design_image']);
-                    $graphic_design = "<img src='$image' alt='$image_alt' style='aspect-ratio: php graphicRatio($image);' $lazy>";
-                };
+                    <!-- Initial (main) Product Inputs -->
+                        <?php require ROOT.'/private/includes/automotive/auto_graphic_form_initial_inputs.php' ?>
 
-                $price = pricing();
-                $weight = weight();
-            ?>
+                    <!-- Vehicle Information Section (Year, Trim, Color) -->
+                        <?php vehicleInformationStart(); ?>
 
-            <div id="cartContainer-<?= $design ?>" class="design cart-container">
-                <h3><?= $name ?></h3>
-                <div id="graphic_<?= $design ?>" class="image">
-                    <?= $graphic_design ?>
-                    <h3><?= $part_number ?></h3>
-                    </a>
-                </div>
-                <div class="form">
-                    <form id="form-<?= $design ?>" data-fc-form-code="p<?= $design ?>" action="<?= $foxy_cart; ?>" method="post" accept-charset="utf-8">
-                        <input type="hidden" name="name" value="<?= "$year_range $make $model {$graphic['product_name']}" ?>" />
-                        <input type="hidden" name="image" value="<?= $image ?>" />
-                        <input type="hidden" name="Part #:" value="<?= $part_number ?>" />
-                        <input type="hidden" name="Design:" value="Design <?= $design ?>" />
-                        <input type="hidden" name="price" value="<?= $price ?>" />
-                        <input type="hidden" name="weight" value="<?= $weight ?>" />
+                            <?php
+                            /**
+                             * @var array $yearsMod ['year' => 'year to modify', 'price_mod' => 'price modification', 'image_mod' => 'b']
+                             * image_mod is appended to filename before file type
+                             */
+                            $yearsMod = null;
+                            modelYears($graphic, $vehicle,null);
 
-                        <div class="vehicle-details">
-                            <h4>Vehicle Information</h4>
-                            <?php modelYears(); ?>
+                             /**
+                             * @var array $trimsOverride ['new trim 1', 'new trim 2', 'new trim 3']
+                             * @var array $trimsAddon ['add trim 1', 'add trim 2', 'add trim 3']
+                             * @var array $trimMods ['trim' => 'trim to modify', 'price_mod' => 'price modification', 'image_mod' => 'b']
+                              * image_mod is appended to filename before file type
+                             * @var bool $modelsOverride if set to TRUE model will prefix trim
+                             */
+                            $trimModPrice = ceil(.0489 * pricing($design));
+                            $trimSVGMod = 'b';
+                            $trimMods = array(
+                                ['trim' => 'SRT Hellcat Redeye Widebody', 'price_mod' => $trimModPrice, 'image_mod' => $trimSVGMod]
+                            ); ?>
+                            <?php trimLevels($graphic, $vehicle, null, null, null, false); ?>
 
-                            <?php trimLevels(null, null, null, null); ?>
+                            <?php carColors($vehicle); ?>
 
-                            <?php carColors(); ?>
-                        </div>
+                    <!-- Graphic Section (material, color, accent, cutout options (trimOptions)) -->
+                        <?php graphicInformationStart(); /* Closing </div> in textColorOptions */?>
 
-                        <div class="graphic-details"> <!-- Main & Accent Colors -->
-                            <h4>Graphic Customization</h4>
+                            <?php materialBrand($design); ?>
 
-                            <?php materialBrand(); ?>
+                            <?php mainColor($design); ?>
 
-                            <?php mainColor(); ?>
+                            <?php accentColor($design, $accentStyles, $accentCut, $accentSame); // Accent Styles, Cut Styles, Same Styles ?>
 
-                            <?php accentColor($accentStyles, $accentCut, $accentSame); // Accent Styles, Cut Styles, Same Styles ?>
+                            <?php accentColor2($design, $accent2Styles, $accent2Cut, $accent2Same); ?>
 
-                            <?php accentColor2($accent2Styles, $accent2Cut, $accent2Same); ?>
-                        </div>
+                            <?php trimOptions($design, $trimData); ?>
 
-                        <div class="graphic-details" style="display: none "> <!-- Text Colors & Options -->
+                        <?php graphicInformationClose(); ?>
 
-                            <?php textColorOptions(
+                    <!-- Text & Logo Options, Notes -->
+                        <?php textLogoNotesStart(); ?>
+
+                            <?php textColorOptions($design,
                                 $text, $textRef, $textCut, $textSame,
                                 $text2, $text2Ref, $text2Cut, $text2Same,
                                 $text3, $text3Ref, $text3Cut, $text3Same, $accentStyles, $accent2Styles
                             ); ?>
 
-                            <label class="notes label_left">Notes</label>
-                            <textarea class="notes" placeholder="Any other details you would like us to know here..." name="Notes:" rows="3" cols="40"></textarea>
+                            <?php notes(); ?>
 
-                        </div>
+                        <?php textLogoNotesClose(); ?>
 
-                        <button class="buy-now-button">
-                            <span>Add to Cart</span><br>
-                            <span class="p<?= $design ?>_total">From $<?= $price ?> </span>
-                        </button>
+                        <?php cartButton($design, $price) //Add to Cart Button ?>
 
-                    </form>
-                </div>
-            </div>
-        <?php $design = sprintf('%02s', ++$design); } ?>
-        </section>
+                        <?php graphicInfoRequest($design, $design_pn); //Form Button ?>
 
+                    <?php formClose(); ?>
 
+                <?php containerFooter($design_pn); ?>
 
+            <?php containerEnd(); /* Container End (containerStart() function) */ ?>
 
+        <?php $design = sprintf('%02s', ++$design);
+            } // While Loop Close
+        ?>
 
-        <!-- Navigation -->
+    <?php graphicInformationClose(); ?>
+
+    <!-- Navigation -->
         <?php include ROOT.'/private/includes/navigation.php'; ?> <!-- Note: Keep inside content div for page anchors to work properly -->
     </div> <!-- #content close -->
 
     <!-- footer -->
-    <?php include_once ROOT.'/private/includes/footer.php' /* Note: Keep here for positioning and scrolling to work correctly */?>
+        <?php include_once ROOT.'/private/includes/footer.php' /* Note: Keep here for positioning and scrolling to work correctly */?>
 
 </div> <!-- #page close -->
 
 <!-- LiveReload for activates on local server only -->
-<?php if (!empty($liveReload)) { echo $liveReload . '<!-- '.$dbPrefix.' -->'; } ?>
-</body>
+    <?php live_reload(); /* core_functions.php */?>
 
-    </html>
+</body> <!-- Page body close -->
 
-    <!-- Simon: Todo: create and move this to include file foot.php -->
-    <?php ob_end_flush();
-?>
+</html> <!-- html close -->
+
+<?php ob_end_flush(); /* SEE: https://www.php.net/manual/en/function.ob-end-flush.php */ ?>

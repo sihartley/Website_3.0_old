@@ -1,4 +1,5 @@
 <?php
+
 /* Hosting Server Identification for Ajax*/
 function ajax_host_ident($server): array
 {
@@ -85,6 +86,24 @@ function color_graphic_query($id): array {
     return $graphic;
 }
 
+function mc_color_graphic_query($table, $id): array {
+    global $dbPrefix;
+    $graphicColumns = 'color2_perc_adjust, color3_perc_adjust, text_perc_adjust, text2_perc_adjust, text3_perc_adjust';
+    $graphicQuery = "(SELECT {$graphicColumns} FROM {$dbPrefix}Motorcycle.graphics_{$table} WHERE id = '{$id}' )";
+    $graphic = mysqli_fetch_assoc(db_query($graphicQuery));
+    db_disconnect(db_connect());
+    return $graphic;
+}
+
+function trailer_color_graphic_query($table, $id): array {
+    global $dbPrefix;
+    $graphicColumns = 'color2_perc_adjust, color3_perc_adjust, text_perc_adjust, text2_perc_adjust, text3_perc_adjust';
+    $graphicQuery = "(SELECT {$graphicColumns} FROM {$dbPrefix}Trailer.{$table} WHERE id = '{$id}' )";
+    $graphic = mysqli_fetch_assoc(db_query($graphicQuery));
+    db_disconnect(db_connect());
+    return $graphic;
+}
+
 function color_list_query($material, $brands): mysqli_result {
     global $dbPrefix;
     $colorColumns = 'id, hex, gradient, svg_gradient, brand, series, color_name, color_type, color_code, film_type, film_thickness, durability, price_load';
@@ -115,3 +134,11 @@ function colorPriceLoad($price, $accentLoad, $colorLoad): string
     return ceil($loadedPrice);
 }
 
+/* Autocomplete Query */
+function autocomplete_query($vColumns, $vehicleId): array {
+    global $dbPrefix;
+    $autocompleteQuery = "(SELECT $vColumns FROM {$dbPrefix}Automotive.vehicles WHERE id = '$vehicleId' )";
+    $autocomplete = mysqli_fetch_assoc(db_query($autocompleteQuery));
+    db_disconnect(db_connect());
+    return $autocomplete;
+}

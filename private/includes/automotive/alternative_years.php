@@ -12,7 +12,7 @@ if (isset($alt_years) && (mysqli_num_rows($alt_years) !== 0)) { ?>
             $year_start = explode(' ', $years)[0];
             $image = $alt_year['image_path'] . $alt_year['vehicle_250px_image'];
             $image_alt = "BUY $make $model $years Vehicle Graphics";
-            $href = "/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start&years=$years";
+            $href = "/pages/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start&years=$years";
             $aria_label = "SHOP $years $make $model Vehicle Graphics";
             ?>
             <div class="<?= "vehicle-" . $vehicle++ ?>">

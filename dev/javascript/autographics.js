@@ -1,4 +1,4 @@
-/* Ajax file for color lists */
+/* Automotive Vehicle Details & Color Lists */
 // Functions
 function thisCartContainer(item) {
     return document.getElementById(item.closest('.cart-container').attr('id'))
@@ -12,9 +12,9 @@ function thisForm(item) {
 function formSels(form) {
     return Array.from(form.querySelectorAll('select'))
 }
-function formTexts(form) {
+function formTexts(item) {
     // document.querySelectorAll("input[type=text]")
-    form = document.getElementById(form)
+    let form = document.getElementById(item.closest('form').attr('id'))
     return Array.from(form.querySelectorAll("input[type=text]"))
 }
 function colorIds(form) {
@@ -22,53 +22,134 @@ function colorIds(form) {
         .querySelectorAll('select'))
         .map(a => a.id).filter(id => id.match(/color/i))
 }
+function colorOptions(itemId, colorOption) {
+    let
+        graphic = itemId.replace(colorOption, 'graphic'),
+        design = graphic.split('_')[1],
+        option = $(graphic).children('svg')
+        option = $(option).find('.' + colorOption)
+    return { graphic, design, option }
+}
+function colorChange (itemId, optionId, cutout, color, background, svgGradient) {
+    let
+        colorOption = colorOptions(itemId, optionId),
+        colorId = '#' + optionId.replace('color', '') + 'Gradient_'
+    if (cutout) {
+        colorOption.option.css('fill', background)
+    } else if (!color) {
+        $(colorOption.graphic).find(colorId + colorOption.design).html(svgGradient)
+        colorOption.option.css('fill', 'url(' + colorId + colorOption.design + ')')
+    } else {
+        colorOption.option.css('fill', color)
+    }
+}
 
+//Graphics Text Change (Called by text inputs on page)
+function textChange(data) {
+    let
+        textInput = data.id.split('_')[0],
+        designId = '#' + thisGraphic($(data)).id,
+        textcolor = '.' + textInput.replace('textinput', 'textcolor'),
+        svgGraphic = '.' + textInput.replace('textinput', 'graphic'),
+        textChange = $(designId).children('svg').children(textcolor),
+        svgGraphicChange = $(designId).find(svgGraphic)
+        // $(svgGraphicChange).empty()
+    $(textChange).find('tspan').text(data.value)
+
+}
+// Autocomplete Scrolling (maxShowItems:)
+;(function($, undefined) {
+    'use strict';
+    $.widget('ui.autocomplete', $.ui.autocomplete, {
+        _resizeMenu: function() {
+            let ul, lis, ulW, barW;
+            if (isNaN(this.options.maxShowItems)) { return; }
+            ul = this.menu.element
+                .scrollLeft(0).scrollTop(0) // Reset scroll position
+                .css({overflowX: '', overflowY: '', width: '', maxHeight: ''}); // Restore
+            lis = ul.children('li').css('whiteSpace', 'nowrap');
+
+            if (lis.length > this.options.maxShowItems) {
+                ulW = ul.prop('clientWidth');
+                ul.css({overflowX: 'hidden', overflowY: 'auto',
+                    maxHeight: lis.eq(0).outerHeight() * this.options.maxShowItems + 1}); // 1px for Firefox
+                barW = ulW - ul.prop('clientWidth');
+                ul.width('+=' + barW);
+            }
+
+            // Original code from jquery.ui.autocomplete.js _resizeMenu()
+            ul.outerWidth(Math.max(
+                ul.outerWidth() + 1,
+                this.element.outerWidth()
+            ));
+        }
+    });
+
+})($);
+
+// Colors & Selects
 $(function(){
-    /* Select2 Simon: Note: moved from scripts_global.js*/
+    /* Select2 Initialization */
     $('select').select2({
         minimumResultsForSearch: 20,
         theme: 'classic'
     });
 
+    /* Car Year */
+    $('.model-year').on('select2:select', function (e) {
+        console.log(formTexts($(this)))
+
+        /* Simon: Note: Testing for SVG Image placement. */
+        // let graphic = thisGraphic($(this))
+        // console.log(graphic)
+        // let svg = graphic.querySelector('svg')
+        // // let rect = document.getElementById('g1_pos')
+        // let rect = graphic.querySelector('.g1_pos')
+        // let text = $(graphic).children('svg').children('.textcolor')
+        // console.log('SVG:')
+        // console.log(svg)
+        // console.log(svg.getBoundingClientRect())
+        // console.log('Rectangle:')
+        // console.log(rect.getBoundingClientRect())
+        // console.log(rect.getBBox())
+        /* Simon: Note: Testing for SVG Image placement. */
+
+    })
+
     /* Car Color */
     $('.car-color').on('select2:select', function (e) {
-        let container = thisCartContainer($(this))
-        let colorHex = '#' + $(this).find(':selected').data('hex')
-        let cutouts = $(container).find('.cut-out, .text-cut-out')
+        let
+            container = thisCartContainer($(this)),
+            colorHex = '#' + $(this).find(':selected').data('hex'),
+            cutouts = $(container).find('.cut-out, .text-cut-out')
         $(container).css('background-color', colorHex).trigger('change')
         $(cutouts).data('cutout', colorHex).trigger('change')
     })
 
     /* Car Trim */
     $('.trim-level').on('select2:select', function (e) {
-        let graphic = thisGraphic($(this))
-        let filename = '/graphics/Vehicles/Dodge/Charger/2k15/PBHD/Charger-2k15-Hellcat-Power-Bulge-Hood-Decal-(PBHD01).svg'
-        let svg = $(this).find(':selected').data('svg')
-        console.log(svg)
-
-        $.get(svg, function(svgfile)
-        {
-            console.log(filename)
-            console.log(svgfile)
-            console.log($(graphic).find('svg'))
-
-        });
-
+        let
+            graphic = thisGraphic($(this)),
+            svgfile = $(this).find(':selected').data('svg')
+        if (svgfile) {
+            $(graphic).load(svgfile)
+        }
     })
 
     /* Material Type Selection (wet/dry install) - Working */
     $('.material').on('select2:select', function (e) {
-        let currentForm = thisForm($(this))
-        let formSelects = formSels(currentForm)
-        let colorSelectIds = formSelects.map(a => a.id).filter(id => id.match(/color/i))
+        let
+            currentForm = thisForm($(this)),
+            formSelects = formSels(currentForm),
+            colorSelectIds = formSelects.map(a => a.id).filter(id => id.match(/color/i))
         $(thisForm($(this))).find('.brand>select').prop("disabled", false);
         $(colorSelectIds).each(function() {
             $('#'+this).find('option').not(':first, .standard-opt').remove()
         })
         let dropdown = $(this).find(':selected');
         $.getJSON('/data/material-data.json', function (data) {
-            let key = dropdown.val();
-            let vals = [];
+            let key = dropdown.val(),
+            vals = [];
             switch (key) {
                 case 'wet-install':
                     $.each( data['wet-install']['Wet-Install Premium Cast'], function( key ) {
@@ -95,13 +176,14 @@ $(function(){
     let brands = []
     $('.brand').on({
             'select2:select select2:unselect': function (e) {
-                let RequestURL = '/ajax/ajax-colors-automotive.php';
-                // let currentForm = thisForm($(this)) //Simon: Remove Me: if not used
-                // let formSelects = formSels(currentForm) //Simon: Remove Me: if not used
-                let colorSelectIds = colorIds($(this))
-                let price = $("input[name='price']").val()
-                let weight = $("input[name='weight']").val()
-                brands = []
+                let
+                    AjaxColorsURL = '/ajax/ajax-colors-automotive.php',
+                    //currentForm = thisForm($(this)), //Simon: Remove Me: if not used
+                    //formSelects = formSels(currentForm), //Simon: Remove Me: if not used
+                    colorSelectIds = colorIds($(this)),
+                    price = $("input[name='price']").val(),
+                    weight = $("input[name='weight']").val()
+                    brands = []
                 // let data = e.params.data; //Simon: Remove Me: if not used
                 // let brand = data.id //Simon: Remove Me: if not used
 
@@ -117,7 +199,7 @@ $(function(){
             // console.log(brands)
 
                 $.getJSON(
-                    RequestURL, {
+                    AjaxColorsURL, {
                         graphic: localStorage.getItem('graphicId'), //value sent to RequestURL via $_GET[]
                         form: localStorage.getItem('formId'), //Passed from current graphics page
                         material: localStorage.getItem('material'), //Passed from material selection above
@@ -133,11 +215,11 @@ $(function(){
                     function (data) {
             // console.log(data);
                         colorSelectIds.forEach(function (item) {
-                            let itemId = '#' + item;
-                            let itemData = item.split('_')[0];
+                            let
+                                itemId = '#' + item,
+                                itemData = item.split('_')[0];
                             $.each(data[itemData], function (i, color) {
                                 $(itemId).append($('<option>', {
-                                    // 'data-icon': 'fas fa-square',
                                     'data-class': color.optionClasses,
                                     'data-color': color.optionHEXColor,
                                     'data-gradient': color.optionGradient,
@@ -156,8 +238,9 @@ $(function(){
 
                             //Simon: Todo: Make Selected color more compact (reformat data.priceload etc)
                             function cformatSelection(item) { //format item before / after selection
-                                let originalOption = item.element;
-                                let markup =
+                                let
+                                    originalOption = item.element,
+                                    markup =
                                     '<span class="select2-selection__selected">'
                                 if (!$(originalOption).data('color') && !$(originalOption).data('gradient')) {
                                     return $('<div>' + item.text + '</div>'); // If nothing is yet selected (fresh)
@@ -182,8 +265,9 @@ $(function(){
                                     }, 800);
                                 } //if (buildCounter === 0){ END
 
-                                let originalOption = item.element;
-                                let markup =
+                                let
+                                    originalOption = item.element,
+                                    markup =
                                     '<div class="select2-result-container">';
                                 if ($(originalOption).data('color')) {
                                     markup +=
@@ -235,141 +319,76 @@ $(function(){
 
                             // Selected Color Options
                             $(itemId).on('change', function (e) {
-                                let container = thisCartContainer($(this))
-                                let background = $(thisCartContainer($(this))).css('background-color')
-                                let cutout = $(this).find(':selected').data('cutout')
-                                let color = $(this).find(':selected').data('color')
-                                let gradient = $(this).find(':selected').data('gradient')
-                                let svgGradient = $(this).find(':selected').data('svg_gradient')
-
+                                let
+                                    container = thisCartContainer($(this)),
+                                    background = $(thisCartContainer($(this))).css('background-color'),
+                                    cutout = $(this).find(':selected').data('cutout'),
+                                    color = $(this).find(':selected').data('color'),
+                                    gradient = $(this).find(':selected').data('gradient'),
+                                    svgGradient = $(this).find(':selected').data('svg_gradient'),
+                                    optionId = itemId.replace('#', '').split('_')[0]
 
                                 if (itemId.includes('maincolor_')) {
-                                    let graphic = itemId.replace('maincolor', 'graphic')
-                                    let design = graphic.split('_')[1]
-                                    let maincolor = $(graphic).children('svg').children('.maincolor')
-                                    //Simon: Note: use @var color and $var gradient here to alter colors on .svg files.
+                                    colorChange(itemId, optionId, cutout, color, background, svgGradient)
                                     $.each(['accentcolor', 'accentcolor2', 'textcolor', 'textcolor2', 'textcolor3'], function (key, option) {
-                                        option = itemId.replace('maincolor', option)
+                                        option = itemId.replace(optionId, option)
                                         $(option).children('.cut-out, .main-same, .text-cut-out, .text-same').data('color', color).data('gradient', gradient).data('svg_gradient', svgGradient).trigger('change')
                                         $(option).children('.cut-out, .text-cut-out').data('cutout', background).trigger('change')
-
                                     })
-
-                                    if (!color) {
-                                        $(graphic).find('#mainGradient_' + design).html(svgGradient)
-                                        maincolor.css('fill', 'url(#mainGradient_' + design + ')')
-                                    } else {
-                                        maincolor.css('fill', color)
-                                    }
                                 }
 
                                 if (itemId.includes('accentcolor_')) {
-                                    let graphic = itemId.replace('accentcolor', 'graphic')
-                                    let design = graphic.split('_')[1]
-                                    let accentcolor = $(graphic).children('svg').children('.accentcolor')
-                                    //Simon: Note: use @var color and $var gradient here to alter colors on .svg files.
+                                    colorChange(itemId, optionId, cutout, color, background, svgGradient)
                                     $.each(['accentcolor2', 'textcolor', 'textcolor2', 'textcolor3'], function (key, option) {
-                                        option = itemId.replace('accentcolor', option)
+                                        option = itemId.replace(optionId, option)
                                         $(option).children('.accent-same, .text-accent-same').data('color', color).data('gradient', gradient).data('svg_gradient', svgGradient).trigger('change')
                                         $(option).children('.cut-out, .text-cut-out').data('cutout', background).trigger('change')
                                     })
-
-                                    // $(this).find(':selected').data('cutout', background)
-                                    // console.log('Cutout: '+$(this).find(':selected').data('cutout'))
-
-                                    if (cutout) {
-                                        accentcolor.css('fill', background)
-                                    } else if (!color) {
-                                        $(graphic).find('#accentGradient_' + design).html(svgGradient)
-                                        accentcolor.css('fill', 'url(#accentGradient_' + design + ')')
-                                    } else {
-                                        accentcolor.css('fill', color)
-                                    }
                                 }
 
                                 if (itemId.includes('accentcolor2_')) {
-                                    let graphic = itemId.replace('accentcolor2', 'graphic')
-                                    let design = graphic.split('_')[1]
-                                    let accentcolor2 = $(graphic).children('svg').children('.accentcolor2')
-                                    //Simon: Note: use @var color and $var gradient here to alter colors on .svg files.
+                                    colorChange(itemId, optionId, cutout, color, background, svgGradient)
                                     $.each(['textcolor', 'textcolor2', 'textcolor3'], function (key, option) {
-                                        option = itemId.replace('accentcolor2', option)
+                                        option = itemId.replace(optionId, option)
                                         $(option).children('.text-accent2-same').data('color', color).data('gradient', gradient).data('svg_gradient', svgGradient).trigger('change')
                                     })
-                                    if (cutout) {
-                                        accentcolor2.css('fill', background)
-                                    } else if (!color) {
-                                        $(graphic).find('#accent2Gradient_' + design).html(svgGradient)
-                                        accentcolor2.css('fill', 'url(#accent2Gradient_' + design + ')')
-                                    } else {
-                                        accentcolor2.css('fill', color)
-                                    }
                                 }
 
                                 if (itemId.includes('textcolor_')) {
-                                    let graphic = itemId.replace('textcolor', 'graphic')
-                                    let design = graphic.split('_')[1]
-                                    let textcolor = $(graphic).children('svg').children('.textcolor')
-                                    //Simon: Note: use @var color and $var gradient here to alter colors on .svg files.
+                                    colorChange(itemId, optionId, cutout, color, background, svgGradient)
                                     $.each(['textcolor2', 'textcolor3'], function (key, option) {
-                                        option = itemId.replace('textcolor', option)
+                                        option = itemId.replace(optionId, option)
                                         $(option).children('.text-text-same').data('color', color).data('gradient', gradient).data('svg_gradient', svgGradient).trigger('change')
                                     })
-                                    if (cutout) {
-                                        textcolor.css('fill', background)
-                                    } else if (!color) {
-                                        $(graphic).find('#textGradient_' + design).html(svgGradient)
-                                        textcolor.css('fill', 'url(#textGradient_' + design + ')')
-                                    } else {
-                                        textcolor.css('fill', color)
-                                    }
-
-                                    //get text from input
-                                    let textinput = $(this).prev().val()
-                                    //text change
-                                    $(textcolor).children('tspan').text(textinput)
+                                    // //get text from input
+                                    // let textinput = $(this).prev().val()
+                                    // //text change
+                                    // $(colorOption.option).children('tspan').text(textinput)
                                 }
 
                                 if (itemId.includes('textcolor2_')) {
-                                    let graphic = itemId.replace('textcolor2', 'graphic')
-                                    let design = graphic.split('_')[1]
-                                    let textcolor2 = $(graphic).children('svg').children('.textcolor2')
-                                    //Simon: Note: use @var color and $var gradient here to alter colors on .svg files.
+                                    colorChange(itemId, optionId, cutout, color, background, svgGradient)
                                     $.each(['textcolor3'], function (key, option) {
-                                        option = itemId.replace('textcolor2', option)
+                                        option = itemId.replace(optionId, option)
                                         $(option).children('.text-text-same').data('color', color).data('gradient', gradient).data('svg_gradient', svgGradient).trigger('change')
                                     })
-                                    if (cutout) {
-                                        textcolor2.css('fill', background)
-                                    } else if (!color) {
-                                        $(graphic).find('#text2Gradient_' + design).html(svgGradient)
-                                        textcolor2.css('fill', 'url(#text2Gradient_' + design + ')')
-                                    } else {
-                                        textcolor2.css('fill', color)
-                                        // console.log('NO SVG')
-                                    }
-
-                                    //get text from input
-                                    let textinput2 = $(this).prev().val()
-                                    // console.log($(this).prev().val())
-
-                                    //text change
-                                    $(textcolor2).find('tspan').text(textinput2)
+                                    // //get text from input
+                                    // let textinput2 = $(this).prev().val()
+                                    // // console.log($(this).prev().val())
+                                    //
+                                    // //text change
+                                    // $(colorOption.option).find('tspan').text(textinput2)
                                 }
 
                                 if (itemId.includes('textcolor3_')) {
-                                    let graphic = itemId.replace('textcolor3', 'graphic')
-                                    let design = graphic.split('_')[1]
-                                    let textcolor3 = $(graphic).children('svg').children('.textcolor3')
-                                    //Simon: Note: use @var color and $var gradient here to alter colors on .svg files.
-                                    if (cutout) {
-                                        textcolor3.css('fill', background)
-                                    } else if (!color) {
-                                        $(graphic).find('#text3Gradient_' + design).html(svgGradient)
-                                        textcolor3.css('fill', 'url(#text3Gradient_' + design + ')')
-                                    } else {
-                                        textcolor3.css('fill', color)
-                                    }
+                                    colorChange(itemId, optionId, cutout, color, background, svgGradient)
+
+                                    // //get text from input
+                                    // let textinput3 = $(this).prev().val()
+                                    // // console.log($(this).prev().val())
+                                    //
+                                    // //text change
+                                    // $(colorOption.option).find('tspan').text(textinput3)
                                 }
                             })
 
@@ -386,9 +405,10 @@ $(function(){
             }, //'select2:select': function () { END
 
             'select2:unselect': function () {
-                let colorSelectIds = colorIds($(this))
-                let optionSwitch = $(this).parent().next() // Main Options Switch
-                let textOptions = thisForm($(this)).getElementsByClassName('text-option') // Text Options
+                let
+                    colorSelectIds = colorIds($(this)),
+                    optionSwitch = $(this).parent().next(), // Main Options Switch
+                    textOptions = thisForm($(this)).getElementsByClassName('text-option') // Text Options
 
                 $(colorSelectIds).each(function () {
                     let $thisId = $('#' + this)
@@ -412,59 +432,168 @@ $(function(){
 
     }) //$('.brand').on({ END
 
+    /* Car Options */
+    function trimOptions(item) {
+        // console.log(item)
+        let originalOption = item.element;
+        if (!$(originalOption).data('image')) {
+            return $('<div class="select2-trim-result-no_img">' + item.text + '</div>');
+        } else {
+            return $('<div class="select2-trim-result-container">' +
+                '<div class="trim-image"><img src="' + $(originalOption).data('image') + '"></div>' +
+                '<div class="info">' +
+                '<div class="title">' + item.text + '</div>' +
+                '<div class="specs">' + $(originalOption).data('specs') + '</div>' +
+                '</div>' +
+                '</div>');
+        }
+    }
+
+    $('.trim-spec').select2({
+        templateResult: trimOptions
+    });
 
 }); //$(function(){
 
 //Text Option Switches
+/* Main Options Switch */
 $('.options-check').click(function(){
-    let currentForm = thisForm($(this))
-    let textOptions = currentForm.getElementsByClassName('text-option')
-    let options = $(this).parent().next('.options')
+    let
+        currentForm = thisForm($(this)),
+        textOptions = currentForm.getElementsByClassName('text-option'),
+        options = $(this).parent().next('.options'),
+        phrases;
+
     if($(this).is(':checked')) {
         $(this).prev().text($(this).prev().attr('data-alt-txt'))
         options.fadeIn()
 
+        /* Ajax Call for Autocomplete */
+        $.ajax({
+            url: '/ajax/ajax-autocomplete-automotive.php',
+            data: {
+                vehicle: localStorage.getItem('vehicleId'),
+                vColumns: 'autocomplete_phrases, image_path'
+            },
+            dataType: 'json',
+            async: false,
+            success: function(data) {
+                phrases = data;
+            }
+        }) // $.ajax({ END
+
+        /* Text/Logo Option Switches */
         $(textOptions).each(function() {
             let originalTxt = $(this).find('label').text()
 
             $(this).find("input[type='checkbox']").on('change', function () {
-                let option = $(this).parent().next('.option')
+                let
+                    option = $(this).parent().next('.option'),
+                    textId = option.children('input').attr('id').split('_')[0],
+                    textInputId = '#' + option.find('input:text').attr('id'),
+                    svgText = '.' + textId.replace('textinput', 'textcolor'),
+                    svgGraphic = '.' + textId.replace('textinput', 'graphic'),
+                    designId = '#' + thisGraphic($(this)).id, // graphic_01
+                    svgTextChange = $(designId).children('svg').children(svgText),
+                    svgGraphicChange = $(designId).find(svgGraphic)
 
                 if ($(this).is(':checked')) {
                     $(this).prev().text('Specify ' + originalTxt + ' & Color')
                     option.fadeIn()
                     option.children().prop('disabled', false)
+
+                    /* Autocomplete for Each Text Input */
+                    $(textInputId).autocomplete({
+                        minLength: 0,
+                        source: phrases,
+                        // multiselect: true,
+                        maxShowItems: 8,
+                        focus: function( event, ui ) {
+                            // console.log ('FOCUS EVENT')
+                            // console.log (event)
+                            // console.log(ui)
+                        },
+                        open: function( event, ui ) {
+                            // console.log ('OPEN EVENT')
+                            // console.log (event)
+                            // console.log(ui)
+                        },
+                        response: function( event, ui ) {
+                            // console.log ('RESPONSE EVENT')
+                            // console.log (event)
+                            // console.log(ui)
+                            if (ui.content.length === 0) {
+                                // console.log('RESPONSE EMPTY')
+                                // $(svgGraphicChange).empty() // 9/13/2023
+                            } 
+                        },
+                        select: function (event, ui) {
+                            event.preventDefault();
+                            // console.log ('SELECT EVENT')
+                            // console.log (event)
+                            console.log(ui)
+                            let selected = ui.item.value,
+                                phrase = ui.item.phrase,
+                                phrase_svg = ui.item.phrase_svg
+
+                            $(textInputId).val(selected).trigger('change')
+
+                            // SVG Text Change
+                            $(svgTextChange).find('tspan').text(selected) //Change Text to autocomplete value (text not graphic)
+                            // $(svgTextChange).find('tspan').text('') //Remove text when graphic selected
+
+                            /* Ajax call for logo svg paths etc. */
+                            $.ajax({
+                                url: phrase_svg,
+                                dataType: 'html',
+                                type: 'GET',
+                                success: function(data){
+                                    let
+                                        svgContent = $(data).children().unwrap(),
+                                        viewBox = $(data).attr('viewBox')
+                                    /* Simon: Fix Me: Problem with text/logo after 1st */
+                                    //$(svgGraphicChange).empty().attr('viewBox', viewBox).append(svgContent)
+                                }
+                            }); // $.ajax({ END
+                        },
+                        change: function( event, ui ) {
+                            // console.log ('CHANGE EVENT')
+                            // console.log (event)
+                            // console.log(ui)
+                        },
+                        close: function( event, ui ) {
+                            // console.log ('CLOSE EVENT')
+                            // console.log (event)
+                            // console.log(ui)
+                        }
+                    }).on('focus', function () {
+                        $(this).autocomplete('search', '')
+
+                    }).data("ui-autocomplete")._renderItem = function( ul, item ) {
+                        // console.log(item)
+                        return $( "<li class='ui-autocomplete-row'></li>" )
+                            .data( "item.autocomplete", item )
+                            .append( item.label )
+                            .appendTo( ul );
+                    }
+
                 } else {
+                    // Text
                     $(this).prev().text(originalTxt)
                     option.fadeOut()
-                    option.children().prop('disabled', true).val('').trigger('change') //Clear Selections
+                    option.children().prop('disabled', true).val('').trigger('change') //Clear Inputs and Dropdowns
+                    $(svgTextChange).find('tspan').text('') //Clear text in svg specifically shift colors
+
                 }
+            }) // $(this).find("input[type='checkbox']").on('change', function () { END
+        }) // $(textOptions).each(function() END
 
-
-
-                //Simon: Note: Testing
-
-                console.log(this)
-                console.log($(this).find("input[type='text']").id)
-
-                function handleTextChange() {
-                    // #cartContainer-01
-
-                    // let textinput = document.getElementById('textbox_id').value;
-                    // let textinput = $(this).find("input[type='checkbox']").value;
-                    // let graphictext = document.getElementById('result');
-                    graphictext.innerHTML = textinput;
-                }
-                //Simon: Note: End Testing
-
-
-            })
-        }) // $(textOptions).each(function()
 
     } else {
         $(textOptions).each(function() {
-            let originalText = $(this).find('label').text().replace('Specify ', '').replace(' & Color', '')
-            let option = $(this).find('.option')
+            let
+                originalText = $(this).find('label').text().replace('Specify ', '').replace(' & Color', ''),
+                option = $(this).find('.option')
             $(this).find("input[type='checkbox']").prop('checked', false)
             $(this).find('label').text(originalText)
             option.children().prop('disabled', true).val('').trigger('change')
@@ -476,13 +605,37 @@ $('.options-check').click(function(){
     } // if($(this).is(':checked')) END
 });
 
-//Graphics Text Change
-function textChange(data) {
-    let textInput = data.id.split('_')[0]
-    let graphicId = thisGraphic($(data)).id
-    let textcolor = '.' + textInput.replace('textinput', 'textcolor')
-    let textChange = $('#' + graphicId).children('svg').children(textcolor)
-    $(textChange).find('tspan').text(data.value)
-}
+/* Created SVG to webp cart image */
+$('.buy-now-button').click(function() {
+    let currentForm = thisForm($(this)),
+        cartImage = currentForm.querySelector('input[name=image]'),
+        imageVal = cartImage.value,
+        currentGraphic = thisGraphic($(this)),
+        currentSVG = document.getElementById(currentGraphic.id).children[0],
+        {width, height} = currentSVG.getBBox()
 
+    console.log('Add to Cart Button Clicked')
+        console.log(currentForm.id)
+    console.log('Cart Image')
+        console.log(cartImage)
+        console.log(imageVal)
+    console.log('Current Graphic')
+        console.log(currentGraphic.id)
+    console.log('Current SVG')
+        console.log(currentSVG)
+        console.log('width: ' + width)
+        console.log('height: ' + height)
+
+    /* Simon: Note: Use this to convert the dataurl to an actual file for the cart */
+    // let dataUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjOHLkyH8AB+gDTOQq89IAAAAASUVORK5CYII="
+    // fetch(dataUrl)
+    //     .then(response => response.blob())
+    //     .then(blob => {
+    //         let file = new File([blob], "sample.png", {type: blob.type})
+    //         console.log(file)    //File object
+    //         cartImage.setAttribute('value', file.name)
+    //         console.log(imageVal)
+    //     })
+
+})
 

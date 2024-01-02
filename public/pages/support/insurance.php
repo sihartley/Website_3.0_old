@@ -1,5 +1,7 @@
 <?php
-/** @var $rightClickProtect
+/** @var $dbPrefix //From functions/core_functions.php
+ ** @var $rightClickProtect //From functions/core_functions.php
+ ** @var $insuranceClaim //From includes/business_info.php
  *  From function hostident() IN core_functions.php INCLUDE in initialize.php
  */
 require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
@@ -69,12 +71,7 @@ $css_file = '/css/support.min.css';
                 <div class="claim">
                     <img src="/images/icons/form.svg" alt="File an Installation Insurance Claim" style="aspect-ratio: <?php svg_ratio('/images/icons/form.svg'); ?>">
                     <h3>How to File a Claim</h3>
-                    <a href="#" class="claim-button" aria-label="File an Installation Insurance Claim">
-                        <div>
-                            <span>File Installation</span><br>
-                            <span>Insurance Claim</span>
-                        </div>
-                    </a>
+                    <?php insuranceClaimRequest($insuranceClaim); ?>
                     <p>Contact us immediately if you have a problem during installation using the links below. We will then open a claim and will contact you for further information. Photographs are required to complete your claim.</p>
                 </div>
 

@@ -11,7 +11,7 @@ require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.
 
 if (isset($_GET['make'], $_GET['model'], $_GET['year'], $_GET['years'])) {
     $make = $_GET['make']; $model = $_GET['model']; $year = $_GET['year']; $years = $_GET['years'];
-    $graphics_query = "(select product_name, part_number, make, model, year, price_1, image_path, main_page_image from ".$dbPrefix."Automotive.graphics where make = '".db_escape($make)."' AND model = '".db_escape($model)."' AND year = '".db_escape($year)."' AND available IS NOT NULL ORDER BY id DESC)";
+    $graphics_query = "(select product_name, part_number, make, model, year, price_1, image_path, main_page_image, product_page from ".$dbPrefix."Automotive.graphics where make = '".db_escape($make)."' AND model = '".db_escape($model)."' AND year = '".db_escape($year)."' AND available IS NOT NULL ORDER BY id DESC)";
     $alt_years_query ="(SELECT make, model, year, image_path, vehicle_250px_image FROM ".$dbPrefix."Automotive.vehicles WHERE make = '".db_escape($make)."' AND model = '".db_escape($model)."' AND year != '".db_escape($years)."' AND available IS NOT NULL ORDER BY id ASC)";
     $graphics = db_query($graphics_query);
     $alt_years = db_query($alt_years_query);

@@ -45,8 +45,13 @@
     width: 20px;
   }
 
-
 }
+
+.select2-selection__rendered {
+  font-weight: 500;
+}
+
+
 .select2-result-container,
 .select2-selection__selected {
 
@@ -76,6 +81,56 @@
   .text-text-same {
     mask-image: url('/images/icons_text_text_same.svg');
     mask-repeat: no-repeat;
+  }
+
+}
+
+//Trim / Size Options
+.select2-container--default {
+  .select2-trim-result-container {
+    display: flex;
+
+    div.trim-image {
+      margin-right: 2%;
+      width: 35%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    div.info {
+      width: 65%;
+
+      .title {
+        font-weight: 700;
+      }
+
+      .specs {
+        font-size: .65em;
+        font-weight: 500;
+      }
+    }
+
+  }
+
+  .select2-size-result-container {
+    display: flex;
+
+    .size-info {
+      flex: 1;
+
+      .metric {
+        font-size: .75em;
+        font-weight: 500;
+      }
+
+    }
+
+    .price {
+      margin: auto;
+    }
+
   }
 
 }

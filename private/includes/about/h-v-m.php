@@ -18,7 +18,7 @@
         <div>
             <img src="/images/icons/mission.svg" alt="Our Mission" style="aspect-ratio: <?php svg_ratio('/images/icons/mission.svg'); ?>">
             <h2>Mission</h2>
-            <p>To make our vision accessible to everyone through our custom design process, experience, and high-quality products. On this site, there is a wide array of products that can serve as inspiration for you in your consultation with us. Or maybe you’ll find exactly what you’re looking for! If that’s the case, our website allows you to customize the details of the graphic and add the product immediately to the cart.</p>
+            <p>We make our vision accessible to everyone through our custom design process, experience, and high-quality products. On this site, there is a wide array of products that can serve as inspiration for you in your consultation with us. Or maybe you’ll find exactly what you’re looking for! If that’s the case, our website allows you to customize the details of the graphic and add the product immediately to the cart.</p>
         </div>
 
     </aside>

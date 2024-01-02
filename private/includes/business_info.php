@@ -2,8 +2,6 @@
 //Company Identification
 $companyName = 'Vinyl Imagination';
 $companySite = 'https://vinylimagination.com';
-$godaddy_ip = '208.109.67.139';
-$inmotion_ip = '168.235.116.113';
 
 //Business Hours
 $office_hours = '10am to 5pm PST';
@@ -31,13 +29,34 @@ $foxy_cart = 'https://vinylimagination.foxycart.com/cart';
 //Tawk.to Direct Chat Link
 $chat_link = 'https://tawk.to/chat/6229917ca34c2456412a54e4/1ftp60k94';
 
-//Discounts
+//Base Costs
+$tube_caps = 1.00;
+$shipping_tube = 3.00;
+$shipping_cost = 10.00;
+$foxy_trans_fee = 0.20; //$21.25 Monthly Subscription
+$oDesk_trans_fee = 0.25; //$20.00 Monthly Subscription
+$cc_trans_fee = 0.25; //+3.4% Fee
+$base_costs = $tube_caps + $shipping_tube + $shipping_cost + $foxy_trans_fee + $oDesk_trans_fee + $cc_trans_fee;
+
+$trans_fee = 0.034;
+
+//Hourly Rate
+$hr_rate = 88.00;
+
+//Discounts (Percentage)
 $automotive_sale_discount = match (date('M')) {
     /* Simon: Info: a -ve value will add to the price. */
     'Jan', 'Feb', 'Mar' => 0.01,
-    'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep' => 0.02,
+    'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep' => 0.00,
     'Oct', 'Nov', 'Dec' => 0.03,
-    default => 0.00
+    default => 0.10
 };
+$motorcycle_sale_discount = .000;
+$trailer_sale_discount = .000;
+
+//JotForm Form Identifiers
+$graphicRequest = '232556466911057';
+$infoRequest = '221986631775165';
+$insuranceClaim = '233647762310152';
 
 

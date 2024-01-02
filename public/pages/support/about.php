@@ -3,7 +3,7 @@
  *  From function hostident() IN core_functions.php INCLUDE in initialize.php
  */
 require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.php';
-
+//$slider = 'on';
 $page_title = 'About';
 $css_file = '/css/support.min.css';
 
