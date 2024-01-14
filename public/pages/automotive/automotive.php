@@ -52,7 +52,7 @@ $page_title = 'Automotive Graphics';
             while ($models = mysqli_fetch_assoc($vehicle_models)) {
                 $make = $models['make']; $model = $models['model']; $years = $models['year']; $year_start = explode(' ', $years)[0];
                 $image = $models['image_path'] . $models['vehicle_250px_image']; $image_alt = "BUY $make $model $years Vehicle Graphics";
-                $href = "/pages/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start&years=$years";
+                $href = "/pages/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start";
                 $aria_label = "SHOP $years $make $model Vehicle Graphics"; ?>
 
                 <div class="<?= "vehicle-" //. $vehicle++ ?>">

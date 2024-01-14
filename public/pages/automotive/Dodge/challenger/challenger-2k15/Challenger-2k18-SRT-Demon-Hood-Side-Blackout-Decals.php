@@ -70,6 +70,7 @@ $page_title = "$year_range $make $model $product_name"; // page title
 <!-- Head -->
 <?php include_once ROOT.'/private/includes/head.php'; /* includes page title, meta, prefetch, css sheets, js scripts etc. */?>
 <body>
+
 <div id="page">
     <div id="content">
 

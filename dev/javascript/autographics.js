@@ -34,6 +34,7 @@ function colorChange (itemId, optionId, cutout, color, background, svgGradient) 
     let
         colorOption = colorOptions(itemId, optionId),
         colorId = '#' + optionId.replace('color', '') + 'Gradient_'
+
     if (cutout) {
         colorOption.option.css('fill', background)
     } else if (!color) {
@@ -97,7 +98,7 @@ $(function(){
 
     /* Car Year */
     $('.model-year').on('select2:select', function (e) {
-        console.log(formTexts($(this)))
+        // console.log(formTexts($(this)))
 
         /* Simon: Note: Testing for SVG Image placement. */
         // let graphic = thisGraphic($(this))
@@ -119,11 +120,19 @@ $(function(){
     /* Car Color */
     $('.car-color').on('select2:select', function (e) {
         let
+            outline = $(thisCartContainer($(this))).find('.outline'),
+            accentoutline = $(thisCartContainer($(this))).find('.accentoutline'),
             container = thisCartContainer($(this)),
             colorHex = '#' + $(this).find(':selected').data('hex'),
             cutouts = $(container).find('.cut-out, .text-cut-out')
-        $(container).css('background-color', colorHex).trigger('change')
-        $(cutouts).data('cutout', colorHex).trigger('change')
+
+        if ($(outline).css('stroke') !== 'none') {
+            $(outline).css('stroke', colorHex).trigger('change')
+        }
+
+        $(container).css('background-color', colorHex).trigger('change') //Change Form Background Color
+        $(accentoutline).css('fill', colorHex).trigger('change') //Change accent outline Color
+        $(cutouts).data('cutout', colorHex).trigger('change') //Change Text Cutout Color
     })
 
     /* Car Trim */
@@ -319,17 +328,31 @@ $(function(){
 
                             // Selected Color Options
                             $(itemId).on('change', function (e) {
+
                                 let
                                     container = thisCartContainer($(this)),
                                     background = $(thisCartContainer($(this))).css('background-color'),
+                                    outline = $(thisCartContainer($(this))).find('.outline'),
+                                    samemain = $(thisCartContainer($(this))).find('.same-main'),
+                                    main = $(thisCartContainer($(this))).find('.maincolor'),
+                                    accent = $(thisCartContainer($(this))).find('.accentcolor'),
                                     cutout = $(this).find(':selected').data('cutout'),
                                     color = $(this).find(':selected').data('color'),
                                     gradient = $(this).find(':selected').data('gradient'),
                                     svgGradient = $(this).find(':selected').data('svg_gradient'),
-                                    optionId = itemId.replace('#', '').split('_')[0]
+                                    optionId = itemId.replace('#', '').split('_')[0],
+                                    stroketomatch = $(thisCartContainer($(this))).find('.strokematchaccent')
+
 
                                 if (itemId.includes('maincolor_')) {
                                     colorChange(itemId, optionId, cutout, color, background, svgGradient)
+                                    $(outline).css('stroke', 'none').trigger('change') //Outline removal
+                                    $(samemain).css('stroke', main.css('fill')).trigger('change') //Outline removal
+                                    $(stroketomatch).css('stroke', 'none').trigger('change') //Text Outline Match Accent removal
+                                    $(outline).children('tspan').text('') //Remove text if text stroke should match background.
+                                    $(samemain).children('tspan').text('') //Remove text if text stroke should match main.
+                                    $(stroketomatch).children('tspan').text('') //Remove text if text stroke should match accent.
+
                                     $.each(['accentcolor', 'accentcolor2', 'textcolor', 'textcolor2', 'textcolor3'], function (key, option) {
                                         option = itemId.replace(optionId, option)
                                         $(option).children('.cut-out, .main-same, .text-cut-out, .text-same').data('color', color).data('gradient', gradient).data('svg_gradient', svgGradient).trigger('change')
@@ -339,6 +362,9 @@ $(function(){
 
                                 if (itemId.includes('accentcolor_')) {
                                     colorChange(itemId, optionId, cutout, color, background, svgGradient)
+                                    $(outline).css('stroke', background).trigger('change') //Text Outline to background color
+                                    $(stroketomatch).css('stroke', accent.css('fill')).trigger('change')
+
                                     $.each(['accentcolor2', 'textcolor', 'textcolor2', 'textcolor3'], function (key, option) {
                                         option = itemId.replace(optionId, option)
                                         $(option).children('.accent-same, .text-accent-same').data('color', color).data('gradient', gradient).data('svg_gradient', svgGradient).trigger('change')
@@ -348,6 +374,8 @@ $(function(){
 
                                 if (itemId.includes('accentcolor2_')) {
                                     colorChange(itemId, optionId, cutout, color, background, svgGradient)
+                                    $(outline).css('stroke', background).trigger('change') //Text Outline to background color
+
                                     $.each(['textcolor', 'textcolor2', 'textcolor3'], function (key, option) {
                                         option = itemId.replace(optionId, option)
                                         $(option).children('.text-accent2-same').data('color', color).data('gradient', gradient).data('svg_gradient', svgGradient).trigger('change')
@@ -356,6 +384,9 @@ $(function(){
 
                                 if (itemId.includes('textcolor_')) {
                                     colorChange(itemId, optionId, cutout, color, background, svgGradient)
+                                    $(outline).css('stroke', background).trigger('change') //Text Outline to background color
+                                    $(stroketomatch).css('stroke', accent.css('fill')).trigger('change') //Match Text Stroke to Accent
+
                                     $.each(['textcolor2', 'textcolor3'], function (key, option) {
                                         option = itemId.replace(optionId, option)
                                         $(option).children('.text-text-same').data('color', color).data('gradient', gradient).data('svg_gradient', svgGradient).trigger('change')
@@ -459,6 +490,7 @@ $(function(){
 /* Main Options Switch */
 $('.options-check').click(function(){
     let
+        graphic =thisGraphic($(this)),
         currentForm = thisForm($(this)),
         textOptions = currentForm.getElementsByClassName('text-option'),
         options = $(this).parent().next('.options'),
@@ -500,7 +532,7 @@ $('.options-check').click(function(){
                 if ($(this).is(':checked')) {
                     $(this).prev().text('Specify ' + originalTxt + ' & Color')
                     option.fadeIn()
-                    option.children().prop('disabled', false)
+                    option.children().prop('disabled', false).attr('required', true)
 
                     /* Autocomplete for Each Text Input */
                     $(textInputId).autocomplete({
@@ -531,7 +563,7 @@ $('.options-check').click(function(){
                             event.preventDefault();
                             // console.log ('SELECT EVENT')
                             // console.log (event)
-                            console.log(ui)
+                            // console.log(ui)
                             let selected = ui.item.value,
                                 phrase = ui.item.phrase,
                                 phrase_svg = ui.item.phrase_svg
@@ -581,9 +613,11 @@ $('.options-check').click(function(){
                     // Text
                     $(this).prev().text(originalTxt)
                     option.fadeOut()
-                    option.children().prop('disabled', true).val('').trigger('change') //Clear Inputs and Dropdowns
+                    option.children().prop('disabled', true).attr('required', false).val('').trigger('change') //Clear Inputs and Dropdowns
+                    // console.log(option + ' options cleared')
+                    // console.log($(this))
+                    //Simon: ToDo: add clear outline code here
                     $(svgTextChange).find('tspan').text('') //Clear text in svg specifically shift colors
-
                 }
             }) // $(this).find("input[type='checkbox']").on('change', function () { END
         }) // $(textOptions).each(function() END
@@ -597,7 +631,10 @@ $('.options-check').click(function(){
             $(this).find("input[type='checkbox']").prop('checked', false)
             $(this).find('label').text(originalText)
             option.children().prop('disabled', true).val('').trigger('change')
+            $($(thisCartContainer($(this))).find('.outline')).css('stroke', '').trigger('change') //Outline removal
+            $($(thisCartContainer($(this))).find('.strokematchaccent')).css('stroke', 'none').trigger('change') //Outline removal
             option.fadeOut()
+            //console.log($(this))
         })
 
         options.fadeOut()
@@ -614,17 +651,17 @@ $('.buy-now-button').click(function() {
         currentSVG = document.getElementById(currentGraphic.id).children[0],
         {width, height} = currentSVG.getBBox()
 
-    console.log('Add to Cart Button Clicked')
-        console.log(currentForm.id)
-    console.log('Cart Image')
-        console.log(cartImage)
-        console.log(imageVal)
-    console.log('Current Graphic')
-        console.log(currentGraphic.id)
-    console.log('Current SVG')
-        console.log(currentSVG)
-        console.log('width: ' + width)
-        console.log('height: ' + height)
+    // console.log('Add to Cart Button Clicked')
+    //     console.log(currentForm.id)
+    // console.log('Cart Image')
+    //     console.log(cartImage)
+    //     console.log(imageVal)
+    // console.log('Current Graphic')
+    //     console.log(currentGraphic.id)
+    // console.log('Current SVG')
+    //     console.log(currentSVG)
+    //     console.log('width: ' + width)
+    //     console.log('height: ' + height)
 
     /* Simon: Note: Use this to convert the dataurl to an actual file for the cart */
     // let dataUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjOHLkyH8AB+gDTOQq89IAAAAASUVORK5CYII="
@@ -638,4 +675,86 @@ $('.buy-now-button').click(function() {
     //     })
 
 })
+
+/* Form Validation */
+$(function() {
+    $('form').each(function() {  // attach to all form elements on page
+        let validobj = $(this).validate({
+            // errorContainer: '.error-container',
+            // errorLabelContainer: '.error-container ul',
+            // wrapper: 'li',
+            ignore: [], // Required to work with select2
+            rules: {
+                // checkbox_block: {
+                //     required: function (element) {
+                //         let boxes = $('.includeCheckbox');
+                //         if (boxes.filter(':checked').length === 0) {
+                //             return true;
+                //         }
+                //         return false;
+                //     },
+                //     minlength: 1
+                // }
+            },
+            messages: {
+                //checkbox_block: "Please select at least two stripe sections."
+            },
+            onkeyup: false,
+            errorClass: "myErrorClass",
+            errorPlacement: function (error, element) {
+                // var elem = $(element);
+                // error.insertAfter(element);
+            },
+            highlight: function (element, errorClass, validClass) {
+                let elem = $(element);
+                if (elem.hasClass('select2-hidden-accessible')) {
+                    $('#select2-' + elem.attr('id') + '-container').parent().addClass(errorClass);
+                } else {
+                    elem.addClass(errorClass);
+                }
+                if (elem.hasClass('checkbox_block')) {
+                    elem.parent('div').addClass('blockErrorClass');
+                } else {
+                    elem.removeClass('blockErrorClass');
+                }
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                let elem = $(element);
+                if (elem.hasClass('select2-hidden-accessible')) {
+                    $('#select2-' + elem.attr('id') + '-container').parent().removeClass(errorClass);
+                } else {
+                    elem.removeClass(errorClass);
+                }
+                if (elem.hasClass('checkbox_block')) {
+                    elem.parent('div').removeClass('blockErrorClass');
+                } else {
+                    elem.removeClass('blockErrorClass');
+                }
+
+            }
+        });
+
+        // $('.checkbox_block').on('click', function(){
+        //     let currentForm = $(this).closest('form');
+        //     $(currentForm).valid();
+        // });
+
+        $(document).on('change', '.select2-hidden-accessible', function () {
+            if (!$.isEmptyObject(validobj.submitted)) {
+                validobj.form();
+            }
+        });
+
+        $(document).on('select2:opening', function (arg) {
+            let elem = $(arg.target);
+            if ($('#select2-' + elem.attr('id') + '-container').hasClass('myErrorClass')) {
+                //jquery checks if the class exists before adding.
+                $('.select2-container').addClass('myErrorClass');
+            } else {
+                $('.select2-container').removeClass('myErrorClass');
+            }
+        });
+    });
+});
+
 

@@ -52,7 +52,31 @@ $accent2Same = [];  //Styles that have the 2nd Accent Separate which can be the 
 $text = [1, 2, 3, 4, 5]; $textRef = 'CUSTOM TEXT/LOGO'; $textCut = [1, 2, 3, 4, 5]; $textSame = [];
 $text2 = []; $text2Ref = 'SIDE TXT/LOGO'; $text2Cut = []; $text2Same = [];
 $text3 = []; $text3Ref = ''; $text3Cut = []; $text3Same = [];
-$trimData = null;
+$trimData = array(
+    'Spoiler' => [
+        'select' => [
+            'name' => 'Rear Spoiler',
+            'placeholder' => 'Factory Rear Spoiler installed?'
+        ],
+        'options' => [
+            'installed' => [
+                'text' => 'Spoiler Installed',
+                'specs' => 'Factory Rear Spoiler is Installed on the vehicle trunk',
+                'image' => '',
+                'percentage' => 0,
+                'add sub' => ''
+            ],
+            'none' => [
+                'text' => 'No Spoiler Installed',
+                'specs' => 'Factory Rear Spoiler is NOT Installed or Removed for Installation',
+                'image' => '',
+                'percentage' => .10,
+                'add sub' => '+'
+            ]
+        ]
+    ]
+);
+
 
 /* Page Options */
 $css_file = '/css/designs.min.css'; // page css file

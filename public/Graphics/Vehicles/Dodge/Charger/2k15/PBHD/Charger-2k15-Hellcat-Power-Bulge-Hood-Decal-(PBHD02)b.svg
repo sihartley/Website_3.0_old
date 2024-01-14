@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2146.2 2484.7" style="enable-background:new 0 0 2146.2 2484.7;" xml:space="preserve">
+	<defs>
+		<linearGradient id="mainGradient_01" y2='1'>
+		</linearGradient>
+		  <linearGradient id="accentGradient_01" y2='1'>
+		</linearGradient>
+		  <linearGradient id="accent2Gradient_01" y2='1'>
+		</linearGradient>
+		  <linearGradient id="textGradient_01" y2='1'>
+		</linearGradient>
+		  <linearGradient id="text2Gradient_01" y2='1'>
+		</linearGradient>
+		  <linearGradient id="text3Gradient_01" y2='1'>
+		</linearGradient>
+	</defs>
+
+	<path class="maincolor" d="M1072.4,2444.6c268.2,0,510.2-8.1,631.7-13c53.6-2.2,86.6,13.5,100.4,49.6c1.2,3.2,5.4,3.2,6-0.2
+		C2021.9,1195.9,2144.9,11.8,2145.2,8.3c0.4-7.2-2.6-9.2-8.4-7.9c-336.4,74.3-775.2,108.3-1064.3,108.3
+		c-289.1,0-727.6-34-1063.9-108.3C2.6-0.9-0.4,1.1,0,8.3c0.2,3.5,123.3,1187.6,334.6,2472.8c0.6,3.4,4.8,3.3,6,0.2
+		c13.8-36.1,46.8-51.8,100.4-49.6C562.6,2436.5,804.2,2444.6,1072.4,2444.6C1072.4,2444.6,1072.4,2444.6,1072.4,2444.6
+		C1072.4,2444.6,1072.4,2444.6,1072.4,2444.6z M1481,1766.2c0,225.6-182.8,408.4-408.4,408.4s-408.4-182.8-408.4-408.4
+		s182.8-408.4,408.4-408.4S1481,1540.6,1481,1766.2z"/>
+
+	<path id="accent" class="accentcolor" d="M1072.9,2422.6c210.2-0.3,420.5-4.6,630.5-13c31.4-1.7,67.9,3.4,92.9,22.9
+		C1917.8,1686.3,2039.2,788.4,2121,27.4c-235.9,50-501,79.3-740.3,94.1c-102.5,6.4-205.1,9.8-307.7,10.1l-0.2,0
+		c-172.9-1-345.6-9.8-517.6-26.5c-184-17.6-353.1-40.4-530-77.8c81.9,761.1,200.6,1642.5,324.8,2405.2c25.9-20,61.2-24.2,92.6-22.9
+		C652.5,2418.1,862.7,2422.4,1072.9,2422.6z M1072.9,2400.2c-209.9-0.3-419.7-4.6-629.4-13c-25.7-1.1-52.6,1.4-76.5,10.5
+		C246.2,1651.8,131.8,800.3,50.8,55.6c311.7,63.3,704.7,97.3,1021.8,98.5c103.2,0.2,206.5-3.2,309.5-10.2
+		c233.3-15,482.8-41.4,713.3-88.3c-80,739.2-198.8,1617.7-316.2,2342c-24.8-9.1-50.8-11.8-77-10.4
+		C1492.5,2395.6,1282.7,2399.9,1072.9,2400.2z"/>
+
+	<text class="textcolor" style="font-size:110px; font-family:'Square721BT-BoldExtended';  text-anchor:middle;"  transform="matrix(1 0 0 1 1070 1802.6843)">
+		<tspan>TXT/LOGO</tspan>
+	</text>
+
+	<path id="SVGID_x5F_1_x5F_" class="textpath" d="M1761,2369.1c17-105.6,33.6-211.3,49.8-317.1c15.6-102.3,30.9-204.6,45.8-307
+		c28.2-193.5,55.2-387.1,81.2-581c47.7-356.6,93.5-727.9,132-1080.4"/>
+	<text class="textcolor2" style=" font-size:110px; text-anchor:middle; font-family:'Square721BT-BoldExtended';">
+		<textPath  xlink:href="#SVGID_x5F_1_x5F_" startOffset="50%">
+			<tspan  class="st2" style="font-size:110px;">SIDE TXT/LOGO</tspan>
+		</textPath>
+	</text>
+
+	<path id="SVGID_x5F_00000181089301999623261690000006741057727120432297_x5F_" class="textpath" d="M76.5,83.6
+		c43.6,398,94.6,807.9,148.3,1202.6c26.4,193.6,53.9,387.1,82.6,580.4c24.7,166.2,51.4,339,77.8,502.5"/>
+	<text class="textcolor2" style=" font-size:110px; text-anchor:middle; font-family:'Square721BT-BoldExtended';">
+		<textPath  xlink:href="#SVGID_x5F_00000181089301999623261690000006741057727120432297_x5F_" startOffset="50%">
+			<tspan  class="st2" style="font-size:110px;">SIDE TXT/LOGO</tspan>
+		</textPath>
+	</text>
+</svg>

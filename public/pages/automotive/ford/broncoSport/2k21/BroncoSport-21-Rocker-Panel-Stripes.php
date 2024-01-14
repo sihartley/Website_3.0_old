@@ -43,9 +43,9 @@ require_once PRIV_PATH . '/includes/automotive/automotive_variables.php';
 galleryAutomation ($galleryDir);
 
 /* Graphics Options */
-$accentStyles = [3]; //Styles that have an Accent
+$accentStyles = [3, 7]; //Styles that have an Accent
 $accentCut = []; //Styles that have the Accent Cut-Out
-$accentSame = [3]; //Styles that have the accent Separate which can be the Same Color as Main
+$accentSame = [3, 7]; //Styles that have the accent Separate which can be the Same Color as Main
 $accent2Styles = []; //Styles with a 2nd Accent
 $accent2Cut = []; //Styles that have the 2nd Accent Cut-Out
 $accent2Same = [];  //Styles that have the 2nd Accent Separate which can be the Same Color as Main

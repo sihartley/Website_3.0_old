@@ -462,7 +462,7 @@ function textColorOptions($design, $text1 = [], $textRef = '', $textCut = [], $t
 }
 
 // Trim Options (Sunroof, Antenna, Hood etc.)
-function trimOptions ($design, array $trimDataArray = null):void {
+function trimOptions ($design, ?array $trimDataArray):void {
     if(isset($trimDataArray)) {
         foreach ($trimDataArray as $trimData) {
             $name = $trimData['select']['name']; $id = strtolower($name); $placeholder = $trimData['select']['placeholder'];

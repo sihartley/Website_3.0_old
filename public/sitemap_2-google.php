@@ -44,8 +44,9 @@ function imageCheck($base_url, $source):string {
       echo "<loc>" . strtolower($base_url . $auto_row['product_page']) . "</loc>" . PHP_EOL;
       echo '<image:image>' . PHP_EOL;
 
-      imageCheck($base_url, $auto_row['image_path'].urldecode($auto_row['main_page_image']));
+//      imageCheck($base_url, $auto_row['image_path'].$auto_row['main_page_image']);
 
+      echo "<image:loc>$base_url.{$auto_row['image_path']}.{$auto_row['main_page_image']}</image:loc>";
       echo "<image:title>{$auto_row['year']} {$auto_row['make']} {$auto_row['model']} {$product_name}</image:title>" . PHP_EOL;
       echo "<image:caption>{$product_name} installed on {$auto_row['year']} {$auto_row['make']} {$auto_row['model']}</image:caption>" . PHP_EOL;
       echo '</image:image>' . PHP_EOL;

@@ -43,13 +43,13 @@ require_once PRIV_PATH . '/includes/automotive/automotive_variables.php';
 galleryAutomation ($galleryDir);
 
 /* Graphics Options */
-$accentStyles = [5, 6, 7]; //Styles that have an Accent
-$accentCut = []; //Styles that have the Accent Cut-Out
-$accentSame = [5, 6, 7]; //Styles that have the accent Separate which can be the Same Color as Main
-$accent2Styles = []; //Styles with a 2nd Accent
-$accent2Cut = []; //Styles that have the 2nd Accent Cut-Out
+$accentStyles = [5, 6, 7, 9, 10]; //Styles that have an Accent
+$accentCut = [9]; //Styles that have the Accent Cut-Out
+$accentSame = [5, 6, 7, 10]; //Styles that have the accent Separate which can be the Same Color as Main
+$accent2Styles = [7, 10]; //Styles with a 2nd Accent
+$accent2Cut = [7, 10]; //Styles that have the 2nd Accent Cut-Out
 $accent2Same = [];  //Styles that have the 2nd Accent Separate which can be the Same Color as Main
-$text = [2, 3, 4, 7, 8]; $textRef = 'CUSTOM TEXT/LOGO / FX4'; $textCut = [2, 4, 7, 8]; $textSame = [3];
+$text = [2, 3, 4, 7, 8, 9]; $textRef = 'CUSTOM TEXT/LOGO / FX4'; $textCut = [2, 4, 7, 8, 9]; $textSame = [3];
 $text2 = []; $text2Ref = 'SIDE TXT/LOGO'; $text2Cut = []; $text2Same = [];
 $text3 = []; $text3Ref = ''; $text3Cut = []; $text3Same = [];
 $trimData = null;

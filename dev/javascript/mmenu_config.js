@@ -38,9 +38,9 @@ document.addEventListener(
           {
             position: "bottom",
             content: [
-              "<a class='fa fa-envelope' href='#/'>Email</a>",
-              "<a class='fa fa-twitter' href='#/'>Tweet</a>",
-              "<a class='fa fa-facebook' href='#/'>SMS</a>"
+              "<a class='fa fa-envelope' href=\"javascript:void(window.open('https://form.jotform.com/vinylimagination/information-request-form', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500'))\">Email</a>",
+              //"<a class='fa fa-twitter' href='#/'>Tweet</a>",
+              "<a class='fa fa-facebook' href='sms:+1 (805) 910-7072'>SMS</a>"
             ]
           }
         ]

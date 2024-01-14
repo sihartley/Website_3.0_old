@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2194.8 2308.9" style="enable-background:new 0 0 2194.8 2308.9;" xml:space="preserve">
+	<title>$design_title</title>
+	<desc>$design_desc</desc>
+    <defs>
+		<linearGradient id="mainGradient_15" y2='1'>
+        </linearGradient>
+		<linearGradient id="accentGradient_15" y2='1'>
+        </linearGradient>
+		<linearGradient id="accent2Gradient_15" y2='1'>
+        </linearGradient>
+		<linearGradient id="textGradient_15" y2='1'>
+        </linearGradient>
+		<linearGradient id="text2Gradient_15" y2='1'>
+        </linearGradient>
+		<linearGradient id="text3Gradient_15" y2='1'>
+        </linearGradient>
+    </defs>
+
+	<path class="maincolor" d="M1097.4,2235.6c277.5,0,552.9,20,586.7,25c27.3,4,50,14.3,61.9,32.6c1.1,1.7,4.9,12.4,4.9,12.4
+	c1.1,4.3,7.2,4.5,8.6,0.2l4.2-13c7.1-22.2,13.9-44.5,20.4-66.7c9.5-32.3,18.5-64.7,27.2-97.2c7.6-28.5,14.9-57,22-85.6
+	c7.3-29.3,14.3-58.7,21.1-88.1c6.1-26.1,12-52.2,17.7-78.4c10.7-48.7,21-97.5,30.8-146.3c10-49.8,19.7-99.7,29-149.7
+	c23.4-125.8,45.1-254.4,64.9-380.8c9.2-59.1,18-118.2,26.2-177.4c7.6-54.1,14.8-108.3,21.7-162.5c7-55.1,13.8-110.3,20.3-165.4
+	c6-50.8,11.9-101.7,17.7-152.6c4.7-41.1,9.4-82.2,14.2-123.3c4.2-35.6,9.3-78.9,13.9-114.7c9.7-75.6,28.5-150.7,54.4-222.3
+	c6.7-18.5,13.9-36.7,21.6-54.8c1-2.3,7.4-16.6,7.4-16.6c2.5-5.4-2.4-11.4-8.2-10l-23,5.3c-58,13.1-145.9,30.9-263.5,48.7
+	c-261.2,39.4-512.9,54.4-802,54.4c-289.1,0-540.8-15-802-54.4C177.7,36.5,89.8,18.6,31.8,5.5l-23-5.3C3-1.2-1.8,4.8,0.7,10.2
+	c0,0,6.4,14.3,7.4,16.6c7.7,18.1,14.9,36.3,21.6,54.8C55.5,153.2,74.4,228.4,84,303.9c4.6,35.8,9.8,79.1,13.9,114.7
+	c4.8,41.1,9.5,82.2,14.2,123.3c5.8,50.9,11.7,101.7,17.7,152.6c6.5,55.2,13.3,110.3,20.3,165.4c6.9,54.2,14.1,108.4,21.7,162.5
+	c8.3,59.2,17,118.4,26.2,177.4c19.8,126.5,41.5,255.1,64.9,380.8c9.3,50,18.9,99.9,29,149.7c9.8,48.9,20.1,97.6,30.8,146.3
+	c5.8,26.2,11.7,52.3,17.7,78.4c6.8,29.4,13.9,58.8,21.1,88.1c7.1,28.6,14.4,57.2,22,85.6c8.7,32.5,17.7,64.9,27.2,97.2
+	c6.5,22.2,13.3,44.4,20.4,66.7l4.2,13c1.4,4.3,7.5,4.1,8.6-0.2c0,0,3.8-10.7,4.9-12.4c11.9-18.3,34.6-28.6,61.9-32.6
+	C544.4,2255.6,819.9,2235.6,1097.4,2235.6z M1505.8,1546c0,225.6-182.8,408.4-408.4,408.4S689,1771.5,689,1546
+	s182.8-408.4,408.4-408.4S1505.8,1320.4,1505.8,1546z"/>
+
+	<text class="textcolor" style="font-size:110px; font-family:'Square721BT-BoldExtended';  text-anchor:middle;" transform="matrix(0.7803 0 0 1 1100 1591.248)">
+		<tspan>$textRef</tspan>
+	</text>
+
+	<path id="SVGID_x5F_A" class="textpath" d="M55,72.5c26.9,73.7,45.6,150.1,55.8,227.9l14,115l31.9,275.9L177,856.5l21.6,162.3
+	c22.1,162,58.9,384.6,90.9,557c36.9,198.4,89.7,451.1,147.1,642.6l11.5,37.3"/>
+	<text class="textcolor2" style=" font-size:110px; text-anchor:middle; font-family:'Square721BT-BoldExtended';">
+		<textPath  xlink:href="#SVGID_x5F_A" startOffset="50%">
+			<tspan>$text2Ref</tspan>
+		</textPath>
+	</text>
+
+	<path id="SVGID_x5F_B" class="textpath" d="M1746.6,2255.7l11.5-37.3
+	c56.3-187.9,111-447.5,147.1-642.6c32.1-173.5,68.5-392.9,90.9-557l21.6-162.3l20.3-165.2l31.9-275.9l14-115
+	c10.2-77.8,28.9-154.2,55.8-227.9"/>
+	<text class="textcolor2" style=" font-size:110px; text-anchor:middle; font-family:'Square721BT-BoldExtended';">
+		<textPath  xlink:href="#SVGID_x5F_B" startOffset="50%">
+			<tspan>$text2Ref</tspan>
+		</textPath>
+	</text>
+</svg>

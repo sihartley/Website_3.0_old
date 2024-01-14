@@ -25,7 +25,8 @@ section {
 
   aside,
   > div.contacts,
-  > div.insurance {
+  > div.insurance,
+  > div.shipping {
     justify-content: center;
     text-align: center;
   }
@@ -250,7 +251,8 @@ section {
 
 
   > div.contacts,
-  > div.insurance {
+  > div.insurance,
+  > div.shipping {
 
     > h3 { // Hours
       flex: 1 0 100%;
@@ -310,7 +312,8 @@ section {
     }
   }
 
-  > div.insurance {
+  > div.insurance,
+  > div.shipping {
     img {
       flex: 1 0 100%;
       height: 6em;
@@ -477,7 +480,8 @@ section {
 
 @media screen and (max-width: 600px) {
   section>div.contacts div,
-  section>div.insurance div {
+  section>div.insurance div,
+  section>div.shipping div {
     flex: 1 0 100%;
   }
 

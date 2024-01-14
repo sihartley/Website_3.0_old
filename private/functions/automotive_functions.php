@@ -52,9 +52,10 @@ function graphic_block_heading($year_range, $model, $product_name):void {
 
 // Container Start (Graphic Design Image)
 function containerStart($name, $design, $graphic_design):void {
+    global $orientation;
     echo "<div id='cartContainer-$design' class='design cart-container'>"
         . "<h3>$name</h3>"
-        . "<div id='graphic_$design' class='image'>"
+        . "<div id='graphic_$design' class='image $orientation'>"
         . $graphic_design /* Result from auto_graphic_while_start.php */
         . '</div>';
 }
@@ -98,7 +99,8 @@ function graphic_vehicle_query($id):array {
 }
 
 // Model Years
-function modelYears($graphic, $vehicle, array $yearsMod = null):void {
+function modelYears($graphic, $vehicle, ?array $yearsMod):void {
+    global $design;
     if ($graphic['years_exclusive']) {
         $modelYears = explode(', ', $graphic['years_exclusive']);
     } elseif(date('n') >= 8 && stripos($vehicle['year'], 'present')) { // > August, and 'Present'
@@ -108,9 +110,8 @@ function modelYears($graphic, $vehicle, array $yearsMod = null):void {
         $modelYears =  explode(', ', $vehicle['years']);
     }
 
-
     //output in form
-    echo '<div class="model-year"><select data-placeholder="Year" name="Model Year:" onchange="initDynamicPrice();" style="width: 100%;" required>';
+    echo "<div class='model-year'><select id='modelyear_$design' data-placeholder='Year' name='Model Year:' onchange='initDynamicPrice();' style='width: 100%;' required>";
     echo "<option></option>"; //Required for placeholder to work
 
     if (!$yearsMod) {
@@ -139,8 +140,8 @@ function modelYears($graphic, $vehicle, array $yearsMod = null):void {
 }
 
 // Trim Levels
-function trimLevels($graphic, $vehicle, array $trimsOverride = null, array $trimsAddon = null, array $trimsMod = null, bool $modelsOverride = null):void {
-    global $svg_image; $model = $modelsOverride === true ? '' : $graphic['model'];
+function trimLevels($graphic, $vehicle, ?array $trimsOverride, ?array $trimsAddon, ?array $trimsMod, ?bool $modelsOverride):void {
+    global $design, $svg_image; $model = $modelsOverride === true ? '' : $graphic['model'];
 
     //Trim Level List Creation
     if ($trimsOverride) { // Takes Precedent Over Automated TrimLevel code below
@@ -163,7 +164,7 @@ function trimLevels($graphic, $vehicle, array $trimsOverride = null, array $trim
 
     //Output in form
     echo "<div class='trim-level'>
-            <select data-placeholder='Trim' name='Trim Level:' onchange='initDynamicPrice();' style='width: 100%;' required>";
+            <select id='trimlevel_$design' data-placeholder='Trim' name='Trim Level:' onchange='initDynamicPrice();' style='width: 100%;' required>";
     echo '<option></option>';
 
     if (!$trimsMod) {
@@ -193,9 +194,10 @@ function trimLevels($graphic, $vehicle, array $trimsOverride = null, array $trim
 
 // Car Colors
 function carColors($vehicle):void {
+    global $design;
     echo
         "<div class='car-color'>"
-        ."<select data-placeholder='Color' name='Car Color:' onchange='initDynamicPrice();' style='width: 100%;'>"
+        ."<select id='carpaint_$design' data-placeholder='Color' name='Car Color:' onchange='initDynamicPrice();' style='width: 100%;'>"
         ."<option></option>";
     $color = explode(', ', $vehicle['colors']);
     $car_colors = [];
@@ -222,14 +224,14 @@ function graphicInformationStart():void {
 function materialBrand($design):void {
     echo
     "<div class='material'>"
-        ."<select id='material_$design' data-placeholder='Preferred Install Method' onchange='initDynamicPrice();' style='width: 100%;'>"
+        ."<select id='material_$design' data-placeholder='Preferred Install Method' name='Install' onchange='initDynamicPrice();' style='width: 100%;' required>"
             ."<option value=''></option>"
             ."<option value='wet-install'>Wet-Install Premium Cast</option>"
             ."<option value='dry-install'>Dry-Install Premium Wrap</option>"
         .'</select>'
     .'</div>'
     ."<div class='brand'>"
-        ."<select id='brand_$design' data-placeholder='Choose Material Brand(s)' onchange='initDynamicPrice();' style='width: 100%; display: none;' multiple required disabled>"
+        ."<select id='brand_$design' data-placeholder='Choose Material Brand(s)' name='Brand' onchange='initDynamicPrice();' style='width: 100%; display: none;' multiple required disabled>"
             ."<option value=''></option>"
         .'</select>'
     .'</div>';
@@ -352,7 +354,7 @@ function text($textRef, $textCut, $textSame, $accentStyles, $accent2Styles):void
             ."<input id='option-1-$design' type='checkbox'>"
         ."</div>"
         ."<div class='option' style='display: none'>"
-            ."<input id='textinput_$design' type='text' name='$textRef:'  oninput='textChange(this)'>"
+            ."<input id='textinput_$design' placeholder='$textRef Text/Logo' type='text' name='$textRef:'  oninput='textChange(this)'\>"
             ."<select id='textcolor_$design' data-placeholder='Text/Logo Color' name='$textRef Color:' onchange='initDynamicPrice();' style='width: 100%;' disabled>"
                 ."<option class='standard-opt' value=''></option>";
         if (in_array($design, $textCut)) {
@@ -411,7 +413,7 @@ function text2($text2Ref, $text2Cut, $text2Same, $text1, $accentStyles, $accent2
             ."<input id='option-2-$design' type='checkbox'>"
         ."</div>"
         ."<div class='option' style='display: none'>"
-            ."<input id='textinput2_$design' type='text' name='$text2Ref:' oninput='textChange(this)'>"
+            ."<input id='textinput2_$design' type='text' placeholder='$text2Ref Text/Logo' name='$text2Ref:' oninput='textChange(this)'>"
             ."<select id='textcolor2_$design' data-placeholder='Text/Logo Color' name='$text2Ref Color:' onchange='initDynamicPrice();' style='width: 100%;' disabled>"
                 ."<option class='standard-opt' value=''></option>";
         if (in_array($design, $text2Cut)) {
@@ -480,7 +482,7 @@ function text3($text3Ref, $text3Cut, $text3Same, $text1, $text2, $accentStyles, 
             ."<input id='option-3-$design' type='checkbox'>"
         ."</div>"
         ."<div class='option' style='display: none'>"
-            ."<input id='textinput_3$design' type='text' name='$text3Ref:' oninput='textChange(this)'>"
+            ."<input id='textinput_3$design' type='text' placeholder='$text3Ref Text/Logo' name='$text3Ref:' oninput='textChange(this)'>"
             ."<select id='textcolor3_$design' data-placeholder='Text/Logo Color' name='$text3Ref Color:' onchange='initDynamicPrice();' style='width: 100%;' disabled>"
                 ."<option class='standard-opt' value=''></option>";
         if (in_array($design, $text3Cut)) {
@@ -588,7 +590,7 @@ function textColorOptions($design, $text1 = [], $textRef = '', $textCut = [], $t
 }
 
 // Trim Options (Sunroof, Antenna, Hood etc.)
-function trimOptions ($design, array $trimDataArray = null):void {
+function trimOptions ($design, ?array $trimDataArray):void {
     if(isset($trimDataArray)) {
         foreach ($trimDataArray as $trimData) {
             $name = $trimData['select']['name']; $id = strtolower($name); $placeholder = $trimData['select']['placeholder'];
@@ -657,20 +659,25 @@ function graphicDesignsSectionClose():void {
 }
 
 // Price
+function priceCalc($price, $base_costs, $trans_fee, $automotive_sale_discount):float {
+    $calcPrice = ceil(num: number_format((($base_costs + $price) * $trans_fee) + ($base_costs + $price), 2));
+    return ceil($calcPrice - ($calcPrice * $automotive_sale_discount));
+}
+
 function pricing():string {
-    global $design, $graphic, $base_costs, $hr_rate, $trans_fee, $automotive_sale_discount;
+    global $design, $graphic, $base_costs_auto, $hr_rate, $trans_fee, $automotive_sale_discount;
     if (in_array($design, explode(',', $graphic['price_2_styles']), false)) {
-        $price = $graphic['price_2'] - ($graphic['price_2'] * $automotive_sale_discount);
+        $price = priceCalc($graphic['price_2'], $base_costs_auto, $trans_fee, $automotive_sale_discount);
     } elseif (in_array($design, explode(',', $graphic['price_3_styles']), false)) {
-        $price = $graphic['price_3'] - ($graphic['price_3'] * $automotive_sale_discount);
+        $price = priceCalc($graphic['price_3'], $base_costs_auto, $trans_fee, $automotive_sale_discount);
     } elseif (in_array($design, explode(',', $graphic['price_4_styles']), false)) {
-        $price = $graphic['price_4'] - ($graphic['price_4'] * $automotive_sale_discount);
+        $price = priceCalc($graphic['price_4'], $base_costs_auto, $trans_fee, $automotive_sale_discount);
     } elseif (in_array($design, explode(',', $graphic['price_5_styles']), false)) {
-        $price = $graphic['price_5'] - ($graphic['price_5'] * $automotive_sale_discount);
+        $price = priceCalc($graphic['price_5'], $base_costs_auto, $trans_fee, $automotive_sale_discount);
     } else {
-        $price = $graphic['price_1'] - ($graphic['price_1'] * $automotive_sale_discount);
+        $price = priceCalc($graphic['price_1'], $base_costs_auto, $trans_fee, $automotive_sale_discount);
     }
-    return ceil(num: number_format((($base_costs + $price) * $trans_fee) + ($base_costs + $price), 2));
+    return ceil(num: $price);
 }
 
 // Weight

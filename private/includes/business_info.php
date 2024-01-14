@@ -24,10 +24,16 @@ $email_admin = 'administrator@vinylimagination.com'; $e_admin = 'administrator@'
 $email_gallery = 'gallery@vinylimagination.com'; $e_gallery = 'gallery@';
 
 //FoxyCart
-$foxy_cart = 'https://vinylimagination.foxycart.com/cart';
+//$foxy_cart = 'https://vinylimagination.foxycart.com/cart'; //Original URL From Foxy Cart
+$foxycart_SSL = 'checkout.vinylimagination.com'; //Custom SSL URL From Foxy Cart
+$foxy_cart = 'https://'.$foxycart_SSL.'/cart';
 
 //Tawk.to Direct Chat Link
 $chat_link = 'https://tawk.to/chat/6229917ca34c2456412a54e4/1ftp60k94';
+
+//Free Shipping Threshold
+$shippingCarriers = 'USPS, FedEx, and UPS';
+$freeShipLimit = 100;
 
 //Base Costs
 $tube_caps = 1.00;
@@ -35,8 +41,8 @@ $shipping_tube = 3.00;
 $shipping_cost = 10.00;
 $foxy_trans_fee = 0.20; //$21.25 Monthly Subscription
 $oDesk_trans_fee = 0.25; //$20.00 Monthly Subscription
-$cc_trans_fee = 0.25; //+3.4% Fee
-$base_costs = $tube_caps + $shipping_tube + $shipping_cost + $foxy_trans_fee + $oDesk_trans_fee + $cc_trans_fee;
+$cc_trans_fee = 0.034; //+3.4% Fee
+$base_costs_auto = $tube_caps + $shipping_tube + $shipping_cost + $foxy_trans_fee + $oDesk_trans_fee + $cc_trans_fee;
 
 $trans_fee = 0.034;
 
@@ -46,7 +52,7 @@ $hr_rate = 88.00;
 //Discounts (Percentage)
 $automotive_sale_discount = match (date('M')) {
     /* Simon: Info: a -ve value will add to the price. */
-    'Jan', 'Feb', 'Mar' => 0.01,
+    'Jan', 'Feb', 'Mar' => 0.26,
     'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep' => 0.00,
     'Oct', 'Nov', 'Dec' => 0.03,
     default => 0.10
@@ -58,5 +64,6 @@ $trailer_sale_discount = .000;
 $graphicRequest = '232556466911057';
 $infoRequest = '221986631775165';
 $insuranceClaim = '233647762310152';
+$shippingClaim = '240095972773163';
 
 

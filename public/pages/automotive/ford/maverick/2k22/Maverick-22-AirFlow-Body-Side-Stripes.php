@@ -49,7 +49,7 @@ $accentSame = [2]; //Styles that have the accent Separate which can be the Same 
 $accent2Styles = []; //Styles with a 2nd Accent
 $accent2Cut = []; //Styles that have the 2nd Accent Cut-Out
 $accent2Same = [];  //Styles that have the 2nd Accent Separate which can be the Same Color as Main
-$text = [1, 2, 3]; $textRef = 'CUSTOM TEXT'; $textCut = [1, 2, 3]; $textSame = [];
+$text = [1, 2, 3, 4]; $textRef = 'CUSTOM TEXT'; $textCut = [1, 2, 3]; $textSame = [];
 $text2 = []; $text2Ref = 'SIDE TXT/LOGO'; $text2Cut = []; $text2Same = [];
 $text3 = []; $text3Ref = ''; $text3Cut = []; $text3Same = [];
 $trimData = null;

@@ -54,9 +54,13 @@ function host_ident($server): array
     return array($hostingServer, $dbPrefix, $minifyHTML, $rightClickProtect, $liveReload, $serverDot);
 }
 
-function category_ident($cat, $string):void {
-    if (str_contains(strtolower($_SERVER['REQUEST_URI']), $cat)) {
-        echo $string;
+function category_ident(array $cats, ?array $xPages, $string):void {
+    //['automotive.php', 'vehicle-main.php']
+    foreach ($cats as $cat) {
+        if (str_contains(haystack: strtolower(string: $_SERVER['REQUEST_URI']), needle: $cat)
+            and (!in_array(strtolower(string: basename($_SERVER['PHP_SELF'])), haystack: $xPages))) {
+            echo $string;
+        }
     }
 }
 
@@ -182,4 +186,11 @@ function insuranceClaimRequest($formNumber):void {
          href=\"javascript:void( window.open( 'https://form.jotform.com/{$formNumber}?"
         ."&pageUrl={$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) \">"
         ."<div><span>File Installation</span><br><span>Insurance Claim</div></a>";
+}
+
+function shippingClaimRequest($formNumber):void {
+    echo "<a class=\"claim-button\" aria-label=\"File a shipping Claim\"
+         href=\"javascript:void( window.open( 'https://form.jotform.com/{$formNumber}?"
+        ."&pageUrl={$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) ) \">"
+        ."<div><span>File Shipping</span><br><span>Claim</div></a>";
 }

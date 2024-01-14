@@ -44,11 +44,11 @@ galleryAutomation ($galleryDir);
 
 /* Graphics Options */
 $accentStyles = [2, 4]; //Styles that have an Accent
-$accentCut = []; //Styles that have the Accent Cut-Out
-$accentSame = [2, 4]; //Styles that have the accent Separate which can be the Same Color as Main
-$accent2Styles = []; //Styles with a 2nd Accent
+$accentCut = [2]; //Styles that have the Accent Cut-Out
+$accentSame = [4]; //Styles that have the accent Separate which can be the Same Color as Main
+$accent2Styles = [2]; //Styles with a 2nd Accent
 $accent2Cut = []; //Styles that have the 2nd Accent Cut-Out
-$accent2Same = [];  //Styles that have the 2nd Accent Separate which can be the Same Color as Main
+$accent2Same = [2];  //Styles that have the 2nd Accent Separate which can be the Same Color as Main
 $text = []; $textRef = 'TXT/LOGO'; $textCut = []; $textSame = [];
 $text2 = []; $text2Ref = 'SIDE TXT/LOGO'; $text2Cut = []; $text2Same = [];
 $text3 = []; $text3Ref = ''; $text3Cut = []; $text3Same = [];

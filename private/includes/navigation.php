@@ -27,9 +27,10 @@
                                         $vehicle_years_query = "(SELECT year FROM ".$dbPrefix."Automotive.vehicles WHERE model = '$model' AND available IS NOT NULL ORDER BY year DESC)";
                                         $vehicle_years = db_query($vehicle_years_query);
                                         db_disconnect(db_connect());
-                                        while ($year =mysqli_fetch_assoc($vehicle_years)) {
+                                        while ($year = mysqli_fetch_assoc($vehicle_years)) {
                                             $years = $year['year']; $year_start = explode(' ', $years)[0];
-                                            $href = "/pages/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start&years=$years";
+//                                            $href = "/pages/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start&years=$years";
+                                            $href = "/pages/automotive/vehicle-main.php?make=$make&model=$model&year=$year_start";
                                             echo "<li><a href='$href'>$years</a></li>";
                                         }
                                         echo '</ul>';
@@ -138,6 +139,7 @@
             </li>
             <li><a href="/pages/support/contact.php" title="Contact us">Contact Us</a></li>
             <li><a href="/pages/support/insurance.php" title="Installation Insurance">Installation Insurance</a></li>
+            <li><a href="/pages/support/shipping-information.php" title="Shipping Information">Shipping Information</a></li>
             <li><a href="/pages/support/terms-conditions.php" title="Terms and Conditions">Terms & Conditions</a></li>
             <li><a href="/pages/support/privacy-policy.php" title="Privacy Policy">Privacy Policy</a></li>
             <li><a href="/pages/support/return-policy.php" title="Return Policy">Return Policy</a></li>

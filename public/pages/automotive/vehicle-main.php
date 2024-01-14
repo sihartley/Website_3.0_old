@@ -9,10 +9,17 @@ require_once dirname($_SERVER['DOCUMENT_ROOT']) . '/private/includes/initialize.
  * From function hostident() IN core_functions.php INCLUDE in initialize.php
  */
 
-if (isset($_GET['make'], $_GET['model'], $_GET['year'], $_GET['years'])) {
-    $make = $_GET['make']; $model = $_GET['model']; $year = $_GET['year']; $years = $_GET['years'];
+if (isset($_GET['make'], $_GET['model'], $_GET['year'])) {
+    $make = $_GET['make']; $model = $_GET['model']; $year = $_GET['year']; $years=''; //$years set
     $graphics_query = "(select product_name, part_number, make, model, year, price_1, image_path, main_page_image, product_page from ".$dbPrefix."Automotive.graphics where make = '".db_escape($make)."' AND model = '".db_escape($model)."' AND year = '".db_escape($year)."' AND available IS NOT NULL ORDER BY id DESC)";
+
+    $years_query = "(SELECT year FROM ".$dbPrefix."Automotive.vehicles WHERE model = '$model' AND year LIKE '%$year%' AND available IS NOT NULL ORDER BY year DESC)";
+    $model_years = db_query($years_query);
+
+    while ($modelYear = mysqli_fetch_assoc($model_years)) { $years = $modelYear['year']; }
+
     $alt_years_query ="(SELECT make, model, year, image_path, vehicle_250px_image FROM ".$dbPrefix."Automotive.vehicles WHERE make = '".db_escape($make)."' AND model = '".db_escape($model)."' AND year != '".db_escape($years)."' AND available IS NOT NULL ORDER BY id ASC)";
+
     $graphics = db_query($graphics_query);
     $alt_years = db_query($alt_years_query);
     db_disconnect(db_connect());

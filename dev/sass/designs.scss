@@ -5,7 +5,27 @@ html { //Global
 }
 @font-face {
   font-family: Square721BT-BoldExtended;
-  src: url(fonts/Square721BT-BoldExtended.ttf);
+  src: url('fonts/Square721BT-BoldExtended.woff2');
+}
+
+.blockErrorClass {
+  border: 2px solid #cc0000 !important;
+  border-radius: 4px;
+}
+
+.myErrorClass {
+  background: #f3d8d8 url(/css/error/error-bg.png) repeat 50% 50% !important;
+  border: 2px solid #cc0000 !important;
+  border-radius: 4px;
+}
+
+.error-container {
+  background: #fdf3f3;
+  border: 1px solid #ff3333;
+  clear: both;
+  display: none;
+  overflow: auto;
+  padding: 10px;
 }
 
 section {
@@ -66,28 +86,38 @@ section {
         margin-top: auto;
         width: 90%;
 
+        &.w {
+          flex: unset;
+          margin: auto;
+          width: 95%;
+        }
+
         img,
         svg {
           &.w {
-            max-width: 450px;
-            width: 90%; //Simon: Note: Removing this fucks Cumulative Layout Shift
+            //max-width: 450px; //Simon: Note: Remove when fixing 'w' graphics view on larger screens
+            width: 100%; //Simon: Note: Removing this fucks Cumulative Layout Shift
           }
 
           &.v {
-            max-height: 600px;
+            margin-right: 2%; //Simon: ToDo: Change in media queries for smaller width screens
+            max-height: 540px; //600px
+            max-width: 500px;
           }
         }
 
         svg {
           .textpath {fill: none;}
-          .maincolor {fill: #B3B3B3;}
-          .accentcolor {fill: #CC0D0B;}
-          .accentcolor2 {fill: none;}
-          .textcolor {fill: #f87d02;}
+          .maincolor {fill: #b3b3b3;}
+          .accentcolor {fill: #cc0d0b;}
+          .strokematchaccent {stroke: #cc0d0b;}
+          .accentoutline {fill: #6a6a6a}
+          .accentcolor2 {fill: #000000;} //#00BFFF
+          .textcolor {fill: #0052ff;}
           .textpath2 {fill: none;}
-          .textcolor2 {fill: #0052FF;}
+          .textcolor2 {fill: #f87d02;}
           .textpath3 {fill: none;}
-          .textcolor3 {fill: #f87d02;}
+          .textcolor3 {fill: #35d000;}
 
         }
 
