@@ -22,11 +22,11 @@
 	l0.1-0.8c3.6-32.5-2.2-65.4-16.7-94.7l-63.1-129.5c-34.7-69.2-51.6-145.9-49.2-223.2l13.9-693.7C1472,86.5,1218,106.1,950.5,105.7z"
 	/>
 <text class="textcolor"  textLength="650" lengthAdjust="spacingAndGlyphs" transform="matrix(0.1952 1.8899 -0.9947 0.1027 67.6196 1129.0725)" style="font-family:BankGothic-Md-BT; font-size:111.6288px;">
-	<tspan x="0" y="0">MAVERICK</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 
 
 <text class="textcolor" textLength="650" lengthAdjust="spacingAndGlyphs" transform="matrix(0.2167 -1.8876 0.9935 0.1141 1688.7703 2388.4231)" style="font-family:BankGothic-Md-BT; font-size:111.6288px;">
-	<tspan x="0" y="0">MAVERICK</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 </svg>

@@ -58,6 +58,7 @@ function textChange(data) {
     $(textChange).find('tspan').text(data.value)
 
 }
+
 // Autocomplete Scrolling (maxShowItems:)
 ;(function($, undefined) {
     'use strict';
@@ -531,7 +532,7 @@ $('.options-check').click(function(){
 
                 if ($(this).is(':checked')) {
                     $(this).prev().text('Specify ' + originalTxt + ' & Color')
-                    option.fadeIn()
+                    option.fadeIn().css('display', 'flex').css('flex-wrap', 'wrap')
                     option.children().prop('disabled', false).attr('required', true)
 
                     /* Autocomplete for Each Text Input */
@@ -755,6 +756,90 @@ $(function() {
             }
         });
     });
+});
+
+/* Help/Info Dialogues */
+$(function() {
+    $('.item-info').on('click', function () {
+
+        console.log('trigger clicked')
+        let AjaxDialoguesURL = '/ajax/ajax-dialogues.php',
+            triggerId = $(this).attr('id'),
+            dialogueId = triggerId.replace('trigger', 'dialogue').split('_')[0],
+            graphicId = localStorage.getItem('graphicId'),
+            textRef = localStorage.getItem('textRef'),
+            text2Ref = localStorage.getItem('text2Ref'),
+            text3Ref = localStorage.getItem('text3Ref'),
+            options = {
+                autoOpen: false,
+                closeOnEscape: true,
+                modal: true,
+                dialogClass: "no-close",
+                buttons: [
+                    {
+                        text: "Close",
+                        click: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                ],
+                // width: 550,
+                // height:650,
+                // title: 'Details'
+                clickOutside: true,
+                clickOutsideTrigger: triggerId
+            }
+
+            $.ajax({
+                url: AjaxDialoguesURL,
+                type: 'GET',
+                data: {
+                    'graphic': graphicId,
+                    'dialogue': dialogueId,
+                    'textRef': textRef,
+                    'text2Ref': text2Ref,
+                    'text3Ref': text3Ref
+                },
+                dataType: 'html',
+                success: function (data) {
+                    // console.log(data);
+                    // console.log(dialogueId);
+                    $('body').append(data);
+
+                    $('#' + dialogueId).dialog(options).dialog("open");
+
+
+                }
+            })
+    })
+})
+
+/* Dialogue Close by Clicking outside dialogue */
+$.widget( "ui.dialog", $.ui.dialog, {
+    options: {
+        clickOutside: false, // Determine if clicking outside the dialog shall close it
+        clickOutsideTrigger: "" // Element (id or class) that triggers the dialog opening
+    },
+    open: function() {
+        let clickOutsideTriggerEl = $( this.options.clickOutsideTrigger ),
+            that = this;
+        if (this.options.clickOutside){
+            // Add document wide click handler for the current dialog namespace
+            $(document).on( "click.ui.dialogClickOutside" + that.eventNamespace, function(event){
+                if ( $(event.target).closest($(clickOutsideTriggerEl)).length == 0 && $(event.target).closest($(that.uiDialog)).length == 0){
+                    that.close();
+                }
+            });
+        }
+        this._super(); // Invoke parent open method
+    },
+    close: function() {
+        let that = this;
+        // Remove document wide click handler for the current dialog
+        $(document).off( "click.ui.dialogClickOutside" + that.eventNamespace );
+        this._super(); // Invoke parent close method
+    },
+
 });
 
 

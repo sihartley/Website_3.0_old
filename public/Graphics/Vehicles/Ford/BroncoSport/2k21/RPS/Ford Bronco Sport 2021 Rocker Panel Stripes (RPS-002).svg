@@ -11,7 +11,7 @@
 	C8431.3,486.6,8448.4,440.6,8467.9,393.4z"/>
 
 <text class="textcolor same-main" transform="matrix(0.88 0 0 1 754.3527 461.3379)" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:323.9792px; text-anchor: start; stroke:#b3b3b3; stroke-width:180; paint-order:stroke; stroke-linecap:square; stroke-linejoin:round;">
-	<tspan x="0" y="0">CUSTOM</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 
 <path class="maincolor" d="M75.9,1074.4h6496.4c5.9,0,10.7,4.8,10.7,10.7v69c0,5.9-4.8,10.7-10.7,10.7H115.4c19.5,47.2,36.6,93.2,50,134.3
@@ -21,6 +21,6 @@
 	z"/>
 
 <text class="textcolor same-main" transform="matrix(0.88 0 0 1 7858.9473 1232.8102)" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:323.9792px; text-anchor: end; stroke:#b3b3b3; stroke-width:180; paint-order:stroke; stroke-linecap:square; stroke-linejoin:round;">
-	<tspan x="0" y="0" class="textcolor">CUSTOM</tspan>
+	<tspan x="0" y="0" class="textcolor">$textRef</tspan>
 </text>
 </svg>

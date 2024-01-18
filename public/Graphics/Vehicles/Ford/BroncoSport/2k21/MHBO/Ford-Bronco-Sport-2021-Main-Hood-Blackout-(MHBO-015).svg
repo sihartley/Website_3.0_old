@@ -17,6 +17,6 @@
 	c2.8,78.7,7.4,157.3,13.8,235.8c10,123.8,29.1,257.5,56.9,376.2c8.5,36.1,20.8,77.4,44.7,108.2c18.8,24.2,53.1,41.5,83.9,49.3
 	c42.2,10.4,85.2,17.1,128.6,19.9c48.3,3.3,96.6,5.5,145,6.6l174.4,3.3c223.7,2.4,447.4,3.1,671.1,2.1H1358.9z"/>
 <text class="textcolor strokematchaccent" transform="matrix(1 0 0 1 1366.8897 2594.2478)" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:205.9416px;  stroke-width:40; paint-order:stroke; stroke-linecap:round; stroke-linejoin:round; text-anchor: middle;">
-	<tspan x="0" y="0">CUSTOM</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 </svg>

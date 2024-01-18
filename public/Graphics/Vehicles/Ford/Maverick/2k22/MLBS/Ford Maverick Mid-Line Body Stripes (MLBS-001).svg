@@ -14,7 +14,7 @@
 	c-65.6-4-90.4-55.7-108.3-78.6C124.5,708,64.3,618.5,34.5,551.9S1.7,431,0.1,377C-1.3,328,9,141.5,15.9,74.9
 	c5.9-56.7,35.2-68,61.5-73.2L87.1,0c0.8-0.1,1.8,0.4,1.8,1.2C89,2,88.5,2.6,87.8,2.9z"/>
 <text class="textcolor" transform="matrix(1.46 1.960547e-03 -1.342841e-03 1 599.8055 793.0512)" style="font-family:'Square721BT-BoldExtended'; font-size:109.1441px; text-anchor:start;">
-	<tspan x="0" y="0">CUSTOM TEXT</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 <g>
 	<path class="accentcolor" d="M6457.3,1200.9l-13.2,24.9l-76.5-40.4L6457.3,1200.9z M6077.3,1030l26,13.7l-109.8,10.2l-27.1-14.3
@@ -71,7 +71,7 @@
 	c-5.9-56.7-35.2-68-61.5-73.2l-9.6-1.7c-0.8-0.1-1.8,0.4-1.8,1.2C7111.7,1667.4,7112.1,1668.1,7112.9,1668.3z"/>
 
 <text class="textcolor" transform="matrix(1.46 1.960547e-03 -1.342841e-03 1 6627.0015 2453.7969)" style="font-family:'Square721BT-BoldExtended'; font-size:109.1441px; text-anchor:end;">
-	<tspan x="0" y="0">CUSTOM TEXT</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 <g>
 	<path class="accentcolor" d="M1430.6,2503.2l13.2,24.9l-76.5,40.4L1430.6,2503.2z M1075.3,2720.9l26-13.7l-53.4,96.5l-27.1,14.3

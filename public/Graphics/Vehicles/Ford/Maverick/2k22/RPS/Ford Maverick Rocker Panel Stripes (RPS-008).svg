@@ -19,7 +19,7 @@
 </g>
 	
 <text class="textcolor" transform="matrix(1 0 0 1 439.2495 197.9509)" style="font-family:'Square721-Cn-Bold'; font-size:198.5904px; text-anchor: start;">
-	<tspan x="0" y="0">CUSTOM TEXT/LOGO</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 	
 <g>
@@ -37,6 +37,6 @@
 </g>
 	
 <text class="textcolor" transform="matrix(1 0 0 1 5625.0254 645.9588)" style="font-family:'Square721-Cn-Bold'; font-size:198.5904px; text-anchor: end;">
-	<tspan x="0" y="0">CUSTOM TEXT/LOGO</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 </svg>

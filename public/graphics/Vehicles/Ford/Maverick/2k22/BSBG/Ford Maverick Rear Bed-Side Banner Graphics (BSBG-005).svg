@@ -314,10 +314,10 @@
 	<path class="accentcolor" d="M1452.3,1546.6c4.6,10.1,9,20,13.1,29.7l2.8-18.5c0.2-1.4-0.5-2.8-1.7-3.5L1452.3,1546.6z"/>
 </g>
 	<text class="textcolor outline" textLength="11" lengthAdjust="spacingAndGlyphs" transform="matrix(118.4741 -1.3361 1.3361 118.4741 2.3547 486.4537)" style="font-family:BankGothic-Md-BT; font-size:2.3251px; stroke:#6A6A6A; stroke-width:.55; paint-order:stroke; stroke-linecap:round; stroke-linejoin:round; ">
-		<tspan>MAVERICK</tspan>
+		<tspan>$textRef</tspan>
 	</text>
 
 	<text class="textcolor outline" textLength="11" lengthAdjust="spacingAndGlyphs" transform="matrix(118.4816 -3.000000e-04 3.000000e-04 118.4816 4172.083 478.6956)" style="font-family:BankGothic-Md-BT; font-size:2.3251px; stroke:#6A6A6A; stroke-width:.55; paint-order:stroke; stroke-linecap:round; stroke-linejoin:round;">
-	<tspan>MAVERICK</tspan>
+	<tspan>$textRef</tspan>
 </text>
 </svg>

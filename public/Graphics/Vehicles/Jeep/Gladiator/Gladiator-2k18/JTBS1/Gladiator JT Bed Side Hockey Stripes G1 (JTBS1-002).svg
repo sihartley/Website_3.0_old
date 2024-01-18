@@ -21,6 +21,6 @@
 	C8399.5,1906.2,8403.1,1904.4,8404.4,1902z"/>
 
 <text class="textcolor" transform="matrix(1 0 0 1 6522.3486 1059.7133)" textLength="1350" lengthAdjust="spacingAndGlyphs" style="font-family:'Arial-Black'; font-size:290.7986px;">
-	<tspan>Custom</tspan>
+	<tspan>$textRef</tspan>
 </text>
 </svg>

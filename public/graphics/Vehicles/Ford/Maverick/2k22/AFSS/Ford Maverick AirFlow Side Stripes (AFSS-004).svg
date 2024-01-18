@@ -110,9 +110,9 @@
 <path class="maincolor" d="M5376.7,1741.3l-358.4-312.9c-57.3,46.6-105.2,66.6-164.5,75.3l358.4,329.2
 	C5259,1811.6,5311.8,1782.1,5376.7,1741.3z"/>
 <text class="textcolor" textLength="2500" lengthAdjust="spacingAndGlyphs" style="font-family:'Square721BT-BoldExtended'; font-size:183.204px; text-anchor:left;" transform="matrix(1 0 0 1 612.626 1760.6558)">
-	<tspan x="0" y="0">CUSTOM TEXT</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 <text class="textcolor" textLength="2500" lengthAdjust="spacingAndGlyphs" style="font-family:'Square721BT-BoldExtended'; font-size:183.204px; text-anchor:right;" transform="matrix(1 0 0 1 4520.397 3715.0483)">
-	<tspan x="0" y="0">CUSTOM TEXT</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 </svg>

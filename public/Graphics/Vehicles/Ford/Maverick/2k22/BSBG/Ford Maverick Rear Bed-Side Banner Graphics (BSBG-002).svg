@@ -22,7 +22,7 @@
 <path class="maincolor" d="M2492.3,1121.9l-657.5,511.5c20.3-0.6,37.8-7,54-19.6l605.4-471C2501.6,1137.1,2500.5,1125.8,2492.3,1121.9z"/>
 
 	<text class="textcolor outline" textLength="14" lengthAdjust="spacingAndGlyphs" transform="matrix(118.4816 -3.000000e-04 3.000000e-04 118.4816 4.882812e-04 304.8753)" style="font-family:BankGothic-Md-BT; font-size:2.3251px; stroke:#6A6A6A; stroke-width:.55; paint-order:stroke; stroke-linecap:round; stroke-linejoin:round; ">
-		<tspan>MAVERICK</tspan>
+		<tspan>$textRef</tspan>
 	</text>
 	
 <path class="maincolor" d="M5064.9,574.3L4366.8,31.2c52.5,0.7,105.7,1.4,159.4,2.1l34.6,0.4c8.2,0.1,15.2,2.5,21.6,7.6
@@ -45,6 +45,6 @@
 	/>
 
 	<text class="textcolor outline" textLength="14" lengthAdjust="spacingAndGlyphs" transform="matrix(118.471 -1.3361 1.3361 118.4741 3788.6772 312.6333)" style="font-family:BankGothic-Md-BT; font-size:2.3251px; stroke:#6A6A6A; stroke-width:.55; paint-order:stroke; stroke-linecap:round; stroke-linejoin:round;">
-		<tspan>MAVERICK</tspan>
+		<tspan>$textRef</tspan>
 	</text>
 </svg>

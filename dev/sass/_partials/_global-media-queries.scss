@@ -21,7 +21,18 @@
       }
     }
   }
+
+  section.graphic-designs div.design div.form form div.graphic-details {
+    .material {
+      margin-right: 0;
+    }
+
+    .brand {
+      margin-left: 2%;
+    }
+  }
 }
+
 @media screen and (max-width: 975px) { //below 930px
   header {
     div.fixed-title .menu-bar {

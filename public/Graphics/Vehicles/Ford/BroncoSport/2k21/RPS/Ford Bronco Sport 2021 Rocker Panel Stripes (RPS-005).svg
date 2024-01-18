@@ -36,7 +36,7 @@
 </g>
 	
 <text class="textcolor" transform="matrix(0.9 0 0 1 749.9726 437.3433)" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:261.7107px; text-anchor: start">
-	<tspan x="0" y="0" class="textcolor st2 st3">CUSTOM</tspan>
+	<tspan x="0" y="0" class="textcolor st2 st3">$textRef</tspan>
 </text>
 	
 <g>
@@ -70,6 +70,6 @@
 </g>
 	
 <text class="textcolor" transform="matrix(0.9 0 0 1 7803.6274 1204.7087)" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:261.7107px; text-anchor: end">
-	<tspan x="0" y="0">CUSTOM</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 </svg>

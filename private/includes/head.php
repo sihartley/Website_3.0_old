@@ -1,6 +1,5 @@
 <head>
     <?php
-
     /**
      * @var $page_title * is set by each page except index.php which is set below
      * @var $css_file * is set on per page basis.
@@ -46,14 +45,19 @@
     echo '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/global.min.css') . '" type="text/css">' . "\n";
 
 // active for ford graphics pages only
-    category_ident(['pages/automotive', 'pages/motorcycle', 'pages/trailer'], ['automotive.php', 'vehicle-main.php', 'motorcycle.php', 'trailer.php'],
-        '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/select2.min.css') . '" type="text/css">' . "\n");
+    /*category_ident(['pages/automotive', 'pages/motorcycle', 'pages/trailer'], ['automotive.php', 'vehicle-main.php', 'motorcycle.php', 'trailer.php'],
+        '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/select2.min.css') . '" type="text/css">' . "\n");*/
+    echo '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/select2.min.css') . '" type="text/css">' . "\n";
 
 // active for ALL pages
     echo '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/menu.min.css') . '" type="text/css">' . "\n";
     if (isset($gallery) || isset($slider) || isset($carousel) == 'on') {
         echo '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/unite-gallery.min.css') . '" type="text/css">' . "\n";
     }
+
+// active for ford graphics pages only
+    category_ident(['pages/automotive/dodge'], ['automotive.php', 'vehicle-main.php'],
+        '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/dodge-fonts.min.css') . '" type="text/css">' . "\n");
 
 // active for ford graphics pages only
     category_ident(['pages/automotive/ford'], ['automotive.php', 'vehicle-main.php'],
@@ -63,12 +67,16 @@
     category_ident(['pages/automotive/jeep'], ['automotive.php', 'vehicle-main.php'],
         '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/jeep-fonts.min.css') . '" type="text/css">' . "\n");
 
+// active for subaru graphics pages only
+    category_ident(['pages/automotive/subaru'], ['automotive.php', 'vehicle-main.php'],
+        '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/subaru-fonts.min.css') . '" type="text/css">' . "\n");
+
 // $css_file passed from each page
     echo '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version($css_file) . '" type="text/css">' . "\n";
 
 // active for all graphics pages
     category_ident(['pages/automotive', 'pages/motorcycle', 'pages/trailer'], ['automotive.php', 'vehicle-main.php', 'motorcycle.php', 'trailer.php'],
-        '<link rel="stylesheet" media="screen"  href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css" type="text/css">' . "\n");
+        '<link rel="stylesheet" rel="preload" media="screen"  href="' . auto_version('/css/jquery-ui.css') . '" type="text/css">' . "\n");
 
 // active for ALL pages
     /* Simon: Info: These are ordered for optimal performance ref. Lighthouse Test. Simon: Todo: RECHECK ORDER after adding jqueryui*/
@@ -79,6 +87,8 @@
 // active for all graphics pages
     category_ident(['pages/automotive', 'pages/motorcycle', 'pages/trailer'], ['automotive.php', 'vehicle-main.php', 'motorcycle.php', 'trailer.php'],
         '<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" type="text/javascript" defer></script>' . "\n");
+    /*category_ident(['pages/automotive', 'pages/motorcycle', 'pages/trailer'], ['automotive.php', 'vehicle-main.php', 'motorcycle.php', 'trailer.php'],
+        '<script src="' . auto_version('/js/jquery-ui.min.js') . '" type="text/javascript" async defer></script>' . "\n");*/
 
 // active for all graphics pages
     category_ident(['pages/automotive', 'pages/motorcycle', 'pages/trailer'], ['automotive.php', 'vehicle-main.php', 'motorcycle.php', 'trailer.php'],

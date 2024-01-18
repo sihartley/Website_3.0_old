@@ -84,11 +84,7 @@ $page_title = "$year_range $make $model $product_name"; // page title
 ?>
 
 <!DOCTYPE html>
-    <script type="text/javascript">
-        localStorage.setItem('vehicleId', '<?= $vehicle['id']; ?>');
-        localStorage.setItem('graphicId', '<?= $graphicId; ?>');
-    </script>
-
+<?php require_once PRIV_PATH . '/includes/automotive/localstorage_scripts.php';?>
 <html lang="en"<?= $rightClickProtect ?>>
 
 <!-- Head -->

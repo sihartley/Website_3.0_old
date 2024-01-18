@@ -24,7 +24,7 @@
 	C7085.9,561,7250.7,446.1,7374.5,359.7z"/>
 
 	<text class="textcolor" textLength="1985" lengthAdjust="spacingAndGlyphs" style="font-family:'Square721BT-BoldExtended'; font-size:183.204px; text-anchor:left;" transform="matrix(1 0 0 1 652.626 1760.6558)">
-		<tspan x="0" y="0">CUSTOM TEXT</tspan>
+		<tspan x="0" y="0">$textRef</tspan>
 	</text>
 
 	<path class="maincolor" d="M4933.2,3632.7c7.6-51.1,47-90,94.5-90h1910.3c47.5,0,86.9,38.9,94.5,90h503c2.8-8.1,5.7-16.3,8.7-24.3
@@ -38,6 +38,6 @@
 	s14.1-80.9,41.7-171H7032.6z"/>
 
 	<text class="textcolor" textLength="1985" lengthAdjust="spacingAndGlyphs" style="font-family:'Square721BT-BoldExtended'; font-size:183.204px; text-anchor:right;" transform="matrix(1 0 0 1 4990.397 3710.0483)">
-		<tspan x="0" y="0">CUSTOM TEXT</tspan>
+		<tspan x="0" y="0">$textRef</tspan>
 	</text>
 </svg>

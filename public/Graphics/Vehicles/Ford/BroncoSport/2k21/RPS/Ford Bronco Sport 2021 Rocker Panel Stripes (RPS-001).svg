@@ -10,7 +10,7 @@
 	c572.1,0.1,2398.7,0.7,4111.1,1.2c1614.2,0.5,3126.9,0.8,3391.4,0.5c37.2,0,44.6-5.5,51.3-23.4L8350.7,504.1z"/>
 
 <text class="textcolor" transform="matrix(1 0 0 1 747.8298 448.2833)" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:301.0792px; text-anchor: start;">
-	<tspan x="0" y="0">CUSTOM</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 
 <path class="maincolor" d="M157.7,1268.8C121.6,1163,63.2,1030.2,6,928.6c-12-21.3-6-27.4,19.1-27.2c229.8,1.7,1740.4,1.8,3399.2,1.4
@@ -20,6 +20,6 @@
 	c-37.2,0-44.6-5.5-51.3-23.4L157.7,1268.8z"/>
 
 <text class="textcolor" transform="matrix(1 0 0 1 7760.4702 1213.0145)" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:301.0792px; text-anchor: end;">
-	<tspan x="0" y="0">CUSTOM</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 </svg>

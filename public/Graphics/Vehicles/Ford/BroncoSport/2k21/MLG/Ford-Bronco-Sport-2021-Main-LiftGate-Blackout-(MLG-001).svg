@@ -20,6 +20,6 @@
 	c-550.1,0-1102.6,5.9-1102.6,5.9s-24.1-1.9-25.3,23.6v268.8C3151,1938.3,3154.9,1941.9,3159.7,1941.8z"/>
 
 <text class="textcolor" transform="matrix(0.9 0 0 1 4300 1443.6686)" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:404.0045px; text-anchor: middle;">
-	<tspan>BADASS</tspan>
+	<tspan>$textRef</tspan>
 </text>
 </svg>

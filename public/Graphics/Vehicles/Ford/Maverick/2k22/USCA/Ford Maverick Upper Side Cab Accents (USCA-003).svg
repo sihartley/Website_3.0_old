@@ -44,11 +44,11 @@
 	C19.8,166.6,18.7,167.9,18.7,169z"/>
 
 <text class="textcolor" textLength="850" lengthAdjust="spacingAndGlyphs" transform="matrix(1.2536 0 0 1 95.1431 336.3031)" style="font-family:'Square721-Cn-Bold'; font-size:155.1121px;">
-	<tspan x="0" y="0">CUSTOM TEXT</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 
 <text class="textcolor" textLength="850" lengthAdjust="spacingAndGlyphs" transform="matrix(1.2536 0 0 1 3907.9192 818.9528)" style="font-family:'Square721-Cn-Bold'; font-size:155.1121px;">
-	<tspan x="0" y="0">CUSTOM TEXT</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 
 

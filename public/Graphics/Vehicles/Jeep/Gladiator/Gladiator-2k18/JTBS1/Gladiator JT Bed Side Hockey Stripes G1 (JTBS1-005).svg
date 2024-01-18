@@ -28,6 +28,6 @@
 	c-2.2,74.8-1.7,149.6,1.4,224.3c7.1,246.7,17.7,493.4,31.6,739.8c3.1,67.7,12,135,26.8,201.1c7.3,33.5,18.5,66,33.2,97
 	c14.8,30.8,34.8,58.8,59.1,82.9c95.1,100.7,201.9,189.6,318.1,264.9C8476.6,1933.9,8475.3,1938.2,8472.4,1938.2z"/>
 <text class="textcolor" transform="matrix(1 0 0 1 6641.8481 1062.4604)" textLength="1300" lengthAdjust="spacingAndGlyphs" style="font-family:'Arial-Black'; font-size:291.5526px;">
-	<tspan>Custom</tspan>
+	<tspan>$textRef</tspan>
 </text>
 </svg>

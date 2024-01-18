@@ -3,10 +3,6 @@
 html { //Global
   scroll-padding-top: 100px;
 }
-@font-face {
-  font-family: Square721BT-BoldExtended;
-  src: url('fonts/Square721BT-BoldExtended.woff2');
-}
 
 .blockErrorClass {
   border: 2px solid #cc0000 !important;
@@ -28,8 +24,15 @@ html { //Global
   padding: 10px;
 }
 
-section {
+.item-info {
+  cursor: help;
+}
 
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+
+section {
   &.graphic-look {
     background-color: $color-section-background;
     margin: 1%;
@@ -146,6 +149,14 @@ section {
             //select {
             //  width: 100%;
             //}
+            .item-info {
+              margin-bottom: auto;
+              margin-left: 5px;
+              margin-top: 2.5px;
+              img {
+                height: 25px;
+              }
+            }
 
             h4 {
               flex: 1 0 100%;
@@ -153,19 +164,24 @@ section {
             }
 
             .model-year {
+              display: flex;
               flex: 1; //Changed from .5
               margin: 0 2%;
             }
 
             .trim-level, .size-option {
+              display: flex;
               flex: 1.5;
               margin: 0 2%;
             }
 
             .car-color {
+              display: flex;
               flex: 1;
-              margin: 0 2%;
+              //margin: 0 2%;
+              margin: 0;
             }
+
           }
 
           div.graphic-details {
@@ -173,6 +189,15 @@ section {
             flex-wrap: wrap;
             margin: 0 auto 1em;
             width: 96%;
+
+            .item-info {
+              margin-bottom: auto;
+              margin-left: 5px;
+              margin-top: 2.5px;
+              img {
+                height: 25px;
+              }
+            }
 
             .stripe-1 {
               background: repeating-linear-gradient(
@@ -189,20 +214,25 @@ section {
               margin: 0 auto .5em;
             }
 
-            .material, .trim-option {
+            .material {
+              display: flex;
               flex: 2 0 46%;
               margin: 0 2% 1%;
             }
 
             .brand {
+              display: flex;
               flex: 1 0 46%;
-              margin: 0 2% 1%;
+              margin: 0 0 1% 0;
             }
 
             .main-color,
-            .accent {
+            .accent, .accent2,
+            .trim-option {
+              display: flex;
               flex: 1 0 68%;
-              margin: 0 2% 1%;
+              //margin: 0 2% 1%;
+              margin: 0 0 1% 2%;
 
               .text-option {
                 flex-basis: 100%;
@@ -227,6 +257,20 @@ section {
               flex-wrap: wrap;
               margin-bottom: 2%;
 
+
+
+              .option {
+
+                .item-info {
+                  //margin-bottom: auto;
+                  //margin-right: 1.5%;
+                  //margin-top: 2.5px;
+                  img {
+                    //height: 25px;
+                  }
+                }
+              }
+
               div {
                 //display: flex;
               }
@@ -239,7 +283,7 @@ section {
 
               .text-option {
                 flex-basis: 100%;
-                margin: 0 2% 1%;
+                margin: 0 0 1% 2%;
 
                 div:first-child {
                   display: flex;
@@ -252,9 +296,23 @@ section {
                   height: 30px;
                   margin-bottom: 1%;
                   width: 99%;
+                  flex: 1 80%; //Added
                 };
 
+                div > .item-info {
+                  margin-top: auto;
+                  margin-right: auto;
+                  margin-bottom: auto;
+                }
               }
+
+              > .item-info {
+                margin-top: auto;
+                margin-right: auto;
+                margin-bottom: auto;
+              }
+
+
             }
 
             input[type="checkbox"] {
@@ -265,7 +323,7 @@ section {
               box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0,0,0,1);
               cursor: pointer;
               //height: 25px;
-              margin-right: auto;
+              //margin-right: auto; //Remove for info icon
               //padding-right: 25px;
               padding-right: 4%;
               transition: .25s;
@@ -303,8 +361,18 @@ section {
             //}
 
             .notes {
-              flex: 1 0 95%;
-              margin: 0 2% 0;
+              display: flex;
+              flex-wrap: wrap;
+              flex: 1;
+              margin-left: 2.5%;
+
+              label {
+                flex: 1 100%;
+              }
+
+              textarea {
+                flex: 1;
+              }
             }
 
             .select2-result-container {

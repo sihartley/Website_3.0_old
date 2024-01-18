@@ -142,3 +142,13 @@ function autocomplete_query($vColumns, $vehicleId): array {
     db_disconnect(db_connect());
     return $autocomplete;
 }
+
+/* Graphic Details Query */
+function graphic_query($id): array {
+    global $dbPrefix;
+    $graphicColumns = 'make, model, product_name';
+    $graphicQuery = "(SELECT {$graphicColumns} FROM {$dbPrefix}Automotive.graphics WHERE id = '{$id}' )";
+    $graphic = mysqli_fetch_assoc(db_query($graphicQuery));
+    db_disconnect(db_connect());
+    return $graphic;
+}

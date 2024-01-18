@@ -25,7 +25,7 @@
 
 	<text class="textcolor" text-anchor="middle" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:94px;">
 		<textPath  xlink:href="#SVGID_x5F_1_x5F_" startOffset="50%">
-			<tspan>CUSTOM TEXT</tspan>
+			<tspan>$textRef</tspan>
 		</textPath>
 	</text>
 	

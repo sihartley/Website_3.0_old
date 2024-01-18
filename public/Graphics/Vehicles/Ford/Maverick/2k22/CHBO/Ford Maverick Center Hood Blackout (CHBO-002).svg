@@ -24,7 +24,7 @@
 	c137.1,18.9,274.7,33.8,412.6,44.7l0.1,0C683.2,79.4,816.8,84.3,950.5,84.1z"/>
 
 	<text  class="textcolor" transform="matrix(135.2766 0 0 157.2984 260.0555 2424.1328)" textLength="10" lengthAdjust="spacingAndGlyphs"  style="font-family:'Square721BT-BoldExtended'; font-size:1.6505px;">
-		<tspan x="0" y="0">TEXT / LOGO</tspan>
+		<tspan x="0" y="0">$textRef</tspan>
 	</text>
 
 </svg>

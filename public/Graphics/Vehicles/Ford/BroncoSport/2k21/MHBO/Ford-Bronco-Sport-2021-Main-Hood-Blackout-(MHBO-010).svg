@@ -36,6 +36,6 @@
 	c-4.3-1.2-23.5-11.9-37.5-26C1490.4,1764.1,1483.7,1755,1483.7,1755z"/>
 
 <text class="textcolor outline" transform="matrix(1 0 0 1 504.1819 1835.3519)"  textLength="1820" lengthAdjust="spacingAndGlyphs" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:169.9018px; letter-spacing:40; stroke:#6A6A6A; stroke-width:25; paint-order:stroke; stroke-linecap:round; stroke-linejoin:round; ">
-	<tspan x="0" y="0">CUSTOM</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 </svg>

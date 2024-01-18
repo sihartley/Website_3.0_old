@@ -12,6 +12,6 @@
 		/>
 </g>
 <text class="textcolor" transform="matrix(0 -78.48 72 0 2023.4545 1385.2317)" textLength="32.6" lengthAdjust="spacingAndGlyphs" text-anchor="middle" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:3.7184px;">
-	<tspan>CUSTOM</tspan>
+	<tspan>$textRef</tspan>
 </text>
 </svg>

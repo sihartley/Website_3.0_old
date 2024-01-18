@@ -39,7 +39,7 @@
 </g>
 
 <text class="textcolor" transform="matrix(1 0 0 1 747.8298 448.2833)" textLength="2500" lengthAdjust="spacingAndGlyphs" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:301.0792px; text-anchor: start;">
-	<tspan x="0" y="0">CUSTOM</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 
 <g>
@@ -73,7 +73,7 @@
 </g>
 
 <text class="textcolor" transform="matrix(1 0 0 1 7839.3704 1213.0145)" textLength="2500" lengthAdjust="spacingAndGlyphs" style="font-family:'Ford-Bronco-Font-Main-Regular'; font-size:301.0792px; text-anchor: end;">
-	<tspan x="0" y="0">CUSTOM</tspan>
+	<tspan x="0" y="0">$textRef</tspan>
 </text>
 	
 </svg>

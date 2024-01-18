@@ -37,6 +37,6 @@
 		C1032.6,2414.9,1059.7,2407.7,1084.4,2395.9z"/>
 </g>
 <text class="textcolor" transform="matrix(1 0 0 1 835.4639 2713.9375)" style="font-size:215.9424px; font-family:'Ford-Mach-1-Regular'; text-anchor: middle">
-	<tspan>CUSTOMTEXT</tspan>
+	<tspan>$textRef</tspan>
 </text>
 </svg>
